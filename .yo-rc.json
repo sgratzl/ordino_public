@@ -1,0 +1,30 @@
+{
+  "generator-phovea": {
+    "type": "app-slib",
+    "modules": [
+      "phovea_server"
+    ],
+    "libraries": [],
+    "libraryAliases": {},
+    "libraryExternals": [
+      "jquery",
+      "font-awesome"
+    ],
+    "name": "ordino_public",
+    "author": "Samuel Gratzl",
+    "today": "Tue, 06 Jun 2017 07:34:54 GMT",
+    "githubAccount": "phovea",
+    "sextensions": [],
+    "app": "ordino_public",
+    "clientOnly": false,
+    "entries": {
+      "app": "./src/index.ts"
+    },
+    "unknown": {
+      "requirements": [],
+      "dockerPackages": []
+    },
+    "ignores": [],
+    "extensions": []
+  }
+}
