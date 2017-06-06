@@ -48,7 +48,7 @@ const elems = template.create(document.body, {
 {
   // generate random username
   const username = DockerName.getRandomName();
-  const password = username + randomId(4);
+  const password = randomId(6);
   (<HTMLInputElement>document.querySelector('input#login_username')).value = username;
   (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
 }
