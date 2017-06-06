@@ -4,11 +4,18 @@
     "modules": [
       "phovea_server"
     ],
-    "libraries": [],
-    "libraryAliases": {},
+    "libraryAliases": {
+      "d3": "d3/d3",
+      "scrollTo": "jquery.scrollto/jquery.scrollTo.js"
+    },
     "libraryExternals": [
+      "d3",
       "jquery",
-      "font-awesome"
+      "lineupjs",
+      "select2",
+      "scrollTo",
+      "mongodb",
+      "marked"
     ],
     "name": "ordino_public",
     "author": "Samuel Gratzl",

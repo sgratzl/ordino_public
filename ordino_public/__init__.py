@@ -11,7 +11,7 @@ def phovea(registry):
   :param registry:
   """
   # generator-phovea:begin
-  registry.append('user_stores', 'ordino_public_store', 'ordino_public_store.store', {})
+  registry.append('user_stores', 'ordino_public_store', 'ordino_public.store', {})
   # generator-phovea:end
   pass
 
