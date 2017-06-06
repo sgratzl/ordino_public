@@ -21,8 +21,8 @@ class FakeUser(phovea_server.security.User):
   def __init__(self, id, password, salt, roles):
     super(FakeUser, self).__init__(id)
     self.name = id
-    self._password = password
-    self._salt = salt
+    self.password = password
+    self.salt = salt
     self.roles = roles
 
   @property
@@ -35,22 +35,29 @@ class FakeUser(phovea_server.security.User):
 
   def is_password(self, given):
     given_h = hash_password(given, self._salt)
-    return given_h == self._password
-
-
-def load_users():
-  return []
-
-
-def persist_user(user):
-  pass
+    return given_h == self.password
 
 
 class FakeStore(object):
   def __init__(self):
     from phovea_server.config import view as configview
     self._config = configview('ordino_public')
-    self._users = load_users()
+    self._users = self.load_users()
+
+  def load_users(self):
+    import csv
+    import os
+    if not os.path.isfile(self._config.file):
+      return []
+    with open(self._config.file, 'rb') as f:
+      reader = csv.reader(f)
+      return [User(row[0], row[1], row[2], row[3].split(';')) for row in reader]
+
+  def persist_user(self, user):
+    import csv
+    with open(self._config.file, 'ab') as f:
+      writer = csv.writer(f)
+      writer.writerow([user.name, user.password, user.salt, ';'.join(user.roles)])
 
   def logout(self, user):
     if hasattr(user, 'id'):
@@ -88,7 +95,7 @@ class FakeStore(object):
     user = FakeUser(username, hashed_password, salt, [username])
     self._users.append(user)
     _log.info('registering new user: ' + username)
-    persist_user(user)
+    self.persist_user(user)
     return user
 
 
