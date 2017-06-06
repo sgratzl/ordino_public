@@ -86,7 +86,8 @@ class FakeStore(object):
     salt = uuid.uuid4().hex
     hashed_password = hashlib.sha512(password + salt).hexdigest()
     user = FakeUser(username, hashed_password, salt, [username])
-    self._users.add(user)
+    self._users.append(user)
+    _log.info('registering new user: ' + username)
     persist_user(user)
     return user
 
