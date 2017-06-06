@@ -105,6 +105,7 @@
     "webpack-dev-server": "2.4.2"
   },
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#develop",
+    "docker-names": "1.0.3"
   }
 }

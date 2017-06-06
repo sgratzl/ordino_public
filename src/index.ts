@@ -15,6 +15,8 @@ import * as loginForm from 'html-loader!./_loginForm.html';
 import * as template from 'phovea_clue/src/template';
 import * as header from 'phovea_ui/src/header';
 import {create} from 'ordino/src/Targid';
+import {getRandomName} from 'docker-names';
+import {randomId} from 'phovea_core/src';
 
 // cache the nodes from the ordino/index.html before the TargID app is created
 // NOTE: the template (see next line) replaces the content of the document.body (but not document.head)
@@ -42,6 +44,14 @@ const elems = template.create(document.body, {
   },
   loginForm: String(loginForm)
 });
+
+{
+  // generate random username
+  const username = getRandomName();
+  const password = username + randomId(4);
+  (<HTMLInputElement>document.querySelector('input#login_username')).value = username;
+  (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
+}
 
 const aboutDialogBody = elems.header.aboutDialog;
 aboutDialogBody.insertAdjacentHTML('afterbegin', '<div class="alert alert-warning" role="alert"><strong>Disclaimer</strong> This software is <strong>for research purpose only</strong>.</span></div>');
