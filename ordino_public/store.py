@@ -8,6 +8,7 @@ import phovea_server.security
 import logging
 import hashlib
 import uuid
+import sqlite3
 
 __author__ = 'Samuel Gratzl'
 _log = logging.getLogger(__name__)
@@ -42,26 +43,26 @@ class FakeStore(object):
   def __init__(self):
     from phovea_server.config import view as configview
     self._config = configview('ordino_public')
-    self._users = self.load_users()
+    self._db = sqlite3.connect(self._config.file)
+    self._db.execute(
+      """CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)""")
 
-  def load_users(self):
-    import csv
-    import os
-    if not os.path.isfile(self._config.file):
-      return []
-    with open(self._config.file, 'rb') as f:
-      reader = csv.reader(f)
-      return [User(row[0], row[1], row[2], row[3].split(';')) for row in reader]
+    self._users = list(self._load_users())
 
-  def persist_user(self, user):
-    import csv
-    with open(self._config.file, 'ab') as f:
-      writer = csv.writer(f)
-      writer.writerow([user.name, user.password, user.salt, ';'.join(user.roles)])
+  def _load_users(self):
+    for row in self._db.execute("""SELECT username, password, salt, roles FROM user"""):
+      yield User(row[0], row[1], row[2], row[3].split(';'))
+
+  def _flag_logged_in(self, user):
+    self._db.execute("""UPDATE TABLE user SET last_login_date = date('now') WHERE username = ?""", (user.name,))
+
+  def _persist_user(self, user):
+    self._db.execute("""
+INSERT INTO user(username, password, salt, roles, creation_date, last_login_date) VALUES(?,?,?,?,date('now'),date('now'))
+""", (user.name, user.password, user.salt, ';'.join(user.roles)))
 
   def logout(self, user):
-    if hasattr(user, 'id'):
-      del self._logged_in[user.id]
+    pass
 
   def load(self, id):
     return next((u for u in self._users if u.id == id), None)
@@ -83,7 +84,11 @@ class FakeStore(object):
     user = next((u for u in self._users if u.id == username), None)
     if user:
       # existing user
-      return user if user.is_password(password) else None
+      if user.is_password(password):
+        self._flag_logged_in(user)
+        return user
+      else:
+        return None
 
     # create a new one on the fly given the new values
     user = self._add_user(username, password)
@@ -95,7 +100,7 @@ class FakeStore(object):
     user = FakeUser(username, hashed_password, salt, [username])
     self._users.append(user)
     _log.info('registering new user: ' + username)
-    self.persist_user(user)
+    self._persist_user(user)
     return user
 
 
