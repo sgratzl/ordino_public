@@ -8,7 +8,9 @@
 module.exports = function(registry) {
   //registry.push('extension-type', 'extension-id', function() { return System.import('./src/extension_impl'); }, {});
   // generator-phovea:begin
-
+  registry.push('disableTargidView', 'public_filter', {
+    filter: 'clip_cellline|shiny_cellline|clip'
+  });
   // generator-phovea:end
 };
 
