@@ -35,7 +35,7 @@ class FakeUser(phovea_server.security.User):
     return True
 
   def is_password(self, given):
-    given_h = hash_password(given, self._salt)
+    given_h = hash_password(given, self.salt)
     return given_h == self.password
 
 
@@ -46,20 +46,23 @@ class FakeStore(object):
     self._db = sqlite3.connect(self._config.file)
     self._db.execute(
       """CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)""")
+    self._db.commit()
 
     self._users = list(self._load_users())
 
   def _load_users(self):
     for row in self._db.execute("""SELECT username, password, salt, roles FROM user"""):
-      yield User(row[0], row[1], row[2], row[3].split(';'))
+      yield FakeUser(row[0], row[1], row[2], row[3].split(';'))
 
   def _flag_logged_in(self, user):
-    self._db.execute("""UPDATE TABLE user SET last_login_date = date('now') WHERE username = ?""", (user.name,))
+    self._db.execute("""UPDATE user SET last_login_date = date('now') WHERE username = ?""", (user.name,))
+    self._db.commit()
 
   def _persist_user(self, user):
     self._db.execute("""
 INSERT INTO user(username, password, salt, roles, creation_date, last_login_date) VALUES(?,?,?,?,date('now'),date('now'))
 """, (user.name, user.password, user.salt, ';'.join(user.roles)))
+    self._db.commit()
 
   def logout(self, user):
     pass
