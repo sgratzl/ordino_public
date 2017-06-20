@@ -1,7 +1,7 @@
 ordino_public [![Phovea][phovea-image]][phovea-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 =====================
 
-
+![screenshot](media/screenshot.png?raw=true "Screenshot")
 
 Installation
 ------------
