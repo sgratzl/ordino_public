@@ -44,8 +44,7 @@ class FakeStore(object):
     from phovea_server.config import view as configview
     self._config = configview('ordino_public')
     self._db = sqlite3.connect(self._config.file)
-    self._db.execute(
-      """CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)""")
+    self._db.execute("""CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)""")
     self._db.commit()
 
     self._users = list(self._load_users())
