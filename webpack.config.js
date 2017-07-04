@@ -176,15 +176,15 @@ function generateWebpack(options) {
         }
       },
       contentBase: resolve(__dirname, 'build'),
-	  watchOptions: {
-	    aggregateTimeout: 500,
-	    ignored: /node_modules/
-	  }
+      watchOptions: {
+        aggregateTimeout: 500,
+        ignored: /node_modules/
+      }
     },
-	watchOptions: {
-	  aggregateTimeout: 500,
-	  ignored: /node_modules/
-	}
+    watchOptions: {
+      aggregateTimeout: 500,
+      ignored: /node_modules/
+    }
   };
 
   if (options.isProduction) {
