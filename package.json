@@ -10,11 +10,11 @@
   },
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/phovea/ordino_public/issues"
+    "url": "https://github.com/Caleydo/ordino_public/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/phovea/ordino_public.git"
+    "url": "https://github.com/Caleydo/ordino_public.git"
   },
   "private": true,
   "scripts": {
