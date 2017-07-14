@@ -317,7 +317,7 @@ function generateWebpackConfig(env) {
     return generateWebpack(base);
   } else if (type.startsWith('app')) { //isProduction app
     return generateWebpack(Object.assign({}, base, {
-        min: true,
+        min: false,
         nosuffix: true
       }));
   } else { //isProduction
