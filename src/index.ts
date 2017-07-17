@@ -12,6 +12,7 @@ import 'phovea_ui/src/_font-awesome';
 import 'ordino/src/style.scss';
 import * as loginForm from 'html-loader!./_loginForm.html';
 import Ordino from 'ordino/src/Ordino';
+import './style.scss';
 
 
 import * as DockerName from 'docker-names';

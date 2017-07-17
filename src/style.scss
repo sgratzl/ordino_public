@@ -1,0 +1,13 @@
+
+/**
+ * disable mouse species
+ */
+.startMenu .speciesSelector {
+  .species-group[data-species="mouse"] {
+    cursor: not-allowed;
+
+    label[for^="speciesSelector"] {
+      pointer-events: none;
+    }
+  }
+}
