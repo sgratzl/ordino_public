@@ -260,12 +260,16 @@ function generateWebpack(options) {
         debug: false
       }),
       new webpack.optimize.UglifyJsPlugin({
+        beautify: false,
+        mangle: {
+          screw_ie8: true,
+          keep_fnames: true
+        },
         compress: {
+          screw_ie8: true,
           warnings: false
         },
-        output: {
-          comments: false
-        },
+        comments: false,
         sourceMap: false
       }));
   } else {
