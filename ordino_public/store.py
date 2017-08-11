@@ -22,8 +22,9 @@ def ensure_dir(path):
   import errno
   import os
 
+  path = os.path.dirname(path)
   try:
-    os.makedirs(os.path.dirname(path))
+    os.makedirs(path)
   except OSError as exc:  # Python >2.5
     if exc.errno == errno.EEXIST and os.path.isdir(path):
       pass
