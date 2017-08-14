@@ -39,3 +39,13 @@ new Ordino({
   (<HTMLInputElement>document.querySelector('input#login_username')).value = username;
   (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
 }
+
+function injectDisclaimer() {
+  const alert = <HTMLElement>document.querySelector('#headerAboutDialog .modal-body .alert');
+  if (!alert) {
+    setTimeout(injectDisclaimer, 2000); //wait another 2s
+    return;
+  }
+  alert.innerHTML = `<strong>Disclaimer</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
+}
+setTimeout(injectDisclaimer, 2000);
