@@ -195,6 +195,10 @@ function generateWebpack(options) {
 			minChunkSize: 10000 //at least 10.000 characters
 		  }),
 		  new webpack.optimize.AggressiveMergingPlugin());
+  } else if (options.isDev) {
+    //use dev version of tsconfig
+    const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+    base.plugins.push(new TsConfigPathsPlugin({ configFileName: './tsconfig_dev.json'}));
   }
 
   if (options.library) {
