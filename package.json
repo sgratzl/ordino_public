@@ -73,7 +73,7 @@
     "node": ">= 6"
   },
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#v2.1.0",
+    "ordino": "github:Caleydo/ordino#tdp",
     "docker-names": "1.0.3"
   },
   "devDependencies": {
