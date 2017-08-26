@@ -8,7 +8,7 @@ import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordin
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
-import * as loginForm from 'html-loader!./_loginForm.html'; 
+import * as loginForm from 'html-loader!./_loginForm.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
 
