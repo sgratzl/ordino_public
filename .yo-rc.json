@@ -4,6 +4,19 @@
     "modules": [
       "phovea_server"
     ],
+    "registry": {
+      "exclude": [
+        "bob",
+        [
+          "datatype",
+          "(table|matrix|stratification|vector|atom)"
+        ],
+        [
+          "clue",
+          "multiform"
+        ]
+      ]
+    },
     "libraryAliases": {
       "d3": "d3/d3",
       "scrollTo": "jquery.scrollto/jquery.scrollTo.js"
