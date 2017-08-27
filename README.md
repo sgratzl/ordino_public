@@ -7,7 +7,7 @@ Installation
 ------------
 
 ```
-git clone https://github.com/phovea/ordino_public.git
+git clone https://github.com/Caleydo/ordino_public.git
 cd ordino_public
 npm install
 ```
@@ -38,7 +38,7 @@ This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform 
 [phovea-url]: https://phovea.caleydo.org
 [npm-image]: https://badge.fury.io/js/ordino_public.svg
 [npm-url]: https://npmjs.org/package/ordino_public
-[travis-image]: https://travis-ci.org/phovea/ordino_public.svg?branch=master
-[travis-url]: https://travis-ci.org/phovea/ordino_public
-[daviddm-image]: https://david-dm.org/phovea/ordino_public/status.svg
-[daviddm-url]: https://david-dm.org/phovea/ordino_public
+[travis-image]: https://travis-ci.org/Caleydo/ordino_public.svg?branch=master
+[travis-url]: https://travis-ci.org/Caleydo/ordino_public
+[daviddm-image]: https://david-dm.org/Caleydo/ordino_public/status.svg
+[daviddm-url]: https://david-dm.org/Caleydo/ordino_public
