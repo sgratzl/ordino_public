@@ -49,7 +49,7 @@
     "prebuild:python": "node -e \"process.exit(process.env.PHOVEA_SKIP_TESTS === undefined?1:0)\" || npm run test:python",
     "prebuild:web": "node -e \"process.exit(process.env.PHOVEA_SKIP_TESTS === undefined?1:0)\" || npm run test:web",
     "build:python": "python build.py",
-    "build:web": "webpack --env prod --debug --display-reasons --display-error-details --verbose --display-chunks",
+    "build:web": "npm run compile && webpack --env prod --debug --display-reasons --display-error-details --verbose --display-chunks",
     "predist:web": "npm run build:web && npm run docs:web",
     "predist:python": "npm run build:python && npm run docs:python",
     "dist:web": "mkdirp dist && cd build && tar cvzf ../dist/ordino_public.tar.gz *",
