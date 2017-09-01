@@ -18,6 +18,20 @@ def hash_password(password, salt):
   return hashlib.sha512(password + salt).hexdigest()
 
 
+def ensure_dir(path):
+  import errno
+  import os
+
+  path = os.path.dirname(path)
+  try:
+    os.makedirs(path)
+  except OSError as exc:  # Python >2.5
+    if exc.errno == errno.EEXIST and os.path.isdir(path):
+      pass
+    else:
+      raise
+
+
 class FakeUser(phovea_server.security.User):
   def __init__(self, id, password, salt, roles):
     super(FakeUser, self).__init__(id)
@@ -43,6 +57,7 @@ class FakeStore(object):
   def __init__(self):
     from phovea_server.config import view as configview
     self._config = configview('ordino_public')
+    ensure_dir(self._config.file)
     self._db = sqlite3.connect(self._config.file)
     self._db.execute("""CREATE TABLE IF NOT EXISTS user (username TEXT, password TEXT, salt TEXT, roles TEXT, creation_date TEXT, last_login_date TEXT)""")
     self._db.commit()
