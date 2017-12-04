@@ -6,11 +6,8 @@
 
 //register all extensions in the registry following the given pattern
 module.exports = function(registry) {
-  //registry.push('extension-type', 'extension-id', function() { return System.import('./src/extension_impl'); }, {});
+  //registry.push('extension-type', 'extension-id', function() { return import('./src/extension_impl'); }, {});
   // generator-phovea:begin
-  registry.push('disableTargidView', 'public_filter', {
-    filter: 'clip_cellline|shiny_cellline|clip'
-  });
   // generator-phovea:end
 };
 

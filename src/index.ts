@@ -7,8 +7,6 @@
 import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
-import 'phovea_ui/src/_bootstrap';
-import 'phovea_ui/src/_font-awesome';
 import 'ordino/src/style.scss';
 import * as loginForm from 'html-loader!./_loginForm.html';
 import Ordino from 'ordino/src/Ordino';

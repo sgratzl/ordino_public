@@ -2,7 +2,7 @@
   "name": "ordino_public",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "2.1.0",
+  "version": "3.1.0",
   "author": {
     "name": "Samuel Gratzl",
     "email": "samuel_gratzl@gmx.at",
@@ -73,7 +73,7 @@
     "node": ">= 6"
   },
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#v2.1.0",
+    "ordino": "github:Caleydo/ordino#v3.1.0",
     "docker-names": "1.0.3"
   },
   "devDependencies": {
@@ -85,6 +85,7 @@
     "file-loader": "0.10.0",
     "html-loader": "0.4.4",
     "imports-loader": "0.7.0",
+    "ifdef-loader": "2.0.0",
     "jasmine": "2.5.3",
     "json-loader": "0.5.4",
     "karma": "1.4.0",

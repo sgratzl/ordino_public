@@ -4,18 +4,26 @@
     "modules": [
       "phovea_server"
     ],
+    "registry": {
+      "exclude": [
+        "dTiles",
+        "bob",
+        [
+          "datatype",
+          "(table|matrix|stratification|vector|atom)"
+        ],
+        [
+          "clue",
+          "multiform"
+        ]
+      ]
+    },
     "libraryAliases": {
       "d3": "d3/d3",
       "scrollTo": "jquery.scrollto/jquery.scrollTo.js"
     },
     "libraryExternals": [
-      "d3",
-      "jquery",
-      "lineupjs",
-      "select2",
-      "scrollTo",
-      "mongodb",
-      "marked"
+      "d3"
     ],
     "name": "ordino_public",
     "author": "Samuel Gratzl",
@@ -32,6 +40,9 @@
       "dockerPackages": []
     },
     "ignores": [],
-    "extensions": []
+    "extensions": [],
+    "libraries": [
+      "d3"
+    ]
   }
 }
