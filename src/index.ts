@@ -17,7 +17,8 @@ import * as DockerName from 'docker-names';
 import {randomId} from 'phovea_core/src';
 
 new Ordino({
-  loginForm: String(loginForm)
+  loginForm: String(loginForm),
+  showCookieDisclaimer: true
 });
 
 {
