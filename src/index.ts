@@ -39,12 +39,26 @@ new Ordino({
   (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
 }
 
-function injectDisclaimer() {
-  const alert = <HTMLElement>document.querySelector('#headerAboutDialog .modal-body .alert');
+function injectDisclaimer(selector) {
+  const alert = <HTMLElement>document.querySelector(selector);
   if (!alert) {
-    setTimeout(injectDisclaimer, 2000); //wait another 2s
+    setTimeout(injectDisclaimer, 2000, selector); //wait another 2s
     return;
   }
-  alert.innerHTML = `<strong>Disclaimer</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
+  alert.innerHTML = `<strong>Disclaimer:</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
 }
-setTimeout(injectDisclaimer, 2000);
+setTimeout(injectDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
+setTimeout(injectDisclaimer, 10, '.welcomeView .disclaimer .alert');
+
+/**
+ * Close start menu in public instance so that the welcome page is visible
+ */
+function closeStartMenu() {
+  const menu = <HTMLElement>document.querySelector('.startMenu');
+  if(!menu) {
+    setTimeout(closeStartMenu, 10); //wait another 10 ms
+    return;
+  }
+  menu.classList.remove('open');
+}
+setTimeout(closeStartMenu, 10);
