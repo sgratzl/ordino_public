@@ -45,7 +45,7 @@ function injectDisclaimer(selector) {
     setTimeout(injectDisclaimer, 2000, selector); //wait another 2s
     return;
   }
-  alert.innerHTML = `<strong>Disclaimer</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
+  alert.innerHTML = `<strong>Disclaimer:</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
 }
 setTimeout(injectDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
 setTimeout(injectDisclaimer, 10, '.welcomeView .disclaimer .alert');
