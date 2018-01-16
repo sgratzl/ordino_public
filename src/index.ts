@@ -49,16 +49,3 @@ function injectDisclaimer(selector) {
 }
 setTimeout(injectDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
 setTimeout(injectDisclaimer, 10, '.welcomeView .disclaimer .alert');
-
-/**
- * Close start menu in public instance so that the welcome page is visible
- */
-function closeStartMenu() {
-  const menu = <HTMLElement>document.querySelector('.startMenu');
-  if(!menu) {
-    setTimeout(closeStartMenu, 10); //wait another 10 ms
-    return;
-  }
-  menu.classList.remove('open');
-}
-setTimeout(closeStartMenu, 10);
