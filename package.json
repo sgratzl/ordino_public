@@ -68,10 +68,6 @@
     "requirements_dev.txt",
     "docker_packages.txt"
   ],
-  "engines": {
-    "npm": ">= 3",
-    "node": ">= 6"
-  },
   "dependencies": {
     "ordino": "github:Caleydo/ordino#develop",
     "docker-names": "1.0.3"
