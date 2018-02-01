@@ -9,9 +9,9 @@ import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
 import * as loginForm from 'html-loader!./_loginForm.html';
+import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
-
 
 import * as DockerName from 'docker-names';
 import {randomId} from 'phovea_core/src';
@@ -49,3 +49,5 @@ function injectDisclaimer(selector) {
 }
 setTimeout(injectDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
 setTimeout(injectDisclaimer, 10, '.welcomeView .disclaimer .alert');
+
+document.querySelector(`#headerAboutDialog .modal-body .metaData`).insertAdjacentHTML('beforebegin', `<div class="about-disclaimer">${aboutDisclaimer}</div>`);
