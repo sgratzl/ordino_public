@@ -47,7 +47,36 @@ function injectDisclaimer(selector) {
   }
   alert.innerHTML = `<strong>Disclaimer:</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
 }
-setTimeout(injectDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
 setTimeout(injectDisclaimer, 10, '.welcomeView .disclaimer .alert');
 
-document.querySelector(`#headerAboutDialog .modal-body .metaData`).insertAdjacentHTML('beforebegin', `<div class="about-disclaimer">${aboutDisclaimer}</div>`);
+const metaData = document.querySelector(`#headerAboutDialog .modal-body .metaData`);
+metaData.insertAdjacentHTML('beforebegin', `<article class="about-disclaimer">${aboutDisclaimer}</article>`);
+// move the information about caleydo to the source code section and remove the rest of the info
+const caleydoInfo = document.querySelector(`#headerAboutDialog .modal-body .caleydoInfo`);
+document.getElementById('about-source-code').insertAdjacentElement('beforeend', caleydoInfo.querySelector('p'));
+caleydoInfo.remove();
+
+// wait until the metadata is loaded, then move the version number remove the rest of the metadata
+function moveMetaDataVersion() {
+  const version = <HTMLElement>metaData.querySelector('p.version');
+  if (!version) {
+    setTimeout(moveMetaDataVersion, 2000); //wait another 2s
+    return;
+  }
+  document.getElementById('about-source-code').insertAdjacentElement('beforeend', version);
+  metaData.remove();
+}
+
+setTimeout(moveMetaDataVersion, 2000);
+
+// remove alert disclaimer from about dialog
+function removeDisclaimer(selector) {
+  const alert = <HTMLElement>document.querySelector(selector);
+  if (!alert) {
+    setTimeout(injectDisclaimer, 2000, selector); //wait another 2s
+    return;
+  }
+  alert.remove();
+}
+
+setTimeout(removeDisclaimer, 2000, '#headerAboutDialog .modal-body .alert');
