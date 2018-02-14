@@ -2,7 +2,7 @@
   "name": "ordino_public",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "4.0.0",
+  "version": "4.0.1-SNAPSHOT",
   "author": {
     "name": "Samuel Gratzl",
     "email": "samuel_gratzl@gmx.at",
@@ -69,7 +69,7 @@
     "docker_packages.txt"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#v4.0.0",
+    "ordino": "github:Caleydo/ordino#develop",
     "docker-names": "1.0.3"
   },
   "devDependencies": {
