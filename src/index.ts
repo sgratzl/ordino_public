@@ -47,6 +47,7 @@ function injectDisclaimer(selector) {
   }
   alert.innerHTML = `<strong>Disclaimer:</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
 }
+
 setTimeout(injectDisclaimer, 100, '.welcomeView .disclaimer .alert');
 
 
@@ -70,13 +71,13 @@ caleydoInfo.remove();
  */
 function createMutationObserver(selector, callback: (mutation: MutationRecord, observer: MutationObserver) => void) {
   const observer = new MutationObserver((mutationsList) => {
-    for(const mutation of mutationsList) {
+    for (const mutation of mutationsList) {
       if (mutation.type === 'childList') {
         callback(mutation, observer);
       }
     }
   });
-  observer.observe(document.querySelector(selector), { childList: true });
+  observer.observe(document.querySelector(selector), {childList: true});
 }
 
 
@@ -88,9 +89,10 @@ function createMutationObserver(selector, callback: (mutation: MutationRecord, o
 function moveMetaDataVersion(mutation: MutationRecord, observer: MutationObserver) {
   observer.disconnect(); // stop listening
   const target = <HTMLElement>mutation.target;
-  document.getElementById('about-source-code' ).insertAdjacentElement('beforeend', target.querySelector('.version'));
+  document.getElementById('about-source-code').insertAdjacentElement('beforeend', target.querySelector('.version'));
   target.remove();
 }
+
 createMutationObserver(`#headerAboutDialog .modal-body .metaData`, moveMetaDataVersion);
 
 
@@ -101,9 +103,10 @@ createMutationObserver(`#headerAboutDialog .modal-body .metaData`, moveMetaDataV
  */
 function modifyDialogTitle(mutation: MutationRecord, observer: MutationObserver) {
   observer.disconnect(); // stop listening
-  if(mutation.target.textContent !== 'Ordino') {
+  if (mutation.target.textContent !== 'Ordino') {
     mutation.target.textContent = 'Ordino';
   }
 }
+
 createMutationObserver(`#headerAboutDialog .modal-title`, modifyDialogTitle);
 
