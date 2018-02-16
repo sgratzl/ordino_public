@@ -1,8 +1,10 @@
-###############################################################################
-# Caleydo - Visualization for Molecular Biology - http://caleydo.org
-# Copyright (c) The Caleydo Team. All rights reserved.
-# Licensed under the new BSD license, available at http://caleydo.org/license
-###############################################################################
+#####################################################################
+# Copyright (c) The Caleydo Team, http://caleydo.org
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#####################################################################
 
 
 def phovea(registry):
