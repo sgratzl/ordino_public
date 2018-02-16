@@ -7,7 +7,6 @@
 #####################################################################
 
 
-
 def phovea(registry):
   """
   register extension points
