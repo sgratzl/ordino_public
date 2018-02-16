@@ -1,4 +1,4 @@
-ordino_public [![Phovea][phovea-image]][phovea-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+ordino_public [![Phovea][phovea-image]][phovea-url] [![License: MPL 2.0][mpl-image]][mpl-url] 
 =====================
 
 ![screenshot](media/screenshot.png?raw=true "Screenshot")
@@ -36,9 +36,5 @@ This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform 
 
 [phovea-image]: https://img.shields.io/badge/Phovea-Client%20Plugin-F47D20.svg
 [phovea-url]: https://phovea.caleydo.org
-[npm-image]: https://badge.fury.io/js/ordino_public.svg
-[npm-url]: https://npmjs.org/package/ordino_public
-[travis-image]: https://travis-ci.org/Caleydo/ordino_public.svg?branch=master
-[travis-url]: https://travis-ci.org/Caleydo/ordino_public
-[daviddm-image]: https://david-dm.org/Caleydo/ordino_public/status.svg
-[daviddm-url]: https://david-dm.org/Caleydo/ordino_public
+[mpl-image]: https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg
+[mpl-url]: https://opensource.org/licenses/MPL-2.0
