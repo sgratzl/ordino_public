@@ -283,10 +283,9 @@ function generateWebpack(options) {
         debug: false
       }),
       new webpack.optimize.UglifyJsPlugin());
-  } else {
-    // generate source maps
-    base.devtool = 'source-map';
   }
+  // generate source maps
+  base.devtool = 'source-map';
   return base;
 }
 
