@@ -7,8 +7,7 @@
     "registry": {
       "exclude": [
         "dTiles",
-        "bob",
-        [
+        "bob", [
           "datatype",
           "(table|matrix|stratification|vector|atom)"
         ],
@@ -18,8 +17,13 @@
         ]
       ]
     },
+    "vendor": [
+      "node_modules.*(d3|bootstrap|jquery|select2)",
+      "((node_modules.*popper)|lineupjs|lineupengine|tdp_core)"
+    ],
     "libraryAliases": {
-      "d3": "d3/d3"
+      "d3": "d3/d3",
+      "scrollTo": "jquery.scrollto/jquery.scrollTo.js"
     },
     "libraryExternals": [
       "d3"
