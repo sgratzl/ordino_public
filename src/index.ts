@@ -20,7 +20,8 @@ import './style.scss';
 import {randomId} from 'phovea_core/src';
 
 new Ordino({
-  showCookieDisclaimer: true
+  showCookieDisclaimer: true,
+  showResearchDisclaimer: false
 });
 
 function injectDisclaimer(selector) {
@@ -33,10 +34,6 @@ function injectDisclaimer(selector) {
 }
 
 setTimeout(injectDisclaimer, 100, '.welcomeView .disclaimer .alert');
-
-
-// remove disclaimer alert from about dialog
-document.querySelector('#headerAboutDialog .modal-body .alert').remove();
 
 // insert Ordino Public about disclaimer
 const metaData = document.querySelector(`#headerAboutDialog .modal-body .metaData`);
@@ -78,19 +75,3 @@ function moveMetaDataVersion(mutation: MutationRecord, observer: MutationObserve
 }
 
 createMutationObserver(`#headerAboutDialog .modal-body .metaData`, moveMetaDataVersion);
-
-
-/**
- * Change about dialog title to `Ordino` (instead of `Ordino Public`)
- * @param {MutationRecord} mutation
- * @param {MutationObserver} observer
- */
-function modifyDialogTitle(mutation: MutationRecord, observer: MutationObserver) {
-  observer.disconnect(); // stop listening
-  if (mutation.target.textContent !== 'Ordino') {
-    mutation.target.textContent = 'Ordino';
-  }
-}
-
-createMutationObserver(`#headerAboutDialog .modal-title`, modifyDialogTitle);
-

@@ -1,5 +1,6 @@
 {
   "name": "ordino_public",
+  "displayName": "Ordino",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
   "version": "4.0.1-SNAPSHOT",
@@ -47,7 +48,7 @@
     "build"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop",
+    "ordino": "github:Caleydo/ordino#develop"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.41",
