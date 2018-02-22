@@ -13,36 +13,16 @@ import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordin
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
-import * as loginForm from 'html-loader!./_loginForm.html';
 import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
 
-import * as DockerName from 'docker-names';
 import {randomId} from 'phovea_core/src';
 
 new Ordino({
-  loginForm: String(loginForm),
-  showCookieDisclaimer: true
+  showCookieDisclaimer: true,
+  showResearchDisclaimer: false
 });
-
-{
-  // generate random username
-  const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)randomCredentials\s*=\s*([^;]*).*$)|^.*$/, '$1');
-
-  let username = DockerName.getRandomName();
-  let password = randomId(6);
-  if (cookieValue) {
-    // restore old value
-    [username, password] = cookieValue.split('@');
-  }
-  // store for next time
-  const maxAge = 2 * 7 * 24 * 60 * 60; // 2 weeks in seconds
-  document.cookie = `randomCredentials=${username}@${password};max-age=${maxAge}`;
-
-  (<HTMLInputElement>document.querySelector('input#login_username')).value = username;
-  (<HTMLInputElement>document.querySelector('input#login_password')).value = password;
-}
 
 function injectDisclaimer(selector) {
   const alert = <HTMLElement>document.querySelector(selector);
@@ -54,10 +34,6 @@ function injectDisclaimer(selector) {
 }
 
 setTimeout(injectDisclaimer, 100, '.welcomeView .disclaimer .alert');
-
-
-// remove disclaimer alert from about dialog
-document.querySelector('#headerAboutDialog .modal-body .alert').remove();
 
 // insert Ordino Public about disclaimer
 const metaData = document.querySelector(`#headerAboutDialog .modal-body .metaData`);
@@ -99,19 +75,3 @@ function moveMetaDataVersion(mutation: MutationRecord, observer: MutationObserve
 }
 
 createMutationObserver(`#headerAboutDialog .modal-body .metaData`, moveMetaDataVersion);
-
-
-/**
- * Change about dialog title to `Ordino` (instead of `Ordino Public`)
- * @param {MutationRecord} mutation
- * @param {MutationObserver} observer
- */
-function modifyDialogTitle(mutation: MutationRecord, observer: MutationObserver) {
-  observer.disconnect(); // stop listening
-  if (mutation.target.textContent !== 'Ordino') {
-    mutation.target.textContent = 'Ordino';
-  }
-}
-
-createMutationObserver(`#headerAboutDialog .modal-title`, modifyDialogTitle);
-
