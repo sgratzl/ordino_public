@@ -3,7 +3,7 @@
   "displayName": "Ordino",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "4.0.1-SNAPSHOT",
+  "version": "4.0.1",
   "author": {
     "name": "Samuel Gratzl",
     "email": "samuel_gratzl@gmx.at",
@@ -48,7 +48,7 @@
     "build"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#v4.0.1"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.41",
