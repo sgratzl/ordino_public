@@ -48,7 +48,7 @@
     "build"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#thinkh/flexible-welcome-view"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.41",
