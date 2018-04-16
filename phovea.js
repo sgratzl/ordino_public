@@ -8,6 +8,11 @@
 module.exports = function(registry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./src/extension_impl'); }, {});
   // generator-phovea:begin
+
+
+  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function() { return import('./src/WelcomeView'); }, {
+    priority: 20
+  });
   // generator-phovea:end
 };
 

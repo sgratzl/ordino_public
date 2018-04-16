@@ -7,7 +7,8 @@
     "registry": {
       "exclude": [
         "dTiles",
-        "bob", [
+        "bob",
+        [
           "datatype",
           "(table|matrix|stratification|vector|atom)"
         ],
@@ -43,7 +44,14 @@
       "dockerPackages": []
     },
     "ignores": [],
-    "extensions": [],
+    "extensions": [
+      {
+        "type": "ordinoWelcomeView",
+        "id": "ordinoPublicWelcomeView",
+        "module": "WelcomeView",
+        "extras": {}
+      }
+    ],
     "libraries": [
       "d3"
     ]
