@@ -17,23 +17,10 @@ import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
 
-import {randomId} from 'phovea_core/src';
-
 new Ordino({
   showCookieDisclaimer: true,
   showResearchDisclaimer: false
 });
-
-function injectDisclaimer(selector) {
-  const alert = <HTMLElement>document.querySelector(selector);
-  if (!alert) {
-    setTimeout(injectDisclaimer, 1000, selector); //wait another second
-    return;
-  }
-  alert.innerHTML = `<strong>Disclaimer:</strong> This software is <strong>for research purpose and non-commercial use only</strong>.`;
-}
-
-setTimeout(injectDisclaimer, 100, '.welcomeView .disclaimer .alert');
 
 // insert Ordino Public about disclaimer
 const metaData = document.querySelector(`#headerAboutDialog .modal-body .metaData`);
