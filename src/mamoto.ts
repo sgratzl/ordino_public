@@ -22,6 +22,7 @@ const mamoto = {
   },
   login(user: string) {
     _paq.push(['setUserId', user]);
+    // _paq.push(['requireConsent']); TODO user consent form with opt out
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     // enable correct measuring of the site since it is a single page site
