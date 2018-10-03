@@ -9,56 +9,30 @@
 
 // Determine the order of css files manually
 
-import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
+import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!./index.html';
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
 import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
+import getMetaData from 'phovea_ui/src/metaData';
 
-new Ordino({
+const _ = new Ordino({
   showCookieDisclaimer: true,
-  showResearchDisclaimer: false
+  showResearchDisclaimer: false,
+  showAboutLink
 });
 
-// insert Ordino Public about disclaimer
-const metaData = document.querySelector(`#headerAboutDialog .modal-body .metaData`);
-metaData.insertAdjacentHTML('beforebegin', `<article class="about-disclaimer">${aboutDisclaimer}</article>`);
+function showAboutLink(title: HTMLElement, content: HTMLElement) {
+  title.innerHTML = 'Ordino';
+  // insert Ordino Public about disclaimer
+  const caleydoInfo = content.querySelector(`.caleydoInfo p`);
+  content.innerHTML = `<article class="about-disclaimer">${aboutDisclaimer}</article>`;
+  // move the information about caleydo to the source code section and remove the rest of the info
+  document.getElementById('about-source-code').insertAdjacentElement('beforeend', caleydoInfo);
 
-// move the information about caleydo to the source code section and remove the rest of the info
-const caleydoInfo = document.querySelector(`#headerAboutDialog .modal-body .caleydoInfo`);
-document.getElementById('about-source-code').insertAdjacentElement('beforeend', caleydoInfo.querySelector('p'));
-caleydoInfo.remove();
-
-
-/**
- * Create a MutationObserver that checks for childList modifications
- * @param selector
- * @param {(mutation: MutationRecord, observer: MutationObserver) => void} callback
- */
-function createMutationObserver(selector, callback: (mutation: MutationRecord, observer: MutationObserver) => void) {
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        callback(mutation, observer);
-      }
-    }
+  getMetaData().then((metaData) => {
+    document.getElementById('about-source-code').insertAdjacentHTML('beforeend', `<p class="version"><strong>Version</strong>: ${metaData.version}</p>`);
   });
-  observer.observe(document.querySelector(selector), {childList: true});
 }
-
-
-/**
- * wait until the metadata is loaded, then move the version number remove the rest of the metadata
- * @param {MutationRecord} mutation
- * @param {MutationObserver} observer
- */
-function moveMetaDataVersion(mutation: MutationRecord, observer: MutationObserver) {
-  observer.disconnect(); // stop listening
-  const target = <HTMLElement>mutation.target;
-  document.getElementById('about-source-code').insertAdjacentElement('beforeend', target.querySelector('.version'));
-  target.remove();
-}
-
-createMutationObserver(`#headerAboutDialog .modal-body .metaData`, moveMetaDataVersion);
