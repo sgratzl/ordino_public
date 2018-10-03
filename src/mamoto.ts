@@ -6,36 +6,44 @@ import * as session from 'phovea_core/src/session';
 import {ProvenanceGraph, ActionNode} from 'phovea_core/src/provenance';
 
 
-const cmds: any[][] = (<any>window)._paq = (<any>window)._paq || [];
+// assume already declared
+declare const _paq: any[][];
 
 const mamoto = {
-  trackEvent(category: string, action: string) {
-    cmds.push(['trackEvent', category, action]);
+  trackEvent(category: string, action: string, name?: string, value?: number) {
+    const t: any[] = ['trackEvent', category, action];
+    if (typeof name === 'string') {
+      t.push(name);
+    }
+    if (typeof value === 'number') {
+      t.push(value);
+    }
+    _paq.push(t);
   },
   login(user: string) {
-    cmds.push(['setUserId', user]);
-    cmds.push(['trackPageView']);
-    cmds.push(['enableLinkTracking']);
+    _paq.push(['setUserId', user]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
     // enable correct measuring of the site since it is a single page site
-    cmds.push(['enableHeartBeatTimer']);
+    _paq.push(['enableHeartBeatTimer']);
   },
   logout() {
-    cmds.push(['resetUserId']);
-    cmds.push(['trackPageView']);
+    _paq.push(['resetUserId']);
+    _paq.push(['trackPageView']);
   }
 };
 
 function trackGraph(graph: ProvenanceGraph) {
   graph.on('execute', (_, node: ActionNode) => {
-    mamoto.trackEvent('executeAction', `${node.name}: ${JSON.stringify(node.parameter)}`);
+    mamoto.trackEvent('executeAction', node.name, JSON.stringify(node.parameter));
   });
   graph.on('run_chain', (_, nodes: ActionNode[]) => {
-    mamoto.trackEvent('runChain', nodes.map((d) => `${d.name}: ${JSON.stringify(d.parameter)}`).join('->'));
+    mamoto.trackEvent('runChain', nodes.map((d) => d.name).join('->'), nodes.map((d) => JSON.stringify(d.parameter)).join('->'));
   });
 }
 
 export default function trackApp(ordino: Ordino) {
-  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => mamoto.trackEvent('StartMenu', 'open'));
+  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => mamoto.trackEvent('startMenu', 'open'));
 
   const sessionInit: {view: string, options: any} = <any>session.retrieve(SESSION_KEY_NEW_ENTRY_POINT);
 
@@ -45,9 +53,9 @@ export default function trackApp(ordino: Ordino) {
       if (graph.isEmpty && !sessionInit) {
         mamoto.trackEvent('initSession', 'new');
       } else if (sessionInit) {
-        mamoto.trackEvent('initSession', `init ${sessionInit.view}: ${JSON.stringify(sessionInit.options)}`);
+        mamoto.trackEvent('initSession', `init ${sessionInit.view}`, JSON.stringify(sessionInit.options));
       } else {
-        mamoto.trackEvent('initSession', `continue ${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
+        mamoto.trackEvent('initSession', `continue`, `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
       }
 
       trackGraph(graph);
