@@ -9,7 +9,7 @@
 
 // Determine the order of css files manually
 
-import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!./index.html';
+import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
