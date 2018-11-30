@@ -48,7 +48,7 @@
     "build"
   ],
   "dependencies": {
-    "tdp_core": "github:datavisyn/tdp-core#semver:^5.0.2",
+    "tdp_core": "github:datavisyn/tdp_core#semver:^5.0.2",
     "ordino": "github:Caleydo/ordino#semver:^5.0.0"
   },
   "devDependencies": {
