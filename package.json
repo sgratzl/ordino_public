@@ -3,11 +3,10 @@
   "displayName": "Ordino",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "5.0.0",
+  "version": "5.0.1-SNAPSHOT",
   "author": {
     "name": "Samuel Gratzl",
-    "email": "samuel_gratzl@gmx.at",
-    "url": ""
+    "email": "sam@sgratzl.com"
   },
   "license": "MPL",
   "bugs": {
@@ -48,8 +47,8 @@
     "build"
   ],
   "dependencies": {
-    "tdp_core": "github:datavisyn/tdp_core#semver:^5.0.2",
-    "ordino": "github:Caleydo/ordino#semver:^5.0.0"
+    "tdp_core": "github:datavisyn/tdp_core#develop",
+    "ordino": "github:Caleydo/ordino#develop"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.47",
