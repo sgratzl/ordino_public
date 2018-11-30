@@ -3,7 +3,7 @@
   "displayName": "Ordino",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "4.0.2-SNAPSHOT",
+  "version": "5.0.0",
   "author": {
     "name": "Samuel Gratzl",
     "email": "samuel_gratzl@gmx.at",
@@ -23,7 +23,7 @@
     "predocker": "npm run build",
     "docker": "docker build -t ordino_public -f deploy/Dockerfile .",
     "compile": "tsc",
-    "lint": "tslint -c tslint.json src/**.ts tests/**.ts",
+    "lint": "tslint -c tslint.json -p .",
     "docs": "typedoc --options typedoc.json src/**.ts",
     "prebuild": "node -e \"process.exit(process.env.PHOVEA_SKIP_TESTS === undefined?1:0)\" || npm run test",
     "pretest": "npm run compile",
@@ -48,7 +48,7 @@
     "build"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#semver:^5.0.0"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.41",
