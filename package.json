@@ -108,6 +108,7 @@
     "ts-loader": "4.0.1"
   },
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#develop",
+    "tdp_core": "github:datavisyn/tdp_core#develop"
   }
 }
