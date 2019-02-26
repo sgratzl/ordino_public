@@ -4,9 +4,11 @@ import Ordino from 'ordino/src/Ordino';
 import {SESSION_KEY_NEW_ENTRY_POINT} from 'ordino/src/internal/constants';
 import * as session from 'phovea_core/src/session';
 import {ProvenanceGraph, ActionNode} from 'phovea_core/src/provenance';
+import {getAPIJSON} from 'phovea_core/src/ajax';
 
 
 // assume already declared
+(<any>window)._pag = (<any>window)._paq || [];
 declare const _paq: any[][];
 
 const mamoto = {
@@ -43,6 +45,25 @@ function trackGraph(graph: ProvenanceGraph) {
   });
 }
 
+function loadMamoto(): Promise<boolean> {
+  return getAPIJSON('/tdp/config/mamoto').then((config: {url?: string, site: string}) => {
+    if (!config.url) {
+      return false;
+    }
+    _paq.push(['setTrackerUrl', `${config.url}piwik.php`]);
+    _paq.push(['setSiteId', config.site]);
+
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.defer = true;
+    s.src = `${config.url}piwik.js`;
+    const base = document.getElementsByTagName('script')[0];
+    base.insertAdjacentElement('beforebegin', s);
+    return true;
+  });
+}
+
 export default function trackApp(ordino: Ordino) {
   ordino.on(Ordino.EVENT_OPEN_START_MENU, () => mamoto.trackEvent('startMenu', 'open'));
 
@@ -66,4 +87,6 @@ export default function trackApp(ordino: Ordino) {
   on(GLOBAL_EVENT_USER_LOGGED_OUT, () => {
     mamoto.logout();
   });
+
+  return loadMamoto();
 }
