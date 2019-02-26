@@ -1,5 +1,6 @@
 {
   "mamoto": {
-    "url": null
+    "url": null, // mamoto url with a trailing slash
+    "site": "1"
   }
 }
