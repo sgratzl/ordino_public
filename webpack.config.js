@@ -4,7 +4,16 @@
  * Licensed under the new BSD license, available at http://caleydo.org/license
  **************************************************************************** */
 
-const {libraryAliases, libraryExternals, modules, entries, ignores, type, registry, vendor} = require('./.yo-rc.json')['generator-phovea'];
+const {
+  libraryAliases,
+  libraryExternals,
+  modules,
+  entries,
+  ignores,
+  type,
+  registry,
+  vendor
+} = require('./.yo-rc.json')['generator-phovea'];
 const resolve = require('path').resolve;
 const pkg = require('./package.json');
 const webpack = require('webpack');
@@ -24,7 +33,9 @@ const banner = '/*! ' + (pkg.title || pkg.name) + ' - v' + pkg.version + ' - ' +
   '* Copyright (c) ' + year + ' ' + pkg.author.name + ';' +
   ' Licensed ' + pkg.license + '*/\n';
 
-const preCompilerFlags = {flags: (registry || {}).flags || {}};
+const preCompilerFlags = {
+  flags: (registry || {}).flags || {}
+};
 const includeFeature = registry ? (extension, id) => {
   const exclude = registry.exclude || [];
   const include = registry.include || [];
@@ -35,14 +46,13 @@ const includeFeature = registry ? (extension, id) => {
   return include.every(test) && !exclude.some(test);
 } : () => true;
 
-const tsLoader = [
-  {
-    loader: 'awesome-typescript-loader'
-  }
-];
+const tsLoader = [{
+  loader: 'awesome-typescript-loader'
+}];
 
-const tsLoaderDev = [
-  {loader: 'cache-loader'},
+const tsLoaderDev = [{
+    loader: 'cache-loader'
+  },
   {
     loader: 'thread-loader',
     options: {
@@ -55,24 +65,40 @@ const tsLoaderDev = [
     options: {
       happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack,
       compilerOptions: {
-        target: 'es6'
+        "target": "es6",
+        "jsx": "react",
+        "jsxFactory": "h",
       }
     }
   }
 ];
 
 // list of loaders and their mappings
-const webpackloaders = [
-  {test: /\.scss$/, use: 'style-loader!css-loader!sass-loader'},
-  {test: /\.css$/, use: 'style-loader!css-loader'},
-  {test: /\.tsx?$/, use: tsLoader},
+const webpackloaders = [{
+    test: /\.scss$/,
+    use: 'style-loader!css-loader!sass-loader'
+  },
   {
-    test: /phovea(_registry)?\.js$/, use: [{
+    test: /\.css$/,
+    use: 'style-loader!css-loader'
+  },
+  {
+    test: /\.tsx?$/,
+    use: tsLoader
+  },
+  {
+    test: /phovea(_registry)?\.js$/,
+    use: [{
       loader: 'ifdef-loader',
-      options: Object.assign({include: includeFeature}, preCompilerFlags)
+      options: Object.assign({
+        include: includeFeature
+      }, preCompilerFlags)
     }]
   },
-  {test: /\.json$/, use: 'json-loader'},
+  {
+    test: /\.json$/,
+    use: 'json-loader'
+  },
   {
     test: /\.(png|jpg)$/,
     loader: 'url-loader',
@@ -96,7 +122,10 @@ const webpackloaders = [
       mimetype: 'image/svg+xml'
     }
   },
-  {test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader'}
+  {
+    test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+    loader: 'file-loader'
+  }
 ];
 
 /**
@@ -241,7 +270,10 @@ function generateWebpack(options) {
   } else if (options.isDev) {
     // switch to def settings
     base.module.loaders.find((d) => d.use === tsLoader).use = tsLoaderDev;
-    base.plugins.push(new ForkTsCheckerWebpackPlugin({checkSyntacticErrors: true, tsconfig: './tsconfig_dev.json'}));
+    base.plugins.push(new ForkTsCheckerWebpackPlugin({
+      checkSyntacticErrors: true,
+      tsconfig: './tsconfig_dev.json'
+    }));
   }
 
   if (options.library) {
@@ -267,7 +299,10 @@ function generateWebpack(options) {
 
     // ignore extra modules
     (options.ignore || []).forEach(function (d) {
-      base.module.loaders.push({test: new RegExp(d), loader: 'null-loader'}); // use null loader
+      base.module.loaders.push({
+        test: new RegExp(d),
+        loader: 'null-loader'
+      }); // use null loader
     });
     // ingore phovea module registry calls
     (options.modules || []).forEach(function (m) {
@@ -326,7 +361,7 @@ function generateWebpack(options) {
       new webpack.optimize.UglifyJsPlugin());
   } else {
     // generate source maps
-    base.devtool = 'inline-source-map';
+    base.devtool = 'source-map';
   }
   return base;
 }

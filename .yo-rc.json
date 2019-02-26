@@ -1,6 +1,6 @@
 {
   "generator-phovea": {
-    "type": "app",
+    "type": "app-slib",
     "modules": [
       "phovea_server"
     ],
