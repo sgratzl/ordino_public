@@ -48,7 +48,6 @@ jobs:
           command: |
             . ~/venv/bin/activate
             npm run build
-
 workflows:
   version: 2
   build-branch:

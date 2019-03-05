@@ -4,7 +4,8 @@ env:
 - TOXENV=py27
 - TOXENV=py34
 node_js:
-- 6
+- 8
+
 addons:
   firefox: 49.0.1
 before_install:
