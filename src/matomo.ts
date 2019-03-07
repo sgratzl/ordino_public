@@ -11,6 +11,24 @@ import {getAPIJSON} from 'phovea_core/src/ajax';
 (<any>window)._pag = (<any>window)._paq || [];
 const _paq: any[][] = (<any>window)._pag;
 
+interface IPhoveaMatomoConfig {
+  /**
+   * URL to Matomo backend with with a trailing slash
+   * Use `null` to disables the tracking
+   */
+  url?: string;
+
+  /**
+   * ID of the Matomo site (generated when creating a page)
+   */
+  site: string;
+
+  /**
+   * Enable or disable tracking of provenance graph actions
+   */
+  trackGraphActions: boolean;
+}
+
 const matomo = {
   trackEvent(category: string, action: string, name?: string, value?: number) {
     const t: any[] = ['trackEvent', category, action];
@@ -45,26 +63,26 @@ function trackGraph(graph: ProvenanceGraph) {
   });
 }
 
-function loadMamoto(): Promise<boolean> {
-  return getAPIJSON('/tdp/config/matomo').then((config: {url?: string, site: string}) => {
-    if (!config.url) {
-      return false;
-    }
-    _paq.push(['setTrackerUrl', `${config.url}matomo.php`]);
-    _paq.push(['setSiteId', config.site]);
+function initMamoto(config: IPhoveaMatomoConfig): boolean {
+  if (!config.url) {
+    return false;
+  }
+  _paq.push(['setTrackerUrl', `${config.url}matomo.php`]);
+  _paq.push(['setSiteId', config.site]);
 
-    const s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.defer = true;
-    s.src = `${config.url}matomo.js`;
-    const base = document.getElementsByTagName('script')[0];
-    base.insertAdjacentElement('beforebegin', s);
-    return true;
-  });
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.defer = true;
+  s.src = `${config.url}matomo.js`;
+  const base = document.getElementsByTagName('script')[0];
+  base.insertAdjacentElement('beforebegin', s);
+  return true;
 }
 
-export default function trackApp(ordino: Ordino) {
+export default function trackApp(ordino: Ordino): Promise<boolean> {
+  const matomoConfig = getAPIJSON('/tdp/config/matomo');
+
   ordino.on(Ordino.EVENT_OPEN_START_MENU, () => matomo.trackEvent('startMenu', 'open'));
 
   const sessionInit: {view: string, options: any} = <any>session.retrieve(SESSION_KEY_NEW_ENTRY_POINT);
@@ -80,7 +98,11 @@ export default function trackApp(ordino: Ordino) {
         matomo.trackEvent('initSession', `continue`, `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
       }
 
-      trackGraph(graph);
+      matomoConfig.then((config: IPhoveaMatomoConfig) => {
+        if(config.trackGraphActions === true) {
+          trackGraph(graph);
+        }
+      });
     });
   });
 
@@ -88,5 +110,5 @@ export default function trackApp(ordino: Ordino) {
     matomo.logout();
   });
 
-  return loadMamoto();
+  return matomoConfig.then((config: IPhoveaMatomoConfig) => initMamoto(config));
 }

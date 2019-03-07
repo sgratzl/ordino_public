@@ -1,6 +1,7 @@
 {
   "matomo": {
     "url": null, // matomo url with a trailing slash
-    "site": "1"
+    "site": "1",
+    "trackGraphActions": false
   }
 }
