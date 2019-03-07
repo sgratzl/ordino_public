@@ -50,14 +50,14 @@ function loadMamoto(): Promise<boolean> {
     if (!config.url) {
       return false;
     }
-    _paq.push(['setTrackerUrl', `${config.url}piwik.php`]);
+    _paq.push(['setTrackerUrl', `${config.url}matomo.php`]);
     _paq.push(['setSiteId', config.site]);
 
     const s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
     s.defer = true;
-    s.src = `${config.url}piwik.js`;
+    s.src = `${config.url}matomo.js`;
     const base = document.getElementsByTagName('script')[0];
     base.insertAdjacentElement('beforebegin', s);
     return true;
