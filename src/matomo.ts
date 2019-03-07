@@ -9,7 +9,7 @@ import {getAPIJSON} from 'phovea_core/src/ajax';
 
 // assume already declared
 (<any>window)._pag = (<any>window)._paq || [];
-declare const _paq: any[][];
+const _paq: any[][] = (<any>window)._pag;
 
 const matomo = {
   trackEvent(category: string, action: string, name?: string, value?: number) {
