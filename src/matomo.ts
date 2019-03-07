@@ -7,9 +7,9 @@ import {ProvenanceGraph, ActionNode} from 'phovea_core/src/provenance';
 import {getAPIJSON} from 'phovea_core/src/ajax';
 
 
-// assume already declared
-(<any>window)._pag = (<any>window)._paq || [];
-const _paq: any[][] = (<any>window)._pag;
+// assume `_pag` is already declared
+(<any>window)._paq = (<any>window)._paq || [];
+declare const _paq: any[][];
 
 interface IPhoveaMatomoConfig {
   /**
