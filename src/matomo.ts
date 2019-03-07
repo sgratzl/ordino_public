@@ -11,7 +11,7 @@ import {getAPIJSON} from 'phovea_core/src/ajax';
 (<any>window)._pag = (<any>window)._paq || [];
 declare const _paq: any[][];
 
-const mamoto = {
+const matomo = {
   trackEvent(category: string, action: string, name?: string, value?: number) {
     const t: any[] = ['trackEvent', category, action];
     if (typeof name === 'string') {
@@ -38,15 +38,15 @@ const mamoto = {
 
 function trackGraph(graph: ProvenanceGraph) {
   graph.on('execute', (_, node: ActionNode) => {
-    mamoto.trackEvent('executeAction', node.name, JSON.stringify(node.parameter));
+    matomo.trackEvent('executeAction', node.name, JSON.stringify(node.parameter));
   });
   graph.on('run_chain', (_, nodes: ActionNode[]) => {
-    mamoto.trackEvent('runChain', nodes.map((d) => d.name).join('->'), nodes.map((d) => JSON.stringify(d.parameter)).join('->'));
+    matomo.trackEvent('runChain', nodes.map((d) => d.name).join('->'), nodes.map((d) => JSON.stringify(d.parameter)).join('->'));
   });
 }
 
 function loadMamoto(): Promise<boolean> {
-  return getAPIJSON('/tdp/config/mamoto').then((config: {url?: string, site: string}) => {
+  return getAPIJSON('/tdp/config/matomo').then((config: {url?: string, site: string}) => {
     if (!config.url) {
       return false;
     }
@@ -65,19 +65,19 @@ function loadMamoto(): Promise<boolean> {
 }
 
 export default function trackApp(ordino: Ordino) {
-  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => mamoto.trackEvent('startMenu', 'open'));
+  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => matomo.trackEvent('startMenu', 'open'));
 
   const sessionInit: {view: string, options: any} = <any>session.retrieve(SESSION_KEY_NEW_ENTRY_POINT);
 
   on(GLOBAL_EVENT_USER_LOGGED_IN, (_, user: IUser) => {
-    mamoto.login(user.name);
+    matomo.login(user.name);
     ordino.graph.then((graph) => {
       if (graph.isEmpty && !sessionInit) {
-        mamoto.trackEvent('initSession', 'new');
+        matomo.trackEvent('initSession', 'new');
       } else if (sessionInit) {
-        mamoto.trackEvent('initSession', `init ${sessionInit.view}`, JSON.stringify(sessionInit.options));
+        matomo.trackEvent('initSession', `init ${sessionInit.view}`, JSON.stringify(sessionInit.options));
       } else {
-        mamoto.trackEvent('initSession', `continue`, `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
+        matomo.trackEvent('initSession', `continue`, `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
       }
 
       trackGraph(graph);
@@ -85,7 +85,7 @@ export default function trackApp(ordino: Ordino) {
   });
 
   on(GLOBAL_EVENT_USER_LOGGED_OUT, () => {
-    mamoto.logout();
+    matomo.logout();
   });
 
   return loadMamoto();

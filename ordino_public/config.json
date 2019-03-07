@@ -1,6 +1,6 @@
 {
-  "mamoto": {
-    "url": null, // mamoto url with a trailing slash
+  "matomo": {
+    "url": null, // matomo url with a trailing slash
     "site": "1"
   }
 }

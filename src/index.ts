@@ -17,7 +17,7 @@ import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
 import getMetaData from 'phovea_ui/src/metaData';
-import trackApp from './mamoto';
+import trackApp from './matomo';
 
 const ordino = new Ordino({
   showCookieDisclaimer: true,
