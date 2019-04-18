@@ -5,7 +5,49 @@ import {SESSION_KEY_NEW_ENTRY_POINT} from 'ordino/src/internal/constants';
 import * as session from 'phovea_core/src/session';
 import {ProvenanceGraph, ActionNode} from 'phovea_core/src/provenance';
 import {getAPIJSON} from 'phovea_core/src/ajax';
+import parseRange from 'phovea_core/src/range/parser';
 
+/**
+ * Trackable Matomo event
+ */
+interface IMatomoEvent {
+  category: string;
+  action: string;
+  name?: (node: ActionNode) => string | string;
+  value?: (node: ActionNode) => number | number;
+}
+
+/**
+ * Map of trackable actions
+ * key = phovea extension id
+ */
+const trackableActions = new Map<string, IMatomoEvent>();
+
+// custom event
+trackableActions.set('runChain', {category:'provenance', action: 'runChain'});
+
+// from tdp_core\src\internal\cmds.ts
+trackableActions.set('tdpInitSession', {category:'session', action: 'init'});
+trackableActions.set('tdpSetParameter', {category:'view', action: 'setParameter'});
+
+// from tdp_core\src\lineup\internal\scorecmds.ts
+trackableActions.set('tdpAddScore', {category:'score', action: 'add'});
+trackableActions.set('tdpRemoveScore', {category:'score', action: 'remove'});
+
+// from ordino\src\internal\cmds.ts
+trackableActions.set('targidCreateView', {category:'view', action: 'create'});
+trackableActions.set('targidRemoveView', {category:'view', action: 'remove'});
+trackableActions.set('targidReplaceView', {category:'view', action: 'replace'});
+trackableActions.set('targidSetSelection', {category:'view', action: 'setSelection', value: (node) => parseRange(node.parameter.range).dim(0).length});
+
+// from tdp_core\src\lineup\internal\cmds.ts
+trackableActions.set('lineupSetRankingSortCriteria', {category:'lineup', action: 'setRankingSortCriteria'});
+trackableActions.set('lineupSetSortCriteria', {category:'lineup', action: 'setRankingSortCriteria'});
+trackableActions.set('lineupSetGroupCriteria', {category:'lineup', action: 'setGroupCriteria'});
+trackableActions.set('lineupAddRanking', {category:'lineup', action: 'addRanking'});
+trackableActions.set('lineupSetColumn', {category:'lineup', action: 'setColumn'});
+trackableActions.set('lineupAddColumn', {category:'lineup', action: 'addColumn'});
+trackableActions.set('lineupMoveColumn', {category:'lineup', action: 'moveColumn'});
 
 // assume `_pag` is already declared
 (<any>window)._paq = (<any>window)._paq || [];
@@ -22,11 +64,6 @@ interface IPhoveaMatomoConfig {
    * ID of the Matomo site (generated when creating a page)
    */
   site: string;
-
-  /**
-   * Enable or disable tracking of provenance graph actions
-   */
-  trackGraphActions: boolean;
 }
 
 const matomo = {
@@ -56,10 +93,20 @@ const matomo = {
 
 function trackGraph(graph: ProvenanceGraph) {
   graph.on('execute', (_, node: ActionNode) => {
-    matomo.trackEvent('executeAction', node.name, JSON.stringify(node.parameter));
+    if(!Array.from(trackableActions.keys()).includes(node.getAttr('f_id'))) {
+      return;
+    }
+    const event = trackableActions.get(node.getAttr('f_id'));
+    matomo.trackEvent(
+      event.category,
+      event.action,
+      (typeof event.name === 'function') ? event.name(node) : node.name,
+      (typeof event.value === 'function') ? event.value(node) : null
+    );
   });
   graph.on('run_chain', (_, nodes: ActionNode[]) => {
-    matomo.trackEvent('runChain', nodes.map((d) => d.name).join('->'), nodes.map((d) => JSON.stringify(d.parameter)).join('->'));
+    const event = trackableActions.get('runChain');
+    matomo.trackEvent(event.category, event.action, 'Run actions in chain', nodes.length);
   });
 }
 
@@ -83,7 +130,7 @@ function initMamoto(config: IPhoveaMatomoConfig): boolean {
 export default function trackApp(ordino: Ordino): Promise<boolean> {
   const matomoConfig = getAPIJSON('/tdp/config/matomo');
 
-  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => matomo.trackEvent('startMenu', 'open'));
+  ordino.on(Ordino.EVENT_OPEN_START_MENU, () => matomo.trackEvent('startMenu', 'open', 'Open start menu'));
 
   const sessionInit: {view: string, options: any} = <any>session.retrieve(SESSION_KEY_NEW_ENTRY_POINT);
 
@@ -91,17 +138,15 @@ export default function trackApp(ordino: Ordino): Promise<boolean> {
     matomo.login(user.name);
     ordino.graph.then((graph) => {
       if (graph.isEmpty && !sessionInit) {
-        matomo.trackEvent('initSession', 'new');
+        matomo.trackEvent('session', 'new', 'New Session');
       } else if (sessionInit) {
-        matomo.trackEvent('initSession', `init ${sessionInit.view}`, JSON.stringify(sessionInit.options));
+        // matomo.trackEvent('session', 'init', `Initialize ${sessionInit.view}`);//, JSON.stringify(sessionInit.options));
       } else {
-        matomo.trackEvent('initSession', `continue`, `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
+        matomo.trackEvent('session', 'continue', `${graph.desc.id} at state ${ordino.clueManager.storedState || Math.max(...graph.states.map((s) => s.id))}`);
       }
 
       matomoConfig.then((config: IPhoveaMatomoConfig) => {
-        if(config.trackGraphActions === true) {
-          trackGraph(graph);
-        }
+        trackGraph(graph);
       });
     });
   });
