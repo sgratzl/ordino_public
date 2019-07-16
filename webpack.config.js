@@ -65,9 +65,9 @@ const tsLoaderDev = [{
     options: {
       happyPackMode: true, // IMPORTANT! use happyPackMode mode to speed-up compilation and reduce errors reported to webpack,
       compilerOptions: {
-        "target": "es6",
-        "jsx": "react",
-        "jsxFactory": "h",
+        target: 'es6',
+        jsx: 'react',
+        jsxFactory: 'h',
       }
     }
   }
