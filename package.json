@@ -48,8 +48,8 @@
     "build"
   ],
   "dependencies": {
-    "tdp_core": "github:datavisyn/tdp_core#develop",
-    "ordino": "github:Caleydo/ordino#develop"
+    "tdp_core": "github:datavisyn/tdp_core#semver:^5.2.0",
+    "ordino": "github:Caleydo/ordino#semver:^5.1.0"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.47",
