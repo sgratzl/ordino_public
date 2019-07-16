@@ -17,15 +17,12 @@ import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
 import getMetaData from 'phovea_ui/src/metaData';
-import trackApp from './matomo';
 
-const ordino = new Ordino({
+const _ = new Ordino({
   showCookieDisclaimer: true,
   showResearchDisclaimer: false,
   showAboutLink
 });
-
-trackApp(ordino);
 
 function showAboutLink(title: HTMLElement, content: HTMLElement) {
   title.innerHTML = 'Ordino';
