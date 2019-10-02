@@ -169,12 +169,12 @@ let metaDataFile;
 if(isWorkspaceContext) {
   const workspacePkg = require('../package.json'); // workspace or product
   workspacePkg.version = workspacePkg.version.replace('SNAPSHOT', buildId);
-  console.log(`generate phoveaMetaData.json from '${workspacePkg.name}' package.json`);
+  console.log(`generate phoveaMetaData.json from '${workspacePkg.name}' package.json with version ${workspacePkg.version}`);
   metaDataFile = workspacePkg;
   // Note: The screenshot in the phoveaMetaData.json is still taken from `./media/screenshot.png` of the current plugin/application,
   // because it is resolved in `buildInfo.metaDataTmpFile()` from the current directory and independent of the provided package.json
 } else {
-  console.log(`generate phoveaMetaData.json from '${pkg.name}' package.json`);
+  console.log(`generate phoveaMetaData.json from '${pkg.name}' package.json with version ${pkg.version}`);
   metaDataFile = pkg;
 }
 
