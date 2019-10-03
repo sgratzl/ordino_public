@@ -164,7 +164,21 @@ function testPhoveaModules(modules) {
 // use workspace registry file if available
 const isWorkspaceContext = fs.existsSync(resolve(__dirname, '..', 'phovea_registry.js'));
 const registryFile = isWorkspaceContext ? '../phovea_registry.js' : './phovea_registry.js';
-const actMetaData = `file-loader?name=phoveaMetaData.json!${buildInfo.metaDataTmpFile(pkg)}`;
+
+let metaDataFile;
+if(isWorkspaceContext) {
+  const workspacePkg = require('../package.json'); // workspace or product
+  workspacePkg.version = workspacePkg.version.replace('SNAPSHOT', buildId);
+  console.log(`generate phoveaMetaData.json from '${workspacePkg.name}' package.json with version ${workspacePkg.version}`);
+  metaDataFile = workspacePkg;
+  // Note: The screenshot in the phoveaMetaData.json is still taken from `./media/screenshot.png` of the current plugin/application,
+  // because it is resolved in `buildInfo.metaDataTmpFile()` from the current directory and independent of the provided package.json
+} else {
+  console.log(`generate phoveaMetaData.json from '${pkg.name}' package.json with version ${pkg.version}`);
+  metaDataFile = pkg;
+}
+
+const actMetaData = `file-loader?name=phoveaMetaData.json!${buildInfo.metaDataTmpFile(metaDataFile)}`;
 const actBuildInfoFile = `file-loader?name=buildInfo.json!${buildInfo.tmpFile()}`;
 
 /**
