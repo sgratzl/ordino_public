@@ -6,10 +6,9 @@
   "author": {
     "name": "datavisyn",
     "email": "contact@datavisyn.io",
-    "url": "http://datavisyn.io"
+    "url": "http://www.datavisyn.io"
   },
   "license": "MPL",
-  "homepage": "https://github.com/Caleydo/ordino_public",
   "bugs": {
     "url": "https://github.com/Caleydo/ordino_public/issues"
   },
