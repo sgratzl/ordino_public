@@ -2,12 +2,11 @@
   "name": "ordino_public",
   "displayName": "Ordino",
   "description": "",
-  "homepage": "https://github.com/Caleydo/ordino_public",
   "version": "5.4.1-SNAPSHOT",
   "author": {
     "name": "datavisyn",
     "email": "contact@datavisyn.io",
-    "url": "http://datavisyn.io"
+    "url": "http://www.datavisyn.io"
   },
   "license": "MPL",
   "bugs": {
