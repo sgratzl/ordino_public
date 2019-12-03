@@ -1,9 +1,7 @@
 {
   "generator-phovea": {
     "type": "app",
-    "modules": [
-      "phovea_server"
-    ],
+    "modules": [],
     "registry": {
       "exclude": [
         "dTiles",
@@ -58,6 +56,12 @@
     ],
     "libraries": [
       "d3"
-    ]
+    ],
+    "promptValues": {
+      "authorName": "datavisyn",
+      "authorEmail": "contact@datavisyn.io",
+      "authorUrl": "http://www.datavisyn.io",
+      "githubAccount": "Caleydo"
+    }
   }
 }
