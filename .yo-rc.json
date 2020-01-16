@@ -34,7 +34,7 @@
       "d3"
     ],
     "name": "ordino_public",
-    "author": "Samuel Gratzl",
+    "author": "datavisyn",
     "today": "Tue, 06 Jun 2017 07:34:54 GMT",
     "githubAccount": "Caleydo",
     "sextensions": [],
@@ -58,6 +58,12 @@
     ],
     "libraries": [
       "d3"
-    ]
+    ],
+    "promptValues": {
+      "authorName": "datavisyn",
+      "authorEmail": "contact@datavisyn.io",
+      "authorUrl": "http://www.datavisyn.io",
+      "githubAccount": "Caleydo"
+    }
   }
 }
