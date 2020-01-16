@@ -1,7 +1,9 @@
 {
   "generator-phovea": {
     "type": "app",
-    "modules": [],
+    "modules": [
+      "phovea_server"
+    ],
     "registry": {
       "exclude": [
         "dTiles",
