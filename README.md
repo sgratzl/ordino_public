@@ -38,3 +38,5 @@ This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform 
 [phovea-url]: https://phovea.caleydo.org
 [mpl-image]: https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg
 [mpl-url]: https://opensource.org/licenses/MPL-2.0
+[circleci-image]: https://circleci.com/gh/Caleydo/ordino_public.svg?style=shield
+[circleci-url]: https://circleci.com/gh/Caleydo/ordino_public
