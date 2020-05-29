@@ -1,0 +1,30 @@
+/********************************************************************
+ * Copyright (c) The Caleydo Team, http://caleydo.org
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ ********************************************************************/
+
+
+@import './styles/welcome_view';
+
+
+/**
+ * disable mouse species
+ */
+.startMenu .speciesSelector {
+  .species-group[data-species="mouse"] {
+    cursor: not-allowed;
+
+    label[for^="speciesSelector"] {
+      pointer-events: none;
+    }
+  }
+}
+
+#headerAboutDialog .modal-dialog {
+  width: 50vw;
+  min-width: 600px;
+  max-width: 900px;
+}
