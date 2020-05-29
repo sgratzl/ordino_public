@@ -16,7 +16,7 @@ import 'ordino/src/style.scss';
 import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
 import './style.scss';
-import getMetaData from 'phovea_ui/src/metaData';
+import {AppMetaDataUtils} from 'phovea_ui';
 
 const _ = new Ordino({
   showCookieDisclaimer: true,
@@ -32,7 +32,7 @@ function showAboutLink(title: HTMLElement, content: HTMLElement) {
   // move the information about caleydo to the source code section and remove the rest of the info
   document.getElementById('about-source-code').insertAdjacentElement('beforeend', caleydoInfo);
 
-  getMetaData().then((metaData) => {
+  AppMetaDataUtils.getMetaData().then((metaData) => {
     document.getElementById('about-source-code').insertAdjacentHTML('beforeend', `<p class="version"><strong>Version</strong>: ${metaData.version}</p>`);
   });
 }

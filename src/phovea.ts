@@ -1,17 +1,15 @@
-import {IRegistry, asResource} from 'phovea_core/src/plugin';
-import parseRange from 'phovea_core/src/range/parser';
-import ActionNode from 'phovea_core/src/provenance/ActionNode';
-import {ILocaleEPDesc, EP_PHOVEA_CORE_LOCALE} from 'phovea_core/src/extensions';
+import {IRegistry, PluginRegistry} from 'phovea_core';
+import {ILocaleEPDesc, EP_PHOVEA_CORE_LOCALE} from 'phovea_core';
 
 export default function (registry: IRegistry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./extension_impl'); }, {});
   // generator-phovea:begin
-  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () {return import('./WelcomeView.ts');}, {
+  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () {return import('./WelcomeView');}, {
     priority: 20
   });
 
   registry.push(EP_PHOVEA_CORE_LOCALE, 'ordinoPublicTdpLocaleEN', function () {
-    return import('./assets/locales/en/tdp.json').then(asResource);
+    return import('./assets/locales/en/tdp.json').then(PluginRegistry.getInstance().asResource);
   }, <ILocaleEPDesc>{
     ns: 'tdp',
   });
