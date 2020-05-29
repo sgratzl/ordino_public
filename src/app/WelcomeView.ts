@@ -1,8 +1,8 @@
 import {IWelcomeView} from 'ordino/src/WelcomeView';
 
-import WelcomeViewTemplate from 'html-loader!./welcome_view.html';
+import WelcomeViewTemplate from 'html-loader!./templates/welcome_view.html';
 
-export default class WelcomeView implements IWelcomeView {
+export class WelcomeView implements IWelcomeView {
 
   constructor(private parent: HTMLElement) {
     //

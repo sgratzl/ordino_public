@@ -4,7 +4,7 @@ import {ILocaleEPDesc, EP_PHOVEA_CORE_LOCALE} from 'phovea_core';
 export default function (registry: IRegistry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./extension_impl'); }, {});
   // generator-phovea:begin
-  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () {return import('./WelcomeView');}, {
+  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () {return import('./app/WelcomeView');}, {
     priority: 20
   });
 

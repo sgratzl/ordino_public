@@ -13,9 +13,9 @@ import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordin
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
 import 'ordino/src/style.scss';
-import * as aboutDisclaimer from 'html-loader!./_aboutDisclaimer.html';
+import * as aboutDisclaimer from 'html-loader!./templates/_aboutDisclaimer.html';
 import Ordino from 'ordino/src/Ordino';
-import './style.scss';
+import './scss/style.scss';
 import {AppMetaDataUtils} from 'phovea_ui';
 
 const _ = new Ordino({
