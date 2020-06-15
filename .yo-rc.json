@@ -41,7 +41,7 @@
     "app": "ordino_public",
     "clientOnly": false,
     "entries": {
-      "app": "./src/index.ts"
+      "app": "./ordino_public/dist/initialize.ts"
     },
     "unknown": {
       "requirements": [],

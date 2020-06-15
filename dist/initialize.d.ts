@@ -5,26 +5,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  ********************************************************************/
-
-
-@import './styles/welcome_view';
-
-
-/**
- * disable mouse species
- */
-.startMenu .speciesSelector {
-  .species-group[data-species="mouse"] {
-    cursor: not-allowed;
-
-    label[for^="speciesSelector"] {
-      pointer-events: none;
-    }
-  }
-}
-
-#headerAboutDialog .modal-dialog {
-  width: 50vw;
-  min-width: 600px;
-  max-width: 900px;
-}
+import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
+import 'file-loader?name=404.html!ordino/src/404.html';
+import 'file-loader?name=robots.txt!ordino/src/robots.txt';
+import 'ordino/scss/main.scss';
+import './scss/style.scss';

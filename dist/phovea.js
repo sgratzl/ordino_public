@@ -3,7 +3,7 @@ import { EP_PHOVEA_CORE_LOCALE } from 'phovea_core';
 export default function (registry) {
     //registry.push('extension-type', 'extension-id', function() { return import('./extension_impl'); }, {});
     // generator-phovea:begin
-    registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () { return import('./app/WelcomeView'); }, {
+    registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () { return import('./app/WelcomeView').then((w) => w.WelcomeView); }, {
         priority: 20
     });
     registry.push(EP_PHOVEA_CORE_LOCALE, 'ordinoPublicTdpLocaleEN', function () {

@@ -9,9 +9,9 @@
 import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
 import 'file-loader?name=404.html!ordino/src/404.html';
 import 'file-loader?name=robots.txt!ordino/src/robots.txt';
-import 'ordino/src/style.scss';
+import 'ordino/scss/main.scss';
 import * as aboutDisclaimer from 'html-loader!./templates/_aboutDisclaimer.html';
-import Ordino from 'ordino/src/Ordino';
+import { Ordino } from 'ordino';
 import './scss/style.scss';
 import { AppMetaDataUtils } from 'phovea_ui';
 const _ = new Ordino({
@@ -30,4 +30,4 @@ function showAboutLink(title, content) {
         document.getElementById('about-source-code').insertAdjacentHTML('beforeend', `<p class="version"><strong>Version</strong>: ${metaData.version}</p>`);
     });
 }
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=initialize.js.map

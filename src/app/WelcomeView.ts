@@ -1,4 +1,4 @@
-import {IWelcomeView} from 'ordino/src/WelcomeView';
+import {IWelcomeView} from 'ordino';
 
 import WelcomeViewTemplate from 'html-loader!./templates/welcome_view.html';
 
