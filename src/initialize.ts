@@ -9,11 +9,11 @@
 
 // Determine the order of css files manually
 
-import 'file-loader?name=index.html!extract-loader!html-loader?interpolate!ordino/src/index.html';
-import 'file-loader?name=404.html!ordino/src/404.html';
-import 'file-loader?name=robots.txt!ordino/src/robots.txt';
+import 'ordino/src/index.html';
+import 'ordino/src/404.html';
+import 'ordino/src/robots.txt';
 import 'ordino/scss/main.scss';
-import * as aboutDisclaimer from 'html-loader!./templates/_aboutDisclaimer.html';
+import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
 import {Ordino} from 'ordino';
 import './scss/style.scss';
 import {AppMetaDataUtils} from 'phovea_ui';
