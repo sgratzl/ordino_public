@@ -26,19 +26,15 @@
       "others": "phovea_.*|tdp_.*",
       "phovea": "phovea_.*",
       "tdp": "tdp_.*",
-      "dv": "ordino*|dTiles*|festival*"
+      "dv": "ordino*|tourdino*"
     },
     "filesToLoad": {
-      "file-loader": "404|search|index|robots"
+      "file-loader": "404|robots"
     },
     "libraryAliases": {
       "d3": "d3/d3.js"
     },
-    "libraryExternals": [
-      "d3",
-      "scrollTo",
-      "jquery"
-    ],
+    "libraryExternals": [],
     "name": "ordino_public",
     "author": "datavisyn",
     "today": "Tue, 06 Jun 2017 07:34:54 GMT",
