@@ -26,25 +26,13 @@
       "others": "phovea_.*|tdp_.*",
       "phovea": "phovea_.*",
       "tdp": "tdp_.*",
-      "dv": "ordino*|dTiles*|jamborees|snpology|patentbay|triage|festival*"
+      "dv": "ordino*|dTiles*|festival*"
     },
     "filesToLoad": {
       "file-loader": "404|search|index|robots"
     },
     "libraryAliases": {
-      "d3": "d3/d3",
-      "scrollTo": "jquery.scrollto/jquery.scrollTo.js",
-      "jquery": "jquery/dist/jquery",
-      "ordino": "ordino",
-      "ordino_public": "ordino_public",
-      "phovea_core": "phovea_core",
-      "tdp_core": "tdp_core",
-      "tdp_gene": "tdp_gene",
-      "tdp_matomo": "tdp_matomo",
-      "tdp_publicdb": "tdp_publicdb",
-      "tdp_uploaded_data": "tdp_uploaded_data",
-      "phovea_security_flask": "phovea_security_flask",
-      "phovea_clue":"phovea_clue"
+      "d3": "d3/d3.js"
     },
     "libraryExternals": [
       "d3",
@@ -59,7 +47,12 @@
     "app": "ordino_public",
     "clientOnly": false,
     "entries": {
-      "app": "./ordino_public/dist/initialize.js"
+      "app": {
+        "js": "./ordino_public/dist/initialize.js",
+        "template": "./ordino_public/dist/index.template.ejs",
+        "html": "index.html",
+        "chunkName": "app"
+      }
     },
     "unknown": {
       "requirements": [],
