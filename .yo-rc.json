@@ -23,10 +23,10 @@
       ]
     },
     "vendors": {
-      "others": "phovea_.*|tdp_.*",
-      "phovea": "phovea_.*",
-      "tdp": "tdp_.*",
-      "dv": "ordino*|tourdino*"
+      "others": "phovea.*|tdp_.*|tdp-.*|datavisyn.*",
+      "phovea": "phovea.*",
+      "tdp": "tdp_.|tdp-.*",
+      "dv": "datavisyn.*"
     },
     "filesToLoad": {
       "file-loader": "404|robots"
@@ -44,8 +44,8 @@
     "clientOnly": false,
     "entries": {
       "app": {
-        "js": "./ordino_public/dist/initialize.js",
-        "template": "./ordino_public/dist/index.template.ejs",
+        "js": "dist/initialize.js",
+        "template": "dist/index.template.ejs",
         "html": "index.html",
         "chunkName": "app"
       }
