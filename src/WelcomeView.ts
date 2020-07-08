@@ -27,7 +27,7 @@ export default class WelcomeView implements IWelcomeView {
       return;
     }
 
-    const textNode = parentNode.childNodes[1];
+    const sessionsTable = parentNode.childNodes[1];
     warningMessage = document.createElement('div');
     warningMessage.className = 'alert alert-warning';
     warningMessage.setAttribute('role', 'alert');
@@ -36,6 +36,6 @@ export default class WelcomeView implements IWelcomeView {
       <strong>Please note:</strong> We have upgraded Ordino to the hg38 genome build, which might change the result of some old sessions.
       If you experience some issues please open previous sessions in the <a href="https://ordino-hg19.caleydoapp.org">Ordino with hg19</a>.`;
 
-    parentNode.insertBefore(warningMessage, textNode);
+    parentNode.insertBefore(warningMessage, sessionsTable);
   }
 }
