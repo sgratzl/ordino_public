@@ -13,7 +13,7 @@ import 'ordino/dist/index.html';
 import 'ordino/dist/404.html';
 import 'ordino/dist/robots.txt';
 import 'ordino/dist/scss/main.scss';
-import * as aboutDisclaimer from './_aboutDisclaimer.html';
+import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
 import {Ordino} from 'ordino';
 import './scss/main.scss';
 import {AppMetaDataUtils} from 'phovea_ui';

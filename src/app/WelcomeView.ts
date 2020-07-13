@@ -1,6 +1,6 @@
 import {IWelcomeView} from 'ordino';
 
-import WelcomeViewTemplate from '../welcome_view.html';
+import WelcomeViewTemplate from '../templates/welcome_view.html';
 
 export class WelcomeView implements IWelcomeView {
 
