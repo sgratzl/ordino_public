@@ -5,8 +5,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  ********************************************************************/
-import 'ordino/dist/index.html';
-import 'ordino/dist/404.html';
+import 'ordino/dist/templates/index.html';
+import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
 import 'ordino/dist/scss/main.scss';
 import './scss/main.scss';
