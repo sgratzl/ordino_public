@@ -33,7 +33,7 @@ export default class WelcomeView implements IWelcomeView {
     warningMessage.setAttribute('role', 'alert');
     (warningMessage as HTMLDivElement).style.maxWidth = 'fit-content';
     warningMessage.innerHTML = `
-      <strong>Please note:</strong> We have upgraded Ordino to the hg38 genome build, which might change the result of some old sessions.
+      <strong>Please note:</strong> We have upgraded Ordino to the hg38 genome build, which might change the result of some old sessions.<br>
       If you experience some issues please open previous sessions in the <a href="https://ordino-hg19.caleydoapp.org">Ordino with hg19</a>.`;
 
     parentNode.insertBefore(warningMessage, sessionsTable);
