@@ -3,10 +3,10 @@ import {IWelcomeView} from 'ordino/src/WelcomeView';
 import WelcomeViewTemplate from 'html-loader!./welcome_view.html';
 import {generateDialog} from 'phovea_ui/src/dialogs';
 import * as session from 'phovea_core/src/session';
+import {SESSION_KEY_NEW_ENTRY_POINT} from 'ordino/src/internal/constants';
+import {ProvenanceGraph} from 'phovea_core/src/provenance';
 
 export default class WelcomeView implements IWelcomeView {
-
-  private static DISMISS_POPUP_SESSION_KEY = 'OrdinoDismissMigrationPopup';
 
   constructor(private parent: HTMLElement) {
     //
@@ -20,8 +20,6 @@ export default class WelcomeView implements IWelcomeView {
     dataToggleElement.addEventListener('click', (evt) => {
       this.createMigrationMessage(parentNode);
     });
-
-    this.showMigrationPopup();
   }
 
   /**
@@ -44,42 +42,58 @@ export default class WelcomeView implements IWelcomeView {
 
     parentNode.insertBefore(warningMessage, sessionsTable);
   }
+}
 
-  private showMigrationPopup() {
-    // dismissed flag is active == do not show the popup
-    if(session.has(WelcomeView.DISMISS_POPUP_SESSION_KEY) && session.retrieve(WelcomeView.DISMISS_POPUP_SESSION_KEY) === true) {
-      return;
-    }
+/**
+ * Show a migration popup for Ordino hg38 instance.
+ * The dialog can be dismissed and should not open again.
+ * The dialog should also not open, if the user has already
+ * selected an entry point or session from the start menu.
+ *
+ * Temporary feature will be removed eventually.
+ *
+ * @param graph Provenance graph
+ */
+export function dismissMigrationPopup(graph: ProvenanceGraph) {
+  const DISMISS_POPUP_SESSION_KEY = 'OrdinoDismissMigrationPopup';
 
-    const dialog = generateDialog('Ordino just got better!');
+  // 1) dismissed flag is active == do not show the popup
+  if(session.has(DISMISS_POPUP_SESSION_KEY) && session.retrieve(DISMISS_POPUP_SESSION_KEY) === true) {
+    return;
 
-    dialog.body.innerHTML = `
-    We have updated the data in Ordino from genome build hg19 to build hg38.
-    Additionally we also extended the available data.
-    As a consequence of these changes, analysis results can differ slightly compared to the previous Ordino version.
-    If necessary, you can still access the original hg19 instance here: <a href="https://ordino-hg19.caleydoapp.org">ordino-hg19.caleydoapp.org</a>`;
-
-    dialog.footer.innerHTML = `
-      <div class="row">
-        <div class="col-md-6" style="text-align: left;">
-          <label><input type="checkbox" name="dismiss"> Do not show this again</label>
-        </div>
-        <div class="col-md-6">
-          <button type="button" class="btn btn-default btn-primary submit-dialog">Close</button>
-        </div>
-      </div>
-    `;
-
-    dialog.footer.querySelector('button').onclick = () => {
-      dialog.hide();
-    };
-
-    const dismissCheckbox = dialog.footer.querySelector('input');
-
-    dialog.onHide(() => {
-      session.store(WelcomeView.DISMISS_POPUP_SESSION_KEY, dismissCheckbox.checked);
-    });
-
-    dialog.show();
+  // 2) do not show the popup if there is a new graph or session; inspired by `Ordino.initSessionImpl()`
+  } else if (!graph.isEmpty || session.has(SESSION_KEY_NEW_ENTRY_POINT)) {
+    return;
   }
+
+  const dialog = generateDialog('Ordino just got better!');
+
+  dialog.body.innerHTML = `
+  We have updated the data in Ordino from genome build hg19 to build hg38.
+  Additionally we also extended the available data.
+  As a consequence of these changes, analysis results can differ slightly compared to the previous Ordino version.
+  If necessary, you can still access the original hg19 instance here: <a href="https://ordino-hg19.caleydoapp.org">ordino-hg19.caleydoapp.org</a>`;
+
+  dialog.footer.innerHTML = `
+    <div class="row">
+      <div class="col-md-6" style="text-align: left;">
+        <label><input type="checkbox" name="dismiss"> Do not show this again</label>
+      </div>
+      <div class="col-md-6">
+        <button type="button" class="btn btn-default btn-primary submit-dialog">Close</button>
+      </div>
+    </div>
+  `;
+
+  dialog.footer.querySelector('button').onclick = () => {
+    dialog.hide();
+  };
+
+  const dismissCheckbox = dialog.footer.querySelector('input');
+
+  dialog.onHide(() => {
+    session.store(DISMISS_POPUP_SESSION_KEY, dismissCheckbox.checked);
+  });
+
+  dialog.show();
 }
