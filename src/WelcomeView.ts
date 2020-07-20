@@ -55,10 +55,10 @@ export default class WelcomeView implements IWelcomeView {
  * @param graph Provenance graph
  */
 export function dismissMigrationPopup(graph: ProvenanceGraph) {
-  const DISMISS_POPUP_SESSION_KEY = 'OrdinoDismissMigrationPopup';
+  const DISMISS_POPUP_SESSION_KEY = 'ordino_dismiss_migration_popup';
 
   // 1) dismissed flag is active == do not show the popup
-  if(session.has(DISMISS_POPUP_SESSION_KEY) && session.retrieve(DISMISS_POPUP_SESSION_KEY) === true) {
+  if(localStorage.getItem(DISMISS_POPUP_SESSION_KEY) !== null && JSON.parse(localStorage.getItem(DISMISS_POPUP_SESSION_KEY)) === true) {
     return;
 
   // 2) do not show the popup if there is a new graph or session; inspired by `Ordino.initSessionImpl()`
@@ -92,7 +92,7 @@ export function dismissMigrationPopup(graph: ProvenanceGraph) {
   const dismissCheckbox = dialog.footer.querySelector('input');
 
   dialog.onHide(() => {
-    session.store(DISMISS_POPUP_SESSION_KEY, dismissCheckbox.checked);
+    localStorage.setItem(DISMISS_POPUP_SESSION_KEY, JSON.stringify(dismissCheckbox.checked));
   });
 
   dialog.show();
