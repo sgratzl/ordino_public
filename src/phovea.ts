@@ -1,5 +1,6 @@
 import {IRegistry, PluginRegistry} from 'phovea_core';
 import {ILocaleEPDesc, EP_PHOVEA_CORE_LOCALE} from 'phovea_core';
+import {EP_PHOVEA_CLUE_PROVENANCE_GRAPH} from 'phovea_clue';
 
 export default function (registry: IRegistry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./extension_impl'); }, {});
@@ -15,6 +16,9 @@ export default function (registry: IRegistry) {
     ns: 'tdp',
   });
 
+  registry.push(EP_PHOVEA_CLUE_PROVENANCE_GRAPH, 'dismissMigrationPopup', () => import('./app/WelcomeView'), {
+    factory: 'dismissMigrationPopup'
+  });
   // generator-phovea:end
 
 }
