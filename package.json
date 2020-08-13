@@ -2,7 +2,7 @@
   "name": "ordino_public",
   "displayName": "Ordino",
   "description": "",
-  "version": "7.0.1-SNAPSHOT",
+  "version": "8.0.0",
   "author": {
     "name": "datavisyn",
     "email": "contact@datavisyn.io",
@@ -53,8 +53,8 @@
     "dist"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop",
-    "tdp_core": "github:datavisyn/tdp_core#develop"
+    "ordino": "github:Caleydo/ordino#semver:^8.0.0",
+    "tdp_core": "^10.0.1"
   },
   "devDependencies": {
     "@types/jest": "~26.0.5",
