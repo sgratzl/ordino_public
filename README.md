@@ -1,5 +1,7 @@
-ordino_public [![Phovea][phovea-image]][phovea-url] [![License: MPL 2.0][mpl-image]][mpl-url] 
+ordino_public  
 =====================
+[![Phovea][phovea-image]][phovea-url] [![Build Status][circleci-image]][circleci-url]    
+
 
 ![screenshot](media/screenshot.png?raw=true "Screenshot")
 
@@ -34,7 +36,7 @@ npm run build
 This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform for developing web-based visualization applications. For tutorials, API docs, and more information about the build and deployment process, see the [documentation page](http://phovea.caleydo.org).
 
 
-[phovea-image]: https://img.shields.io/badge/Phovea-Client%20Plugin-F47D20.svg
+[phovea-image]: https://img.shields.io/badge/Phovea-Application-1BA64E.svg
 [phovea-url]: https://phovea.caleydo.org
-[mpl-image]: https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg
-[mpl-url]: https://opensource.org/licenses/MPL-2.0
+[circleci-image]: https://circleci.com/gh/Caleydo/ordino_public.svg?style=shield
+[circleci-url]: https://circleci.com/gh/Caleydo/ordino_public

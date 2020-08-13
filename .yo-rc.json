@@ -22,17 +22,19 @@
         ]
       ]
     },
-    "vendor": [
-      "node_modules.*(d3|bootstrap|jquery|select2)",
-      "((node_modules.*popper)|lineupjs|lineupengine|tdp_core)"
-    ],
-    "libraryAliases": {
-      "d3": "d3/d3",
-      "scrollTo": "jquery.scrollto/jquery.scrollTo.js"
+    "vendors": {
+      "others": "phovea.*|tdp_.*|tdp-.*|datavisyn.*",
+      "phovea": "phovea.*",
+      "tdp": "tdp_.|tdp-.*",
+      "dv": "datavisyn.*"
     },
-    "libraryExternals": [
-      "d3"
-    ],
+    "filesToLoad": {
+      "file-loader": "404|robots"
+    },
+    "libraryAliases": {
+      "d3": "d3/d3.js"
+    },
+    "libraryExternals": [],
     "name": "ordino_public",
     "author": "datavisyn",
     "today": "Tue, 06 Jun 2017 07:34:54 GMT",
@@ -41,7 +43,12 @@
     "app": "ordino_public",
     "clientOnly": false,
     "entries": {
-      "app": "./src/index.ts"
+      "app": {
+        "js": "dist/initialize.js",
+        "template": "dist/index.template.ejs",
+        "html": "index.html",
+        "chunkName": "app"
+      }
     },
     "unknown": {
       "requirements": [],
