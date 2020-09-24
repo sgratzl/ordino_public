@@ -8,5 +8,4 @@
 import 'ordino/dist/templates/index.html';
 import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
-import 'ordino/dist/scss/main.scss';
 import './scss/main.scss';

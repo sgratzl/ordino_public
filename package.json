@@ -53,8 +53,7 @@
     "dist"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop",
-    "tdp_core": "github:datavisyn/tdp_core#develop"
+    "ordino": "github:Caleydo/ordino#develop"
   },
   "devDependencies": {
     "@types/jest": "~26.0.5",

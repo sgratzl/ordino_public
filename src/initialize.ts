@@ -12,7 +12,6 @@
 import 'ordino/dist/templates/index.html';
 import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
-import 'ordino/dist/scss/main.scss';
 import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
 import {Ordino} from 'ordino';
 import './scss/main.scss';
