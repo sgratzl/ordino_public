@@ -1,0 +1,18 @@
+/**
+ * disable mouse species
+ */
+ .startMenu .speciesSelector {
+  .species-group[data-species="mouse"] {
+    cursor: not-allowed;
+
+    label[for^="speciesSelector"] {
+      pointer-events: none;
+    }
+  }
+}
+
+#headerAboutDialog .modal-dialog {
+  width: 50vw;
+  min-width: 600px;
+  max-width: 900px;
+}

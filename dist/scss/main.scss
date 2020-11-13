@@ -6,26 +6,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  ********************************************************************/
 
+@import "./abstracts/variables";
+
 @import "~ordino/dist/scss/main";
 
-@import './welcome_view';
+@import './override/ordino';
 
-
-/**
- * disable mouse species
- */
-.startMenu .speciesSelector {
-  .species-group[data-species="mouse"] {
-    cursor: not-allowed;
-
-    label[for^="speciesSelector"] {
-      pointer-events: none;
-    }
-  }
-}
-
-#headerAboutDialog .modal-dialog {
-  width: 50vw;
-  min-width: 600px;
-  max-width: 900px;
-}
+@import './components/welcome_view';

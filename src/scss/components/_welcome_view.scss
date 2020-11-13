@@ -16,7 +16,7 @@
     width: 8%; // depends on the container width
     height: 300px;
     content: '';
-    background: transparent url('../assets/welcome-view-arrow.svg') no-repeat;
+    background: transparent url('~ordino_public/dist/assets/welcome-view-arrow.svg') no-repeat;
     background-size: contain;
     display: block;
     z-index: 1;
@@ -108,14 +108,14 @@
       height: 350px;
 
       &.step1 {
-        background-image: url('../assets/welcome-view-step1.png');
+        background-image: url('~ordino_public/dist/assets/welcome-view-step1.png');
         background-position: top center;
       }
       &.step2 {
-        background-image: url('../assets/welcome-view-step2.png');
+        background-image: url('~ordino_public/dist/assets/welcome-view-step2.png');
       }
       &.step3 {
-        background-image: url('../assets/welcome-view-step3.png');
+        background-image: url('~ordino_public/dist/assets/welcome-view-step3.png');
       }
     }
   }
@@ -163,4 +163,3 @@
 .disclaimer {
   margin-top: 40px;
 }
-
