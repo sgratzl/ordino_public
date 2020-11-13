@@ -6,10 +6,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  ********************************************************************/
 
-
-// Determine the order of css files manually
-
-import 'ordino/dist/templates/index.html';
 import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
 import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
