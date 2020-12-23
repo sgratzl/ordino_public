@@ -41,10 +41,19 @@
     "clientOnly": false,
     "entries": {
       "app": {
-        "js": "dist/initialize.js",
-        "template": "dist/index.template.ejs",
+        "js": "dist/initialize.app.js",
+        "template": "dist/app.template.ejs",
+        "html": "app/index.html",
+        "chunkName": "app",
+        "excludeChunks": ["welcome"]
+      },
+      "welcome": {
+        "scss": "../welcome.scss",
+        "js": "dist/initialize.welcome.js",
+        "template": "dist/welcome.template.ejs",
         "html": "index.html",
-        "chunkName": "app"
+        "chunkName": "welcome",
+        "excludeChunks": ["app"]
       }
     },
     "unknown": {
