@@ -53,7 +53,7 @@
     "dist"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#fontawesome-v5"
+    "ordino": "github:Caleydo/ordino#welcome-page"
   },
   "devDependencies": {
     "@types/jest": "~26.0.5",
