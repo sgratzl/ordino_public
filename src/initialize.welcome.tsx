@@ -28,4 +28,4 @@ ReactDOM.render(
     </HashRouter>
   </>,
   document.querySelector('#welcome')
-)
+);
