@@ -7,7 +7,7 @@
  ********************************************************************/
 import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
-import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
+import * as aboutDisclaimer from '../templates/_aboutDisclaimer.html';
 import { Ordino } from 'ordino';
 import { AppMetaDataUtils } from 'phovea_ui';
 const _ = new Ordino({
