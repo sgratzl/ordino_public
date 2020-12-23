@@ -23,10 +23,7 @@
       ]
     },
     "vendors": {
-      "others": "phovea.*|tdp_.*|tdp-.*|datavisyn.*",
-      "phovea": "phovea.*",
-      "tdp": "tdp_.|tdp-.*",
-      "dv": "datavisyn.*"
+      "others": "phovea.*|tdp_.*|tdp-.*|datavisyn.*"
     },
     "filesToLoad": {
       "file-loader": "404|robots"
