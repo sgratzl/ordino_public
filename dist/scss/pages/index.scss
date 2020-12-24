@@ -1,2 +1,9 @@
+@import "./abstracts/variables";
 
+@import "./base/base";
+
+// pages
+@import "./HomePage";
+
+// components
 @import "./components/HeaderNavigation";

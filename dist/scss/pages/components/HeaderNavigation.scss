@@ -1,3 +1,21 @@
+.navbar-brand {
+  font-size: 2.2rem;
+  font-weight: 500;
+
+  & > img {
+    margin-top: -6px;
+  }
+}
+
 .nav-item {
   text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: map-get($theme-colors, 'ordino-gray-1');
+  font-weight: 500;
+}
+
+.btn {
+  font-weight: 500;
 }
