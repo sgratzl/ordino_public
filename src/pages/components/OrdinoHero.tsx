@@ -20,20 +20,14 @@ export function OrdinoHero() {
         <div className="row ordino-hero-actions my-4">
           <div className="col text-center">
             <Button variant="link" size="lg" onClick={() => setModalShow(true)}>
-              <span className="fa-stack">
-                <i className="far fa-circle fa-stack-2x"></i>
-                <i className="fas fa-play fa-stack-1x"></i>
-              </span>
+              <i className="fas fa-play"></i>
               Watch intro video
             </Button>
             <IntroVideoModal show={modalShow} onHide={() => setModalShow(false)} />
           </div>
           <div className="col text-center">
             <Link to="/tours" className="btn btn-link btn-lg">
-              <span className="fa-stack">
-                <i className="far fa-circle fa-stack-2x"></i>
-                <i className="fas fa-question fa-stack-1x"></i>
-              </span>
+              <i className="fas fa-question"></i>
               Learn more about Ordino
             </Link>
           </div>
