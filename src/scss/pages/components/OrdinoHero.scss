@@ -29,18 +29,32 @@
       text-decoration: none;
       font-size: 1.5rem;
 
-      &:hover,
-      &:focus {
+      i {
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 2.1rem;
+        height: 2.1rem;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.6rem;
+        position: relative;
+        top: -0.2rem;
+      }
+
+      &:hover {
         color: #ffffffbf;
       }
 
-      &:focus {
-        box-shadow: 0 0 0 0.1rem scale-color(map-get($theme-colors, 'ordino-gray-1'), $alpha: -50%);
+      &:hover > i {
+        color: #ffffffbf;
+        border-color: #ffffffbf;
       }
 
-      .fa-stack {
-        font-size: 1rem;
-        margin-right: 0.6rem;
+      &:focus {
+        color: #ffffffbf;
+        box-shadow: 0 0 0 0.1rem scale-color(map-get($theme-colors, 'ordino-gray-1'), $alpha: -50%);
       }
     }
   }
