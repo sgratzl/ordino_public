@@ -3,14 +3,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
-import ordinoLogo from 'ordino_public/dist/assets/logos/ordino.svg';
+import { OrdinoLogo } from './OrdinoLogo';
 export function HeaderNavigation() {
     // sticky="top"
     return (React.createElement(Navbar, { bg: "transparent", variant: "dark" },
         React.createElement(Navbar.Brand, { href: "#/" },
-            React.createElement("img", { alt: "", src: ordinoLogo, width: "30", height: "30" }),
-            ' ',
-            "Ordino"),
+            React.createElement(OrdinoLogo, null)),
         React.createElement(Navbar.Toggle, null),
         React.createElement(Navbar.Collapse, { className: "justify-content-end" },
             React.createElement(Nav, { as: "ul", className: "ml-auto" },

@@ -3,14 +3,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import {NavLink} from 'react-router-dom';
-import ordinoLogo from 'ordino_public/dist/assets/logos/ordino.svg';
+import {OrdinoLogo} from './OrdinoLogo';
 
 export function HeaderNavigation() {
   // sticky="top"
   return (
     <Navbar bg="transparent" variant="dark">
       <Navbar.Brand href="#/">
-        <img alt="" src={ordinoLogo} width="30" height="30" />{' '}Ordino
+        <OrdinoLogo></OrdinoLogo>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
