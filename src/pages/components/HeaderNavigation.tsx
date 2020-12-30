@@ -8,13 +8,14 @@ import {OrdinoLogo} from './OrdinoLogo';
 export function HeaderNavigation() {
   // sticky="top"
   return (
-    <Navbar bg="transparent" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark" className="ordino-header-navigation">
       <Navbar.Brand href="#/">
         <OrdinoLogo></OrdinoLogo>
       </Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse className="justify-content-end">
-        <Nav as="ul" className="ml-auto">
+      <Button href="/app/" variant="light" className="order-lg-2 mx-3 mx-lg-0 ml-auto ml-lg-3">Start Analysis</Button>
+      <Navbar.Toggle aria-controls="ordino-header-navbar-nav" className="" />
+      <Navbar.Collapse id="ordino-header-navbar-nav" className="order-lg-1">
+        <Nav as="ul">
           <Nav.Item as="li" className="px-3">
             <NavLink to="/news" className="nav-link" activeClassName="active">What's new?</NavLink>
           </Nav.Item>
@@ -23,9 +24,6 @@ export function HeaderNavigation() {
           </Nav.Item>
           <Nav.Item as="li" className="px-3">
             <NavLink to="/datasets" className="nav-link" activeClassName="active">Datasets</NavLink>
-          </Nav.Item>
-          <Nav.Item as="li" className="px-3">
-            <Button href="/app/" variant="light">Start Analysis</Button>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

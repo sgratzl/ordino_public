@@ -1,21 +1,29 @@
-.navbar-brand {
-  font-size: 2.2rem;
-  font-weight: 500;
+.ordino-header-navigation {
+  .navbar-brand {
+    font-size: 2.2rem;
+    font-weight: 500;
 
-  & > img {
-    margin-top: -6px;
+    & > img {
+      margin-top: -6px;
+    }
   }
-}
 
-.nav-item {
-  text-transform: uppercase;
-}
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
 
-.navbar .navbar-nav .nav-link {
-  color: map-get($theme-colors, 'ordino-gray-1');
-  font-weight: 500;
-}
+  .nav-item {
+    text-transform: uppercase;
+  }
 
-.btn {
-  font-weight: 500;
+  .navbar .navbar-nav .nav-link {
+    color: map-get($theme-colors, 'ordino-gray-1');
+    font-weight: 500;
+  }
+
+  .btn {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
 }
