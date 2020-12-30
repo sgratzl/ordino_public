@@ -3,14 +3,15 @@ import { OrdinoHero } from './components/OrdinoHero';
 import { GettingStarted } from './components/GettingStarted';
 import { DevelopedByAffiliations } from './components/DevelopedByAffiliations';
 import { OrdinoFooter } from './components/OrdinoFooter';
+import { OrdinoTeaserCards } from './components/OrdinoTeaserCards';
 export function HomePage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(OrdinoHero, null),
-        React.createElement("div", { className: "ordino-getting-started-wraper" },
+        React.createElement("div", { className: "ordino-getting-started-wrapper" },
             React.createElement(GettingStarted, null),
             React.createElement("hr", { className: "m-0" }),
             React.createElement(DevelopedByAffiliations, null)),
-        React.createElement("div", { className: "ordino-info-box-wrapper" }),
+        React.createElement(OrdinoTeaserCards, null),
         React.createElement(OrdinoFooter, null)));
 }
 //# sourceMappingURL=HomePage.js.map
