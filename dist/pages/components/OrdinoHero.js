@@ -7,7 +7,7 @@ import ordinoHero from 'ordino_public/dist/assets/ordino-hero.svg';
 export function OrdinoHero() {
     const [modalShow, setModalShow] = React.useState(false);
     return (React.createElement("div", { className: "ordino-hero" },
-        React.createElement(HeaderNavigation, null),
+        React.createElement(HeaderNavigation, { bg: "transparent" }),
         React.createElement("div", { className: "container" },
             React.createElement("div", { className: "row ordino-hero-claim my-4" },
                 React.createElement("div", { className: "col text-center" },

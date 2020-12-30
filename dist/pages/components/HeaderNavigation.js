@@ -4,9 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import { NavLink } from 'react-router-dom';
 import { OrdinoLogo } from './OrdinoLogo';
-export function HeaderNavigation() {
-    // sticky="top"
-    return (React.createElement(Navbar, { collapseOnSelect: true, expand: "lg", bg: "transparent", variant: "dark", className: "ordino-header-navigation" },
+export function HeaderNavigation(props) {
+    var _a;
+    const bg = (_a = props.bg) !== null && _a !== void 0 ? _a : 'ordino-gray-2';
+    return (React.createElement(Navbar, { collapseOnSelect: true, fixed: props.fixed, expand: "lg", bg: bg, variant: "dark", className: "ordino-header-navigation" },
         React.createElement(Navbar.Brand, { href: "#/" },
             React.createElement(OrdinoLogo, null)),
         React.createElement(Button, { href: "/app/", variant: "light", className: "order-lg-2 mx-3 mx-lg-0 ml-auto ml-lg-3" }, "Start Analysis"),

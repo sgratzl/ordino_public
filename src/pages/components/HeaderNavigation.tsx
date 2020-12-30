@@ -5,10 +5,24 @@ import Button from 'react-bootstrap/Button';
 import {NavLink} from 'react-router-dom';
 import {OrdinoLogo} from './OrdinoLogo';
 
-export function HeaderNavigation() {
-  // sticky="top"
+interface IHeaderNavigationProps {
+  /**
+   * Defines if the header is sticky and visible when scrolling the page down
+   */
+  fixed?: 'top' | 'bottom';
+
+  /**
+   * Background color
+   * @default ordino-gray-2 (see variables.scss)
+   */
+  bg?: string;
+}
+
+export function HeaderNavigation(props: IHeaderNavigationProps) {
+  const bg = props.bg ?? 'ordino-gray-2';
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark" className="ordino-header-navigation">
+    <Navbar collapseOnSelect fixed={props.fixed} expand="lg" bg={bg} variant="dark" className="ordino-header-navigation">
       <Navbar.Brand href="#/">
         <OrdinoLogo></OrdinoLogo>
       </Navbar.Brand>

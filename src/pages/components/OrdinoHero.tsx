@@ -10,7 +10,7 @@ export function OrdinoHero() {
 
   return (
     <div className="ordino-hero">
-      <HeaderNavigation></HeaderNavigation>
+      <HeaderNavigation bg="transparent"></HeaderNavigation>
       <div className="container">
         <div className="row ordino-hero-claim my-4">
           <div className="col text-center">
