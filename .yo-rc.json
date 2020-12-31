@@ -39,6 +39,25 @@
     "sextensions": [],
     "app": "ordino_public",
     "clientOnly": false,
+    "__app_entries": {
+      "app": {
+        "js": "dist/initialize.app.js",
+        "template": "dist/app.template.ejs",
+        "html": "index.html",
+        "chunkName": "app",
+        "excludeChunks": ["welcome"]
+      }
+    },
+    "__welcome_entries": {
+      "welcome": {
+        "scss": "../welcome.scss",
+        "js": "dist/initialize.welcome.js",
+        "template": "dist/welcome.template.ejs",
+        "html": "index.html",
+        "chunkName": "welcome",
+        "excludeChunks": ["app"]
+      }
+    },
     "entries": {
       "app": {
         "js": "dist/initialize.app.js",
