@@ -14,11 +14,11 @@ export class WelcomeView implements IWelcomeView {
   build() {
     this.parent.insertAdjacentHTML('afterbegin', WelcomeViewTemplate);
 
-    const dataToggleElement = document.getElementById('tdpSessionPersistentDataToggle');
-    const parentNode = document.querySelector('.tdpSessionPersistentData .body');
-    dataToggleElement.addEventListener('click', (evt) => {
-      this.createMigrationMessage(parentNode);
-    });
+    // const dataToggleElement = document.getElementById('tdpSessionPersistentDataToggle');
+    // const parentNode = document.querySelector('.tdpSessionPersistentData .body');
+    // dataToggleElement.addEventListener('click', (evt) => {
+    //   this.createMigrationMessage(parentNode);
+    // });
   }
 
   /**
