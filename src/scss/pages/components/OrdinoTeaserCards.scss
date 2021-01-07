@@ -1,0 +1,24 @@
+.ordino-teaser-cards {
+  .col {
+    // use flex box to stack headline and card and make cards equally high
+    display: flex;
+    flex-direction: column;
+  }
+
+  // adjust headline icon
+  h4 > .fas {
+    background-color: map-get($theme-colors, 'ordino-gray-2');
+    color: map-get($theme-colors, 'ordino-white');
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+  }
+
+  .card-footer {
+    background-color: transparent;
+  }
+}

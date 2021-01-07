@@ -9,11 +9,11 @@ export class WelcomeView {
     }
     build() {
         this.parent.insertAdjacentHTML('afterbegin', WelcomeViewTemplate);
-        const dataToggleElement = document.getElementById('tdpSessionPersistentDataToggle');
-        const parentNode = document.querySelector('.tdpSessionPersistentData .body');
-        dataToggleElement.addEventListener('click', (evt) => {
-            this.createMigrationMessage(parentNode);
-        });
+        // const dataToggleElement = document.getElementById('tdpSessionPersistentDataToggle');
+        // const parentNode = document.querySelector('.tdpSessionPersistentData .body');
+        // dataToggleElement.addEventListener('click', (evt) => {
+        //   this.createMigrationMessage(parentNode);
+        // });
     }
     /**
      * Create migration message to add to the persisstent sessions section. Temporary feature will be removed eventually.
