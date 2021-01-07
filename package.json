@@ -53,7 +53,7 @@
     "dist"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#develop"
+    "ordino": "github:Caleydo/ordino#vstoiber/update_requirements"
   },
   "devDependencies": {
     "@types/jest": "~26.0.5",
