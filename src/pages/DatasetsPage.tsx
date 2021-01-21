@@ -1,17 +1,67 @@
 import * as React from 'react';
 import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
+import {Row, Col, Nav, Card, Container, ListGroup, Navbar} from 'react-bootstrap';
+
 
 export function DatasetsPage() {
   return (
     <>
       <HeaderNavigation></HeaderNavigation>
-      <div className="container">
-        <div className="row">
-          <div className="col"><h2>Datasets</h2></div>
-        </div>
-      </div>
+      <Container fluid="md">
+        <Row className="mt-4">
+          <h4 className="text-left mt-2 mb-3"><i className="mr-2 fas fa-chevron-circle-right" ></i> Basic Datasets</h4>
+        </Row>
+        <Row className="align-items-stretch">
+          <Col>
+            <SimpleCard title="The Cancer Genome Atlas (TCGA)"
+              text={`Gene expression, mutation, and copy number data cancergenome.nih.gov`} />
+          </Col>
+          <Col>
+            <SimpleCard title="Cancer Cell Line Encyclopedia (CCLE)"
+              text="Gene expression, mutation, and copy number data
+            portals.broadinstitute.org/ccle" />
+          </Col>
+        </Row>
+        <Row className="mt-4">
+          <h4 className="text-left mt-2 mb-3"><i className="mr-2 fas fa-chevron-circle-right" ></i> Depletion sceen data</h4>
+        </Row>
+        <Row md={2}>
+          <Col>
+            <SimpleCard title="Project DRIVE
+"
+              text="RNAi depletion screen data (RSA and ATARiS)
+            McDonald III, E. R. et. al. Project DRIVE: A Compen- dium of Cancer Dependencies and Synthetic Lethal Relationships Uncovered by Large-Scale, Deep RNAi Screening.
+             Cell 170, Pages 577-592.e10 (2017)." />
+          </Col>
+          <Col>
+            <SimpleCard title="Avana CERES"
+              text="CRISPR-Cas9 depletion screen data
+            Meyers, R. M. et. al. Computational correction of copy
+             number effect improves specificity of CRISPR–Cas9 essentiality screens in cancer cells. Nature Genetics 49, 1779–1784 (2017)." />
+          </Col>
+        </Row>
+      </Container>
       <OrdinoFooter></OrdinoFooter>
     </>
   );
+}
+
+interface ICardProps {
+  title: string;
+  text: string;
+}
+
+
+export const SimpleCard = ({title, text}: ICardProps) => {
+  return (
+    <Card style={{height: "100%"}} className="shadow-sm">
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+          {text}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  )
 }
