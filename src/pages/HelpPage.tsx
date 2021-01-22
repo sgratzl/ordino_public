@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
-import {Row, Col, Nav, Container, Card, ListGroup, Navbar} from 'react-bootstrap';
+import {Row, Col, Nav, Container, Button, Form, Card, ListGroup, Navbar} from 'react-bootstrap';
 import {Waypoint} from 'react-waypoint';
 import {useRef} from 'react';
 import {DevelopedByAffiliations} from './components/DevelopedByAffiliations';
@@ -46,9 +46,17 @@ export function HelpPage() {
             </Row>
             <Row>
               <Waypoint topOffset={'40%'} bottomOffset={'70%'} onEnter={() => setSection('second')}>
-                <section ref={sectionsRefs['second']} style={{paddingBottom: '60px', height: "100%"}}  >
+                <section ref={sectionsRefs['second']} style={{paddingBottom: '60px', width: "100%", height: "100%"}}  >
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 fas fa-at"></i> Contact us</h4>
-                  <VideoCard />
+                  <Card className="shadow-sm">
+                    <Card.Body>
+                      <Card.Text>
+                        {"Do you have questions or found a bug, do not hasitate to contact us using the contact form below. You can also contact us by writing an email to "}
+                        <Card.Link href="mailto:ordino@caleydo.org.">ordino@caleydo.org.</Card.Link> or posting a message in the Microsoft Team. We are glad to help you.
+                      </Card.Text>
+                      <ContactForm />
+                    </Card.Body>
+                  </Card>
                 </section>
               </Waypoint>
             </Row>
@@ -129,6 +137,45 @@ export function HelpPage() {
       <OrdinoFooter></OrdinoFooter>
     </>
   );
+}
+
+
+const ContactForm = () => {
+  // Todo implemment backend to send email
+  const handleSubmit = () => null;
+
+  return (
+    <Form onSubmit={() => handleSubmit()}>
+      <Form.Group className="row-cols-md-3" controlId="exampleForm.ControlSelect1">
+        <Form.Label>Type of contact</Form.Label>
+        <Form.Control as="select">
+          <option>I have a question</option>
+          <option>I want to report a bug</option>
+          <option>Placeholder</option>
+        </Form.Control>
+      </Form.Group>
+      <Form.Group controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Message</Form.Label>
+        <Form.Control as="textarea" rows={5} />
+      </Form.Group>
+      <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Name</Form.Label>
+        <Form.Control type="text" placeholder="Name" />
+      </Form.Group>
+      <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="name@example.com" />
+      </Form.Group>
+      <Form.Row className="justify-content-end">
+        <Col md={"auto"}>
+          <Button variant="secondary" type="submit">
+            Send Message
+          </Button>
+        </Col>
+      </Form.Row>
+
+    </Form>
+  )
 }
 
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeaderNavigation } from './components/HeaderNavigation';
 import { OrdinoFooter } from './components/OrdinoFooter';
-import { Row, Col, Nav, Card } from 'react-bootstrap';
+import { Row, Col, Nav, Button, Form, Card } from 'react-bootstrap';
 import { Waypoint } from 'react-waypoint';
 import { useRef } from 'react';
 import { DevelopedByAffiliations } from './components/DevelopedByAffiliations';
@@ -43,11 +43,17 @@ export function HelpPage() {
                                 React.createElement(VideoCard, null)))),
                     React.createElement(Row, null,
                         React.createElement(Waypoint, { topOffset: '40%', bottomOffset: '70%', onEnter: () => setSection('second') },
-                            React.createElement("section", { ref: sectionsRefs['second'], style: { paddingBottom: '60px', height: "100%" } },
+                            React.createElement("section", { ref: sectionsRefs['second'], style: { paddingBottom: '60px', width: "100%", height: "100%" } },
                                 React.createElement("h4", { className: "text-left mt-2 mb-3" },
                                     React.createElement("i", { className: "mr-2 fas fa-at" }),
                                     " Contact us"),
-                                React.createElement(VideoCard, null)))),
+                                React.createElement(Card, { className: "shadow-sm" },
+                                    React.createElement(Card.Body, null,
+                                        React.createElement(Card.Text, null,
+                                            "Do you have questions or found a bug, do not hasitate to contact us using the contact form below. You can also contact us by writing an email to ",
+                                            React.createElement(Card.Link, { href: "mailto:ordino@caleydo.org." }, "ordino@caleydo.org."),
+                                            " or posting a message in the Microsoft Team. We are glad to help you."),
+                                        React.createElement(ContactForm, null)))))),
                     React.createElement(Row, null,
                         React.createElement(Waypoint, { topOffset: '40%', bottomOffset: '70%', onEnter: () => setSection('third') },
                             React.createElement("section", { ref: sectionsRefs['third'], style: { paddingBottom: '60px', height: "100%" } },
@@ -111,6 +117,29 @@ export function HelpPage() {
         React.createElement(DevelopedByAffiliations, null),
         React.createElement(OrdinoFooter, null)));
 }
+const ContactForm = () => {
+    // Todo implemment backend to send email
+    const handleSubmit = () => null;
+    return (React.createElement(Form, { onSubmit: () => handleSubmit() },
+        React.createElement(Form.Group, { className: "row-cols-md-3", controlId: "exampleForm.ControlSelect1" },
+            React.createElement(Form.Label, null, "Type of contact"),
+            React.createElement(Form.Control, { as: "select" },
+                React.createElement("option", null, "I have a question"),
+                React.createElement("option", null, "I want to report a bug"),
+                React.createElement("option", null, "Placeholder"))),
+        React.createElement(Form.Group, { controlId: "exampleForm.ControlTextarea1" },
+            React.createElement(Form.Label, null, "Message"),
+            React.createElement(Form.Control, { as: "textarea", rows: 5 })),
+        React.createElement(Form.Group, { controlId: "exampleForm.ControlInput1" },
+            React.createElement(Form.Label, null, "Name"),
+            React.createElement(Form.Control, { type: "text", placeholder: "Name" })),
+        React.createElement(Form.Group, { controlId: "exampleForm.ControlInput1" },
+            React.createElement(Form.Label, null, "Email address"),
+            React.createElement(Form.Control, { type: "email", placeholder: "name@example.com" })),
+        React.createElement(Form.Row, { className: "justify-content-end" },
+            React.createElement(Col, { md: "auto" },
+                React.createElement(Button, { variant: "secondary", type: "submit" }, "Send Message")))));
+};
 function VideoCard() {
     return (React.createElement(Card, { style: { overflow: "hidden" }, className: "shadow-sm" },
         React.createElement("iframe", { src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
