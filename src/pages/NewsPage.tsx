@@ -1,21 +1,60 @@
 import * as React from 'react';
 import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
-import {Row, Col, Nav, ListGroup, Navbar} from 'react-bootstrap';
-import {Waypoint} from 'react-waypoint';
-import {useRef} from 'react';
-import {OrdinoTeaserCards} from './components/OrdinoTeaserCards';
-import {ReleaseNoteScard} from './components/ReleaseNotesCard';
-import {debounce} from 'lodash';
+import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
+import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
+import {Link, Element} from 'react-scroll'
+
+export function NewsPage() {
+  return (
+    <>
+      <HeaderNavigation></HeaderNavigation>
+      <Container fluid className="news-page my-4">
+        <Row>
+          <Col sm={2}>
+            <Nav className="scrollspy-nav flex-column">
+              {sections.map(({name}, i) => (
+                <Link className="nav-link pl-5" role="button" activeClass="nav-active" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
+                  {name}
+                </Link>
+              ))}
+            </Nav>
+          </Col>
+          <Col sm={7}>
+            {sections.map(({name, markup}, i) => (
+              <Element key={i} name={`element-${i}`} className="news-page-section">
+                <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
+                <Card className="shadow-sm p-3 h-100">
+                  <Card.Body>
+                    <Row xl={2} lg={1}  className="align-items-top">
+                      <Col sm={7}>
+                        {markup()}
+                      </Col>
+                      <Col >
+                        <Card.Img src={cardImage} className='img-fit' alt="Card image" />
+                      </Col>
+                    </Row>
+                  </Card.Body>
+                </Card>
+              </Element>
+            ))}
+          </Col>
+        </Row>
+      </Container>
+      <OrdinoFooter></OrdinoFooter>
+    </>
+  );
+}
+
 
 const sections = [
   {
     name: 'Ordino 7.0.0',
     markup: () => (
-      <ul>
+      <ul className="list-unstyled">
         <li>
-          <b>Improve usability of ranking views</b><br />
-          <ul>
+          Improve usability of ranking views<br />
+          <ul >
             <li>
               Dialogs, such as filter, provide a live preview
                 </li>
@@ -28,19 +67,19 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Integration of Tourdino as ranking side panel</b><br />
-          <ul>
+          Integration of Tourdino as ranking side panel<br />
+          <ul >
             <li>
               Support statistical analysis
                 </li>
           </ul>
         </li>
         <li>
-          <b>Update to hg38 database</b><br />
+          Update to hg38 database<br />
         </li>
         <li>
-          <b> New scores</b><br />
-          <ul>
+          New scores<br />
+          <ul >
             <li>
               Add cell line and tissue scores for HLA Type, MSI Status, and Mutational Burden
                 </li>
@@ -50,8 +89,8 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>New Ordino tours:</b><br />
-          <ul>
+          New Ordino tours:<br />
+          <ul >
             <li>
               Overview of Start Menu
                 </li>
@@ -61,7 +100,7 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Improve support for Boolean columns in uploaded Excel files</b><br />
+          Improve support for Boolean columns in uploaded Excel files<br />
         </li>
       </ul >)
 
@@ -69,32 +108,32 @@ const sections = [
   {
     name: 'Ordino 6.0.0',
     markup: () => (
-      <ul>
-        <li>  <b>LineUp v3.2</b></li>
-        <li> <b>Add Matomo tracking</b></li>
-        <li> <b>Updated internal and external detail views to latest genome build</b></li>
-        <li> <b>Improved add column dropdown menu</b></li>
-        <li> <b>Improved session loading / saving menu</b></li>
-        <li> <b>Simplified data download dialog</b></li>
-        <li> <b>Fixed filtering of missing values of numerical columns in LineUp cannot be undone</b></li>
-        <li> <b>Remove surplus divider in user menu</b></li>
-        <li> <b>When checking for browser compatibility, indicate that IE is not working</b></li>
-        <li> <b>Add help text to "Save List of Entities" dialog</b></li>
-        <li> <b>When uploading a dataset, DB columns cannot be added</b></li>
-        <li> <b>Slim Ordino header does not look nice on hover</b></li>
-        <li> <b>Rename "RegExp" into "Use regular expressions"</b></li>
-        <li> <b>Rename "TPM" to "Normalized Gene Expression (TPM Values)"</b></li>
-        <li> <b>Aggregated score: Comparison value should allow float numbers</b></li>
-        <li> <b>When checking for browser compatibility, indicate that IE is not working</b></li>
+      <ul className="list-unstyled">
+        <li> LineUp v3.2</li>
+        <li>Add Matomo tracking</li>
+        <li>Updated internal and external detail views to latest genome build</li>
+        <li>Improved add column dropdown menu</li>
+        <li>Improved session loading / saving menu</li>
+        <li>Simplified data download dialog</li>
+        <li>Fixed filtering of missing values of numerical columns in LineUp cannot be undone</li>
+        <li>Remove surplus divider in user menu</li>
+        <li>When checking for browser compatibility, indicate that IE is not working</li>
+        <li>Add help text to "Save List of Entities" dialog</li>
+        <li>When uploading a dataset, DB columns cannot be added</li>
+        <li>Slim Ordino header does not look nice on hover</li>
+        <li>Rename "RegExp" into "Use regular expressions"</li>
+        <li>Rename "TPM" to "Normalized Gene Expression (TPM Values)"</li>
+        <li>Aggregated score: Comparison value should allow float numbers</li>
+        <li>When checking for browser compatibility, indicate that IE is not working</li>
       </ul >)
 
   },
   {
     name: 'Ordino 5.4.0',
     markup: () => (
-      <ul>
+      <ul className="list-unstyled">
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -108,7 +147,7 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -122,7 +161,7 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -141,9 +180,9 @@ const sections = [
   {
     name: 'Ordino 5.0.0',
     markup: () => (
-      <ul>
+      <ul className="list-unstyled">
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -157,7 +196,7 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -171,7 +210,7 @@ const sections = [
           </ul>
         </li>
         <li>
-          <b>Improve usability of ranking views</b><br />
+          Improve usability of ranking views<br />
           <ul>
             <li>
               Dialogs, such as filter, provide a live preview
@@ -189,43 +228,3 @@ const sections = [
   },
 ]
 
-
-export function NewsPage() {
-  const [active, setActive] = React.useState('')
-
-  const sectionsRefs = {}
-  sections.forEach(section => sectionsRefs[section.name] = useRef())
-  const scrollToView = (evt, name: string) => {
-    sectionsRefs[name].current.scrollIntoView({behavior: "smooth", block: "center"}).then((e) => console.log('scrolling- finished'));
-  }
-
-
-  return (
-    <>
-      <HeaderNavigation></HeaderNavigation>
-      <div className="container-md news-page">
-        <Row>
-          <Col sm={3}>
-            <Nav style={{position: 'fixed'}} className="flex-column">
-              {sections.map(({name}, i) => (
-                <Nav.Link className={`pl-5 ${active === name ? 'active' : ''} `} onClick={(evt) => scrollToView(evt, name)} key={i}> {name}</Nav.Link>
-              ))}
-            </Nav>
-          </Col>
-          <Col sm={9}>
-            {sections.map(({name, markup}, i) => (
-              <Waypoint topOffset={'40%'} bottomOffset={'70%'} key={i} onEnter={() => setActive(name)}>
-                <section style={{paddingBottom: '60px'}} ref={sectionsRefs[name]} key={i}>
-                  <ReleaseNoteScard headerText={name} >{
-                    markup()
-                  }</ReleaseNoteScard>
-                </section>
-              </Waypoint>
-            ))}
-          </Col>
-        </Row>
-      </div>
-      <OrdinoFooter></OrdinoFooter>
-    </>
-  );
-}

@@ -1,18 +1,20 @@
 import * as React from 'react';
 import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
-import {Row, Col, Nav, Card, Container, ListGroup, Navbar} from 'react-bootstrap';
+import {Row, Col, Card, Container} from 'react-bootstrap';
 
 
 export function DatasetsPage() {
   return (
     <>
       <HeaderNavigation></HeaderNavigation>
-      <Container fluid="md">
-        <Row className="mt-4">
-          <h4 className="text-left mt-2 mb-3"><i className="mr-2 fas fa-chevron-circle-right" ></i> Basic Datasets</h4>
+      <Container className="my-4 dataset-page">
+        <Row>
+          <Col>
+            <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Basic Datasets</h4>
+          </Col>
         </Row>
-        <Row className="align-items-stretch">
+        <Row xs={1} md={2} >
           <Col>
             <SimpleCard title="The Cancer Genome Atlas (TCGA)"
               text={`Gene expression, mutation, and copy number data cancergenome.nih.gov`} />
@@ -24,12 +26,13 @@ export function DatasetsPage() {
           </Col>
         </Row>
         <Row className="mt-4">
-          <h4 className="text-left mt-2 mb-3"><i className="mr-2 fas fa-chevron-circle-right" ></i> Depletion sceen data</h4>
-        </Row>
-        <Row md={2}>
           <Col>
-            <SimpleCard title="Project DRIVE
-"
+            <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 fas ordino-icon-1 fa-chevron-circle-right" ></i> Depletion sceen data</h4>
+          </Col>
+        </Row>
+        <Row xs={1} md={2} >
+          <Col>
+            <SimpleCard title="Project DRIVE"
               text="RNAi depletion screen data (RSA and ATARiS)
             McDonald III, E. R. et. al. Project DRIVE: A Compen- dium of Cancer Dependencies and Synthetic Lethal Relationships Uncovered by Large-Scale, Deep RNAi Screening.
              Cell 170, Pages 577-592.e10 (2017)." />

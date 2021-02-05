@@ -10,7 +10,7 @@ export function PublicationPage() {
       <HeaderNavigation></HeaderNavigation>
       <Container className="ordino-publication-page">
         <Row className="mt-4">
-          <h4 className="text-left mb-3"><i className="mr-2 fas fa-book-open"></i> Publication</h4>
+          <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-2  fas fa-book-open"></i> Publication</h4>
         </Row>
         <Row className="mb-4">
           <Card style={{overflow: "hidden"}} className="shadow-sm">
