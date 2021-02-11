@@ -30,7 +30,7 @@ export function HelpPage() {
                 Terms of Use
               </Link>
               <Link className="nav-link pl-5" role="button" activeClass="nav-active" to={`element-${5}`} spy={true} smooth={true} offset={-230} duration={500}>
-                Source code {"&"}
+                Source code
               </Link>
             </Nav>
           </Col>

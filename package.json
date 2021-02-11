@@ -54,8 +54,7 @@
   ],
   "dependencies": {
     "ordino": "github:Caleydo/ordino#welcome-page",
-    "react-router-dom": "^5.2.0",
-    "react-waypoint": "^9.0.3"
+    "react-scroll": "^1.8.1"
   },
   "devDependencies": {
     "@types/jest": "~26.0.5",
