@@ -4,26 +4,6 @@ import { OrdinoFooter } from './components/OrdinoFooter';
 import { Row, Col, Nav, Container, Card } from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
 import { Link, Element } from 'react-scroll';
-export function NewsPage() {
-    return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { fluid: true, className: "news-page my-4" },
-            React.createElement(Row, null,
-                React.createElement(Col, { sm: 2 },
-                    React.createElement(Nav, { className: "scrollspy-nav flex-column" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link pl-5", role: "button", activeClass: "nav-active", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name))))),
-                React.createElement(Col, { sm: 7 }, sections.map(({ name, markup }, i) => (React.createElement(Element, { key: i, name: `element-${i}`, className: "news-page-section" },
-                    React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
-                        React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
-                        " ",
-                        name),
-                    React.createElement(Card, { className: "shadow-sm p-3 h-100" },
-                        React.createElement(Card.Body, null,
-                            React.createElement(Row, { xl: 2, lg: 1, className: "align-items-top" },
-                                React.createElement(Col, { sm: 7 }, markup()),
-                                React.createElement(Col, null,
-                                    React.createElement(Card.Img, { src: cardImage, className: "img-fit", alt: "Card image" }))))))))))),
-        React.createElement(OrdinoFooter, null)));
-}
 const sections = [
     {
         name: 'Ordino 7.0.0',
@@ -130,4 +110,24 @@ const sections = [
                     React.createElement("li", null, "Collapse/Expand of groups is recorded in session history\"")))))
     },
 ];
+export function NewsPage() {
+    return (React.createElement(React.Fragment, null,
+        React.createElement(HeaderNavigation, null),
+        React.createElement(Container, { fluid: true, className: "news-page my-4" },
+            React.createElement(Row, null,
+                React.createElement(Col, { sm: 2 },
+                    React.createElement(Nav, { className: "scrollspy-nav flex-column" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link pl-5", role: "button", activeClass: "nav-active", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name))))),
+                React.createElement(Col, { sm: 7 }, sections.map(({ name, markup }, i) => (React.createElement(Element, { key: i, name: `element-${i}`, className: "news-page-section" },
+                    React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
+                        React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
+                        " ",
+                        name),
+                    React.createElement(Card, { className: "shadow-sm p-3 h-100" },
+                        React.createElement(Card.Body, null,
+                            React.createElement(Row, { xl: 2, lg: 1, className: "align-items-top" },
+                                React.createElement(Col, { sm: 7 }, markup()),
+                                React.createElement(Col, null,
+                                    React.createElement(Card.Img, { src: cardImage, className: "img-fit", alt: "Card image" }))))))))))),
+        React.createElement(OrdinoFooter, null)));
+}
 //# sourceMappingURL=NewsPage.js.map

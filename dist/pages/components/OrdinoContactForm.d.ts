@@ -1,1 +1,1 @@
-export declare const OrdinoContactForm: () => JSX.Element;
+export declare function OrdinoContactForm(): JSX.Element;

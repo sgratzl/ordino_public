@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Col, Form, Button, Card} from 'react-bootstrap';
 
-export const OrdinoContactForm = () => {
+export function OrdinoContactForm () {
     // TODO implemment backend
     const handleSubmit = () => null;
 
@@ -9,7 +9,7 @@ export const OrdinoContactForm = () => {
         <Card className="shadow-sm">
             <Card.Body>
                 <Card.Text>
-                    {"Do you have questions or found a bug, do not hasitate to contact us using the contact form below. You can also contact us by writing an email to "}
+                    {'Do you have questions or found a bug, do not hasitate to contact us using the contact form below. You can also contact us by writing an email to '}
                     <Card.Link href="mailto:ordino@caleydo.org.">ordino@caleydo.org</Card.Link> or posting a message in the Microsoft Team. We are glad to help you.
                  </Card.Text>
                 <Form onSubmit={() => handleSubmit()}>
@@ -38,7 +38,7 @@ export const OrdinoContactForm = () => {
                     </Form.Group>
 
                     <Form.Row className="justify-content-end">
-                        <Col md={"auto"}>
+                        <Col md={'auto'}>
                             <Button variant="secondary" type="submit">
                                 Send Message
                             </Button>
@@ -47,5 +47,6 @@ export const OrdinoContactForm = () => {
                 </Form>
             </Card.Body>
         </Card>
-    )
+    );
 }
+

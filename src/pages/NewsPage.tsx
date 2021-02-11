@@ -5,47 +5,6 @@ import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
 import {Link, Element} from 'react-scroll';
 
-export function NewsPage() {
-  return (
-    <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container fluid className="news-page my-4">
-        <Row>
-          <Col sm={2}>
-            <Nav className="scrollspy-nav flex-column">
-              {sections.map(({name}, i) => (
-                <Link className="nav-link pl-5" role="button" activeClass="nav-active" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
-                  {name}
-                </Link>
-              ))}
-            </Nav>
-          </Col>
-          <Col sm={7}>
-            {sections.map(({name, markup}, i) => (
-              <Element key={i} name={`element-${i}`} className="news-page-section">
-                <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
-                <Card className="shadow-sm p-3 h-100">
-                  <Card.Body>
-                    <Row xl={2} lg={1}  className="align-items-top">
-                      <Col sm={7}>
-                        {markup()}
-                      </Col>
-                      <Col >
-                        <Card.Img src={cardImage} className="img-fit" alt="Card image" />
-                      </Col>
-                    </Row>
-                  </Card.Body>
-                </Card>
-              </Element>
-            ))}
-          </Col>
-        </Row>
-      </Container>
-      <OrdinoFooter></OrdinoFooter>
-    </>
-  );
-}
-
 
 const sections = [
   {
@@ -227,4 +186,48 @@ const sections = [
 
   },
 ];
+
+
+
+export function NewsPage() {
+  return (
+    <>
+      <HeaderNavigation></HeaderNavigation>
+      <Container fluid className="news-page my-4">
+        <Row>
+          <Col sm={2}>
+            <Nav className="scrollspy-nav flex-column">
+              {sections.map(({name}, i) => (
+                <Link className="nav-link pl-5" role="button" activeClass="nav-active" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
+                  {name}
+                </Link>
+              ))}
+            </Nav>
+          </Col>
+          <Col sm={7}>
+            {sections.map(({name, markup}, i) => (
+              <Element key={i} name={`element-${i}`} className="news-page-section">
+                <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
+                <Card className="shadow-sm p-3 h-100">
+                  <Card.Body>
+                    <Row xl={2} lg={1}  className="align-items-top">
+                      <Col sm={7}>
+                        {markup()}
+                      </Col>
+                      <Col >
+                        <Card.Img src={cardImage} className="img-fit" alt="Card image" />
+                      </Col>
+                    </Row>
+                  </Card.Body>
+                </Card>
+              </Element>
+            ))}
+          </Col>
+        </Row>
+      </Container>
+      <OrdinoFooter></OrdinoFooter>
+    </>
+  );
+}
+
 
