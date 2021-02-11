@@ -1,14 +1,14 @@
 import * as React from 'react';
-import {Card} from "react-bootstrap";
+import {Card} from 'react-bootstrap';
 
 
 
-export const DisclaimerCard = () => {
+export function DisclaimerCard() {
     return (
         <Card className="shadow-sm">
             <Card.Body>
                 <Card.Text>
-                    The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH {"&"} Co KG, and datavisyn GmbH (“we,” “us” or “our”) on https://ordino.calyedoapp.org (the “Site”) is for general research purposes and non-commercial use only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
+                    The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH {'&'} Co KG, and datavisyn GmbH (“we,” “us” or “our”) on https://ordino.calyedoapp.org (the “Site”) is for general research purposes and non-commercial use only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
 
                 </Card.Text>
                 <Card.Text>
@@ -24,5 +24,5 @@ export const DisclaimerCard = () => {
                 </Card.Text>
             </Card.Body>
         </Card>
-    )
+    );
 }

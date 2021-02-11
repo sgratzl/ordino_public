@@ -78,7 +78,7 @@ export function HelpPage() {
                                 React.createElement("h4", { className: "text-left mt-2 mb-3" },
                                     React.createElement("i", { className: "mr-2 ordino-icon-2 fab fa-github" }),
                                     " Source code ",
-                                    "&",
+                                    '&',
                                     " licenses"),
                                 React.createElement(Card, { className: "shadow-sm" },
                                     React.createElement(Card.Body, null,

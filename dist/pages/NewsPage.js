@@ -21,7 +21,7 @@ export function NewsPage() {
                             React.createElement(Row, { xl: 2, lg: 1, className: "align-items-top" },
                                 React.createElement(Col, { sm: 7 }, markup()),
                                 React.createElement(Col, null,
-                                    React.createElement(Card.Img, { src: cardImage, className: 'img-fit', alt: "Card image" }))))))))))),
+                                    React.createElement(Card.Img, { src: cardImage, className: "img-fit", alt: "Card image" }))))))))))),
         React.createElement(OrdinoFooter, null)));
 }
 const sections = [

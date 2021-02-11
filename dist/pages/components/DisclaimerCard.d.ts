@@ -1,1 +1,1 @@
-export declare const DisclaimerCard: () => JSX.Element;
+export declare function DisclaimerCard(): JSX.Element;

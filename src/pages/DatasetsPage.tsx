@@ -4,6 +4,20 @@ import {OrdinoFooter} from './components/OrdinoFooter';
 import {Row, Col, Card, Container} from 'react-bootstrap';
 
 
+export function DatasetCard({title, text}: ICardProps) {
+  return (
+    <Card style={{height: '100%'}} className="shadow-sm">
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>
+          {text}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  );
+}
+
+
 export function DatasetsPage() {
   return (
     <>
@@ -16,11 +30,11 @@ export function DatasetsPage() {
         </Row>
         <Row xs={1} md={2} >
           <Col>
-            <SimpleCard title="The Cancer Genome Atlas (TCGA)"
+            <DatasetCard title="The Cancer Genome Atlas (TCGA)"
               text={`Gene expression, mutation, and copy number data cancergenome.nih.gov`} />
           </Col>
           <Col>
-            <SimpleCard title="Cancer Cell Line Encyclopedia (CCLE)"
+            <DatasetCard title="Cancer Cell Line Encyclopedia (CCLE)"
               text="Gene expression, mutation, and copy number data
             portals.broadinstitute.org/ccle" />
           </Col>
@@ -32,13 +46,13 @@ export function DatasetsPage() {
         </Row>
         <Row xs={1} md={2} >
           <Col>
-            <SimpleCard title="Project DRIVE"
+            <DatasetCard title="Project DRIVE"
               text="RNAi depletion screen data (RSA and ATARiS)
             McDonald III, E. R. et. al. Project DRIVE: A Compen- dium of Cancer Dependencies and Synthetic Lethal Relationships Uncovered by Large-Scale, Deep RNAi Screening.
              Cell 170, Pages 577-592.e10 (2017)." />
           </Col>
           <Col>
-            <SimpleCard title="Avana CERES"
+            <DatasetCard title="Avana CERES"
               text="CRISPR-Cas9 depletion screen data
             Meyers, R. M. et. al. Computational correction of copy
              number effect improves specificity of CRISPR–Cas9 essentiality screens in cancer cells. Nature Genetics 49, 1779–1784 (2017)." />
@@ -53,18 +67,4 @@ export function DatasetsPage() {
 interface ICardProps {
   title: string;
   text: string;
-}
-
-
-export const SimpleCard = ({title, text}: ICardProps) => {
-  return (
-    <Card style={{height: "100%"}} className="shadow-sm">
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>
-          {text}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  )
 }

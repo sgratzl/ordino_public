@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {Card} from "react-bootstrap";
+import {Card} from 'react-bootstrap';
 
-export const VideoCard = () => {
+export function VideoCard() {
     return (
-        <Card style={{overflow: "hidden"}} className="shadow-sm">
+        <Card style={{overflow: 'hidden'}} className="shadow-sm">
             <iframe src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
             <Card.Body>
                 <Card.Text>
@@ -36,5 +36,5 @@ export const VideoCard = () => {
         </Card.Text>
             </Card.Body>
         </Card>
-    )
+    );
 }

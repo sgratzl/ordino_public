@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
-import {Row, Col, Nav, Card, Container, ListGroup, Navbar} from 'react-bootstrap';
+import {Row, Card, Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 export function PublicationPage() {
@@ -13,7 +13,7 @@ export function PublicationPage() {
           <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-2  fas fa-book-open"></i> Publication</h4>
         </Row>
         <Row className="mb-4">
-          <Card style={{overflow: "hidden"}} className="shadow-sm">
+          <Card style={{overflow: 'hidden'}} className="shadow-sm">
             <iframe className="" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
             <Card.Body>
               <Card.Text>

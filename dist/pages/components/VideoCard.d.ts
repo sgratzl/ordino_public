@@ -1,1 +1,1 @@
-export declare const VideoCard: () => JSX.Element;
+export declare function VideoCard(): JSX.Element;

@@ -3,7 +3,7 @@ import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
 import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
 import {DevelopedByAffiliations} from './components/DevelopedByAffiliations';
-import {Link, Element} from 'react-scroll'
+import {Link, Element} from 'react-scroll';
 import {VideoCard} from './components/VideoCard';
 import {OrdinoContactForm} from './components/OrdinoContactForm';
 import {DisclaimerCard} from './components/DisclaimerCard';
@@ -97,7 +97,7 @@ export function HelpPage() {
             <Row className="pt-4">
               <Col>
                 <Element name={`element-${5}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source code {"&"} licenses</h4>
+                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source code {'&'} licenses</h4>
                   <Card className="shadow-sm">
                     <Card.Body>
                       <Card.Text>
