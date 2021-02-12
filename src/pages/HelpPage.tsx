@@ -48,7 +48,7 @@ export function HelpPage() {
 
 
             {/* ContactForm */}
-            <Row className="mt-4">
+            <Row className="mt-6">
               <Col>
                 <Element name={`element-${2}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-at"></i> Contact us</h4>
@@ -58,7 +58,7 @@ export function HelpPage() {
             </Row>
 
             {/* Disclaimer */}
-            <Row className="mt-4">
+            <Row className="mt-6">
               <Col>
                 <Element name={`element-${3}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-exclamation-triangle "></i> Disclaimer</h4>
@@ -68,7 +68,7 @@ export function HelpPage() {
             </Row>
 
             {/* Terms of Use */}
-            <Row className="mt-4">
+            <Row className="mt-6">
               <Col>
                 <Element name={`element-${4}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
@@ -94,7 +94,7 @@ export function HelpPage() {
             </Row>
 
             {/* Source code */}
-            <Row className="pt-4">
+            <Row className="mt-6">
               <Col>
                 <Element name={`element-${5}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source code {'&'} licenses</h4>
