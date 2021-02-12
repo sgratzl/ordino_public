@@ -10,8 +10,8 @@ export function DatasetCard({ title, text }) {
 }
 export function DatasetsPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { className: "my-4 dataset-page" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { className: "dataset-page my-9" },
             React.createElement(Row, null,
                 React.createElement(Col, null,
                     React.createElement("h4", { className: "text-left d-flex align-items-center mt-2 mb-3" },

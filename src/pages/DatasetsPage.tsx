@@ -21,8 +21,8 @@ export function DatasetCard({title, text}: ICardProps) {
 export function DatasetsPage() {
   return (
     <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container className="my-4 dataset-page">
+      <HeaderNavigation fixed="top"></HeaderNavigation>
+      <Container className="dataset-page my-9">
         <Row>
           <Col>
             <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Basic Datasets</h4>

@@ -9,8 +9,8 @@ import feature3Img from 'ordino_public/dist/assets/feature_3.png';
 import feature4Img from 'ordino_public/dist/assets/feature_4.png';
 export function FeaturesPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { className: "my-4" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { className: "my-9" },
             React.createElement(Row, null,
                 React.createElement(Col, null,
                     React.createElement("h4", { className: "text-left d-flex align-items-center mb-3" },

@@ -192,8 +192,8 @@ const sections = [
 export function NewsPage() {
   return (
     <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container fluid className="news-page my-4">
+      <HeaderNavigation fixed="top"></HeaderNavigation>
+      <Container fluid className="news-page my-9">
         <Row>
           <Col sm={2}>
             <Nav className="scrollspy-nav flex-column">
@@ -229,5 +229,3 @@ export function NewsPage() {
     </>
   );
 }
-
-

@@ -29,5 +29,4 @@ export function OrdinoContactForm() {
                     React.createElement(Col, { md: 'auto' },
                         React.createElement(Button, { variant: "secondary", type: "submit" }, "Send Message")))))));
 }
-;
 //# sourceMappingURL=OrdinoContactForm.js.map

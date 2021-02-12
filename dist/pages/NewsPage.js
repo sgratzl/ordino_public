@@ -112,8 +112,8 @@ const sections = [
 ];
 export function NewsPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { fluid: true, className: "news-page my-4" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { fluid: true, className: "news-page my-9" },
             React.createElement(Row, null,
                 React.createElement(Col, { sm: 2 },
                     React.createElement(Nav, { className: "scrollspy-nav flex-column" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link pl-5", role: "button", activeClass: "nav-active", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name))))),

@@ -11,8 +11,8 @@ import feature4Img from 'ordino_public/dist/assets/feature_4.png';
 export function FeaturesPage() {
   return (
     <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container className="my-4">
+      <HeaderNavigation fixed="top"></HeaderNavigation>
+      <Container className="my-9">
         <Row>
           <Col>
             <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Feature Set 1</h4>

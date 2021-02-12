@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom';
 export function PublicationPage() {
   return (
     <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container className="ordino-publication-page">
+      <HeaderNavigation fixed="top"></HeaderNavigation>
+      <Container className="ordino-publication-page my-9">
         <Row className="mt-4">
           <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-2  fas fa-book-open"></i> Publication</h4>
         </Row>

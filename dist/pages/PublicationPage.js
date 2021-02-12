@@ -5,8 +5,8 @@ import { Row, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 export function PublicationPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { className: "ordino-publication-page" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { className: "ordino-publication-page my-9" },
             React.createElement(Row, { className: "mt-4" },
                 React.createElement("h4", { className: "text-left d-flex align-items-center mb-3" },
                     React.createElement("i", { className: "mr-2 ordino-icon-2  fas fa-book-open" }),

@@ -9,8 +9,8 @@ import { OrdinoContactForm } from './components/OrdinoContactForm';
 import { DisclaimerCard } from './components/DisclaimerCard';
 export function HelpPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { fluid: true, className: "ordino-help-page my-4" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { fluid: true, className: "ordino-help-page mt-9 mb-4" },
             React.createElement(Row, null,
                 React.createElement(Col, { sm: 2 },
                     React.createElement(Nav, { style: { position: 'fixed' }, className: "scrollspy-nav flex-column" },

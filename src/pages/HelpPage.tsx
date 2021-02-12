@@ -12,8 +12,8 @@ import {DisclaimerCard} from './components/DisclaimerCard';
 export function HelpPage() {
   return (
     <>
-      <HeaderNavigation></HeaderNavigation>
-      <Container fluid className="ordino-help-page my-4">
+      <HeaderNavigation fixed="top"></HeaderNavigation>
+      <Container fluid className="ordino-help-page mt-9 mb-4">
         <Row>
           <Col sm={2}>
             <Nav style={{position: 'fixed'}} className="scrollspy-nav flex-column">
@@ -122,5 +122,3 @@ export function HelpPage() {
     </>
   );
 }
-
-
