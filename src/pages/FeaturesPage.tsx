@@ -23,9 +23,9 @@ export function FeaturesPage() {
           <FeatureCard title="Feature 2" text="Ordino allows users to flexibly rank, filter and explore" image={feature2Img} />
           <FeatureCard title="Feature 3" text="Pre-loaded data, including The Cancer Genome Atlas, the Cancer Cell Line Encyclopedia" image={feature3Img} />
         </Row>
-        <Row className="mb-4">
+        <Row>
           <Col>
-            <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Feature Set 2</h4>
+            <h4 className="text-left d-flex align-items-center mt-6 mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Feature Set 2</h4>
           </Col>
         </Row>
         <Row md={1}>
