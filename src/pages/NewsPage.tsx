@@ -198,7 +198,7 @@ export function NewsPage() {
           <Col sm={2}>
             <Nav className="scrollspy-nav flex-column">
               {sections.map(({name}, i) => (
-                <Link className="nav-link pl-5" role="button" activeClass="nav-active" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
+                <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
                   {name}
                 </Link>
               ))}

@@ -116,7 +116,7 @@ export function NewsPage() {
         React.createElement(Container, { fluid: true, className: "news-page my-9" },
             React.createElement(Row, null,
                 React.createElement(Col, { sm: 2 },
-                    React.createElement(Nav, { className: "scrollspy-nav flex-column" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link pl-5", role: "button", activeClass: "nav-active", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name))))),
+                    React.createElement(Nav, { className: "scrollspy-nav flex-column" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link", role: "button", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name))))),
                 React.createElement(Col, { sm: 7 }, sections.map(({ name, markup }, i) => (React.createElement(Element, { key: i, name: `element-${i}`, className: "news-page-section" },
                     React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
                         React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
