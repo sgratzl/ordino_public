@@ -74,19 +74,19 @@ export function dismissMigrationPopup(graph: ProvenanceGraph) {
   If necessary, you can still access the original hg19 instance here: <a href="https://ordino-hg19.caleydoapp.org">ordino-hg19.caleydoapp.org</a>`;
 
   dialog.footer.innerHTML = `
-    <div class="row">
+    <div class="row" style="width:100%;">
       <div class="col-md-6" style="text-align: left;">
-        <label><input type="checkbox" name="dismiss"> Do not show this again</label>
+      <label><input type="checkbox" name="dismiss">Do not show this again</label>
       </div>
-      <div class="col-md-6">
-        <button type="button" class="btn btn-default btn-primary submit-dialog">Close</button>
+      <div class="col-md-6" style="text-align: right;">
+          <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   `;
 
-  dialog.footer.querySelector('button').onclick = () => {
-    dialog.hide();
-  };
+  // dialog.footer.querySelector('button').onclick = () => {
+  //   dialog.hide();
+  // };
 
   const dismissCheckbox = dialog.footer.querySelector('input');
 
