@@ -193,24 +193,20 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-      <Container fluid className="news-page my-9">
-        <Row>
-          <Col sm={2}>
-            <Nav className="scrollspy-nav flex-column">
-              {sections.map(({name}, i) => (
-                <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
-                  {name}
-                </Link>
-              ))}
-            </Nav>
-          </Col>
-          <Col sm={7}>
+          <Nav className="scrollspy-nav flex-column ml-4">
+            {sections.map(({name}, i) => (
+              <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
+                {name}
+              </Link>
+            ))}
+          </Nav>
+      <Container className="news-page my-9">
             {sections.map(({name, markup}, i) => (
               <Element key={i} name={`element-${i}`} className="news-page-section">
                 <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
                 <Card className="shadow-sm p-3 h-100">
                   <Card.Body>
-                    <Row xl={2} lg={1}  className="align-items-top">
+                    <Row xl={2} lg={1} className="align-items-top">
                       <Col sm={7}>
                         {markup()}
                       </Col>
@@ -222,8 +218,6 @@ export function NewsPage() {
                 </Card>
               </Element>
             ))}
-          </Col>
-        </Row>
       </Container>
       <OrdinoFooter></OrdinoFooter>
     </>

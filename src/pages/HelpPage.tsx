@@ -13,28 +13,26 @@ export function HelpPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-      <Container fluid className="ordino-help-page mt-9 mb-4">
-        <Row>
-          <Col sm={2}>
-            <Nav className="scrollspy-nav flex-column">
-              <Link className="nav-link" role="button" to={`element-${1}`} spy={true} smooth={true} offset={-180} duration={500}>
-                Ordino at a glance
+      <Nav className="scrollspy-nav flex-column ml-4">
+        <Link className="nav-link" role="button" to={`element-${1}`} spy={true} smooth={true} offset={-180} duration={500}>
+          Ordino at a glance
               </Link>
-              <Link className="nav-link" role="button" to={`element-${2}`} spy={true} smooth={true} offset={-180} duration={500}>
-                Contact us
+        <Link className="nav-link" role="button" to={`element-${2}`} spy={true} smooth={true} offset={-180} duration={500}>
+          Contact us
               </Link>
-              <Link className="nav-link" role="button" to={`element-${3}`} spy={true} smooth={true} offset={-180} duration={500}>
-                Disclaimer
+        <Link className="nav-link" role="button" to={`element-${3}`} spy={true} smooth={true} offset={-180} duration={500}>
+          Disclaimer
               </Link>
-              <Link className="nav-link" role="button" to={`element-${4}`} spy={true} smooth={true} offset={-200} duration={500}>
-                Terms of Use
+        <Link className="nav-link" role="button" to={`element-${4}`} spy={true} smooth={true} offset={-200} duration={500}>
+          Terms of Use
               </Link>
-              <Link className="nav-link" role="button" to={`element-${5}`} spy={true} smooth={true} offset={-230} duration={500}>
-                Source code
+        <Link className="nav-link" role="button" to={`element-${5}`} spy={true} smooth={true} offset={-230} duration={500}>
+          Source code
               </Link>
-            </Nav>
-          </Col>
-          <Col sm={6}>
+      </Nav>
+      <Container className="ordino-help-page mt-9 mb-4">
+        <Row >
+          <Col>
 
             {/* VideoCard 1 */}
             <Row>
