@@ -7,7 +7,7 @@ export function OrdinoTeaserCards() {
     <div className="ordino-teaser-cards container">
       <div className="row row-cols-1 row-cols-md-2 my-5">
         <div className="col mb-4">
-          <h4 className="text-center mb-3"><i className="mr-2 fas fa-newspaper"></i> What's new?</h4>
+          <h4 className="text-center mb-3"><i className="mr-2 ordino-icon-2 fas fa-newspaper"></i> What's new?</h4>
           <Card className="shadow-sm h-100">
             <Card.Body>
               <Card.Text>
@@ -22,7 +22,7 @@ export function OrdinoTeaserCards() {
           </Card>
         </div>
         <div className="col mb-4">
-          <h4 className="text-center mb-3"><i className="mr-2 fas fa-book-open"></i> Publication</h4>
+          <h4 className="text-center mb-3"><i className="mr-2 ordino-icon-2 fas fa-book-open"></i> Publication</h4>
           <Card className="shadow-sm h-100">
             <Card.Body>
               <Card.Text>
