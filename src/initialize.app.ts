@@ -13,7 +13,8 @@ import {AppMetaDataUtils} from 'phovea_ui';
 const _ = new Ordino({
   showCookieDisclaimer: true,
   showResearchDisclaimer: false,
-  showAboutLink
+  showAboutLink,
+  clientConfig:{}
 });
 
 function showAboutLink(title: HTMLElement, content: HTMLElement) {

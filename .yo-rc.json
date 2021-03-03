@@ -31,6 +31,7 @@
     "libraryAliases": {
       "d3": "d3/d3.js"
     },
+    "copyFiles": ["dist/clientConfig.json"],
     "libraryExternals": [],
     "name": "ordino_public",
     "author": "datavisyn",
