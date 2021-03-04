@@ -1,5 +1,7 @@
 {
     "enableDatasetsTab": true,
-    "enableToursTab": true,
-    "enableSessionsTab": true
+    "enableSessionsTab": true,
+    "enableToursTab": false,
+    "enableOtherTab": false,
+    "$schema": "./json.schema"
 }
