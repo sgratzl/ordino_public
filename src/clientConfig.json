@@ -2,6 +2,9 @@
     "enableDatasetsTab": true,
     "enableSessionsTab": true,
     "enableToursTab": false,
-    "enableOtherTab": false,
-    "$schema": "./json.schema"
+    "enableMoreTab": true,
+    "header": {
+        "color": "black",
+        "size": "md"
+    }
 }

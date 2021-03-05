@@ -32,6 +32,7 @@
       "d3": "d3/d3.js"
     },
     "copyFiles": ["dist/clientConfig.json"],
+    "clientConfigInterface": "ordino/src/interfaces.ts",
     "libraryExternals": [],
     "name": "ordino_public",
     "author": "datavisyn",
