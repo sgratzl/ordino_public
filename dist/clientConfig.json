@@ -1,6 +1,3 @@
 {
-    "enableDatasetsTab": true,
-    "enableSessionsTab": true,
-    "enableToursTab": false,
-    "enableOtherTab": false
+    "$schema": "./clientConfig.schema.json",
 }

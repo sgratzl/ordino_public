@@ -1,10 +1,4 @@
 {
-    "enableDatasetsTab": true,
-    "enableSessionsTab": true,
-    "enableToursTab": false,
-    "enableMoreTab": true,
-    "header": {
-        "color": "black",
-        "size": "md"
-    }
+    "$schema": "./clientConfig.schema.json",
+    "enableDatasetsTab": false
 }
