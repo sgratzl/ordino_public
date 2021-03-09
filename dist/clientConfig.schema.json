@@ -1,0 +1,50 @@
+{
+  "$ref": "#/definitions/IClientConfigOptions",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "IClientConfigOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "actions": {
+          "enum": [
+            "hide",
+            "show"
+          ],
+          "type": "string"
+        },
+        "enableDatasetsTab": {
+          "default": false,
+          "description": "Whether to show the datsets tab",
+          "type": "boolean"
+        },
+        "enableMoreTab": {
+          "description": "Whether to show the more tab",
+          "type": "boolean"
+        },
+        "enableSessionsTab": {
+          "description": "Whether to show the sessions tab",
+          "type": "boolean"
+        },
+        "enableToursTab": {
+          "description": "Whether to show the tours tab",
+          "type": "boolean"
+        },
+        "headerHeight": {
+          "description": "Set custom app header height",
+          "maximum": 200,
+          "minimum": 20,
+          "type": "number"
+        }
+      },
+      "required": [
+        "$schema",
+        "headerHeight",
+        "actions"
+      ],
+      "type": "object"
+    }
+  }
+}

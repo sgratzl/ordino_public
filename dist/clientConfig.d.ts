@@ -1,16 +1,27 @@
-interface IHeaderOptions {
-    color: 'black' | 'white';
-    size: 'sm' | 'md' | 'lg';
-}
 export default interface IClientConfigOptions {
+    $schema: string;
     /**
-     * @description to enable vs codes
+     * @default false
+     * @description Whether to show the datsets tab
      */
     enableDatasetsTab?: boolean;
+    /**
+     * @description Whether to show the tours tab
+     */
     enableToursTab?: boolean;
+    /**
+     * @description Whether to show the sessions tab
+     */
     enableSessionsTab?: boolean;
+    /**
+     * @description Whether to show the more tab
+     */
     enableMoreTab?: boolean;
-    header: IHeaderOptions;
-    extra: string;
+    /**
+     * @description Set custom app header height
+     * @minimum 20
+     * @maximum 200
+     */
+    headerHeight: number;
+    actions: 'hide' | 'show';
 }
-export {};

@@ -1,3 +1,5 @@
 {
     "$schema": "./clientConfig.schema.json",
+    "enableDatasetsTab": false,
+    "headerHeight": 20
 }
