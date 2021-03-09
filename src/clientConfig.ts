@@ -1,4 +1,6 @@
-export default interface IClientConfigOptions {
+import {ITDPClientConfig} from 'tdp_core'
+
+export default interface IClientConfigOptions extends ITDPClientConfig {
     $schema: string;
     /**
      * @default false
@@ -23,7 +25,7 @@ export default interface IClientConfigOptions {
      * @minimum 20
      * @maximum 200
      */
-    headerHeight: number;
+    headerHeight?: number;
 
-    actions: 'hide' | 'show'
+    actions?: 'hide' | 'show'
 }

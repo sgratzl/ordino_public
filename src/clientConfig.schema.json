@@ -37,12 +37,22 @@
           "maximum": 200,
           "minimum": 20,
           "type": "number"
+        },
+        "showAboutLink": {
+          "type": "boolean"
+        },
+        "showProvenanceMenu": {
+          "type": "boolean"
+        },
+        "showReportBugLink": {
+          "type": "boolean"
         }
       },
       "required": [
         "$schema",
-        "headerHeight",
-        "actions"
+        "showAboutLink",
+        "showProvenanceMenu",
+        "showReportBugLink"
       ],
       "type": "object"
     }

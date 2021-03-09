@@ -1,5 +1,8 @@
 {
     "$schema": "./clientConfig.schema.json",
-    "enableDatasetsTab": false,
-    "headerHeight": 20
+    "enableToursTab": false,
+    "enableMoreTab": false,
+    "headerHeight": 20,
+    "showAboutLink": false,
+    "showProvenanceMenu": false
 }
