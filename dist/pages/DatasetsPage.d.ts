@@ -1,7 +1,8 @@
-export declare function DatasetCard({ title, text }: ICardProps): JSX.Element;
-export declare function DatasetsPage(): JSX.Element;
-interface ICardProps {
+import * as React from 'react';
+interface IDatasetPageCardProps {
     title: string;
-    text: string;
+    children?: React.ReactNode;
 }
+export declare function DatasetPageCard({ title, children }: IDatasetPageCardProps): JSX.Element;
+export declare function DatasetsPage(): JSX.Element;
 export {};
