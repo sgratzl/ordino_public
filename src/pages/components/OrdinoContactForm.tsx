@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Col, Form, Button, Card} from 'react-bootstrap';
 
 export function OrdinoContactForm () {
-    // TODO implemment backend
+    // TODO: implemment backend
     const handleSubmit = () => null;
 
     return (

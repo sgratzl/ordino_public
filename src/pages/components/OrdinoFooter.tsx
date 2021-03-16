@@ -35,7 +35,7 @@ export function OrdinoFooter(props) {
             <i className="mr-2 fas fa-fw fa-check"></i>Features
           </Link>
           <Link to="/datasets" component={footerLink} openInNewWindow={openInNewWindow} className="list-group-item list-group-item-action">
-            <i className="mr-2 fas fa-fw fa-database"></i>Loaded datasets
+            <i className="mr-2 fas fa-fw fa-database"></i>Loaded Datasets
           </Link>
           <Link to="/publication" component={footerLink} openInNewWindow={openInNewWindow} className="list-group-item list-group-item-action">
             <i className="mr-2 fas fa-fw fa-book-open"></i>Publication
