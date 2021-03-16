@@ -20,7 +20,7 @@ export function OrdinoFooter(props) {
                     "Features"),
                 React.createElement(Link, { to: "/datasets", component: footerLink, openInNewWindow: openInNewWindow, className: "list-group-item list-group-item-action" },
                     React.createElement("i", { className: "mr-2 fas fa-fw fa-database" }),
-                    "Loaded datasets"),
+                    "Loaded Datasets"),
                 React.createElement(Link, { to: "/publication", component: footerLink, openInNewWindow: openInNewWindow, className: "list-group-item list-group-item-action" },
                     React.createElement("i", { className: "mr-2 fas fa-fw fa-book-open" }),
                     "Publication")),
