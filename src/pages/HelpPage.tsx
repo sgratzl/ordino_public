@@ -27,7 +27,7 @@ export function HelpPage() {
           Terms of Use
               </Link>
         <Link className="nav-link" role="button" to={`element-${5}`} spy={true} smooth={true} offset={-230} duration={500}>
-          Source code
+          Source Code
               </Link>
       </Nav>
       <Container className="ordino-help-page mt-9 mb-4">
@@ -95,7 +95,7 @@ export function HelpPage() {
             <Row className="mt-6">
               <Col>
                 <Element name={`element-${5}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source code {'&'} licenses</h4>
+                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source Code {'&'} Licenses</h4>
                   <Card className="shadow-sm">
                     <Card.Body>
                       <Card.Text>
