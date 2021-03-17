@@ -5,19 +5,10 @@ import {EP_PHOVEA_CLUE_PROVENANCE_GRAPH} from 'phovea_clue';
 export default function (registry: IRegistry) {
   //registry.push('extension-type', 'extension-id', function() { return import('./extension_impl'); }, {});
   // generator-phovea:begin
-  registry.push('ordinoWelcomeView', 'ordinoPublicWelcomeView', function () {return import('./app/WelcomeView');}, {
-    factory: 'new WelcomeView',
-    priority: 20
-  });
-
   registry.push(EP_PHOVEA_CORE_LOCALE, 'ordinoPublicTdpLocaleEN', function () {
     return import('./locales/en/tdp.json').then(PluginRegistry.getInstance().asResource);
   }, <ILocaleEPDesc>{
     ns: 'tdp',
-  });
-
-  registry.push(EP_PHOVEA_CLUE_PROVENANCE_GRAPH, 'dismissMigrationPopup', () => import('./app/WelcomeView'), {
-    factory: 'dismissMigrationPopup'
   });
   // generator-phovea:end
 

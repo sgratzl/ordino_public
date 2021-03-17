@@ -81,12 +81,6 @@
     },
     "ignores": [],
     "extensions": [
-      {
-        "type": "ordinoWelcomeView",
-        "id": "ordinoPublicWelcomeView",
-        "module": "WelcomeView",
-        "extras": {}
-      }
     ],
     "libraries": [
       "d3"
