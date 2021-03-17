@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HeaderNavigation } from 'ordino';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { OrdinoFooter } from 'ordino';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import { FeatureCard } from './components/FeatureCard';
 import feature1Img from 'ordino_public/dist/assets/feature_1.png';

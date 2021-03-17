@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { OrdinoFooter } from 'ordino';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import { HeaderNavigation } from 'ordino';
 export function DatasetPageCard({ title, children }) {

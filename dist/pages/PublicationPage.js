@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HeaderNavigation } from 'ordino';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { OrdinoFooter } from 'ordino';
 import { Row, Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 export function PublicationPage() {

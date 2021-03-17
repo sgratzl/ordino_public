@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HeaderNavigation } from 'ordino';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { OrdinoFooter } from 'ordino';
 import { Row, Col, Nav, Container, Card } from 'react-bootstrap';
 import { DevelopedByAffiliations } from './components/DevelopedByAffiliations';
 import { Link, Element } from 'react-scroll';
