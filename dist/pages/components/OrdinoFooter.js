@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { OrdinoLogo } from './OrdinoLogo';
 const footerLink = React.forwardRef((props, ref) => {
     if (props.openInNewWindow) {
         return (React.createElement("a", { href: props.href, className: props.className, target: "_blank", rel: "noopener noreferrer" }, props.children));
@@ -36,7 +35,6 @@ export function OrdinoFooter(props) {
                     "Terms of Use"))),
         React.createElement("div", { className: "row" },
             React.createElement("div", { className: "col text-right ordino-footer-logo" },
-                React.createElement(Link, { to: "/", component: footerLink, openInNewWindow: openInNewWindow },
-                    React.createElement(OrdinoLogo, null))))));
+                React.createElement(Link, { to: "/", component: footerLink, openInNewWindow: openInNewWindow })))));
 }
 //# sourceMappingURL=OrdinoFooter.js.map

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {HeaderNavigation} from './components/HeaderNavigation';
+import {HeaderNavigation} from 'ordino';
 import {OrdinoFooter} from './components/OrdinoFooter';
 import {Row, Card, Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';

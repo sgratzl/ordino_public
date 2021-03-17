@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {HeaderNavigation} from './components/HeaderNavigation';
 import {OrdinoFooter} from './components/OrdinoFooter';
 import {Row, Col, Card, Container} from 'react-bootstrap';
-
+import {HeaderNavigation} from 'ordino';
 
 
 interface IDatasetPageCardProps {
