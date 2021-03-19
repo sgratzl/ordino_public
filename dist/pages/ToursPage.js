@@ -6,8 +6,8 @@ import { TourCard } from 'ordino';
 import tour1Img from 'ordino/dist/assets/tour_1.png';
 export function ToursPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { className: "py-6" },
+        React.createElement(HeaderNavigation, { fixed: "top" }),
+        React.createElement(Container, { className: "mt-9 mb-6" },
             React.createElement("p", { className: "ordino-info-text" }, " Learn more about Ordino by taking an interactive guided tour"),
             React.createElement("h4", { className: "text-left mb-3 d-flex align-items-center " },
                 React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
