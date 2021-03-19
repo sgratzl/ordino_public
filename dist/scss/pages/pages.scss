@@ -67,3 +67,9 @@
     }
   }
 }
+
+ // TODO: remove duplicate styles when workspace.scss imports all styles 
+.ordino-info-text {
+  color: map-get($theme-colors, "ordino-gray-4");
+  font-size: 1.2em;
+}
