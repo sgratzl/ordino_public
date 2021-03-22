@@ -6,6 +6,7 @@ import * as ReactDOM from 'react-dom';
 import {HashRouter, Switch, Route} from 'react-router-dom';
 import {HomePage, DatasetsPage, FeaturesPage, NewsPage, Error404Page, PublicationPage, HelpPage} from './pages';
 import {RouterScrollToTop} from './utils';
+import {ToursPage} from './pages/ToursPage';
 
 ReactDOM.render(
   <>
@@ -16,6 +17,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/news">
           <NewsPage />
+        </Route>
+        <Route path="/tours">
+          <ToursPage />
         </Route>
         <Route path="/features">
           <FeaturesPage />
