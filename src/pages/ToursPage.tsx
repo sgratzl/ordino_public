@@ -10,7 +10,7 @@ export function ToursPage() {
         <>
             <HeaderNavigation fixed="top"/>
             <Container className="mt-9 mb-6">
-                <p className="ordino-info-text"> Learn more about Ordino by taking an interactive guided tour</p>
+                <p className="lead text-ordino-gray-4">Learn more about Ordino by taking an interactive guided tour</p>
                 <h4 className="text-left mb-3 d-flex align-items-center "><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Beginner</h4>
                 <Row className="mb-4" md={3}>
                     <TourCard title="Ordino Welcome Tour" text="Learn the basic features of Ordino in a short welcome tour." image={tour1Img} onClickHandler={(evt) => console.log('')}></TourCard>
