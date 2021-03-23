@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { OrdinoFooter } from 'ordino';
+import { HeaderNavigation, OrdinoFooter } from 'ordino';
 import { Row, Col, Card, Container } from 'react-bootstrap';
-import { HeaderNavigation } from 'ordino';
 export function DatasetPageCard({ title, children }) {
     return (React.createElement(Card, { style: { height: '100%' }, className: "shadow-sm" },
         React.createElement(Card.Body, null,
