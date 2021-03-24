@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { HeaderNavigation } from './components/HeaderNavigation';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { HeaderNavigation, OrdinoFooter } from 'ordino';
 import { Row, Col, Nav, Container, Card } from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
 import { Link, Element } from 'react-scroll';

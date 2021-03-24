@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {HeaderNavigation} from './HeaderNavigation';
 import {Link} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ordinoHero from 'ordino_public/dist/assets/ordino-hero.svg';
+import {HeaderNavigation} from 'ordino';
 
 export function OrdinoHero() {
   const [modalShow, setModalShow] = React.useState(false);
