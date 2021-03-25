@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { HeaderNavigation } from './components/HeaderNavigation';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { HeaderNavigation, OrdinoFooter } from 'ordino';
 import { Row, Container } from 'react-bootstrap';
 import { TourCard } from 'ordino';
 import tour1Img from 'ordino/dist/assets/tour_1.png';
