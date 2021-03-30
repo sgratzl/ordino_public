@@ -3,21 +3,22 @@ import Card from 'react-bootstrap/Card';
 import {Col} from 'react-bootstrap';
 
 interface IFeatureCardProps {
-    image: string;
+    image?: string;
     title: string;
-    text: string;
+    /**
+     * Add card text as children
+     */
     children?: React.ReactNode;
 }
 
-export function FeatureCard({image, title, text}: IFeatureCardProps) {
+export function FeatureCard({image, title, children}: IFeatureCardProps) {
     return (
         <Col className="mb-4">
-            <Card style={{width: '20rem', height: '20rem'}} className="shadow-sm">
-                <Card.Img variant="top" className="p-2" src={image} />
+            <Card  className="shadow-sm h-100">
                 <Card.Body className="p-2">
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                        {text}
+                        {children}
                     </Card.Text>
                 </Card.Body>
             </Card>

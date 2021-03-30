@@ -1,9 +1,11 @@
 import * as React from 'react';
 interface IFeatureCardProps {
-    image: string;
+    image?: string;
     title: string;
-    text: string;
+    /**
+     * Add card text as children
+     */
     children?: React.ReactNode;
 }
-export declare function FeatureCard({ image, title, text }: IFeatureCardProps): JSX.Element;
+export declare function FeatureCard({ image, title, children }: IFeatureCardProps): JSX.Element;
 export {};
