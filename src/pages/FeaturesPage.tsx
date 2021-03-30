@@ -30,7 +30,7 @@ export function FeaturesPage() {
         <Row>
           <Col>
             <p className="lead text-ordino-gray-4">
-              A core component of the Ordino system is the interactive visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener">LineUp</a>,
+              A core component of the Ordino system is the interactive visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener noreferrer">LineUp</a>,
               which allows users to flexibly create and explore rankings of items based
               on a set of heterogeneous attributes. The exploration is supplemented with filtering features, such as
               setting cutoff values for numerical attributes, specifying a string or regular expression for textual
@@ -127,7 +127,7 @@ export function FeaturesPage() {
           </FeatureCard>
           <FeatureCard title="Expression View, Copy Number View and Mutation View" >
             Expression view, Copy Number view, and Mutation view visualizing experimental data for the
-            currently selected items with the ranking visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener">LineUp</a>.
+            currently selected items with the ranking visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener noreferrer">LineUp</a>.
           </FeatureCard>
           <FeatureCard title="Combined View" >
             Combined view is a specialized ranking view that is able to show copy number, expression, and
@@ -155,9 +155,8 @@ export function FeaturesPage() {
           </FeatureCard>
           <FeatureCard title="External Resource Views" >
             External resource views loading the content of external websites. For selected genes, the user
-            can look at the information available on canSAR, Ensembl, Human Protein Atlas, Open Targets,
-            PubMed, and UniProt. For cell lines, the analyst can load the information available on COSMIC
-            (Catalogue Of Somatic Mutations In Cancer).
+            can look at the information available on <a href="https://ensembl.org/" target="_blank" rel="noopener noreferrer">Ensembl</a>, <a href="https://proteinatlas.org/" target="_blank" rel="noopener noreferrer">Human Protein Atlas</a>, <a href="https://www.targetvalidation.org/" target="_blank" rel="noopener noreferrer">Open Targets</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>, and <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">UniProt</a>.
+            For cell lines, the analyst can load the information available on <a href="https://cancer.sanger.ac.uk/cosmic/" target="_blank" rel="noopener noreferrer">COSMIC</a> (Catalogue Of Somatic Mutations In Cancer).
           </FeatureCard>
         </Row>
       </Container>
