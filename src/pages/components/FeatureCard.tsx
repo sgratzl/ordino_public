@@ -17,9 +17,7 @@ export function FeatureCard({image, title, children}: IFeatureCardProps) {
             <Card  className="shadow-sm h-100">
                 <Card.Body className="p-2">
                     <Card.Title>{title}</Card.Title>
-                    <Card.Text>
-                        {children}
-                    </Card.Text>
+                    {children}
                 </Card.Body>
             </Card>
         </Col>

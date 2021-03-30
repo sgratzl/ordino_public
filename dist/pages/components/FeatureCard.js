@@ -6,6 +6,6 @@ export function FeatureCard({ image, title, children }) {
         React.createElement(Card, { className: "shadow-sm h-100" },
             React.createElement(Card.Body, { className: "p-2" },
                 React.createElement(Card.Title, null, title),
-                React.createElement(Card.Text, null, children)))));
+                children))));
 }
 //# sourceMappingURL=FeatureCard.js.map
