@@ -19,7 +19,7 @@ export function FeaturesPage() {
             <p className="lead text-ordino-gray-4">
               The user starts the analysis by defining a set of items. The item set can be determined by manually entering a list of identifiers
               (e.g., a list of gene symbols), by selecting a previously saved or predefined
-               list of items, or by uploading a comma-separated file (Supplementary Fig. S2).</p>
+               list of items, or by uploading a comma-separated file.</p>
           </Col>
         </Row>
         <Row className="mt-6">
@@ -30,26 +30,26 @@ export function FeaturesPage() {
         <Row>
           <Col>
             <p className="lead text-ordino-gray-4">
-              A core component of the Ordino system is the interactive visualization technique LineUp
-              (http://lineup.caleydo.org) [1], which allows users to flexibly create and explore rankings of items based
+              A core component of the Ordino system is the interactive visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener">LineUp</a>,
+              which allows users to flexibly create and explore rankings of items based
               on a set of heterogeneous attributes. The exploration is supplemented with filtering features, such as
               setting cutoff values for numerical attributes, specifying a string or regular expression for textual
               columns, and specifying one or more categories in categorical attributes. In addition, users can change
               the visual representation of columns on demand. Numerical attributes, for instance, can be visualized
-              using bars, varying brightness, or as circles whose sizes are proportional to the data values.<br />
-                          As a starting point, Ordino presents the list of items selected in Step 1 as a table containing metadata
-            attributes specific to the item type. For genes, the default columns are gene symbol, Ensembl ID,
-            chromosome, and biotype (Supplementary Figure S3). For cell lines and tissue samples, the default
-            columns are name, tumor type, organ, and gender (Supplementary Figure S6). Initially, gene lists are
-            sorted alphabetically by gene symbol, and lists of cell lines and tissue samples by their name. Further
-            columns can be added by clicking on the plus icon shown on the right-hand side of the interface
-            (Supplementary Fig. S3).<br />
-            Ordino supports the following column types:
+              using bars, varying brightness, or as circles whose sizes are proportional to the data values.</p>
+            <p className="lead text-ordino-gray-4">
+              As a starting point, Ordino presents the list of items as a table containing metadata
+              attributes specific to the item type. For genes, the default columns are gene symbol, Ensembl ID,
+              chromosome, and biotype. For cell lines and tissue samples, the default
+              columns are name, tumor type, organ, and gender. Initially, gene lists are
+              sorted alphabetically by gene symbol, and lists of cell lines and tissue samples by their name. Further
+              columns can be added by clicking on the plus icon shown on the right-hand side of the interface.<br />
+              Ordino supports the following column types:
               </p>
           </Col>
         </Row>
         <Row md={2}>
-          <FeatureCard title="Database columns" >
+          <FeatureCard title="Database Columns" >
             Database columns contain metadata about genes (such as biotype, chromosome, Ensembl ID,
             name, sequence region start &#38; end, strand, and gene symbol), cell lines (age at surgery, gender,
             growth type, histology type, metastatic site, morphology, name, organ, and tumor type), and
@@ -57,31 +57,35 @@ export function FeaturesPage() {
             gender, height, name, organ, race, tumor type, tumor type adjacent, vendor name, vital status,
             and weight).
           </FeatureCard>
-          <FeatureCard title="Single Score columns" >
+          <FeatureCard title="Single Score Columns" >
             Depending on the item type of the main table, users can add
             single score columns by specifying a single item (gene, cell line, or tissue sample) together with
             the data attribute of interest (e.g., expression, copy number, or mutation). The following single
-          scores are available: <br />
-          ○ For <b>genes</b>: single tissue-sample score, single cell-line score, and single depletion-screen
-          score.<br />
-          ○ For <b>cell lines</b>: single gene score and single depletion-screen score.<br />
-          ○ For <b>tissue samples</b>: single gene score.
+            scores are available:
+            <ul>
+              <li>For <b>genes</b>: single tissue-sample score, single cell-line score, and single depletion-screen
+            score.</li>
+              <li>For <b>cell lines</b>: single gene score and single depletion-screen score.</li>
+              <li>For <b>tissue samples</b>: single gene score.</li>
+            </ul>
           </FeatureCard>
-          <FeatureCard title="Aggregated Score columns">
+          <FeatureCard title="Aggregated Score Columns">
             In addition to single score columns, the values of which are loaded directly from the the Ordino
             database, users can define aggregations of multiple items that are calculated on the fly by the
             Ordino server. To define an aggregation, users must specify (1) the set of items on whose basis
             the aggregation will be calculated (either by selecting previously stored named sets, by entering
             lists of items, or by selecting categorical attributes, such as the tumor type of cell lines), (2) the
             data type (expression, copy number, mutation, and depletion screen), and (3) the aggregation
-            function (average, median, min, max, box plot, frequency, and count).<br />
-            The following aggregated scores are available:<br />
-              ○ For <b>genes</b>: aggregated tissue-sample score, aggregated cell-line score, and aggregated
-              depletion-screen score.<br />
-              ○ For <b>cell lines</b>: aggregated gene score and aggregated depletion-screen score.<br />
-              ○ For <b>tissues samples</b>: aggregated gene score.<br />
+            function (average, median, min, max, box plot, frequency, and count).
+            The following aggregated scores are available:
+            <ul>
+              <li>For <b>genes</b>: aggregated tissue-sample score, aggregated cell-line score, and aggregated
+              depletion-screen score.</li>
+              <li>For <b>cell lines</b>: aggregated gene score and aggregated depletion-screen score.</li>
+              <li>For <b>tissues samples</b>: aggregated gene score.</li>
+            </ul>
           </FeatureCard>
-          <FeatureCard title="Combining columns">
+          <FeatureCard title="Combining Columns">
             Combining columns allow users to combine the content of multiple columns by dragging the
             header of single columns onto the combined column header. Users can create weighted sum
             columns, which are visualized as stacked bars highlighting the contribution of individual
@@ -91,7 +95,7 @@ export function FeaturesPage() {
             semantically grouping multiple columns, and imposition columns, which color numerical
             columns by a categorical attribute.
           </FeatureCard>
-          <FeatureCard title="Uploaded columns">
+          <FeatureCard title="Uploaded Columns">
             Uploaded columns allow users to fuse external data to the currently shown table. The data can
             be loaded from a comma-separated file in which the first column contains the unique identifier
             of the primary identifier in the table, followed by one or multiple columns holding the data to be
@@ -110,7 +114,7 @@ export function FeaturesPage() {
             <p className="lead text-ordino-gray-4">
               Users can select one or more items in a ranking table for exploration using a collection of detail views.
               The detail views offered to the user depend on the type of items selected. The publicly deployed version
-              of Ordino includes the following detail views:.
+              of Ordino includes the following detail views:
           </p>
           </Col>
         </Row>
@@ -123,8 +127,7 @@ export function FeaturesPage() {
           </FeatureCard>
           <FeatureCard title="Expression View, Copy Number View and Mutation View" >
             Expression view, Copy Number view, and Mutation view visualizing experimental data for the
-            currently selected items with the ranking visualization technique described in Step 2 of the
-            analysis workflow
+            currently selected items with the ranking visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener">LineUp</a>.
           </FeatureCard>
           <FeatureCard title="Combined View" >
             Combined view is a specialized ranking view that is able to show copy number, expression, and
@@ -132,7 +135,7 @@ export function FeaturesPage() {
           </FeatureCard>
           <FeatureCard title="Expression vs. Copy Number View" >
             Expression vs. Copy Number view showing a scatterplot for each selected gene with copy
-            number mapped to the x-axis and expression to the y-axis (cf. Step 3 in Supplementary Fig. S1).
+            number mapped to the x-axis and expression to the y-axis.
             The analyst can determine via a drop-down list whether the scatterplot shows cell lines or tissue
             samples. Dots in the plots can be colored by preloaded categorical attributes, such as tumor
             type, gender and organ.
