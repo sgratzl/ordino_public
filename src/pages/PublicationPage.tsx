@@ -28,7 +28,7 @@ export function PublicationPage() {
                 Bioinformatics, 35(17): 3140-3142, 2019.
               </Card.Text>
             </Card.Body>
-            <Card.Footer><Link to="/publication" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> Read the publication</Link></Card.Footer>
+            <Card.Footer><a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> Read the publication</a></Card.Footer>
           </Card>
         </Row>
       </Container>

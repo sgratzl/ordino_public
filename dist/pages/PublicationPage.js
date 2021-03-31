@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter } from 'ordino';
 import { Row, Card, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 export function PublicationPage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, { fixed: "top" }),
@@ -23,7 +22,7 @@ export function PublicationPage() {
                             React.createElement("br", null),
                             "Bioinformatics, 35(17): 3140-3142, 2019.")),
                     React.createElement(Card.Footer, null,
-                        React.createElement(Link, { to: "/publication", className: "btn btn-light" },
+                        React.createElement("a", { href: "https://dx.doi.org/10.1093/bioinformatics/btz009", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
                             React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
                             " Read the publication"))))),
         React.createElement(OrdinoFooter, null)));
