@@ -1,1 +1,0 @@
-//# sourceMappingURL=VerticalNav.js.map

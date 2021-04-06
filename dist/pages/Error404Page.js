@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { HeaderNavigation } from './components/HeaderNavigation';
-import { OrdinoFooter } from './components/OrdinoFooter';
+import { HeaderNavigation, OrdinoFooter } from 'ordino';
 export function Error404Page() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),

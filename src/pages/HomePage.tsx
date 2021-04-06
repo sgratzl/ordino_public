@@ -2,7 +2,7 @@ import * as React from 'react';
 import {OrdinoHero} from './components/OrdinoHero';
 import {GettingStarted} from './components/GettingStarted';
 import {DevelopedByAffiliations} from './components/DevelopedByAffiliations';
-import {OrdinoFooter} from './components/OrdinoFooter';
+import {OrdinoFooter} from 'ordino';
 import {OrdinoTeaserCards} from './components/OrdinoTeaserCards';
 
 export function HomePage() {
