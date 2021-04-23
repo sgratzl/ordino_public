@@ -10,11 +10,7 @@ import * as aboutDisclaimer from './templates/_aboutDisclaimer.html';
 import {Ordino} from 'ordino';
 import {AppMetaDataUtils} from 'phovea_ui';
 
-const _ = new Ordino({
-  showCookieDisclaimer: true,
-  showResearchDisclaimer: false,
-  showAboutLink
-});
+const _ = new Ordino();
 
 function showAboutLink(title: HTMLElement, content: HTMLElement) {
   title.innerHTML = 'Ordino';
