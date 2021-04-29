@@ -1,1 +1,5 @@
-export declare function VideoCard(): JSX.Element;
+interface IVideoCardProps {
+    openInNewWindow: boolean;
+}
+export declare function VideoCard({ openInNewWindow }: IVideoCardProps): JSX.Element;
+export {};
