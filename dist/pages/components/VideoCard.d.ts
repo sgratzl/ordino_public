@@ -1,5 +1,5 @@
 interface IVideoCardProps {
-    openInNewWindow: boolean;
+    openInNewWindow?: boolean;
 }
 export declare function VideoCard({ openInNewWindow }: IVideoCardProps): JSX.Element;
 export {};
