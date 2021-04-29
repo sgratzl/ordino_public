@@ -11,24 +11,24 @@ export function VideoCard({ openInNewWindow }) {
                 "Features"),
             React.createElement(Card.Text, null,
                 "You can find an overview of the main features",
-                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/features" }, "\u00A0here ")),
+                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/features" }, "\u00A0here.")),
             React.createElement(Card.Title, null,
                 React.createElement("i", { className: "mr-2 fas fa-database" }),
                 "Datasets"),
             React.createElement(Card.Text, null,
                 "Many datasets have been integrated and are ready to explore.",
-                React.createElement(DualLink, { component: Card.Link, to: "/features" }, "\u00A0Read more about datasets")),
+                React.createElement(DualLink, { component: Card.Link, to: "/datasets" }, "\u00A0Read more about datasets.")),
             React.createElement(Card.Title, null,
                 React.createElement("i", { className: "mr-2 fas fa-mouse-pointer" }),
                 "Tours"),
             React.createElement(Card.Text, null,
                 "Another good way to learn about the main features of Ordino are our interactive tours that you can find",
-                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/tours" }, "\u00A0here")),
+                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/tours" }, "\u00A0here.")),
             React.createElement(Card.Title, null,
                 React.createElement("i", { className: "mr-2 fas fa-book-open" }),
                 "Publications"),
             React.createElement(Card.Text, null,
                 "Ordino and its components have been described in several scientific publications.",
-                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/publication" }, "\u00A0More about the publications")))));
+                React.createElement(DualLink, { component: Card.Link, openInNewWindow: openInNewWindow, to: "/publication" }, "\u00A0More about the publications.")))));
 }
 //# sourceMappingURL=VideoCard.js.map
