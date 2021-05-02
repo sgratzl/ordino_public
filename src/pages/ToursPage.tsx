@@ -7,7 +7,7 @@ import tour1Img from 'ordino/dist/assets/tour_1.png';
 export function ToursPage() {
     return (
         <>
-            <HeaderNavigation fixed="top"/>
+            <HeaderNavigation fixed="top" />
             <Container className="mt-9 mb-6">
                 <p className="lead text-ordino-gray-4">Learn more about Ordino by taking an interactive guided tour</p>
                 <h4 className="text-left mt-4 mb-3 d-flex align-items-center"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Beginner</h4>
@@ -20,7 +20,7 @@ export function ToursPage() {
                     <TourCard title="Adding data Columns" text="Learn how to add data columns to rankings in Ordino." image={tour1Img} href="/app/#tour=ordinoAddColumnToGeneListTour"></TourCard>
                 </Row>
             </Container>
-            <OrdinoFooter openInNewWindow />
+            <OrdinoFooter />
         </>
     );
 }

@@ -19,6 +19,6 @@ export function ToursPage() {
                 " Advanced"),
             React.createElement(Row, { md: 3 },
                 React.createElement(TourCard, { title: "Adding data Columns", text: "Learn how to add data columns to rankings in Ordino.", image: tour1Img, href: "/app/#tour=ordinoAddColumnToGeneListTour" }))),
-        React.createElement(OrdinoFooter, { openInNewWindow: true })));
+        React.createElement(OrdinoFooter, null)));
 }
 //# sourceMappingURL=ToursPage.js.map

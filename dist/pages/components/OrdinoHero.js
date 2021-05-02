@@ -19,7 +19,7 @@ export function OrdinoHero() {
                         "Watch intro video"),
                     React.createElement(IntroVideoModal, { show: modalShow, onHide: () => setModalShow(false) })),
                 React.createElement("div", { className: "col text-center" },
-                    React.createElement(Link, { to: "/tours", className: "btn btn-link btn-lg" },
+                    React.createElement(Link, { to: "/help", className: "btn btn-link btn-lg" },
                         React.createElement("i", { className: "fas fa-question" }),
                         "Learn more about Ordino"))),
             React.createElement("div", { className: "row ordino-hero-image mt-5" },

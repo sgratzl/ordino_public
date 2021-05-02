@@ -26,7 +26,7 @@ export function OrdinoHero() {
             <IntroVideoModal show={modalShow} onHide={() => setModalShow(false)} />
           </div>
           <div className="col text-center">
-            <Link to="/tours" className="btn btn-link btn-lg">
+            <Link to="/help" className="btn btn-link btn-lg">
               <i className="fas fa-question"></i>
               Learn more about Ordino
             </Link>
