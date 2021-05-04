@@ -1,18 +1,10 @@
 import * as React from 'react';
 import {Col, Form, Card} from 'react-bootstrap';
 
-interface IOrdinoContactFormState {
-    name: string;
-    email?: string;
-    subject: string;
-    message: string;
-    mailTo: string;
-}
-
 const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
 
 const useSubmitContactForm = () => {
-    const [inputs, setInputs] = React.useState<IOrdinoContactFormState>({
+    const [inputs, setInputs] = React.useState({
         name: '',
         subject: 'I have a question',
         message: '',
