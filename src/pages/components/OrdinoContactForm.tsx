@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Col, Form, Card} from 'react-bootstrap';
+import {Col, Form, Card, Button} from 'react-bootstrap';
 
 const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
 
@@ -35,9 +35,25 @@ const useSubmitContactForm = () => {
 };
 
 export function OrdinoContactForm() {
+    const selectRef = React.useRef<HTMLSelectElement>(null);
+    const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
+    const formRef = React.useRef<HTMLFormElement>(null)
+    const mailTo = 'mailto:' + CONTACT_FORM_EMAIL;
 
-    const {inputs, handleInputChange} = useSubmitContactForm();
-    const {name, email, subject, message, mailTo} = inputs;
+    const handleSubmit = (event: React.SyntheticEvent) => {
+        event.preventDefault();
+        const subject = selectRef.current.value;
+        const message = textAreaRef.current.value;
+        let parameters = subject || message ? '?' : '';
+        if (subject) {
+            parameters += `subject=${encodeURIComponent(subject)}`;
+        }
+        if (message) {
+            parameters += `${subject ? '&' : ''}body=${encodeURIComponent(message)}`;
+        }
+        formRef.current.reset();
+        window.location.href = mailTo + parameters;
+    }
 
     return (
         <Card className="shadow-sm">
@@ -46,41 +62,32 @@ export function OrdinoContactForm() {
                     {'Do you have questions or found a bug, do not hesitate to contact us using the contact form below. You can also contact us by writing an email to '}
                     <Card.Link href="mailto:ordino@caleydo.org.">ordino@caleydo.org</Card.Link>. We are glad to help you.
                  </Card.Text>
-                <Form>
-                    <Form.Group className="row-cols-md-3">
+                <Form onSubmit={handleSubmit} ref={formRef}>
+                    <Form.Group role="form" className="row-cols-md-3">
                         <Form.Label>Type of contact</Form.Label>
-                        <Form.Control onChange={handleInputChange} value={subject} name="subject" as="select">
-                            <option value="I have a question">I have a question</option>
-                            <option value="I want to report a bug">I want to report a bug</option>
+                        <Form.Control ref={selectRef} name="subject" as="select">
+                            <option >I have some general feedback</option>
+                            <option>I have a question</option>
+                            <option >I want to report a bug</option>
                         </Form.Control>
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" name="message" value={message} rows={5} onChange={handleInputChange}>
+                        <Form.Control as="textarea" name="message" ref={textAreaRef} rows={5}>
                         </Form.Control>
-                    </Form.Group>
-
-                    <Form.Group >
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control value={name} onChange={handleInputChange} name="name" type="text" placeholder="Name" />
-                    </Form.Group>
-
-                    <Form.Group >
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" value={email} name="email" placeholder="name@example.com" onChange={handleInputChange} />
                     </Form.Group>
 
                     <Form.Row className="justify-content-end">
                         <Col md={'auto'}>
-                            <a href={mailTo} title="Send Message" className="btn btn-secondary">
+                            < Button title="Send Message" type="submit" variant="secondary" >
                                 Send Message
-                            </a>
+                            </Button>
                         </Col>
                     </Form.Row>
                 </Form>
             </Card.Body>
-        </Card>
+        </Card >
     );
 }
 
