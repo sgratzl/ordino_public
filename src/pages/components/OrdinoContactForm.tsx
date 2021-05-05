@@ -6,7 +6,7 @@ const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
 export function OrdinoContactForm() {
     const selectRef = React.useRef<HTMLSelectElement>(null);
     const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
-    const formRef = React.useRef<HTMLFormElement>(null)
+    const formRef = React.useRef<HTMLFormElement>(null);
     const mailTo = 'mailto:' + CONTACT_FORM_EMAIL;
 
     const handleSubmit = (event: React.SyntheticEvent) => {
@@ -22,7 +22,7 @@ export function OrdinoContactForm() {
         }
         formRef.current.reset();
         window.location.href = mailTo + parameters;
-    }
+    };
 
     return (
         <Card className="shadow-sm">
