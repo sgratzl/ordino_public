@@ -32,7 +32,7 @@ export function OrdinoContactForm() {
                     <Card.Link href="mailto:ordino@caleydo.org.">ordino@caleydo.org</Card.Link>. We are glad to help you.
                  </Card.Text>
                 <Form onSubmit={handleSubmit} ref={formRef}>
-                    <Form.Group role="form" className="row-cols-md-3">
+                    <Form.Group className="row-cols-md-3">
                         <Form.Label>Type of contact</Form.Label>
                         <Form.Control ref={selectRef} name="subject" as="select">
                             <option >I have some general feedback</option>

@@ -27,7 +27,7 @@ export function OrdinoContactForm() {
                 React.createElement(Card.Link, { href: "mailto:ordino@caleydo.org." }, "ordino@caleydo.org"),
                 ". We are glad to help you."),
             React.createElement(Form, { onSubmit: handleSubmit, ref: formRef },
-                React.createElement(Form.Group, { role: "form", className: "row-cols-md-3" },
+                React.createElement(Form.Group, { className: "row-cols-md-3" },
                     React.createElement(Form.Label, null, "Type of contact"),
                     React.createElement(Form.Control, { ref: selectRef, name: "subject", as: "select" },
                         React.createElement("option", null, "I have some general feedback"),
