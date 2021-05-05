@@ -1,36 +1,6 @@
 import * as React from 'react';
 import { Col, Form, Card, Button } from 'react-bootstrap';
 const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
-const useSubmitContactForm = () => {
-    const [inputs, setInputs] = React.useState({
-        name: '',
-        subject: 'I have a question',
-        message: '',
-        email: '',
-        mailTo: 'mailto:' + CONTACT_FORM_EMAIL,
-    });
-    const handleInputChange = (event) => {
-        // persist event in order to access `event.target.name`
-        event.persist();
-        const { subject, message, name, email } = inputs;
-        let extra = subject || message ? '?' : '';
-        if (subject) {
-            extra += `subject=${encodeURIComponent(subject)}`;
-        }
-        if (message) {
-            // append name and email to the email body
-            // maybe it would be less confusing to completely remove these two fields and the user can add them directly to the message box
-            const body = `${message}${name ? '\n Name: ' + name : ''}${email ? '\n Email: ' + email : ''}`;
-            extra += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
-        }
-        const newMailTo = 'mailto:' + CONTACT_FORM_EMAIL + extra;
-        setInputs((inputs) => ({ ...inputs, [event.target.name]: event.target.value, mailTo: newMailTo }));
-    };
-    return {
-        inputs,
-        handleInputChange,
-    };
-};
 export function OrdinoContactForm() {
     const selectRef = React.useRef(null);
     const textAreaRef = React.useRef(null);
