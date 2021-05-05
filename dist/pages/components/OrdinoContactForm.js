@@ -2,8 +2,7 @@ import * as React from 'react';
 import { Col, Form, Card, Button } from 'react-bootstrap';
 const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
 export function OrdinoContactForm() {
-    const mailTo = 'mailto:' + CONTACT_FORM_EMAIL;
-    const handleSubmit = (event) => {
+    const handleSubmit = React.useCallback((event) => {
         event.preventDefault();
         const form = event.currentTarget;
         const data = new FormData(form);
@@ -17,8 +16,8 @@ export function OrdinoContactForm() {
             parameters += `${subject ? '&' : ''}body=${encodeURIComponent(message)}`;
         }
         form.reset();
-        window.location.href = mailTo + parameters;
-    };
+        window.location.href = 'mailto:' + CONTACT_FORM_EMAIL + parameters;
+    }, []);
     return (React.createElement(Card, { className: "shadow-sm" },
         React.createElement(Card.Body, null,
             React.createElement(Card.Text, null,
