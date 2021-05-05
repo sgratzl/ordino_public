@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter} from 'ordino';
-import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
+import {Row, Col, Nav, Container, Card, ListGroup} from 'react-bootstrap';
 import {DevelopedByAffiliations} from './components/DevelopedByAffiliations';
 import {Link, Element} from 'react-scroll';
 import {VideoCard} from './components/VideoCard';
@@ -71,19 +71,19 @@ export function HelpPage() {
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
                   <Card className="shadow-sm">
                     <Card.Body>
-                      <Card.Text>
-                        1. Ordino is intended for scientific research and non-commercial use only.<br />
-                        2. Ordino cannot be used for the provision of medical advice.<br />
-                        3. We expect attribution (e.g. in publications, services or products) for any of Ordino's online services, databases or software in accordance with good scientific practice.<br />
-                        4. Ordino provides data collated from the public domain with references to their sources. We cannot guarantee the accuracy of any data or databases nor their suitability for user purposes.<br />
-                        5. The original data in Ordino may be subject to rights claimed by third parties, including but not limited to, patent, copyright, other intellectual property rights, biodiversity-related access and benefit-sharing rights. It is the responsibility of users of Ordino to ensure that their exploitation of the data does not infringe any of the rights of such third parties.<br />
-                        6. We are not liable to you or third parties claiming through you, for any loss or damage.<br />
-                        7. We do not accept responsibility for the consequences of any breach of the confidentiality of the Ordino Site by third parties.<br />
-                        8. We accept no responsibility for the consequences of any temporary or permanent discontinuity in service of this Site.<br />
-                        9. Users of Ordino agree not to attempt to use any Ordino computers, files or networks apart from through the service interfaces provided.<br />
-                        10. Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked.<br />
-                        11. Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise.<br />
-                      </Card.Text>
+                      <ListGroup variant="flush">
+                        <ListGroup.Item>This instance of Ordino is intended for scientific research and non-commercial use only.</ListGroup.Item>
+                        <ListGroup.Item>Ordino cannot be used for the provision of medical advice.</ListGroup.Item>
+                        <ListGroup.Item>We expect attribution (e.g. in publications, services or products) for any of Ordino's online services, databases or software in accordance with good scientific practice.</ListGroup.Item>
+                        <ListGroup.Item>Ordino provides data collated from the public domain with references to their sources. We cannot guarantee the accuracy of any data or databases nor their suitability for user purposes.</ListGroup.Item>
+                        <ListGroup.Item>The original data in Ordino may be subject to rights claimed by third parties, including but not limited to, patent, copyright, other intellectual property rights, biodiversity-related access and benefit-sharing rights. It is the responsibility of users of Ordino to ensure that their exploitation of the data does not infringe any of the rights of such third parties.</ListGroup.Item>
+                        <ListGroup.Item>We are not liable to you or third parties claiming through you, for any loss or damage.</ListGroup.Item>
+                        <ListGroup.Item>We do not accept responsibility for the consequences of any breach of the confidentiality of the Ordino Site by third parties.</ListGroup.Item>
+                        <ListGroup.Item>We accept no responsibility for the consequences of any temporary or permanent discontinuity in service of this Site.</ListGroup.Item>
+                        <ListGroup.Item>Users of Ordino agree not to attempt to use any Ordino computers, files or networks apart from through the service interfaces provided.</ListGroup.Item>
+                        <ListGroup.Item>Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked.</ListGroup.Item>
+                        <ListGroup.Item>Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise.</ListGroup.Item>
+                      </ListGroup>
                     </Card.Body>
                   </Card>
                 </Element>
