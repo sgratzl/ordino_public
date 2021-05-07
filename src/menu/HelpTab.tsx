@@ -1,0 +1,17 @@
+import {OrdinoFooter} from 'ordino';
+import * as React from 'react';
+import {BrowserRouter} from 'react-router-dom';
+import {DevelopedByAffiliations} from '../pages/components/DevelopedByAffiliations';
+import {OrdinoHelpSection} from '../pages/components/OrdinoHelpSection';
+
+
+// TODO: fix when replacing scrollspy
+export default function HelpTab() {
+    return <>
+        <BrowserRouter basename="/#">
+            <OrdinoHelpSection></OrdinoHelpSection>
+            <DevelopedByAffiliations></DevelopedByAffiliations>
+            <OrdinoFooter openInNewWindow></OrdinoFooter>
+        </BrowserRouter>
+    </>
+}
