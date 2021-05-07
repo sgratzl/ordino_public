@@ -1,8 +1,8 @@
-import React from "react";
-import {Nav, Container, Row, Col, Card, ListGroup} from "react-bootstrap";
-import {DisclaimerCard} from "./DisclaimerCard";
-import {OrdinoContactForm} from "./OrdinoContactForm";
-import {VideoCard} from "./VideoCard";
+import React from 'react';
+import {Nav, Container, Row, Col, Card, ListGroup} from 'react-bootstrap';
+import {DisclaimerCard} from './DisclaimerCard';
+import {OrdinoContactForm} from './OrdinoContactForm';
+import {VideoCard} from './VideoCard';
 import {Link, Element} from 'react-scroll';
 
 export function OrdinoHelpSection() {
@@ -109,5 +109,5 @@ export function OrdinoHelpSection() {
           </Col>
         </Row>
       </Container>
-    </>)
+    </>);
 }

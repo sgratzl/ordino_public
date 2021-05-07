@@ -13,5 +13,5 @@ export default function HelpTab() {
             <DevelopedByAffiliations></DevelopedByAffiliations>
             <OrdinoFooter openInNewWindow></OrdinoFooter>
         </BrowserRouter>
-    </>
+    </>;
 }
