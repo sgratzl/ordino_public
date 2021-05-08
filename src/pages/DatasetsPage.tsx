@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter} from 'ordino';
-import {Row, Col, Card, Container} from 'react-bootstrap';
 
 interface IDatasetPageCardProps {
   title: string;
@@ -10,12 +9,12 @@ interface IDatasetPageCardProps {
 
 export function DatasetPageCard({title, children}: IDatasetPageCardProps) {
   return (
-    <Card style={{height: '100%'}} className="shadow-sm">
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
+    <div style={{height: '100%'}} className="card shadow-sm">
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
         {children}
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 }
 
@@ -24,50 +23,49 @@ export function DatasetsPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-      <Container className="dataset-page my-9">
-        <Row>
-          <Col>
+      <div className="dataset-page my-9 container">
+        <div className="row">
+          <div className="col">
             <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Basic Datasets</h4>
-          </Col>
-        </Row>
-        <Row xs={1} md={2} >
-          <Col>
+          </div>
+        </div>
+        <div className="row row-cols-md-2 row-cols-1">
+          <div className="col">
             <DatasetPageCard title="The Cancer Genome Atlas (TCGA)">
-              <Card.Text>Gene expression, mutation, and copy number data </Card.Text>
-              <Card.Link href="https://cancergenome.nih.gov" target="_blank" rel="noopener">cancergenome.nih.gov</Card.Link>
+              <p className="card-text">Gene expression, mutation, and copy number data </p>
+              <a className="card-link" href="https://cancergenome.nih.gov" target="_blank" rel="noopener">cancergenome.nih.gov</a>
             </DatasetPageCard>
-          </Col>
-          <Col>
+          </div>
+          <div className="col">
             <DatasetPageCard title="Cancer Cell Line Encyclopedia (CCLE)">
-              <Card.Text>Gene expression, mutation, and copy number data</Card.Text>
-              <Card.Link href="https://portals.broadinstitute.org/ccle" target="_blank" rel="noopener">portals.broadinstitute.org/ccle</Card.Link>
+              <p className="card-text">Gene expression, mutation, and copy number data</p>
+              <a className="card-link" href="https://portals.broadinstitute.org/ccle" target="_blank" rel="noopener">portals.broadinstitute.org/ccle</a>
             </DatasetPageCard>
-          </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col>
+          </div>
+        </div>
+        <div className="row mt-4">
+          <div className="col">
             <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 fas ordino-icon-1 fa-chevron-circle-right" ></i> Depletion Sceen Data</h4>
-          </Col>
-        </Row>
-        <Row xs={1} md={2} >
-          <Col>
+          </div>
+        </div>
+        <div className="row row-cols-md-2 row-cols-1">
+          <div className="col">
             <DatasetPageCard title="Project DRIVE">
-
-              <Card.Text>RNAi depletion screen data (RSA and ATARiS)</Card.Text>
-              <Card.Link href="https://doi.org/10.1016/j.cell.2017.07.005" target="_blank" rel="noopener"> McDonald III, E. R. et. al.
+              <p className="card-text">RNAi depletion screen data (RSA and ATARiS)</p>
+              <a className="card-link" href="https://doi.org/10.1016/j.cell.2017.07.005" target="_blank" rel="noopener"> McDonald III, E. R. et. al.
               Project DRIVE: A Compen- dium of Cancer Dependencies and Synthetic Lethal Relationships Uncovered by Large-Scale, Deep RNAi Screening.
-             Cell 170, Pages 577-592.e10 (2017).</Card.Link>
+             Cell 170, Pages 577-592.e10 (2017).</a>
             </DatasetPageCard>
-          </Col>
-          <Col>
+          </div>
+          <div className="col">
             <DatasetPageCard title="Avana CERES">
-              <Card.Text>CRISPR-Cas9 depletion screen data</Card.Text>
-              <Card.Link href="https://doi.org/10.1038/ng.3984" target="_blank" rel="noopener">Meyers, R. M. et. al. Computational correction of copy
-             number effect improves specificity of CRISPR–Cas9 essentiality screens in cancer cells. Nature Genetics 49, 1779–1784 (2017).</Card.Link>
+              <p className="card-text">CRISPR-Cas9 depletion screen data</p>
+              <a className="card-link" href="https://doi.org/10.1038/ng.3984" target="_blank" rel="noopener">Meyers, R. M. et. al. Computational correction of copy
+             number effect improves specificity of CRISPR–Cas9 essentiality screens in cancer cells. Nature Genetics 49, 1779–1784 (2017).</a>
             </DatasetPageCard>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
       <OrdinoFooter></OrdinoFooter>
     </>
   );
