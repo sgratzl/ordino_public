@@ -53,8 +53,7 @@
     "dist"
   ],
   "dependencies": {
-    "ordino": "github:Caleydo/ordino#welcome-page",
-    "react-scroll": "^1.8.1"
+    "ordino": "github:Caleydo/ordino#welcome-page"
   },
   "devDependencies": {
     "@types/jest": "~26.0.20",

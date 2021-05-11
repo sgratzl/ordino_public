@@ -7,8 +7,8 @@ import { OrdinoHelpSection } from '../pages/components/OrdinoHelpSection';
 export default function HelpTab() {
     return React.createElement(React.Fragment, null,
         React.createElement(BrowserRouter, { basename: "/#" },
-            React.createElement(OrdinoHelpSection, null),
-            React.createElement(DevelopedByAffiliations, null),
-            React.createElement(OrdinoFooter, { openInNewWindow: true })));
+            React.createElement(OrdinoHelpSection, { openInNewWindow: true },
+                React.createElement(DevelopedByAffiliations, null),
+                React.createElement(OrdinoFooter, { openInNewWindow: true }))));
 }
 //# sourceMappingURL=HelpTab.js.map

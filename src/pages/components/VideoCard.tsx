@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Card} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-interface IVideoCardProps {
+export interface IVideoCardProps {
     openInNewWindow?: boolean;
 }
 
@@ -14,7 +14,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
     } : {};
 
     return (
-        <Card style={{overflow: 'hidden'}} className="shadow-sm">
+        <Card style={{overflow: 'hidden'}} className="shadow-sm ordino-video-card">
             <iframe src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
             <Card.Body>
                 <Card.Text>

@@ -1,74 +1,55 @@
 import React from 'react';
-import { Nav, Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { DisclaimerCard } from './DisclaimerCard';
 import { OrdinoContactForm } from './OrdinoContactForm';
 import { VideoCard } from './VideoCard';
-import { Link, Element } from 'react-scroll';
-export function OrdinoHelpSection() {
+import { OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
+import { UniqueIdManager } from 'phovea_core';
+import { SourceCodeCard } from './SourceCodeCard';
+import { TermsOfUseCard } from './TermsOfuseCard';
+const cards = [
+    {
+        name: 'Ordino at a Glance',
+        icon: 'fas fa-mountain',
+        factory: (props) => React.createElement(VideoCard, Object.assign({}, props))
+    },
+    {
+        name: 'Contact us',
+        icon: 'fas fa-at',
+        factory: () => React.createElement(OrdinoContactForm, null)
+    },
+    {
+        name: 'Disclaimer',
+        icon: 'fas fa-exclamation-triangle',
+        factory: () => React.createElement(DisclaimerCard, null)
+    },
+    {
+        name: 'Terms of Use',
+        icon: 'fas fa-smile',
+        factory: () => React.createElement(TermsOfUseCard, null)
+    },
+    {
+        name: 'Source Code',
+        icon: 'fab fa-github',
+        factory: () => React.createElement(SourceCodeCard, null)
+    },
+];
+export function OrdinoHelpSection(props) {
+    const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
     return (React.createElement(React.Fragment, null,
-        React.createElement(Nav, { className: "scrollspy-nav flex-column ml-4" },
-            React.createElement(Link, { className: "nav-link", role: "button", to: `element-${1}`, spy: true, smooth: true, offset: -180, duration: 500 }, "Ordino at a Glance"),
-            React.createElement(Link, { className: "nav-link", role: "button", to: `element-${2}`, spy: true, smooth: true, offset: -180, duration: 500 }, "Contact us"),
-            React.createElement(Link, { className: "nav-link", role: "button", to: `element-${3}`, spy: true, smooth: true, offset: -180, duration: 500 }, "Disclaimer"),
-            React.createElement(Link, { className: "nav-link", role: "button", to: `element-${4}`, spy: true, smooth: true, offset: -200, duration: 500 }, "Terms of Use"),
-            React.createElement(Link, { className: "nav-link", role: "button", to: `element-${5}`, spy: true, smooth: true, offset: -230, duration: 500 }, "Source Code")),
-        React.createElement(Container, { className: "ordino-help-page mt-9 mb-4" },
-            React.createElement(Row, null,
-                React.createElement(Col, null,
-                    React.createElement(Row, null,
-                        React.createElement(Col, null,
-                            React.createElement(Element, { name: `element-${1}` },
-                                React.createElement("h4", { className: "text-left  mt-2 mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-2 fas fa-mountain" }),
-                                    " Ordino at a Glance"),
-                                React.createElement(VideoCard, null)))),
-                    React.createElement(Row, { className: "mt-6" },
-                        React.createElement(Col, null,
-                            React.createElement(Element, { name: `element-${2}` },
-                                React.createElement("h4", { className: "text-left mt-2 mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-2 fas fa-at" }),
-                                    " Contact us"),
-                                React.createElement(OrdinoContactForm, null)))),
-                    React.createElement(Row, { className: "mt-6" },
-                        React.createElement(Col, null,
-                            React.createElement(Element, { name: `element-${3}` },
-                                React.createElement("h4", { className: "text-left mt-2 mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-2 fas fa-exclamation-triangle " }),
-                                    " Disclaimer"),
-                                React.createElement(DisclaimerCard, null)))),
-                    React.createElement(Row, { className: "mt-6" },
-                        React.createElement(Col, null,
-                            React.createElement(Element, { name: `element-${4}` },
-                                React.createElement("h4", { className: "text-left mt-2 mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-2 fas fa-smile" }),
-                                    " Terms of Use"),
-                                React.createElement(Card, { className: "shadow-sm" },
-                                    React.createElement(Card.Body, null,
-                                        React.createElement(ListGroup, { variant: "flush" },
-                                            React.createElement(ListGroup.Item, null, "This instance of Ordino is intended for scientific research and non-commercial use only."),
-                                            React.createElement(ListGroup.Item, null, "Ordino cannot be used for the provision of medical advice."),
-                                            React.createElement(ListGroup.Item, null, "We expect attribution (e.g. in publications, services or products) for any of Ordino's online services, databases or software in accordance with good scientific practice."),
-                                            React.createElement(ListGroup.Item, null, "Ordino provides data collated from the public domain with references to their sources. We cannot guarantee the accuracy of any data or databases nor their suitability for user purposes."),
-                                            React.createElement(ListGroup.Item, null, "The original data in Ordino may be subject to rights claimed by third parties, including but not limited to, patent, copyright, other intellectual property rights, biodiversity-related access and benefit-sharing rights. It is the responsibility of users of Ordino to ensure that their exploitation of the data does not infringe any of the rights of such third parties."),
-                                            React.createElement(ListGroup.Item, null, "We are not liable to you or third parties claiming through you, for any loss or damage."),
-                                            React.createElement(ListGroup.Item, null, "We do not accept responsibility for the consequences of any breach of the confidentiality of the Ordino Site by third parties."),
-                                            React.createElement(ListGroup.Item, null, "We accept no responsibility for the consequences of any temporary or permanent discontinuity in service of this Site."),
-                                            React.createElement(ListGroup.Item, null, "Users of Ordino agree not to attempt to use any Ordino computers, files or networks apart from through the service interfaces provided."),
-                                            React.createElement(ListGroup.Item, null, "Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked."),
-                                            React.createElement(ListGroup.Item, null, "Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise."))))))),
-                    React.createElement(Row, { className: "mt-6" },
-                        React.createElement(Col, null,
-                            React.createElement(Element, { name: `element-${5}` },
-                                React.createElement("h4", { className: "text-left mt-2 mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-2 fab fa-github" }),
-                                    " Source Code ",
-                                    '&',
-                                    " Licenses"),
-                                React.createElement(Card, { className: "shadow-sm" },
-                                    React.createElement(Card.Body, null,
-                                        React.createElement(Card.Text, null, "The source code of Ordino is available under the Mozilla Public License (MPL) at GitHub."),
-                                        React.createElement(Card.Text, null, "This application is part of Phovea, a platform for developing web-based visualization applications. For tutorials, API docs, and more information about the build and deployment process, see the documentation page."),
-                                        "Version: 7.0.3-20201119-011617",
-                                        React.createElement(Card.Text, null)))))))))));
+        React.createElement(OrdinoScrollspy, { items: cards.map((item, index) => ({ id: `section${index}_${suffix}`, name: item.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
+            React.createElement(Container, { className: "pt-4" },
+                React.createElement(Row, null,
+                    React.createElement(Col, null, cards.map((item, index) => {
+                        return (
+                        // `id` attribute must match the one in the scrollspy
+                        React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `section${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },
+                            React.createElement("h4", { className: "text-left  mt-2 mb-3" },
+                                React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),
+                                " ",
+                                item.name),
+                            React.createElement(item.factory, Object.assign({}, { openInNewWindow: props.openInNewWindow }))));
+                    })))),
+            props.children))));
 }
 //# sourceMappingURL=OrdinoHelpSection.js.map

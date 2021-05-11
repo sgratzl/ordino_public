@@ -9,9 +9,10 @@ import {OrdinoHelpSection} from '../pages/components/OrdinoHelpSection';
 export default function HelpTab() {
     return <>
         <BrowserRouter basename="/#">
-            <OrdinoHelpSection></OrdinoHelpSection>
-            <DevelopedByAffiliations></DevelopedByAffiliations>
-            <OrdinoFooter openInNewWindow></OrdinoFooter>
+            <OrdinoHelpSection openInNewWindow>
+                <DevelopedByAffiliations></DevelopedByAffiliations>
+                <OrdinoFooter openInNewWindow></OrdinoFooter>
+            </OrdinoHelpSection>
         </BrowserRouter>
     </>;
 }
