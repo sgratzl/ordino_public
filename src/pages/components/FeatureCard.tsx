@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Card from 'react-bootstrap/Card';
-import {Col} from 'react-bootstrap';
 
 interface IFeatureCardProps {
     image?: string;
@@ -13,13 +11,13 @@ interface IFeatureCardProps {
 
 export function FeatureCard({image, title, children}: IFeatureCardProps) {
     return (
-        <Col className="mb-4">
-            <Card  className="shadow-sm h-100">
-                <Card.Body className="p-2">
-                    <Card.Title>{title}</Card.Title>
+        <div className="col mb-4">
+            <div className="card shadow-sm h-100">
+                <div className="card-body p-3">
+                    <h5 className="card-title">{title}</h5>
                     {children}
-                </Card.Body>
-            </Card>
-        </Col>
+                </div>
+            </div>
+        </div>
     );
 }
