@@ -9,7 +9,7 @@ const sections = [
     {
         name: 'Version 8.0.0 (2021-03-24)',
         markup: () => (React.createElement(React.Fragment, null,
-            React.createElement("p", { className: "lead" },
+            React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
                 React.createElement("b", null, "data"),
                 ", various ",
@@ -55,7 +55,7 @@ const sections = [
     {
         name: 'Version 7.0.0 (2020-08-26)',
         markup: () => (React.createElement(React.Fragment, null,
-            React.createElement("p", { className: "lead" },
+            React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
                 React.createElement("b", null, "data"),
                 ", many ",
@@ -133,7 +133,7 @@ const sections = [
     {
         name: 'Version 6.0.0 (2019-10-14)',
         markup: () => (React.createElement(React.Fragment, null,
-            React.createElement("p", { className: "lead" },
+            React.createElement("p", { className: "lead text-muted" },
                 "This update contains new ",
                 React.createElement("b", null, "features"),
                 ", various ",
@@ -163,7 +163,7 @@ const sections = [
     {
         name: 'Version 5.1.0 (2018-12-05)',
         markup: () => (React.createElement(React.Fragment, null,
-            React.createElement("p", { className: "lead" },
+            React.createElement("p", { className: "lead text-muted" },
                 "This update contains new ",
                 React.createElement("b", null, "features"),
                 ", ",
@@ -187,7 +187,7 @@ const sections = [
     {
         name: 'Version 5.0.0 (2018-11-07)',
         markup: () => (React.createElement(React.Fragment, null,
-            React.createElement("p", { className: "lead" },
+            React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
                 React.createElement("b", null, "data"),
                 ", various ",
