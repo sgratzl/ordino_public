@@ -26,7 +26,7 @@ const sections = [
                         " are now available for cell lines and tissue samples (including GTEx, TCGA, and PDX models). These can be added using the ",
                         React.createElement("i", null, "Add Column"),
                         " dialog:"),
-                    React.createElement("img", { className: "img-border", src: gene_signature, height: 350, alt: "Gene Signature Score" }),
+                    React.createElement("img", { className: "border border-ordino-gray-5", src: gene_signature, height: 350, alt: "Gene Signature Score" }),
                     React.createElement("p", { className: "card-text mt-2" }, "Currently, the following gene signature scores are available:"),
                     React.createElement("ul", null,
                         React.createElement("li", null, "NIBR_IFN (Novartis 38 Gene Interferon activity signature)"),
@@ -35,11 +35,11 @@ const sections = [
             React.createElement("ul", null,
                 React.createElement("li", null,
                     React.createElement("p", { className: "card-text" }, "It is now possible to add multiple \"Annotation Columns\" at once"),
-                    React.createElement("img", { className: "img-border", src: annotation_column, height: 200, alt: "Annotation Column" })),
+                    React.createElement("img", { className: "border border-ordino-gray-5", src: annotation_column, height: 200, alt: "Annotation Column" })),
                 React.createElement("hr", null),
                 React.createElement("li", null,
                     React.createElement("p", { className: "card-text mt-2" }, "The data download dialog has been improved"),
-                    React.createElement("img", { className: "img-border", src: data_download, height: 400, alt: "Download Data" })))))
+                    React.createElement("img", { className: "border border-ordino-gray-5", src: data_download, height: 400, alt: "Download Data" })))))
     },
     {
         name: 'Version 7.0.0 (2020-08-26)',
