@@ -28,7 +28,7 @@ export function OrdinoHelpSection() {
           <div className="col">
 
             {/* VideoCard 1 */}
-            <div className="row">
+            <div id="ordino-at-a-glance" className="row">
               <div className="col">
                 <Element name={`element-${1}`}>
                   <h4 className="text-left  mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-mountain"></i> Ordino at a Glance</h4>
@@ -39,7 +39,7 @@ export function OrdinoHelpSection() {
 
 
             {/* ContactForm */}
-            <div className="row mt-6">
+            <div id="contact-us" className="row mt-6">
               <div className="col">
                 <Element name={`element-${2}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-at"></i> Contact us</h4>
@@ -49,7 +49,7 @@ export function OrdinoHelpSection() {
             </div>
 
             {/* Disclaimer */}
-            <div className="row mt-6">
+            <div id="disclaimer" className="row mt-6">
               <div className="col">
                 <Element name={`element-${3}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-exclamation-triangle "></i> Disclaimer</h4>
@@ -59,7 +59,7 @@ export function OrdinoHelpSection() {
             </div>
 
             {/* Terms of Use */}
-            <div className="row mt-6">
+            <div id="terms-of-use" className="row mt-6">
               <div className="col">
                 <Element name={`element-${4}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
@@ -83,7 +83,7 @@ export function OrdinoHelpSection() {
             </div>
 
             {/* Source code */}
-            <div className="row mt-6">
+            <div id="source-code-licenses" className="row mt-6">
               <div className="col">
                 <Element name={`element-${5}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-code"></i> Source Code {'&'} Licenses</h4>
