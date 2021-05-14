@@ -1,4 +1,3 @@
-import 'ordino/dist/templates/404.html';
 import 'ordino/dist/robots.txt';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
