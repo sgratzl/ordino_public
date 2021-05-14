@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 export function TermsOfUseCard() {
     return (React.createElement("div", { className: "shadow-sm card" },
         React.createElement("div", { className: "card-body" },

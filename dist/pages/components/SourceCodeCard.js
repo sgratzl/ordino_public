@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 export function SourceCodeCard() {
     return (React.createElement("div", { className: "card shadow-sm" },
         React.createElement("div", { className: "card-body" },
