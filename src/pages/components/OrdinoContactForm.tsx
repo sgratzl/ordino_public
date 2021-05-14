@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Col, Form, Card, Button} from 'react-bootstrap';
 
 const CONTACT_FORM_EMAIL = 'ordino@caleydo.org';
 
@@ -22,37 +21,36 @@ export function OrdinoContactForm() {
     }, []);
 
     return (
-        <Card className="shadow-sm">
-            <Card.Body>
-                <Card.Text>
+        <div className="card shadow-sm">
+            <div className="card-body">
+                <p className="card-text">
                     {'Do you have questions or found a bug, do not hesitate to contact us using the contact form below. You can also contact us by writing an email to '}
-                    <Card.Link href="mailto:ordino@caleydo.org.">ordino@caleydo.org</Card.Link>. We are glad to help you.
-                 </Card.Text>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="row-cols-md-3">
-                        <Form.Label>Type of contact</Form.Label>
-                        <Form.Control name="subject" as="select">
-                            <option >I have some general feedback</option>
+                    <a className="card-link" href="mailto:ordino@caleydo.org.">ordino@caleydo.org</a>. We are glad to help you.
+                 </p>
+                <form onSubmit={handleSubmit}>
+                    <div className="row-cols-md-3 form-group">
+                        <label className="form-label">Type of contact</label>
+                        <select name="subject" className="form-control">
+                            <option>I have some general feedback</option>
                             <option>I have a question</option>
-                            <option >I want to report a bug</option>
-                        </Form.Control>
-                    </Form.Group>
+                            <option>I want to report a bug</option>
+                        </select>
+                    </div>
 
-                    <Form.Group>
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" name="message" rows={5}>
-                        </Form.Control>
-                    </Form.Group>
+                    <div className="form-group">
+                        <label className="form-label">Message</label>
+                        <textarea className="form-control" name="message" rows={5}></textarea>
+                    </div>
 
-                    <Form.Row className="justify-content-end">
-                        <Col md={'auto'}>
-                            < Button title="Send Message" type="submit" variant="secondary" >
+                    <div className="justify-content-end form-row">
+                        <div className="col-md-auto">
+                            <button title="Send Message" type="submit" className="btn btn-secondary" >
                                 Send Message
-                            </Button>
-                        </Col>
-                    </Form.Row>
-                </Form>
-            </Card.Body>
-        </Card >
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     );
 }

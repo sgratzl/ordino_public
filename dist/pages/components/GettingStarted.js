@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Button from 'react-bootstrap/Button';
 export function GettingStarted() {
     return (React.createElement("section", { className: "container ordino-getting-started py-5" },
         React.createElement("div", { className: "row" },
@@ -17,6 +16,6 @@ export function GettingStarted() {
                 React.createElement("p", null, "Dive deeper into the selected entities and obtain further information or visualize selected entities."))),
         React.createElement("div", { className: "row" },
             React.createElement("div", { className: "col text-center" },
-                React.createElement(Button, { href: "/app/", variant: "outline-secondary", size: "lg" }, "Start Analysis")))));
+                React.createElement("a", { href: "/app/", className: "btn btn-outline-secondary btn-lg" }, "Start Analysis")))));
 }
 //# sourceMappingURL=GettingStarted.js.map

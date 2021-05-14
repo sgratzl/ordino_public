@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter} from 'ordino';
-import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
 import {Link, Element} from 'react-scroll';
 
@@ -181,7 +180,7 @@ const sections = [
               </li>
           </ul>
         </li>
-      </ul >)
+      </ul>)
 
   },
 ];
@@ -192,32 +191,32 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-          <Nav className="scrollspy-nav flex-column ml-4">
-            {sections.map(({name}, i) => (
-              <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
-                {name}
-              </Link>
-            ))}
-          </Nav>
-      <Container className="news-page my-9">
+      <div className="scrollspy-nav flex-column ml-4 nav">
+        {sections.map(({name}, i) => (
+          <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
+            {name}
+          </Link>
+        ))}
+      </div>
+      <div className="container news-page my-9">
             {sections.map(({name, markup}, i) => (
               <Element key={i} name={`element-${i}`} className="news-page-section">
                 <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
-                <Card className="shadow-sm p-3 h-100">
-                  <Card.Body>
-                    <Row xl={2} lg={1} className="align-items-top">
-                      <Col sm={7}>
+                <div className="card shadow-sm p-3 h-100">
+                  <div className="card-body">
+                    <div className="align-items-top row row-cols-xl-2 row-cols-lg-1">
+                      <div className="col col-sm-7">
                         {markup()}
-                      </Col>
-                      <Col >
-                        <Card.Img src={cardImage} className="img-fit" alt="Card image" />
-                      </Col>
-                    </Row>
-                  </Card.Body>
-                </Card>
+                      </div>
+                      <div className="col">
+                        <img src={cardImage} className="card-img img-fit" alt="Card image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Element>
             ))}
-      </Container>
+      </div>
       <OrdinoFooter></OrdinoFooter>
     </>
   );
