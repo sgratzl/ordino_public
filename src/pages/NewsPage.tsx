@@ -19,8 +19,8 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Gene Signature Scores</div>
               <div className="card-body">
+                <h5 className="card-title">Gene Signature Scores</h5>
                 <p className="card-text">
                   <i>Gene Signature Scores</i> are now available for cell lines and tissue samples (including GTEx, TCGA, and PDX models). These can be added using the <i>Add Column</i> dialog:
                 </p>
@@ -47,8 +47,8 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Annotation Columns</div>
               <div className="card-body">
+                <h5 className="card-title">Annotation Columns</h5>
                 <p className="card-text">It is now possible to add multiple "Annotation Columns" at once</p>
               </div>
               <div className="card-img-bottom text-center">
@@ -58,8 +58,8 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Data download</div>
               <div className="card-body">
+                <h5 className="card-title">Data download</h5>
                 <p className="card-text">The data download dialog has been improved</p>
               </div>
               <div className="card-img-bottom text-center">
@@ -83,16 +83,16 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Database</div>
               <div className="card-body">
+                <h5 className="card-title">Database</h5>
                 <p className="card-text">All data has be been updated from hg19 to hg38!</p>
               </div>
             </div>
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">HLA-A type, Mutational Burden, and MSI Status</div>
               <div className="card-body">
+                <h5 className="card-title">HLA-A type, Mutational Burden, and MSI Status</h5>
                 <p className="card-text">Now, HLA-A type, Mutational Burden, and MSI Status data is available for many cell line and tissue samples.</p>
                 <p className="card-text"><i> How to access</i>: Open a list of cell lines 	&#8594; click on "+" to open the "add column" dialog 	&#8594; select "Annotation Columns" 	&#8594; select the data of interest.</p>
               </div>
@@ -104,7 +104,9 @@ const sections = [
         <div className="row row-cols-1">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Basic statistical analyses</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Basic statistical analyses</h5>
+              </div>
               <img className="card-img w-100 h-auto" src={tourdino} height={400} alt="Tourdino" />
               <div className="card-body">
                 <p className="card-text">It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino.</p>
@@ -118,7 +120,9 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved column operations (filtering, sorting, etc)</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved column operations (filtering, sorting, etc)</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item"><i>How to access</i>: click on any of the icons in the column headers</li>
                 <li className="list-group-item">
@@ -139,7 +143,9 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Briefly noted</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Briefly noted</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   Improved look and feel of the list of cell lines, genes, and tissue samples.
@@ -158,8 +164,8 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Interactive help tours</div>
               <div className="card-body">
+                <h5 className="card-title">Interactive help tours</h5>
                 <p className="card-text">And to make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.</p>
                 <p className="card-text"><i>These can be accessed by clicking on the "?" in the upper right corner of Ordino</i></p>
               </div>
@@ -178,8 +184,8 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Session management</div>
               <div className="card-body">
+                <h5 className="card-title">Session management</h5>
                 <p className="card-text">There is now an improved menu for saving and loading of analysis sessions.</p>
                 <p className="card-text">This menu is now called "Analysis Session Management" and is available in the upper right corner.</p>
               </div>
@@ -187,8 +193,8 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Session sharing</div>
               <div className="card-body">
+                <h5 className="card-title">Session sharing</h5>
                 <p className="card-text">Advanced session sharing possibilities have been added. It is now possible to share an analysis session with individual people or a group of people.</p>
                 <p className="card-text">To do so, click on "Advanced" in the "Save Session" menu. The same is now possible for sharing uploaded data sets.</p>
               </div>
@@ -196,8 +202,8 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Download data</div>
               <div className="card-body">
+                <h5 className="card-title">Download data</h5>
                 <p className="card-text">The "Download Data" menu has been simplified.</p>
               </div>
             </div>
@@ -216,7 +222,9 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Briefly noted</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Briefly noted</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   File upload is working again.
@@ -254,7 +262,9 @@ const sections = [
         <div className="row row-cols-2">
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved column headers and column menus</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved column headers and column menus</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   Column headers start with gene/cell line name and information about data type.
@@ -270,7 +280,9 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved column sorting and grouping</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved column sorting and grouping</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   The order of multiple sorting/grouping columns can now be explicitly specified in the side panel on the right (can be opened by clicking on the arrow on the right).
@@ -286,7 +298,9 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved aggregated columns</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved aggregated columns</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   Boxplot columns now show outliers.
@@ -302,7 +316,9 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved column types</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved column types</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   Chromosomes are now correctly sorted.
@@ -315,7 +331,9 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved user interface</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Improved user interface</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   "Add column" menu simplified
@@ -331,15 +349,17 @@ const sections = [
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Improved performance</div>
               <div className="card-body">
+                <h5 className="card-title">Improved performance</h5>
                 <p className="card-text">The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
               </div>
             </div>
           </div>
           <div className="col mb-4">
             <div className="card shadow-sm">
-              <div className="h6 card-header">Briefly noted</div>
+              <div className="card-body">
+                <h5 className="card-title m-0">Briefly noted</h5>
+              </div>
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   A few external detail views have been added.
