@@ -1,5 +1,4 @@
-import React, {FunctionComponent} from 'react';
-import {Nav, Container, Row, Col, Card, ListGroup} from 'react-bootstrap';
+import React from 'react';
 import {DisclaimerCard} from './DisclaimerCard';
 import {OrdinoContactForm} from './OrdinoContactForm';
 import {IVideoCardProps, VideoCard} from './VideoCard';
@@ -54,9 +53,9 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
     <OrdinoScrollspy items={cards.map((item, index) => ({id: `section${index}_${suffix}`, name: item.name}))}>
       {(handleOnChange) =>
         <>
-          <Container className="pt-4">
-            <Row>
-              <Col>
+          <div className="container pt-4">
+            <div className="row">
+              <div className="col">
                 {cards.map((item, index) => {
 
                   return (
@@ -67,9 +66,9 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
                     </OrdinoScrollspyItem>
                   );
                 })}
-              </Col>
-            </Row>
-          </Container>
+              </div>
+            </div>
+          </div>
           {props.children}
         </>
       }

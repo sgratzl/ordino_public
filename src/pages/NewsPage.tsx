@@ -1,8 +1,6 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} from 'ordino';
-import {Row, Col, Nav, Container, Card} from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
-import {Link, Element} from 'react-scroll';
 import {UniqueIdManager} from 'phovea_core';
 
 
@@ -182,7 +180,7 @@ const sections = [
               </li>
           </ul>
         </li>
-      </ul >)
+      </ul>)
 
   },
 ];
@@ -194,41 +192,41 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation/>
-      <Container fluid className="position-relative pt-5">
+      <div className="container container-fluid position-relative pt-5">
         <OrdinoScrollspy items={sections.map((section, index) => ({id: `card${index}_${suffix}`, name: section.name}))}>
           {(handleOnChange) =>
             <>
-              <Container className="pb-10 pt-5">
-                <Row>
-                  <Col>
+              <div className="container pb-10 pt-5">
+                <div className="row">
+                  <div className="col">
                     {sections.map((item, index) => {
                       return (
                         // `id` attribute must match the one in the scrollspy
                         <OrdinoScrollspyItem className="pt-3 pb-5" id={`card${index}_${suffix}`} key={item.name} index={index} handleOnChange={handleOnChange}>
                           <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
-                          <Card className="shadow-sm p-3 h-100">
-                            <Card.Body>
-                              <Row xl={2} lg={1} className="align-items-top">
-                                <Col sm={7}>
+                          <div className="card shadow-sm p-3 h-100">
+                            <div className="card-body">
+                              <div className="align-items-top row row-cols-xl-2 row-cols-lg-1">
+                                <div className="col col-sm-7">
                                   {item.markup()}
-                                </Col>
-                                <Col >
-                                  <Card.Img src={cardImage} className="img-fit" alt="Card image" />
-                                </Col>
-                              </Row>
-                            </Card.Body>
-                          </Card>
+                                </div>
+                                <div className="col">
+                                  <img src={cardImage} className="card-img img-fit" alt="Card image" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </OrdinoScrollspyItem>
                       );
                     })}
-                  </Col>
-                </Row>
-              </Container>
+                  </div>
+                </div>
+              </div>
               <OrdinoFooter></OrdinoFooter>
             </>
           }
         </OrdinoScrollspy>
-      </Container>
+      </div>
     </>
   );
 }

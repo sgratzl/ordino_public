@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { DisclaimerCard } from './DisclaimerCard';
 import { OrdinoContactForm } from './OrdinoContactForm';
 import { VideoCard } from './VideoCard';
@@ -38,9 +37,9 @@ export function OrdinoHelpSection(props) {
     const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
     return (React.createElement(React.Fragment, null,
         React.createElement(OrdinoScrollspy, { items: cards.map((item, index) => ({ id: `section${index}_${suffix}`, name: item.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
-            React.createElement(Container, { className: "pt-4" },
-                React.createElement(Row, null,
-                    React.createElement(Col, null, cards.map((item, index) => {
+            React.createElement("div", { className: "container pt-4" },
+                React.createElement("div", { className: "row" },
+                    React.createElement("div", { className: "col" }, cards.map((item, index) => {
                         return (
                         // `id` attribute must match the one in the scrollspy
                         React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `section${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },

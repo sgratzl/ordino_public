@@ -1,34 +1,33 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter} from 'ordino';
-import {Row, Col, Card, Container} from 'react-bootstrap';
 import {FeatureCard} from './components/FeatureCard';
-import featureImg from 'ordino_public/dist/assets/feature.png';
 
 export function FeaturesPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-      <Container className="my-9">
-        <Row>
-          <Col>
+
+      <div className="my-9 container">
+        <div className="row">
+          <div className="col">
             <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define List of Items</h4>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
             <p className="lead text-ordino-gray-4">
               The user starts the analysis by defining a set of items. The item set can be determined by manually entering a list of identifiers
               (e.g., a list of gene symbols), by selecting a previously saved or predefined
                list of items, or by uploading a comma-separated file.</p>
-          </Col>
-        </Row>
-        <Row className="mt-6">
-          <Col>
+          </div>
+        </div>
+        <div className="row mt-6">
+          <div className="col">
             <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Rank, Filter, and Select Items</h4>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
             <p className="lead text-ordino-gray-4">
               A core component of the Ordino system is the interactive visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener noreferrer">LineUp</a>,
               which allows users to flexibly create and explore rankings of items based
@@ -46,9 +45,9 @@ export function FeaturesPage() {
               columns can be added by clicking on the plus icon shown on the right-hand side of the interface.<br />
               Ordino supports the following column types:
               </p>
-          </Col>
-        </Row>
-        <Row md={2}>
+          </div>
+        </div>
+        <div className="row row-cols-md-2">
           <FeatureCard title="Database Columns" >
             <p>Database columns contain metadata about genes (such as biotype, chromosome, Ensembl ID,
             name, sequence region start &#38; end, strand, and gene symbol), cell lines (age at surgery, gender,
@@ -102,24 +101,22 @@ export function FeaturesPage() {
             integrated. The system automatically detects common annotations, such as gene symbols and
             Ensembl IDs.</p>
           </FeatureCard>
-
-        </Row>
-        <Row className="mt-6">
-          <Col>
+        </div>
+        <div className="row mt-6">
+          <div className="col">
             <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain Detailed Information</h4>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
             <p className="lead text-ordino-gray-4">
               Users can select one or more items in a ranking table for exploration using a collection of detail views.
               The detail views offered to the user depend on the type of items selected. The publicly deployed version
               of Ordino includes the following detail views:
           </p>
-          </Col>
-        </Row>
-        <Row md={2}>
-
+          </div>
+        </div>
+        <div className="row row-cols-md-2">
           <FeatureCard title="Database Info View" >
             <p>Database Info view for showing metadata stored in the database for all selected items. The
             information is represented as a table containing a row for each database attribute and a column
@@ -158,8 +155,9 @@ export function FeaturesPage() {
             can look at the information available on <a href="https://ensembl.org/" target="_blank" rel="noopener noreferrer">Ensembl</a>, <a href="https://proteinatlas.org/" target="_blank" rel="noopener noreferrer">Human Protein Atlas</a>, <a href="https://www.targetvalidation.org/" target="_blank" rel="noopener noreferrer">Open Targets</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>, and <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">UniProt</a>.
             For cell lines, the analyst can load the information available on <a href="https://cancer.sanger.ac.uk/cosmic/" target="_blank" rel="noopener noreferrer">COSMIC</a> (Catalogue Of Somatic Mutations In Cancer).</p>
           </FeatureCard>
-        </Row>
-      </Container>
+        </div>
+      </div>
+
       <OrdinoFooter></OrdinoFooter>
     </>
   );

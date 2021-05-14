@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
-import { Row, Col, Container, Card } from 'react-bootstrap';
 import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
 import { UniqueIdManager } from 'phovea_core';
 const sections = [
@@ -113,11 +112,11 @@ export function NewsPage() {
     const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
-        React.createElement(Container, { fluid: true, className: "position-relative pt-5" },
+        React.createElement("div", { className: "container container-fluid position-relative pt-5" },
             React.createElement(OrdinoScrollspy, { items: sections.map((section, index) => ({ id: `card${index}_${suffix}`, name: section.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
-                React.createElement(Container, { className: "pb-10 pt-5" },
-                    React.createElement(Row, null,
-                        React.createElement(Col, null, sections.map((item, index) => {
+                React.createElement("div", { className: "container pb-10 pt-5" },
+                    React.createElement("div", { className: "row" },
+                        React.createElement("div", { className: "col" }, sections.map((item, index) => {
                             return (
                             // `id` attribute must match the one in the scrollspy
                             React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `card${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },
@@ -125,12 +124,12 @@ export function NewsPage() {
                                     React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
                                     " ",
                                     item.name),
-                                React.createElement(Card, { className: "shadow-sm p-3 h-100" },
-                                    React.createElement(Card.Body, null,
-                                        React.createElement(Row, { xl: 2, lg: 1, className: "align-items-top" },
-                                            React.createElement(Col, { sm: 7 }, item.markup()),
-                                            React.createElement(Col, null,
-                                                React.createElement(Card.Img, { src: cardImage, className: "img-fit", alt: "Card image" })))))));
+                                React.createElement("div", { className: "card shadow-sm p-3 h-100" },
+                                    React.createElement("div", { className: "card-body" },
+                                        React.createElement("div", { className: "align-items-top row row-cols-xl-2 row-cols-lg-1" },
+                                            React.createElement("div", { className: "col col-sm-7" }, item.markup()),
+                                            React.createElement("div", { className: "col" },
+                                                React.createElement("img", { src: cardImage, className: "card-img img-fit", alt: "Card image" })))))));
                         })))),
                 React.createElement(OrdinoFooter, null))))));
 }

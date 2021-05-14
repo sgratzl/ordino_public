@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Button from 'react-bootstrap/Button';
 
 export function GettingStarted() {
   return (
@@ -25,7 +24,7 @@ export function GettingStarted() {
       </ol>
       <div className="row">
         <div className="col text-center">
-          <Button href="/app/" variant="outline-secondary" size="lg">Start Analysis</Button>
+          <a href="/app/" className="btn btn-outline-secondary btn-lg">Start Analysis</a>
         </div>
       </div>
     </section>
