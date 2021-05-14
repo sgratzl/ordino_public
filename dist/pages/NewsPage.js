@@ -113,14 +113,14 @@ export function NewsPage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
         React.createElement("div", { className: "position-relative pt-5" },
-            React.createElement(OrdinoScrollspy, { items: sections.map((section, index) => ({ id: `card${index}_${suffix}`, name: section.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
+            React.createElement(OrdinoScrollspy, { items: sections.map((section, index) => ({ id: `card${index}_${suffix}`, name: section.name })) }, (handleOnChange) => React.createElement("div", null,
                 React.createElement("div", { className: "container pb-10 pt-5" },
                     React.createElement("div", { className: "row" },
                         React.createElement("div", { className: "col" }, sections.map((item, index) => {
                             return (
                             // `id` attribute must match the one in the scrollspy
                             React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `card${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },
-                                React.createElement(React.Fragment, null,
+                                React.createElement("div", null,
                                     React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
                                         React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
                                         " ",

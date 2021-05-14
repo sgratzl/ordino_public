@@ -195,7 +195,7 @@ export function NewsPage() {
       <div className="position-relative pt-5">
         <OrdinoScrollspy items={sections.map((section, index) => ({id: `card${index}_${suffix}`, name: section.name}))}>
           {(handleOnChange) =>
-            <>
+            <div>{/* TODO fix scrollspy children typings and replace `<div>` with fragement `<></>` here */}
               <div className="container pb-10 pt-5">
                 <div className="row">
                   <div className="col">
@@ -203,7 +203,7 @@ export function NewsPage() {
                       return (
                         // `id` attribute must match the one in the scrollspy
                         <OrdinoScrollspyItem className="pt-3 pb-5" id={`card${index}_${suffix}`} key={item.name} index={index} handleOnChange={handleOnChange}>
-                          <>
+                          <div>{/* TODO fix scrollspy children typings and replace `<div>` with fragement `<></>` here */}
                             <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
                             <div className="card shadow-sm p-3 h-100">
                               <div className="card-body">
@@ -217,7 +217,7 @@ export function NewsPage() {
                                 </div>
                               </div>
                             </div>
-                          </>
+                          </div>
                         </OrdinoScrollspyItem>
                       );
                     })}
@@ -225,7 +225,7 @@ export function NewsPage() {
                 </div>
               </div>
               <OrdinoFooter></OrdinoFooter>
-            </>
+            </div>
           }
         </OrdinoScrollspy>
       </div>

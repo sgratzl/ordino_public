@@ -52,7 +52,7 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
   return (<>
     <OrdinoScrollspy items={cards.map((item, index) => ({id: `section${index}_${suffix}`, name: item.name}))}>
       {(handleOnChange) =>
-        <>
+        <div>{/* TODO fix scrollspy children typings and replace `<div>` with fragement `<></>` here */}
           <div className="container pt-4">
             <div className="row">
               <div className="col">
@@ -61,10 +61,10 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
                   return (
                     // `id` attribute must match the one in the scrollspy
                     <OrdinoScrollspyItem className="pt-3 pb-5" id={`section${index}_${suffix}`} key={item.name} index={index} handleOnChange={handleOnChange}>
-                      <>
+                      <div>{/* TODO fix scrollspy children typings and replace `<div>` with fragement `<></>` here */}
                         <h4 className="text-left  mt-2 mb-3"><i className={`mr-2 ordino-icon-2 ${item.icon}`}></i> {item.name}</h4>
                         <item.factory {...{openInNewWindow: props.openInNewWindow}} />
-                      </>
+                      </div>
                     </OrdinoScrollspyItem>
                   );
                 })}
@@ -72,7 +72,7 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
             </div>
           </div>
           {props.children}
-        </>
+        </div>
       }
     </OrdinoScrollspy>
   </>);
