@@ -120,16 +120,17 @@ export function NewsPage() {
                             return (
                             // `id` attribute must match the one in the scrollspy
                             React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `card${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },
-                                React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
-                                    React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
-                                    " ",
-                                    item.name),
-                                React.createElement("div", { className: "card shadow-sm p-3 h-100" },
-                                    React.createElement("div", { className: "card-body" },
-                                        React.createElement("div", { className: "align-items-top row row-cols-xl-2 row-cols-lg-1" },
-                                            React.createElement("div", { className: "col col-sm-7" }, item.markup()),
-                                            React.createElement("div", { className: "col" },
-                                                React.createElement("img", { src: cardImage, className: "card-img img-fit", alt: "Card image" })))))));
+                                React.createElement(React.Fragment, null,
+                                    React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
+                                        React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
+                                        " ",
+                                        item.name),
+                                    React.createElement("div", { className: "card shadow-sm p-3 h-100" },
+                                        React.createElement("div", { className: "card-body" },
+                                            React.createElement("div", { className: "align-items-top row row-cols-xl-2 row-cols-lg-1" },
+                                                React.createElement("div", { className: "col col-sm-7" }, item.markup()),
+                                                React.createElement("div", { className: "col" },
+                                                    React.createElement("img", { src: cardImage, className: "card-img img-fit", alt: "Card image" }))))))));
                         })))),
                 React.createElement(OrdinoFooter, null))))));
 }

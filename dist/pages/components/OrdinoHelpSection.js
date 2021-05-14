@@ -43,11 +43,12 @@ export function OrdinoHelpSection(props) {
                         return (
                         // `id` attribute must match the one in the scrollspy
                         React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: `section${index}_${suffix}`, key: item.name, index: index, handleOnChange: handleOnChange },
-                            React.createElement("h4", { className: "text-left  mt-2 mb-3" },
-                                React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),
-                                " ",
-                                item.name),
-                            React.createElement(item.factory, Object.assign({}, { openInNewWindow: props.openInNewWindow }))));
+                            React.createElement(React.Fragment, null,
+                                React.createElement("h4", { className: "text-left  mt-2 mb-3" },
+                                    React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),
+                                    " ",
+                                    item.name),
+                                React.createElement(item.factory, Object.assign({}, { openInNewWindow: props.openInNewWindow })))));
                     })))),
             props.children))));
 }
