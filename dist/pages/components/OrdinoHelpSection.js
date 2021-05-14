@@ -5,7 +5,7 @@ import { VideoCard } from './VideoCard';
 import { OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
 import { UniqueIdManager } from 'phovea_core';
 import { SourceCodeCard } from './SourceCodeCard';
-import { TermsOfUseCard } from './TermsOfuseCard';
+import { TermsOfUseCard } from './TermsOfUseCard';
 const cards = [
     {
         name: 'Ordino at a Glance',

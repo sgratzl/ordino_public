@@ -15,4 +15,4 @@ export function TermsOfUseCard() {
                 React.createElement("div", { className: "list-group-item" }, "Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked."),
                 React.createElement("div", { className: "list-group-item" }, "Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise.")))));
 }
-//# sourceMappingURL=TermsOfuseCard.js.map
+//# sourceMappingURL=TermsOfUseCard.js.map
