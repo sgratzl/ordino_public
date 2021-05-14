@@ -64,21 +64,19 @@ export function OrdinoHelpSection() {
                 <Element name={`element-${4}`}>
                   <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
                   <div className="card shadow-sm">
-                    <div className="card-body">
-                      <div className="list-group list-group-flush">
-                        <div className="list-group-item">This instance of Ordino is intended for scientific research and non-commercial use only.</div>
-                        <div className="list-group-item">Ordino cannot be used for the provision of medical advice.</div>
-                        <div className="list-group-item">We expect attribution (e.g. in publications, services or products) for any of Ordino's online services, databases or software in accordance with good scientific practice.</div>
-                        <div className="list-group-item">Ordino provides data collated from the public domain with references to their sources. We cannot guarantee the accuracy of any data or databases nor their suitability for user purposes.</div>
-                        <div className="list-group-item">The original data in Ordino may be subject to rights claimed by third parties, including but not limited to, patent, copyright, other intellectual property rights, biodiversity-related access and benefit-sharing rights. It is the responsibility of users of Ordino to ensure that their exploitation of the data does not infringe any of the rights of such third parties.</div>
-                        <div className="list-group-item">We are not liable to you or third parties claiming through you, for any loss or damage.</div>
-                        <div className="list-group-item">We do not accept responsibility for the consequences of any breach of the confidentiality of the Ordino Site by third parties.</div>
-                        <div className="list-group-item">We accept no responsibility for the consequences of any temporary or permanent discontinuity in service of this Site.</div>
-                        <div className="list-group-item">Users of Ordino agree not to attempt to use any Ordino computers, files or networks apart from through the service interfaces provided.</div>
-                        <div className="list-group-item">Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked.</div>
-                        <div className="list-group-item">Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise.</div>
-                      </div>
-                    </div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">This instance of Ordino is intended for scientific research and non-commercial use only.</li>
+                      <li className="list-group-item">Ordino cannot be used for the provision of medical advice.</li>
+                      <li className="list-group-item">We expect attribution (e.g. in publications, services or products) for any of Ordino's online services, databases or software in accordance with good scientific practice.</li>
+                      <li className="list-group-item">Ordino provides data collated from the public domain with references to their sources. We cannot guarantee the accuracy of any data or databases nor their suitability for user purposes.</li>
+                      <li className="list-group-item">The original data in Ordino may be subject to rights claimed by third parties, including but not limited to, patent, copyright, other intellectual property rights, bioliersity-related access and benefit-sharing rights. It is the responsibility of users of Ordino to ensure that their exploitation of the data does not infringe any of the rights of such third parties.</li>
+                      <li className="list-group-item">We are not liable to you or third parties claiming through you, for any loss or damage.</li>
+                      <li className="list-group-item">We do not accept responsibility for the consequences of any breach of the confidentiality of the Ordino Site by third parties.</li>
+                      <li className="list-group-item">We accept no responsibility for the consequences of any temporary or permanent discontinuity in service of this Site.</li>
+                      <li className="list-group-item">Users of Ordino agree not to attempt to use any Ordino computers, files or networks apart from through the service interfaces provided.</li>
+                      <li className="list-group-item">Any attempt to use Ordino to a level that prevents, or looks likely to prevent, Ordino providing services to others, will result in the use being blocked.</li>
+                      <li className="list-group-item">Any feedback on Ordino will be treated as non-confidential unless the individual or organization providing the feedback states otherwise.</li>
+                    </ul>
                   </div>
                 </Element>
               </div>
@@ -88,14 +86,15 @@ export function OrdinoHelpSection() {
             <div className="row mt-6">
               <div className="col">
                 <Element name={`element-${5}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source Code {'&'} Licenses</h4>
+                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-code"></i> Source Code {'&'} Licenses</h4>
                   <div className="card shadow-sm">
                     <div className="card-body">
                       <p className="card-text">
-                        The source code of Ordino is available under the Mozilla Public License (MPL) at GitHub.
+                        The source code of Ordino is available under the Mozilla Public License (MPL) at <a href="https://github.com/Caleydo/ordino" target="_blank" rel="noopener noreferrer">GitHub</a>.
                       </p>
                       <p className="card-text">
-                        This application is part of Phovea, a platform for developing web-based visualization applications. For tutorials, API docs, and more information about the build and deployment process, see the documentation page.
+                        This application is part of <a href="http://phovea.caleydo.org/" target="_blank" rel="noopener noreferrer">Phovea</a>, a platform for developing web-based visualization applications.
+                        For tutorials, API docs, and more information about the build and deployment process, see the <a href="http://phovea.caleydo.org/" target="_blank" rel="noopener noreferrer">documentation page</a>.
                       </p>
                       <p className="card-text">
                         Version: 7.0.3-20201119-011617
