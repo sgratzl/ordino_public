@@ -192,7 +192,7 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation/>
-      <div className="container container-fluid position-relative pt-5">
+      <div className="position-relative pt-5">
         <OrdinoScrollspy items={sections.map((section, index) => ({id: `card${index}_${suffix}`, name: section.name}))}>
           {(handleOnChange) =>
             <>

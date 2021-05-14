@@ -112,7 +112,7 @@ export function NewsPage() {
     const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
-        React.createElement("div", { className: "container container-fluid position-relative pt-5" },
+        React.createElement("div", { className: "position-relative pt-5" },
             React.createElement(OrdinoScrollspy, { items: sections.map((section, index) => ({ id: `card${index}_${suffix}`, name: section.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
                 React.createElement("div", { className: "container pb-10 pt-5" },
                     React.createElement("div", { className: "row" },
