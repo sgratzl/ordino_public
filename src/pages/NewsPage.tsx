@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {HeaderNavigation, OrdinoFooter} from 'ordino';
 import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
 import annotation_column from 'ordino_public/dist/assets/pages/annotation_column.png';
 import data_download from 'ordino_public/dist/assets/pages/data_download.png';
 import tourdino from 'ordino_public/dist/assets/pages/tourdino.jpg';
-import {Link, Element} from 'react-scroll';
+import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} from 'ordino';
+import cardImage from 'ordino_public/dist/assets/welcome-view-step2.png';
+import {UniqueIdManager} from 'phovea_core';
 
 const sections = [
   {
@@ -379,25 +380,35 @@ const sections = [
 
 
 export function NewsPage() {
+  const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
   return (
     <>
-      <HeaderNavigation fixed="top"></HeaderNavigation>
-      <div className="scrollspy-nav flex-column ml-4 nav">
-        {sections.map(({name}, i) => (
-          <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
-            {name}
-          </Link>
-        ))}
+      <HeaderNavigation />
+      <div className="position-relative pt-5">
+        <OrdinoScrollspy items={sections.map((section, index) => ({id: `card${index}_${suffix}`, name: section.name}))}>
+          {(handleOnChange) =>
+            <>
+              <div className="container pb-10 pt-5">
+                <div className="row">
+                  <div className="col">
+                    {sections.map(({name, markup}, i) => (
+
+                      // `id` attribute must match the one in the scrollspy
+                      <OrdinoScrollspyItem className="pt-3 pb-5" id={`card${i}_${suffix}`} key={name} index={i} handleOnChange={handleOnChange}>
+                        <>
+                          <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
+                          {markup()}
+                        </>
+                      </OrdinoScrollspyItem>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <OrdinoFooter></OrdinoFooter>
+            </>
+          }
+        </OrdinoScrollspy>
       </div>
-      <div className="container news-page my-9">
-        {sections.map(({name, markup}, i) => (
-          <Element key={i} name={`element-${i}`} className="news-page-section">
-            <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
-            {markup()}
-          </Element>
-        ))}
-      </div>
-      <OrdinoFooter></OrdinoFooter>
     </>
   );
 }
