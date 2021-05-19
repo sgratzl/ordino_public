@@ -5,7 +5,7 @@ export function VideoCard({ openInNewWindow }) {
         target: '_blank',
         rel: 'noopener noreferrer'
     } : {};
-    return (React.createElement("div", { style: { overflow: 'hidden' }, className: "shadow-sm card" },
+    return (React.createElement("div", { style: { overflow: 'hidden' }, className: "card shadow-sm ordino-video-card" },
         React.createElement("iframe", { src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
         React.createElement("div", { className: "card-body" },
             React.createElement("p", { className: "card-text" }, "Ordino is a browser-based visual data analysis solution to flexibly rank, filter, and explore genes, cell lines, and tissue samples based on a rich set of experimental and metadata."),

@@ -1,13 +1,13 @@
 import * as React from 'react';
-import {HeaderNavigation, OrdinoFooter} from 'ordino';
-import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
+import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} from 'ordino';
+import {UniqueIdManager} from 'phovea_core';import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
 import annotation_column from 'ordino_public/dist/assets/pages/annotation_column.png';
 import data_download from 'ordino_public/dist/assets/pages/data_download.png';
 import tourdino from 'ordino_public/dist/assets/pages/tourdino.jpg';
-import {Link, Element} from 'react-scroll';
 
 const sections = [
   {
+    id: 'v8-0-0',
     name: 'Version 8.0.0 (2021-03-24)',
     markup: () => (
       <>
@@ -72,6 +72,7 @@ const sections = [
     )
   },
   {
+    id: 'v7-0-0',
     name: 'Version 7.0.0 (2020-08-26)',
     markup: () => (
       <>
@@ -175,6 +176,7 @@ const sections = [
       </>)
   },
   {
+    id: 'v6-0-0',
     name: 'Version 6.0.0 (2019-10-14)',
     markup: () => (
       <>
@@ -213,6 +215,7 @@ const sections = [
     )
   },
   {
+    id: 'v5-1-0',
     name: 'Version 5.1.0 (2018-12-05)',
     markup: () => (
       <>
@@ -253,6 +256,7 @@ const sections = [
     )
   },
   {
+    id: 'v5-0-0',
     name: 'Version 5.0.0 (2018-11-07)',
     markup: () => (
       <>
@@ -381,23 +385,33 @@ const sections = [
 export function NewsPage() {
   return (
     <>
-      <HeaderNavigation fixed="top"></HeaderNavigation>
-      <div className="scrollspy-nav flex-column ml-4 nav">
-        {sections.map(({name}, i) => (
-          <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
-            {name}
-          </Link>
-        ))}
+      <HeaderNavigation/>
+      <div className="position-relative pt-5">
+        <OrdinoScrollspy items={sections.map((section) => ({id: section.id, name: section.name}))}>
+          {(handleOnChange) =>
+            <>
+              <div className="container pb-10 pt-5">
+                <div className="row">
+                  <div className="col">
+                    {sections.map((item, index) => {
+                      return (
+                        // `id` attribute must match the one in the scrollspy
+                        <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
+                          <>
+                            <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
+                            {item.markup()}
+                          </>
+                        </OrdinoScrollspyItem>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              <OrdinoFooter></OrdinoFooter>
+            </>
+          }
+        </OrdinoScrollspy>
       </div>
-      <div className="container news-page my-9">
-        {sections.map(({name, markup}, i) => (
-          <Element key={i} name={`element-${i}`} className="news-page-section">
-            <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
-            {markup()}
-          </Element>
-        ))}
-      </div>
-      <OrdinoFooter></OrdinoFooter>
     </>
   );
 }

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { HeaderNavigation, OrdinoFooter } from 'ordino';
+import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
 import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
 import annotation_column from 'ordino_public/dist/assets/pages/annotation_column.png';
 import data_download from 'ordino_public/dist/assets/pages/data_download.png';
 import tourdino from 'ordino_public/dist/assets/pages/tourdino.jpg';
-import { Link, Element } from 'react-scroll';
 const sections = [
     {
+        id: 'v8-0-0',
         name: 'Version 8.0.0 (2021-03-24)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -53,6 +53,7 @@ const sections = [
                             React.createElement("img", { src: data_download, height: 400, alt: "Download Data" })))))))
     },
     {
+        id: 'v7-0-0',
         name: 'Version 7.0.0 (2020-08-26)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -131,6 +132,7 @@ const sections = [
                                 React.createElement("i", null, "These can be accessed by clicking on the \"?\" in the upper right corner of Ordino"))))))))
     },
     {
+        id: 'v6-0-0',
         name: 'Version 6.0.0 (2019-10-14)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -161,6 +163,7 @@ const sections = [
                             React.createElement("p", { className: "card-text" }, "The \"Download Data\" menu has been simplified.")))))))
     },
     {
+        id: 'v5-1-0',
         name: 'Version 5.1.0 (2018-12-05)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -185,6 +188,7 @@ const sections = [
                             React.createElement("li", { className: "list-group-item" }, "Spearman correlation computation has been added to the \"Co-expression\" Detail View.")))))))
     },
     {
+        id: 'v5-0-0',
         name: 'Version 5.0.0 (2018-11-07)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -251,14 +255,22 @@ const sections = [
 ];
 export function NewsPage() {
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, { fixed: "top" }),
-        React.createElement("div", { className: "scrollspy-nav flex-column ml-4 nav" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link", role: "button", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name)))),
-        React.createElement("div", { className: "container news-page my-9" }, sections.map(({ name, markup }, i) => (React.createElement(Element, { key: i, name: `element-${i}`, className: "news-page-section" },
-            React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
-                React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
-                " ",
-                name),
-            markup())))),
-        React.createElement(OrdinoFooter, null)));
+        React.createElement(HeaderNavigation, null),
+        React.createElement("div", { className: "position-relative pt-5" },
+            React.createElement(OrdinoScrollspy, { items: sections.map((section) => ({ id: section.id, name: section.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
+                React.createElement("div", { className: "container pb-10 pt-5" },
+                    React.createElement("div", { className: "row" },
+                        React.createElement("div", { className: "col" }, sections.map((item, index) => {
+                            return (
+                            // `id` attribute must match the one in the scrollspy
+                            React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
+                                React.createElement(React.Fragment, null,
+                                    React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
+                                        React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
+                                        " ",
+                                        item.name),
+                                    item.markup())));
+                        })))),
+                React.createElement(OrdinoFooter, null))))));
 }
 //# sourceMappingURL=NewsPage.js.map
