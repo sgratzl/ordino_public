@@ -56,7 +56,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.2.0",
-    "ordino": "github:Caleydo/ordino#thinkh/fix-ordino-scrollspy-typings"
+    "ordino": "github:Caleydo/ordino#welcome-page"
   },
   "devDependencies": {
     "@types/react": "^16.14.6",
