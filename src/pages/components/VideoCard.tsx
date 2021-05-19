@@ -20,8 +20,6 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     Ordino is a browser-based visual data analysis solution to flexibly rank, filter, and explore genes, cell lines, and tissue samples based on a rich set of experimental and metadata.
                     Ordino contains a large set of cancer genomics data allowing to readily address a multitude of use cases as, for instance, identifying genes that could serve as potential drug targets
                     or biomarkers, or finding the most appropriate cell line for an experiment.
-
-
                 </p>
                 <h5 className="card-title">
                     <i className="mr-2 fas fa-check"></i>Workflow and Features
@@ -47,7 +45,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                 </p>
                 <p className="card-text">
                     Additionally, users can select one or more items in the table to explore them in depth using a collection of <i>Detail Views</i>.<br />
-                 The available <i>Detail Views</i> include:
+                    The available <i>Detail Views</i> include:
                 </p>
                 <ul>
                     <li>
@@ -69,10 +67,10 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                 </h5>
                 <p className="card-text">
                     The Ordino database includes metadata as well as mRNA expression, DNA copy number, and mutation data from the Cancer Cell Line Encyclopedia (CCLE),<br /> and The Cancer Genome Atlas (TCGA).
-                    Furthermore, two CRISPR / RNAi loss-of-function screen data sets (DRIVE and Avana) are included.<br />
+                    Furthermore, two CRISPR / RNAi loss-of-function screen data sets (DRIVE and Avana) are included.
                 </p>
                 <p className="card-text">
-                    Additionally, users can upload their own tabular data to explore it within Ordino.<br />
+                    Additionally, users can upload their own tabular data to explore it within Ordino.
                 </p>
                 <p className="card-text">
                     You can find more detailed information about the datasets
