@@ -75,7 +75,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     Additionally, users can upload their own tabular data to explore it within Ordino.<br />
                 </p>
                 <p className="card-text">
-                    You can find more detailed information about the data sets
+                    You can find more detailed information about the datasets
                     <Link {...newWindowProps} className="card-link" to="/datasets">&nbsp;here.</Link>
                 </p>
                 <h5 className="card-title">

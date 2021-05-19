@@ -48,7 +48,7 @@ export function VideoCard({ openInNewWindow }) {
                 "Additionally, users can upload their own tabular data to explore it within Ordino.",
                 React.createElement("br", null)),
             React.createElement("p", { className: "card-text" },
-                "You can find more detailed information about the data sets",
+                "You can find more detailed information about the datasets",
                 React.createElement(Link, Object.assign({}, newWindowProps, { className: "card-link", to: "/datasets" }), "\u00A0here.")),
             React.createElement("h5", { className: "card-title" },
                 React.createElement("i", { className: "mr-2 fas fa-mouse-pointer" }),
