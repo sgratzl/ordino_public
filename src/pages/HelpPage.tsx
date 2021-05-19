@@ -9,10 +9,13 @@ export function HelpPage() {
 
   return (
     <>
-      <HeaderNavigation fixed="top" />
-      <OrdinoHelpSection />
-      <DevelopedByAffiliations />
-      <OrdinoFooter />
+      <HeaderNavigation />
+      <div className="container-fluid ordino-help-page h-100 position-relative pt-5">
+        <OrdinoHelpSection>
+          <DevelopedByAffiliations />
+          <OrdinoFooter />
+        </OrdinoHelpSection>
+      </div>
     </>
   );
 }
