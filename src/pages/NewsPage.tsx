@@ -26,7 +26,7 @@ const sections = [
                 </p>
               </div>
               <div className="card-img text-center">
-                <img src={gene_signature} height={350} alt="Gene Signature Score" />
+                <img src={gene_signature} height={450} alt="Gene Signature Score" />
               </div>
               <div className="card-body">
                 <p className="card-text">Currently, the following gene signature scores are available:</p>
@@ -52,7 +52,7 @@ const sections = [
                 <p className="card-text">It is now possible to add multiple "Annotation Columns" at once</p>
               </div>
               <div className="card-img-bottom text-center">
-                <img src={annotation_column} height={200} alt="Annotation Column" />
+                <img src={annotation_column} height={220} alt="Annotation Column" />
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const sections = [
                 <p className="card-text">The data download dialog has been improved</p>
               </div>
               <div className="card-img-bottom text-center">
-                <img src={data_download} height={400} alt="Download Data" />
+                <img src={data_download} height={550} alt="Download Data" />
               </div>
             </div>
           </div>

@@ -29,7 +29,7 @@ const sections = [
                                 React.createElement("i", null, "Add Column"),
                                 " dialog:")),
                         React.createElement("div", { className: "card-img text-center" },
-                            React.createElement("img", { src: gene_signature, height: 350, alt: "Gene Signature Score" })),
+                            React.createElement("img", { src: gene_signature, height: 450, alt: "Gene Signature Score" })),
                         React.createElement("div", { className: "card-body" },
                             React.createElement("p", { className: "card-text" }, "Currently, the following gene signature scores are available:"),
                             React.createElement("ul", null,
@@ -43,14 +43,14 @@ const sections = [
                             React.createElement("h5", { className: "card-title" }, "Annotation Columns"),
                             React.createElement("p", { className: "card-text" }, "It is now possible to add multiple \"Annotation Columns\" at once")),
                         React.createElement("div", { className: "card-img-bottom text-center" },
-                            React.createElement("img", { src: annotation_column, height: 200, alt: "Annotation Column" })))),
+                            React.createElement("img", { src: annotation_column, height: 220, alt: "Annotation Column" })))),
                 React.createElement("div", { className: "col mb-4" },
                     React.createElement("div", { className: "card shadow-sm" },
                         React.createElement("div", { className: "card-body" },
                             React.createElement("h5", { className: "card-title" }, "Data download"),
                             React.createElement("p", { className: "card-text" }, "The data download dialog has been improved")),
                         React.createElement("div", { className: "card-img-bottom text-center" },
-                            React.createElement("img", { src: data_download, height: 400, alt: "Download Data" })))))))
+                            React.createElement("img", { src: data_download, height: 550, alt: "Download Data" })))))))
     },
     {
         id: 'v7-0-0',
