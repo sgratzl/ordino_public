@@ -35,7 +35,7 @@ const cards = [
     factory: () => <TermsOfUseCard />
   },
   {
-    id: 'source-code-licences',
+    id: 'source-code-licenses',
     name: 'Source Code',
     icon: 'fas fa-code',
     factory: () => <SourceCodeCard />
