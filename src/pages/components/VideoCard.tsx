@@ -21,7 +21,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     Ordino contains a large set of cancer genomics data allowing to readily address a multitude of use cases as, for instance, identifying genes that could serve as potential drug targets
                     or biomarkers, or finding the most appropriate cell line for an experiment.
                 </p>
-                <h5 className="card-title">
+                <h5 className="card-title mt-4">
                     <i className="mr-2 fas fa-check"></i>Workflow and Features
                 </h5>
                 <p className="card-text">
@@ -62,7 +62,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     <Link {...newWindowProps} className="card-link" to="/features">&nbsp;here.</Link>
                 </p>
 
-                <h5 className="card-title">
+                <h5 className="card-title mt-4">
                     <i className="mr-2 fas fa-database"></i>Datasets
                 </h5>
                 <p className="card-text">
@@ -76,7 +76,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     You can find more detailed information about the datasets
                     <Link {...newWindowProps} className="card-link" to="/datasets">&nbsp;here.</Link>
                 </p>
-                <h5 className="card-title">
+                <h5 className="card-title mt-4">
                     <i className="mr-2 fas fa-mouse-pointer"></i>Tours
                 </h5>
                 <p className="card-text">
@@ -84,22 +84,22 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                  You can find them
                     <Link {...newWindowProps} className="card-link" to="/tours">&nbsp;here.</Link>
                 </p>
-                <h5 className="card-title">
+                <h5 className="card-title mt-4">
                     <i className="mr-2 fas fa-book-open"></i>Publications
                 </h5>
                 <p className="card-text">
                     Ordino and its components have been described in the following scientific publications.</p>
-                <p className="card-text">
+                <p className="card-text text-muted">
                     Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger<br />
-                    Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples<br />
+                    <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples</b><br />
                     Bioinformatics, 35(17): 3140-3142, 2019.</p>
-                <p className="card-text">
+                <p className="card-text text-muted">
                     Klaus Eckelt, Patrick Adelberger, Thomas Zichner, Andreas Wernitznig, Marc Streit.<br />
-                    TourDino: A Support View for Confirming Patterns in Tabular Data<br />
+                    <b>TourDino: A Support View for Confirming Patterns in Tabular Data</b><br />
                     EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</p>
-                <p className="card-text">
+                <p className="card-text text-muted">
                     Katarina Furmanova, Samuel Gratzl, Holger Stitz, Thomas Zichner, Miroslava Jaresova, Martin Ennemoser, Alexander Lex, Marc Streit<br />
-                    Taggle: Combining Overview and Details in Tabular Data Visualizations<br />
+                    <b>Taggle: Combining Overview and Details in Tabular Data Visualizations</b><br />
                     Information Visualization, 19(2): 114-136, 2019.</p>
                 <p className="card-text">
                     Please consider a citation when using Ordino and publishing your results.</p>
