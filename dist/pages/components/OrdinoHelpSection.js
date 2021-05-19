@@ -31,7 +31,7 @@ const cards = [
         factory: () => React.createElement(TermsOfUseCard, null)
     },
     {
-        id: 'source-code-licences',
+        id: 'source-code-licenses',
         name: 'Source Code',
         icon: 'fas fa-code',
         factory: () => React.createElement(SourceCodeCard, null)
