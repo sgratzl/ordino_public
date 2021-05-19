@@ -2,38 +2,42 @@ import React from 'react';
 import {DisclaimerCard} from './DisclaimerCard';
 import {OrdinoContactForm} from './OrdinoContactForm';
 import {IVideoCardProps, VideoCard} from './VideoCard';
-import {OrdinoScrollspy, OrdinoScrollspyItem, OrdinoFooter} from 'ordino';
-import {UniqueIdManager} from 'phovea_core';
+import {OrdinoScrollspy, OrdinoScrollspyItem} from 'ordino';
 import {SourceCodeCard} from './SourceCodeCard';
 import {TermsOfUseCard} from './TermsOfUseCard';
 
 const cards = [
   {
+    id: 'ordino-at-a-glance',
     name: 'Ordino at a Glance',
     icon: 'fas fa-mountain',
     factory: (props: IVideoCardProps) => <VideoCard {...props} />
 
   },
   {
+    id: 'contact-us',
     name: 'Contact us',
     icon: 'fas fa-at',
     factory: () => <OrdinoContactForm />
 
   },
   {
+    id: 'disclaimer',
     name: 'Disclaimer',
     icon: 'fas fa-exclamation-triangle',
     factory: () => <DisclaimerCard />
 
   },
   {
+    id: 'terms-of-use',
     name: 'Terms of Use',
     icon: 'fas fa-smile',
     factory: () => <TermsOfUseCard />
   },
   {
+    id: 'source-code-licences',
     name: 'Source Code',
-    icon: 'fab fa-github',
+    icon: 'fas fa-code',
     factory: () => <SourceCodeCard />
   },
 ];
@@ -48,9 +52,8 @@ interface IOrdinoHelpSectionProps {
 }
 
 export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
-  const suffix = React.useMemo(() => UniqueIdManager.getInstance().uniqueId(), []);
   return (<>
-    <OrdinoScrollspy items={cards.map((item, index) => ({id: `section${index}_${suffix}`, name: item.name}))}>
+    <OrdinoScrollspy items={cards.map((item) => ({id: item.id, name: item.name}))}>
       {(handleOnChange) =>
         <>
           <div className="container pt-4">
@@ -59,7 +62,7 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
                 {cards.map((item, index) => {
                   return (
                     // `id` attribute must match the one in the scrollspy
-                    <OrdinoScrollspyItem className="pt-3 pb-5" id={`section${index}_${suffix}`} key={item.name} index={index} handleOnChange={handleOnChange}>
+                    <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
                       <>
                         <h4 className="text-left  mt-2 mb-3"><i className={`mr-2 ordino-icon-2 ${item.icon}`}></i> {item.name}</h4>
                         <item.factory {...{openInNewWindow: props.openInNewWindow}} />
