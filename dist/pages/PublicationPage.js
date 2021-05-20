@@ -5,8 +5,8 @@ export function PublicationPage() {
         React.createElement(HeaderNavigation, { fixed: "top" }),
         React.createElement("div", { className: "ordino-publication-page my-9 container" },
             React.createElement("div", { className: "mt-4 row" },
-                React.createElement("h4", { className: "text-left d-flex align-items-center mb-3" },
-                    React.createElement("i", { className: "mr-2 ordino-icon-2  fas fa-book-open" }),
+                React.createElement("h4", { className: "text-start d-flex align-items-center mb-3" },
+                    React.createElement("i", { className: "me-2 ordino-icon-2  fas fa-book-open" }),
                     " Publication")),
             React.createElement("div", { className: "mb-4 row" },
                 React.createElement("div", { className: "shadow-sm card", style: { overflow: 'hidden' } },
@@ -22,7 +22,7 @@ export function PublicationPage() {
                             "Bioinformatics, 35(17): 3140-3142, 2019.")),
                     React.createElement("div", { className: "card-footer" },
                         React.createElement("a", { href: "https://dx.doi.org/10.1093/bioinformatics/btz009", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
-                            React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
+                            React.createElement("i", { className: "me-1 fas fa-angle-right" }),
                             " Read the publication"))))),
         React.createElement(OrdinoFooter, null)));
 }

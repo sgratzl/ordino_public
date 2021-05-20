@@ -111,17 +111,17 @@ const sections = [
 export function NewsPage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, { fixed: "top" }),
-        React.createElement("div", { className: "scrollspy-nav flex-column ml-4 nav" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link", role: "button", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name)))),
+        React.createElement("div", { className: "scrollspy-nav flex-column ms-4 nav" }, sections.map(({ name }, i) => (React.createElement(Link, { className: "nav-link", role: "button", key: i, to: `element-${i}`, spy: true, smooth: true, offset: -180, duration: 500 }, name)))),
         React.createElement("div", { className: "container news-page my-9" }, sections.map(({ name, markup }, i) => (React.createElement(Element, { key: i, name: `element-${i}`, className: "news-page-section" },
-            React.createElement("h4", { className: "text-left mt-2 d-flex align-items-center mb-3" },
-                React.createElement("i", { className: "mr-2 ordino-icon-1 fas fa-chevron-circle-right" }),
+            React.createElement("h4", { className: "text-start mt-2 d-flex align-items-center mb-3" },
+                React.createElement("i", { className: "me-2 ordino-icon-1 fas fa-chevron-circle-right" }),
                 " ",
                 name),
             React.createElement("div", { className: "card shadow-sm p-3 h-100" },
                 React.createElement("div", { className: "card-body" },
                     React.createElement("div", { className: "align-items-top row row-cols-xl-2 row-cols-lg-1" },
-                        React.createElement("div", { className: "col col-sm-7" }, markup()),
-                        React.createElement("div", { className: "col" },
+                        React.createElement("div", { className: "col position-relative col-sm-7" }, markup()),
+                        React.createElement("div", { className: "col position-relative" },
                             React.createElement("img", { src: cardImage, className: "card-img img-fit", alt: "Card image" }))))))))),
         React.createElement(OrdinoFooter, null)));
 }

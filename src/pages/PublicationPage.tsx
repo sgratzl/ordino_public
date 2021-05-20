@@ -8,7 +8,7 @@ export function PublicationPage() {
 
       <div className="ordino-publication-page my-9 container">
         <div className="mt-4 row">
-          <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-2  fas fa-book-open"></i> Publication</h4>
+          <h4 className="text-start d-flex align-items-center mb-3"><i className="me-2 ordino-icon-2  fas fa-book-open"></i> Publication</h4>
         </div>
         <div className="mb-4 row">
           <div className="shadow-sm card" style={{overflow: 'hidden'}}>
@@ -34,7 +34,7 @@ export function PublicationPage() {
               </p>
             </div>
             <div className="card-footer">
-              <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> Read the publication</a>
+              <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> Read the publication</a>
             </div>
           </div>
         </div>

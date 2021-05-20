@@ -6,7 +6,7 @@ import {Link, Element} from 'react-scroll';
 
 export function OrdinoHelpSection() {
     return (<>
-      <div className="scrollspy-nav flex-column ml-4 nav">
+      <div className="scrollspy-nav flex-column ms-4 nav">
         <Link className="nav-link" role="button" to={`element-${1}`} spy={true} smooth={true} offset={-180} duration={500}>
           Ordino at a Glance
               </Link>
@@ -25,13 +25,13 @@ export function OrdinoHelpSection() {
       </div>
       <div className="container ordino-help-page mt-9 mb-4">
         <div className="row">
-          <div className="col">
+          <div className="col position-relative">
 
             {/* VideoCard 1 */}
             <div className="row">
-              <div className="col">
+              <div className="col position-relative">
                 <Element name={`element-${1}`}>
-                  <h4 className="text-left  mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-mountain"></i> Ordino at a Glance</h4>
+                  <h4 className="text-start  mt-2 mb-3"><i className="me-2 ordino-icon-2 fas fa-mountain"></i> Ordino at a Glance</h4>
                   <VideoCard />
                 </Element>
               </div>
@@ -40,9 +40,9 @@ export function OrdinoHelpSection() {
 
             {/* ContactForm */}
             <div className="row mt-6">
-              <div className="col">
+              <div className="col position-relative">
                 <Element name={`element-${2}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-at"></i> Contact us</h4>
+                  <h4 className="text-start mt-2 mb-3"><i className="me-2 ordino-icon-2 fas fa-at"></i> Contact us</h4>
                   <OrdinoContactForm />
                 </Element>
               </div>
@@ -50,9 +50,9 @@ export function OrdinoHelpSection() {
 
             {/* Disclaimer */}
             <div className="row mt-6">
-              <div className="col">
+              <div className="col position-relative">
                 <Element name={`element-${3}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-exclamation-triangle "></i> Disclaimer</h4>
+                  <h4 className="text-start mt-2 mb-3"><i className="me-2 ordino-icon-2 fas fa-exclamation-triangle "></i> Disclaimer</h4>
                   <DisclaimerCard />
                 </Element>
               </div>
@@ -60,9 +60,9 @@ export function OrdinoHelpSection() {
 
             {/* Terms of Use */}
             <div className="row mt-6">
-              <div className="col">
+              <div className="col position-relative">
                 <Element name={`element-${4}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
+                  <h4 className="text-start mt-2 mb-3"><i className="me-2 ordino-icon-2 fas fa-smile"></i> Terms of Use</h4>
                   <div className="card shadow-sm">
                     <div className="card-body">
                       <div className="list-group list-group-flush">
@@ -86,9 +86,9 @@ export function OrdinoHelpSection() {
 
             {/* Source code */}
             <div className="row mt-6">
-              <div className="col">
+              <div className="col position-relative">
                 <Element name={`element-${5}`}>
-                  <h4 className="text-left mt-2 mb-3"><i className="mr-2 ordino-icon-2 fab fa-github"></i> Source Code {'&'} Licenses</h4>
+                  <h4 className="text-start mt-2 mb-3"><i className="me-2 ordino-icon-2 fab fa-github"></i> Source Code {'&'} Licenses</h4>
                   <div className="card shadow-sm">
                     <div className="card-body">
                       <p className="card-text">

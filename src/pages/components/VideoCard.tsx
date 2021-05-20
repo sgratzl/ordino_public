@@ -21,28 +21,28 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     cell lines, and tissue samples based on a rich set of experimental and metadata.
                 </p>
                 <h5 className="card-title">
-                    <i className="mr-2 fas fa-check"></i>Features
+                    <i className="me-2 fas fa-check"></i>Features
                 </h5>
                 <p className="card-text">
                     You can find an overview of the main features
                     <Link {...newWindowProps} className="card-link" to="/features">&nbsp;here.</Link>
                 </p>
                 <h5 className="card-title">
-                    <i className="mr-2 fas fa-database"></i>Datasets
+                    <i className="me-2 fas fa-database"></i>Datasets
                 </h5>
                 <p className="card-text">
                     Many datasets have been integrated and are ready to explore.
                     <Link {...newWindowProps} className="card-link" to="/datasets">&nbsp;Read more about datasets.</Link>
                 </p>
                 <h5 className="card-title">
-                    <i className="mr-2 fas fa-mouse-pointer"></i>Tours
+                    <i className="me-2 fas fa-mouse-pointer"></i>Tours
                 </h5>
                 <p className="card-text">
                     Another good way to learn about the main features of Ordino are our interactive tours that you can find
                     <Link {...newWindowProps} className="card-link" to="/tours">&nbsp;here.</Link>
                 </p>
                 <h5 className="card-title">
-                    <i className="mr-2 fas fa-book-open"></i>Publications
+                    <i className="me-2 fas fa-book-open"></i>Publications
                 </h5>
                 <p className="card-text">
                     Ordino and its components have been described in several scientific publications.

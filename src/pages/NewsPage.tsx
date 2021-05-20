@@ -191,7 +191,7 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation fixed="top"></HeaderNavigation>
-      <div className="scrollspy-nav flex-column ml-4 nav">
+      <div className="scrollspy-nav flex-column ms-4 nav">
         {sections.map(({name}, i) => (
           <Link className="nav-link" role="button" key={i} to={`element-${i}`} spy={true} smooth={true} offset={-180} duration={500}>
             {name}
@@ -201,14 +201,14 @@ export function NewsPage() {
       <div className="container news-page my-9">
             {sections.map(({name, markup}, i) => (
               <Element key={i} name={`element-${i}`} className="news-page-section">
-                <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
+                <h4 className="text-start mt-2 d-flex align-items-center mb-3"><i className="me-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {name}</h4>
                 <div className="card shadow-sm p-3 h-100">
                   <div className="card-body">
                     <div className="align-items-top row row-cols-xl-2 row-cols-lg-1">
-                      <div className="col col-sm-7">
+                      <div className="col position-relative col-sm-7">
                         {markup()}
                       </div>
-                      <div className="col">
+                      <div className="col position-relative">
                         <img src={cardImage} className="card-img img-fit" alt="Card image" />
                       </div>
                     </div>

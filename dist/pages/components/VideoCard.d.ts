@@ -1,4 +1,3 @@
-/// <reference types="react" />
 interface IVideoCardProps {
     openInNewWindow?: boolean;
 }
