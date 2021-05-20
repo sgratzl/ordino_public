@@ -40,9 +40,7 @@ export function OrdinoHero() {
         <div className="modal-content">
           <div className="modal-header">
             <div className="modal-title h4" id="ordino-intro-video-modal">Introduction to Ordino</div>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" className="btn-close" data-dismiss="modal" aria-label="Close"/>
           </div>
           <div className="modal-body">
           <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>

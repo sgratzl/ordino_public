@@ -27,8 +27,7 @@ export function OrdinoHero() {
                 React.createElement("div", { className: "modal-content" },
                     React.createElement("div", { className: "modal-header" },
                         React.createElement("div", { className: "modal-title h4", id: "ordino-intro-video-modal" }, "Introduction to Ordino"),
-                        React.createElement("button", { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
-                            React.createElement("span", { "aria-hidden": "true" }, "\u00D7"))),
+                        React.createElement("button", { type: "button", className: "btn-close", "data-dismiss": "modal", "aria-label": "Close" })),
                     React.createElement("div", { className: "modal-body" },
                         React.createElement("iframe", { width: "1280", height: "720", src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true })))))));
 }
