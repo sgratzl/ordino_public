@@ -11,7 +11,7 @@ interface IFeatureCardProps {
 
 export function FeatureCard({image, title, children}: IFeatureCardProps) {
     return (
-        <div className="col mb-4">
+        <div className="col position-relative mb-4">
             <div className="card shadow-sm h-100">
                 <div className="card-body p-3">
                     <h5 className="card-title">{title}</h5>

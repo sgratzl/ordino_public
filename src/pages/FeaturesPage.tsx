@@ -9,12 +9,12 @@ export function FeaturesPage() {
 
       <div className="my-9 container">
         <div className="row">
-          <div className="col">
-            <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define List of Items</h4>
+          <div className="col position-relative">
+            <h4 className="text-start d-flex align-items-center mb-3"><i className="me-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define List of Items</h4>
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col position-relative">
             <p className="lead text-ordino-gray-4">
               The user starts the analysis by defining a set of items. The item set can be determined by manually entering a list of identifiers
               (e.g., a list of gene symbols), by selecting a previously saved or predefined
@@ -22,12 +22,12 @@ export function FeaturesPage() {
           </div>
         </div>
         <div className="row mt-6">
-          <div className="col">
-            <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Rank, Filter, and Select Items</h4>
+          <div className="col position-relative">
+            <h4 className="text-start d-flex align-items-center mb-3"><i className="me-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Rank, Filter, and Select Items</h4>
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col position-relative">
             <p className="lead text-ordino-gray-4">
               A core component of the Ordino system is the interactive visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener noreferrer">LineUp</a>,
               which allows users to flexibly create and explore rankings of items based
@@ -103,12 +103,12 @@ export function FeaturesPage() {
           </FeatureCard>
         </div>
         <div className="row mt-6">
-          <div className="col">
-            <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain Detailed Information</h4>
+          <div className="col position-relative">
+            <h4 className="text-start d-flex align-items-center mb-3"><i className="me-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain Detailed Information</h4>
           </div>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col position-relative">
             <p className="lead text-ordino-gray-4">
               Users can select one or more items in a ranking table for exploration using a collection of detail views.
               The detail views offered to the user depend on the type of items selected. The publicly deployed version

@@ -2,7 +2,7 @@ import * as React from 'react';
 export function GettingStarted() {
     return (React.createElement("section", { className: "container ordino-getting-started py-5" },
         React.createElement("div", { className: "row" },
-            React.createElement("div", { className: "col text-center" },
+            React.createElement("div", { className: "col position-relative text-center" },
                 React.createElement("h1", null, "Getting started with Ordino"))),
         React.createElement("ol", { className: "row ordino-getting-started-steps mx-0 mt-5 p-0" },
             React.createElement("li", { className: "col-12 col-lg mb-sm-5 mb-lg-0 text-center" },
@@ -15,7 +15,7 @@ export function GettingStarted() {
                 React.createElement("h2", { className: "my-3" }, "Obtain detailed information"),
                 React.createElement("p", null, "Dive deeper into the selected entities and obtain further information or visualize selected entities."))),
         React.createElement("div", { className: "row" },
-            React.createElement("div", { className: "col text-center" },
+            React.createElement("div", { className: "col position-relative text-center" },
                 React.createElement("a", { href: "/app/", className: "btn btn-outline-secondary btn-lg" }, "Start Analysis")))));
 }
 //# sourceMappingURL=GettingStarted.js.map
