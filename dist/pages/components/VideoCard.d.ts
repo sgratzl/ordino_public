@@ -1,6 +1,5 @@
 /// <reference types="react" />
-interface IVideoCardProps {
+export interface IVideoCardProps {
     openInNewWindow?: boolean;
 }
 export declare function VideoCard({ openInNewWindow }: IVideoCardProps): JSX.Element;
-export {};

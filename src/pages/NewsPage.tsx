@@ -10,7 +10,7 @@ const sections = [
     name: 'Version 8.0.0 (2021-03-24)',
     markup: () => (
       <>
-        <p className="card-text">
+        <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
         <br />
@@ -58,7 +58,7 @@ const sections = [
     name: 'Version 7.0.0 (2020-08-26)',
     markup: () => (
       <>
-        <p className="card-text">
+        <p className="lead text-muted">
           This update contains more <b>data</b>, many <b>new features</b>, various <b>improvements</b>, and a large number of <b>bug fixes</b>. The most important changes are:
       </p>
 
@@ -145,7 +145,7 @@ const sections = [
     name: 'Version 6.0.0 (2019-10-14)',
     markup: () => (
       <>
-        <p className="card-text">
+        <p className="lead text-muted">
           This update contains new <b>features</b>, various <b>improvements</b>, and many <b>bug fixes</b>. The most important changes are:
       </p>
         <h5 className="text-muted">Session management</h5>
@@ -177,7 +177,7 @@ const sections = [
     name: 'Version 5.1.0 (2018-12-05)',
     markup: () => (
       <>
-        <p className="card-text">
+        <p className="lead text-muted">
           This update contains new <b>features</b>, <b>improvements</b>, and <b>bug fixes</b>. The most important changes are:
       </p>
         <h5 className="text-muted" >Briefly noted</h5>
@@ -207,7 +207,7 @@ const sections = [
     name: 'Version 5.0.0 (2018-11-07)',
     markup: () => (
       <>
-        <p className="card-text">
+        <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
 
