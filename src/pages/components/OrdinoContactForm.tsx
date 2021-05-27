@@ -28,7 +28,7 @@ export function OrdinoContactForm() {
                     <a className="card-link" href="mailto:ordino@caleydo.org.">ordino@caleydo.org</a>. We are glad to help you.
                  </p>
                 <form onSubmit={handleSubmit}>
-                    <div className="row-cols-md-3 form-group">
+                    <div className="row-cols-md-3 mb-3">
                         <label className="form-label">Type of contact</label>
                         <select name="subject" className="form-control">
                             <option>I have some general feedback</option>
@@ -37,12 +37,12 @@ export function OrdinoContactForm() {
                         </select>
                     </div>
 
-                    <div className="form-group">
+                    <div className="mb-3">
                         <label className="form-label">Message</label>
                         <textarea className="form-control" name="message" rows={5}></textarea>
                     </div>
 
-                    <div className="justify-content-end form-row">
+                    <div className="justify-content-end row">
                         <div className="col-md-auto">
                             <button title="Send Message" type="submit" className="btn btn-secondary" >
                                 Send Message
