@@ -13,11 +13,9 @@ const sections = [
         <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
-        <br />
-        <h4 >New Data</h4>
-        <br />
+        <h4 className="my-4">New Data</h4>
 
-        <h5 className="text-muted">Gene Signature Scores</h5>
+        <h5 className="mt-4">Gene Signature Scores</h5>
 
         <p>
           <i>Gene Signature Scores</i> are now available for cell lines and tissue samples (including GTEx, TCGA, and PDX models). These can be added using the <i>Add Column</i> dialog:
@@ -35,17 +33,15 @@ const sections = [
         </ul>
 
 
-        <br />
-        <h4>Usability improvements</h4>
-        <br />
-        <h5 className="text-muted mt-3">Annotation Columns</h5>
+        <h4 className="my-4">Usability improvements</h4>
+        <h5 className="mt-4">Annotation Columns</h5>
 
         <p>
           It is now possible to add multiple "Annotation Columns" at once
               </p>
         <img className="img-fluid border border-ordino-gray-5" src={annotation_column} alt="Annotation Column" />
-        <br />
-        <h5 className="text-muted mt-3">Data download</h5>
+
+        <h5 className="mt-4">Data download</h5>
         <p className="mt-2">
           The data download dialog has been improved
               </p>
@@ -62,17 +58,14 @@ const sections = [
           This update contains more <b>data</b>, many <b>new features</b>, various <b>improvements</b>, and a large number of <b>bug fixes</b>. The most important changes are:
       </p>
 
-        <br />
+        <h4 className="my-4">New data</h4>
 
-        <h4 >New data</h4>
-        <br />
-
-        <h5 className="text-muted">Database</h5>
+        <h5 className="mt-4">Database</h5>
         <p>
           All data has be been updated from hg19 to hg38!
             </p>
-        <br />
-        <h5 className="text-muted">HLA-A type, Mutational Burden and MSI Status</h5>
+
+        <h5 className="mt-4">HLA-A type, Mutational Burden and MSI Status</h5>
         <p>
           Now, HLA-A type, Mutational Burden and MSI Status data is available for many cell line and tissue samples.<br />
         </p>
@@ -80,10 +73,8 @@ const sections = [
           <i> How to access</i>: Open a list of cell lines 	&#8594; click on “+” to open the “add column” dialog 	&#8594; select "Annotation Columns" 	&#8594; select the data of interest.
         </p>
 
-        <br />
-        <h4 >Completely new features</h4>
-        <br />
-        <h5 className="text-muted">Basic statistical analyses</h5>
+        <h4 className="my-4">Completely new features</h4>
+        <h5 className="mt-4">Basic statistical analyses</h5>
         <img className="img-fluid mb-2" src={tourdino} alt="Tourdino" />
         <p>
           It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino.
@@ -92,11 +83,9 @@ const sections = [
           <i>How to access</i>: Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot below).<br /> There you can select which columns to compare and then get detailed information about the result.
       </p>
 
-        <br />
-        <h4 >Improved features</h4>
+        <h4 className="my-4">Improved features</h4>
 
-        <br />
-        <h5 className="text-muted">Improved column operations (filtering, sorting, etc)</h5>
+        <h5 className="mt-4">Improved column operations (filtering, sorting, etc)</h5>
         <p>
           <i>How to access</i>: click on any of the icons in the column headers.
             </p>
@@ -114,8 +103,7 @@ const sections = [
           The grouping of text columns (like mutations) is now working much better (e.g., allowing you to split your cell lines by specific mutations). <i>How to access: click the “…” in the column header and then select “Group By”</i>.
       </p>
 
-        <br />
-        <h5 className="text-muted">Interactive help tours</h5>
+        <h5 className="mt-4">Interactive help tours</h5>
         <p>
           And to make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.
             </p>
@@ -123,8 +111,7 @@ const sections = [
           <i>These can be accessed by clicking on the “?” in the upper right corner of Ordino</i>.
       </p>
 
-        <br />
-        <h5 className="text-muted">Briefly noted</h5>
+        <h5 className="mt-4">Briefly noted</h5>
 
         <p>
           Improved look and feel of the list of cell lines, genes, and tissue samples.
@@ -148,7 +135,7 @@ const sections = [
         <p className="lead text-muted">
           This update contains new <b>features</b>, various <b>improvements</b>, and many <b>bug fixes</b>. The most important changes are:
       </p>
-        <h5 className="text-muted">Session management</h5>
+        <h5 className="mt-4">Session management</h5>
         <p >
           There is now an Improved menu for saving and loading of analysis sessions.
           </p>
@@ -156,16 +143,14 @@ const sections = [
           This menu is now called "Analysis Session Management" and is available in the upper right corner.
           Advanced session sharing possibilities have been added. It is now possible to share an analysis session with individual people or a group of people.
           </p>
-        <br />
-        <h5 className="text-muted">Session sharing</h5>
+        <h5 className="mt-4">Session sharing</h5>
         <p>
           Advanced session sharing possibilities have been added. It is now possible to share an analysis session with individual people or a group of people.
           </p>
         <p>
           To do so, click on "Advanced" in the "Save Session" menu. The same is now possible for sharing uploaded data sets.
           </p>
-        <br />
-        <h5 className="text-muted">Download data</h5>
+        <h5 className="mt-4">Download data</h5>
         <p>
           The "Download Data" menu has been simplified.
           </p>
@@ -180,7 +165,7 @@ const sections = [
         <p className="lead text-muted">
           This update contains new <b>features</b>, <b>improvements</b>, and <b>bug fixes</b>. The most important changes are:
       </p>
-        <h5 className="text-muted" >Briefly noted</h5>
+        <h5 className="mt-4">Briefly noted</h5>
         <p>
           File upload is working again.
        </p>
@@ -211,41 +196,37 @@ const sections = [
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
 
-        <h5 className="text-muted">Improved column headers and column menus</h5>
+        <h5 className="mt-4">Improved column headers and column menus</h5>
         <p>Column headers start with gene/cell line name and information about data type.</p>
         <p>New filter and value mapping dialog for numeric columns (e.g., it is now possible to copy the value range from one column to another).</p>
         <p>Extended coloring options for numeric columns.</p>
 
-        <br />
-        <h5 className="text-muted">Improved column sorting and grouping.</h5>
+        <h5 className="mt-4">Improved column sorting and grouping.</h5>
         <p> The order of multiple sorting/grouping columns can now be explicitly specified in the side panel on the right (can be opened by clicking on the arrow on the right).</p>
         <p>The values of numeric columns can be grouped into an arbitrary number of bins.</p>
         <p>  The values of text columns can now be grouped.</p>
 
-        <br />
-        <h5 className="text-muted"> Improved aggregated columns</h5>
+        <h5 className="mt-4"> Improved aggregated columns</h5>
         <p> Boxplot columns now show outliers.</p>
         <p> Heatmap columns now support mouse over to identify individual genes/cell lines/values.</p>
         <p>Heatmap columns now support complex color and value mapping.</p>
 
-        <br />
-        <h5 className="text-muted"> Improved column types</h5>
+        <h5 className="mt-4"> Improved column types</h5>
         <p> Chromosomes are now correctly sorted.</p>
         <p> Gene start and end coordinates are now numeric columns allowing correct sorting (can for instance be used to draw copy number profiles).</p>
 
-        <br />
-        <h5 className="text-muted"> Improved user interface</h5>
-        <p>    "Add column" menu simplified.</p>
+        <h5 className="mt-4"> Improved user interface</h5>
+        <p>"Add column" menu simplified.</p>
         <p> Some features renamed to make it clearer what they do.</p>
-        <p>                A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
+        <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
 
 
-        <h5 className="text-muted">   Improved performance</h5>
+        <h5 className="mt-4"> Improved performance</h5>
         <p>  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
         <p> Some features renamed to make it clearer what they do.</p>
-        <p>                A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
+        <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
 
-        <h5 className="text-muted"> Briefly noted</h5>
+        <h5 className="mt-4"> Briefly noted</h5>
         <p>  A few external detail views have been added.</p>
         <p> SExtended "Data download" functionality.</p>
 
