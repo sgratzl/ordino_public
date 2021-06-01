@@ -253,7 +253,7 @@ export function NewsPage() {
                         // `id` attribute must match the one in the scrollspy
                         <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
                           <>
-                            <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
+                            <h4 className="text-start mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
                             <div className="card shadow-sm p-3 h-100">
                               <div className="card-body">
                                 {item.markup()}
