@@ -29,7 +29,10 @@ ReactDOM.render(
         <Route path="/publication">
           <PublicationPage />
         </Route>
-        <Route path="/help">
+        <Route path="/help/:slug">{/* initialize slug version first */}
+          <HelpPage />
+        </Route>
+        <Route path="/help">{/* then fallback */}
           <HelpPage />
         </Route>
         <Route exact path="/">

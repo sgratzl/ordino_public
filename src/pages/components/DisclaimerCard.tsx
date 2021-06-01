@@ -5,7 +5,7 @@ export function DisclaimerCard() {
         <div className="card shadow-sm">
             <div className="card-body">
                 <p className="card-text">
-                    The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH {'&'} Co KG, and datavisyn GmbH (“we,” “us” or “our”) on https://ordino.calyedoapp.org (the “Site”) is for general research purposes and non-commercial use only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
+                    The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH {'&'} Co KG, and datavisyn GmbH (“we,” “us” or “our”) on <a href="https://ordino.calyedoapp.org" target="_blank" rel="noopener noreferrer">https://ordino.calyedoapp.org</a> (the “Site”) is for general research purposes and non-commercial use only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.
                 </p>
                 <p className="card-text">
                     Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the Site or reliance on any information provided on the Site. Your use of the Site and your reliance on any information on the Site is solely at your own risk.
