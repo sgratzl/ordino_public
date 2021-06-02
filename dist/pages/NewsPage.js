@@ -67,7 +67,7 @@ const sections = [
             React.createElement("p", null, "It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino."),
             React.createElement("p", null,
                 React.createElement("i", null, "How to access"),
-                ": Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot below).",
+                ": Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot above).",
                 React.createElement("br", null),
                 " There you can select which columns to compare and then get detailed information about the result."),
             React.createElement("h4", { className: "my-4" }, "Improved features"),
@@ -86,7 +86,7 @@ const sections = [
                 React.createElement("i", null, "How to access: click the \u201C\u2026\u201D in the column header and then select \u201CGroup By\u201D"),
                 "."),
             React.createElement("h5", { className: "mt-4" }, "Interactive help tours"),
-            React.createElement("p", null, "And to make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application."),
+            React.createElement("p", null, "To make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application."),
             React.createElement("p", null,
                 React.createElement("i", null, "These can be accessed by clicking on the \u201C?\u201D in the upper right corner of Ordino"),
                 "."),
@@ -164,17 +164,15 @@ const sections = [
             React.createElement("h5", { className: "mt-4" }, " Improved column types"),
             React.createElement("p", null, " Chromosomes are now correctly sorted."),
             React.createElement("p", null, " Gene start and end coordinates are now numeric columns allowing correct sorting (can for instance be used to draw copy number profiles)."),
+            React.createElement("h5", { className: "mt-4" }, " Improved performance"),
+            React.createElement("p", null, "  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns."),
             React.createElement("h5", { className: "mt-4" }, " Improved user interface"),
             React.createElement("p", null, "\"Add column\" menu simplified."),
             React.createElement("p", null, " Some features renamed to make it clearer what they do."),
             React.createElement("p", null, "A \"Submit Feedback\" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc)."),
-            React.createElement("h5", { className: "mt-4" }, " Improved performance"),
-            React.createElement("p", null, "  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns."),
-            React.createElement("p", null, " Some features renamed to make it clearer what they do."),
-            React.createElement("p", null, "A \"Submit Feedback\" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc)."),
             React.createElement("h5", { className: "mt-4" }, " Briefly noted"),
-            React.createElement("p", null, "  A few external detail views have been added."),
-            React.createElement("p", null, " SExtended \"Data download\" functionality.")))
+            React.createElement("p", null, " A few external detail views have been added."),
+            React.createElement("p", null, " Extended \"Data download\" functionality.")))
     }
 ];
 export function NewsPage() {

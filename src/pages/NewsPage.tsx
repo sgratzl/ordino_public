@@ -80,7 +80,7 @@ const sections = [
           It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino.
       </p>
         <p>
-          <i>How to access</i>: Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot below).<br /> There you can select which columns to compare and then get detailed information about the result.
+          <i>How to access</i>: Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot above).<br /> There you can select which columns to compare and then get detailed information about the result.
       </p>
 
         <h4 className="my-4">Improved features</h4>
@@ -105,7 +105,7 @@ const sections = [
 
         <h5 className="mt-4">Interactive help tours</h5>
         <p>
-          And to make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.
+          To make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.
             </p>
         <p>
           <i>These can be accessed by clicking on the “?” in the upper right corner of Ordino</i>.
@@ -215,20 +215,18 @@ const sections = [
         <p> Chromosomes are now correctly sorted.</p>
         <p> Gene start and end coordinates are now numeric columns allowing correct sorting (can for instance be used to draw copy number profiles).</p>
 
+        <h5 className="mt-4"> Improved performance</h5>
+        <p>  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
+
         <h5 className="mt-4"> Improved user interface</h5>
         <p>"Add column" menu simplified.</p>
         <p> Some features renamed to make it clearer what they do.</p>
         <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
 
 
-        <h5 className="mt-4"> Improved performance</h5>
-        <p>  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
-        <p> Some features renamed to make it clearer what they do.</p>
-        <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
-
         <h5 className="mt-4"> Briefly noted</h5>
-        <p>  A few external detail views have been added.</p>
-        <p> SExtended "Data download" functionality.</p>
+        <p> A few external detail views have been added.</p>
+        <p> Extended "Data download" functionality.</p>
 
       </>
     )
