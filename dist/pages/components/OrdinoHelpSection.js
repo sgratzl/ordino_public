@@ -48,7 +48,7 @@ export function OrdinoHelpSection(props) {
                         React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
                             React.createElement(React.Fragment, null,
                                 React.createElement("h4", { className: "text-start  mt-2 mb-3" },
-                                    React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),
+                                    React.createElement("i", { className: `me-2 ordino-icon-2 ${item.icon}` }),
                                     " ",
                                     item.name),
                                 React.createElement(item.factory, Object.assign({}, { openInNewWindow: props.openInNewWindow })))));
