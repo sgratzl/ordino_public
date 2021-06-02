@@ -51,7 +51,7 @@ const TourdinoPublication = () => {
           To demonstrate the efficacy of our approach, we have integrated TourDino in the Ordino drug discovery platform for the purpose of identifying new drug targets.
               </p>
         <p className="card-text">
-        {/* // TODO: Check if thos text makes sense  */}
+          {/* // TODO: Check if this text makes sense  */}
           Tourdino was presented in the EuroVis Workshop on Visual Analytics. Please consider a citation
           when using Ordino and publishing your results.
               </p>
