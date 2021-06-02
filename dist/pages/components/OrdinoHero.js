@@ -22,7 +22,7 @@ export function OrdinoHero() {
                 React.createElement("div", { className: "row ordino-hero-image mt-5" },
                     React.createElement("div", { className: "col" },
                         React.createElement("img", { src: ordinoHero, alt: "Screenshot of an analysis with Ordino" }))))),
-        React.createElement("div", { className: "modal fade", id: "ordino-intro-video-modal", "aria-labelledby": "ordino-intro-video-modal-title", "aria-hidden": "true" },
+        React.createElement("div", { className: "modal", id: "ordino-intro-video-modal", "aria-labelledby": "ordino-intro-video-modal-title", "aria-hidden": "true" },
             React.createElement("div", { className: "modal-dialog ordino-intro-video-modal" },
                 React.createElement("div", { className: "modal-content" },
                     React.createElement("div", { className: "modal-header" },
@@ -30,6 +30,7 @@ export function OrdinoHero() {
                         React.createElement("button", { type: "button", className: "close", "data-dismiss": "modal", "aria-label": "Close" },
                             React.createElement("span", { "aria-hidden": "true" }, "\u00D7"))),
                     React.createElement("div", { className: "modal-body" },
+                        React.createElement("p", null, "The video was produced with an earlier Ordino version and shows a slightly different user interface compared to the current app."),
                         React.createElement("iframe", { width: "1280", height: "720", src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true })))))));
 }
 //# sourceMappingURL=OrdinoHero.js.map
