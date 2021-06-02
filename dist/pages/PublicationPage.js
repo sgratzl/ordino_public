@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
+// tslint:disable-next-line: variable-name
 const OrdinoPublication = () => {
     return React.createElement("div", { className: "mb-4 row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
@@ -14,17 +15,24 @@ const OrdinoPublication = () => {
                     React.createElement("br", null),
                     "Bioinformatics, 35(17): 3140-3142, 2019.")),
             React.createElement("div", { className: "card-footer" },
-                React.createElement("a", { href: "https://dx.doi.org/10.1093/bioinformatics/btz009", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                React.createElement("a", { href: "https://dx.doi.org/10.1093/bioinformatics/btz009", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
-                    " Read the publication"))));
+                    " Read the publication"),
+                React.createElement("a", { href: "https://academic.oup.com/bioinformatics/article-pdf/35/17/3140/29591819/btz009.pdf", target: "_blank", className: "btn btn-light mr-2" },
+                    React.createElement("i", { className: "mr-1 fas fa-file-pdf" }),
+                    " Download"),
+                React.createElement("a", { href: "https://github.com/Caleydo/ordino_public", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                    React.createElement("i", { className: "mr-1 fab fa-github" }),
+                    " Source code"))));
 };
+// tslint:disable-next-line: variable-name
 const TourdinoPublication = () => {
     return React.createElement("div", { className: "mb-4 row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
             React.createElement("div", { className: "card-body" },
                 React.createElement("iframe", { className: "mb-2", width: "100%", height: "100%", src: "https://www.youtube-nocookie.com/embed/k6EPm6i-Vw4?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
                 React.createElement("p", { className: "card-text" }, "Seeking relationships and patterns in tabular data is a common data exploration task. To confirm hypotheses that are based on visual patterns observed during exploratory data analysis, users need to be able to quickly compare data subsets, and get further information on the significance of the result and the statistical test applied. Existing tools, however, either focus on the comparison of a single data type, such as comparing numerical attributes only, or provide little or no statistical evaluation to assess a hypothesis. To fill this gap, we present TourDino, a support view that helps users who are not experts in statistics to verify generated hypotheses and confirm insights gained during the exploration of tabular data. In TourDino we present an overview of the statistical significance of various row or column comparisons. On demand, we show further details, including the test score, a textual description, and a detail visualization explaining the results. To demonstrate the efficacy of our approach, we have integrated TourDino in the Ordino drug discovery platform for the purpose of identifying new drug targets."),
-                React.createElement("p", { className: "card-text" }, "// TODO: Tourdino was presented in the EuroVis Workshop on Visual Analytics. Please consider a citation when using Ordino and publishing your results."),
+                React.createElement("p", { className: "card-text" }, "Tourdino was presented in the EuroVis Workshop on Visual Analytics. Please consider a citation when using Ordino and publishing your results."),
                 React.createElement("p", { className: "card-text text-muted" },
                     "Klaus Eckelt, Patrick Adelberger, Thomas Zichner, Andreas Wernitznig, Marc Streit.",
                     React.createElement("br", null),
@@ -32,10 +40,17 @@ const TourdinoPublication = () => {
                     React.createElement("br", null),
                     React.createElement("i", null, "EuroVis Workshop on Visual Analytics (EuroVA '19), 2019."))),
             React.createElement("div", { className: "card-footer" },
-                React.createElement("a", { href: "https://diglib.eg.org/handle/10.2312/eurova20191117", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                React.createElement("a", { href: "https://diglib.eg.org/handle/10.2312/eurova20191117", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
-                    "Read the publication"))));
+                    "Read the publication"),
+                React.createElement("a", { href: "https://diglib.eg.org/bitstream/handle/10.2312/eurova20191117/007-011.pdf?sequence=1&isAllowed=y", target: "_blank", className: "btn btn-light mr-2" },
+                    React.createElement("i", { className: "mr-1 fas fa-file-pdf" }),
+                    " Download"),
+                React.createElement("a", { href: "https://github.com/Caleydo/tourdino", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                    React.createElement("i", { className: "mr-1 fab fa-github" }),
+                    " Source code"))));
 };
+// tslint:disable-next-line: variable-name
 const TagglePublication = () => {
     return React.createElement("div", { className: "mb-4 row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
@@ -50,9 +65,15 @@ const TagglePublication = () => {
                     React.createElement("br", null),
                     React.createElement("i", null, "Information Visualization, 19(2): 114-136, 2019."))),
             React.createElement("div", { className: "card-footer" },
-                React.createElement("a", { href: "https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                React.createElement("a", { href: "https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
-                    " Read the Publication"))));
+                    " Read the Publication"),
+                React.createElement("a", { href: "https://sci.utah.edu/~vdl/papers/2017_preprint_taggle.pdf", target: "_blank", className: "btn btn-light mr-2" },
+                    React.createElement("i", { className: "mr-1 fas fa-file-pdf" }),
+                    " Download"),
+                React.createElement("a", { href: "https://github.com/caleydo/lineupjs/tree/develop", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                    React.createElement("i", { className: "mr-1 fab fa-github" }),
+                    " Source code"))));
 };
 const publications = [
     {
