@@ -8,7 +8,7 @@ export function VideoCard({ openInNewWindow }) {
     return (React.createElement("div", { style: { overflow: 'hidden' }, className: "card p-2 shadow-sm ordino-video-card" },
         React.createElement("div", { className: "card-body" },
             React.createElement("p", { className: "card-text lead" }, "Ordino is a browser-based visual data analysis solution to flexibly rank, filter, and explore genes, cell lines, and tissue samples based on a rich set of experimental and metadata. Ordino contains a large set of cancer genomics data allowing to readily address a multitude of use cases as, for instance, identifying genes that could serve as potential drug targets or biomarkers, or finding the most appropriate cell line for an experiment."),
-            React.createElement("iframe", { className: "w-100", src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
+            React.createElement("iframe", { className: "w-100 pt-2 pb-1", src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
             React.createElement("h5", { className: "card-title mt-4" },
                 React.createElement("i", { className: "mr-2 fas fa-check" }),
                 "Workflow and Features"),
