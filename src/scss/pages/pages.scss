@@ -36,3 +36,14 @@
   font-size: 1rem;
 }
 
+// class to use in pages without scrollspy, in order to have a consistent scrolling behavior in all pages
+.ordino-container {
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
