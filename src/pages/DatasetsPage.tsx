@@ -31,15 +31,24 @@ export function DatasetsPage() {
         </div>
         <div className="row row-cols-md-2 row-cols-1">
           <div className="col">
-            <DatasetPageCard title="The Cancer Genome Atlas (TCGA)">
-              <p className="card-text">Gene expression, mutation, and copy number data </p>
-              <a className="card-link" href="https://cancergenome.nih.gov" target="_blank" rel="noopener">cancergenome.nih.gov</a>
+            <DatasetPageCard title="Cancer Cell Line Encyclopedia (CCLE)">
+              <p className="card-text">Sample annotation, gene expression, mutation, and copy number data</p>
+              <a className="card-link" href="https://portals.broadinstitute.org/ccle" target="_blank" rel="noopener">portals.broadinstitute.org/ccle</a>
             </DatasetPageCard>
           </div>
           <div className="col">
-            <DatasetPageCard title="Cancer Cell Line Encyclopedia (CCLE)">
-              <p className="card-text">Gene expression, mutation, and copy number data</p>
-              <a className="card-link" href="https://portals.broadinstitute.org/ccle" target="_blank" rel="noopener">portals.broadinstitute.org/ccle</a>
+            <DatasetPageCard title="The Cancer Genome Atlas (TCGA)">
+              <p className="card-text">Sample annotation, gene expression, mutation, and copy number data </p>
+              <a className="card-link" href="https://cancergenome.nih.gov" target="_blank" rel="noopener">cancergenome.nih.gov</a>
+            </DatasetPageCard>
+          </div>
+        </div>
+
+        <div className="row row-cols-md-2 row-cols-1 mt-4">
+          <div className="col">
+            <DatasetPageCard title="Gene Annotation">
+              <p className="card-text">Based on Ensembl 86</p>
+              <a className="card-link" href=" http://oct2016.archive.ensembl.org/index.html" target="_blank" rel="noopener">oct2016.archive.ensembl.org</a>
             </DatasetPageCard>
           </div>
         </div>
@@ -48,6 +57,7 @@ export function DatasetsPage() {
             <h4 className="text-left d-flex align-items-center mt-2 mb-3"><i className="mr-2 fas ordino-icon-1 fa-chevron-circle-right" ></i> Depletion Sceen Data</h4>
           </div>
         </div>
+
         <div className="row row-cols-md-2 row-cols-1">
           <div className="col">
             <DatasetPageCard title="Project DRIVE">
