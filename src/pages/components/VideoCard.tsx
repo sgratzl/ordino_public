@@ -91,19 +91,19 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                 <p className="card-text">
                     Ordino and its components have been described in the following scientific publications.</p>
                 <p className="card-text text-muted">
-                    Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger<br />
-                    <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples</b><br />
-                    Bioinformatics, 35(17): 3140-3142, 2019.</p>
+                    Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger.<br />
+                    <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples.</b><br />
+                    <i> Bioinformatics, 35(17): 3140-3142, 2019.</i></p>
                 <p className="card-text text-muted">
                     Klaus Eckelt, Patrick Adelberger, Thomas Zichner, Andreas Wernitznig, Marc Streit.<br />
-                    <b>TourDino: A Support View for Confirming Patterns in Tabular Data</b><br />
-                    EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</p>
+                    <b>TourDino: A Support View for Confirming Patterns in Tabular Data.</b><br />
+                    <i>EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</i></p>
                 <p className="card-text text-muted">
-                    Katarina Furmanova, Samuel Gratzl, Holger Stitz, Thomas Zichner, Miroslava Jaresova, Martin Ennemoser, Alexander Lex, Marc Streit<br />
-                    <b>Taggle: Combining Overview and Details in Tabular Data Visualizations</b><br />
-                    Information Visualization, 19(2): 114-136, 2019.</p>
+                    Katarina Furmanova, Samuel Gratzl, Holger Stitz, Thomas Zichner, Miroslava Jaresova, Martin Ennemoser, Alexander Lex, Marc Streit.<br />
+                    <b>Taggle: Combining Overview and Details in Tabular Data Visualizations.</b><br />
+                    <i>Information Visualization, 19(2): 114-136, 2019.</i></p>
                 <p className="card-text">
-                    Please consider a citation when using Ordino and publishing your results.</p>
+                    Please cite the first article when using Ordino and publishing your results.</p>
                 <p className="card-text">
                     You can find more information about the publications
                     <Link {...newWindowProps} className="card-link" to="/publication">&nbsp;here.</Link></p>
