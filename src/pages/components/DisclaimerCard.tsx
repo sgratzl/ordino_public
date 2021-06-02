@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export function DisclaimerCard() {
     return (
-        <div className="card shadow-sm">
+        <div className="card shadow-sm p-2">
             <div className="card-body">
                 <p className="card-text">
                     The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH {'&'} Co KG, and datavisyn GmbH (“we,” “us” or “our”) on <a href="https://ordino.calyedoapp.org" target="_blank" rel="noopener noreferrer">https://ordino.calyedoapp.org</a> (the “Site”) is for general research purposes and non-commercial use only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, expressed or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.

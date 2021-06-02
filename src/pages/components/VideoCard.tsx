@@ -13,7 +13,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
     } : {};
 
     return (
-        <div style={{overflow: 'hidden'}} className="card shadow-sm ordino-video-card">
+        <div style={{overflow: 'hidden'}} className="card p-2 shadow-sm ordino-video-card">
 
             <div className="card-body">
                 <p className="card-text lead">
