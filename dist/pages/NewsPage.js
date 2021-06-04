@@ -153,7 +153,7 @@ const sections = [
             React.createElement("p", null, "Column headers start with gene/cell line name and information about data type."),
             React.createElement("p", null, "New filter and value mapping dialog for numeric columns (e.g., it is now possible to copy the value range from one column to another)."),
             React.createElement("p", null, "Extended coloring options for numeric columns."),
-            React.createElement("h5", { className: "mt-4" }, "Improved column sorting and grouping."),
+            React.createElement("h5", { className: "mt-4" }, "Improved column sorting and grouping"),
             React.createElement("p", null, " The order of multiple sorting/grouping columns can now be explicitly specified in the side panel on the right (can be opened by clicking on the arrow on the right)."),
             React.createElement("p", null, "The values of numeric columns can be grouped into an arbitrary number of bins."),
             React.createElement("p", null, "  The values of text columns can now be grouped."),

@@ -201,7 +201,7 @@ const sections = [
         <p>New filter and value mapping dialog for numeric columns (e.g., it is now possible to copy the value range from one column to another).</p>
         <p>Extended coloring options for numeric columns.</p>
 
-        <h5 className="mt-4">Improved column sorting and grouping.</h5>
+        <h5 className="mt-4">Improved column sorting and grouping</h5>
         <p> The order of multiple sorting/grouping columns can now be explicitly specified in the side panel on the right (can be opened by clicking on the arrow on the right).</p>
         <p>The values of numeric columns can be grouped into an arbitrary number of bins.</p>
         <p>  The values of text columns can now be grouped.</p>
