@@ -4,7 +4,7 @@ import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} fr
 // tslint:disable-next-line: variable-name
 const OrdinoPublication = () => {
   return <div className="row">
-    <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
+    <div className="shadow-sm card p-2 overflow-hidden">
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
         <p className="card-text">
@@ -38,7 +38,7 @@ const OrdinoPublication = () => {
 // tslint:disable-next-line: variable-name
 const TourdinoPublication = () => {
   return <div className="row">
-    <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
+    <div className="shadow-sm card p-2 overflow-hidden">
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/k6EPm6i-Vw4?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
         <p className="card-text">
@@ -72,7 +72,7 @@ const TourdinoPublication = () => {
 // tslint:disable-next-line: variable-name
 const TagglePublication = () => {
   return <div className="row">
-    <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
+    <div className="shadow-sm card p-2 overflow-hidden">
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/t50KgQKK8EQ?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
         <p className="card-text">
