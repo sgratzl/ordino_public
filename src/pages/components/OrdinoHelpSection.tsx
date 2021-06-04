@@ -9,7 +9,7 @@ import {TermsOfUseCard} from './TermsOfUseCard';
 const cards = [
   {
     id: 'ordino-at-a-glance',
-    name: 'Ordino at a Glance',
+    name: 'Ordino at a glance',
     icon: 'fas fa-mountain',
     factory: (props: IVideoCardProps) => <VideoCard {...props} />
 
@@ -30,13 +30,13 @@ const cards = [
   },
   {
     id: 'terms-of-use',
-    name: 'Terms of Use',
+    name: 'Terms of use',
     icon: 'fas fa-smile',
     factory: () => <TermsOfUseCard />
   },
   {
     id: 'source-code-licenses',
-    name: 'Source Code',
+    name: 'Source code',
     icon: 'fas fa-code',
     factory: () => <SourceCodeCard />
   },

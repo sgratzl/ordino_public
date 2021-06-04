@@ -8,7 +8,7 @@ import { TermsOfUseCard } from './TermsOfUseCard';
 const cards = [
     {
         id: 'ordino-at-a-glance',
-        name: 'Ordino at a Glance',
+        name: 'Ordino at a glance',
         icon: 'fas fa-mountain',
         factory: (props) => React.createElement(VideoCard, Object.assign({}, props))
     },
@@ -26,13 +26,13 @@ const cards = [
     },
     {
         id: 'terms-of-use',
-        name: 'Terms of Use',
+        name: 'Terms of use',
         icon: 'fas fa-smile',
         factory: () => React.createElement(TermsOfUseCard, null)
     },
     {
         id: 'source-code-licenses',
-        name: 'Source Code',
+        name: 'Source code',
         icon: 'fas fa-code',
         factory: () => React.createElement(SourceCodeCard, null)
     },
