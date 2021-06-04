@@ -13,7 +13,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
     } : {};
 
     return (
-        <div style={{overflow: 'hidden'}} className="card shadow-sm ordino-video-card">
+        <div style={{overflow: 'hidden'}} className="card p-2 shadow-sm ordino-video-card">
 
             <div className="card-body">
                 <p className="card-text lead">
@@ -21,7 +21,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     Ordino contains a large set of cancer genomics data allowing to readily address a multitude of use cases as, for instance, identifying genes that could serve as potential drug targets
                     or biomarkers, or finding the most appropriate cell line for an experiment.
                 </p>
-                <iframe className="w-100" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
+                <iframe className="w-100 pt-2 pb-1" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
                 <h5 className="card-title mt-4">
                     <i className="mr-2 fas fa-check"></i>Workflow and Features
                 </h5>
@@ -91,19 +91,19 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                 <p className="card-text">
                     Ordino and its components have been described in the following scientific publications.</p>
                 <p className="card-text text-muted">
-                    Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger<br />
-                    <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples</b><br />
-                    Bioinformatics, 35(17): 3140-3142, 2019.</p>
+                    Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger.<br />
+                    <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples.</b><br />
+                    <i> Bioinformatics, 35(17): 3140-3142, 2019.</i></p>
                 <p className="card-text text-muted">
                     Klaus Eckelt, Patrick Adelberger, Thomas Zichner, Andreas Wernitznig, Marc Streit.<br />
-                    <b>TourDino: A Support View for Confirming Patterns in Tabular Data</b><br />
-                    EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</p>
+                    <b>TourDino: A Support View for Confirming Patterns in Tabular Data.</b><br />
+                    <i>EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</i></p>
                 <p className="card-text text-muted">
-                    Katarina Furmanova, Samuel Gratzl, Holger Stitz, Thomas Zichner, Miroslava Jaresova, Martin Ennemoser, Alexander Lex, Marc Streit<br />
-                    <b>Taggle: Combining Overview and Details in Tabular Data Visualizations</b><br />
-                    Information Visualization, 19(2): 114-136, 2019.</p>
+                    Katarina Furmanova, Samuel Gratzl, Holger Stitz, Thomas Zichner, Miroslava Jaresova, Martin Ennemoser, Alexander Lex, Marc Streit.<br />
+                    <b>Taggle: Combining Overview and Details in Tabular Data Visualizations.</b><br />
+                    <i>Information Visualization, 19(2): 114-136, 2019.</i></p>
                 <p className="card-text">
-                    Please consider a citation when using Ordino and publishing your results.</p>
+                    Please cite the first article when using Ordino and publishing your results.</p>
                 <p className="card-text">
                     You can find more information about the publications
                     <Link {...newWindowProps} className="card-link" to="/publication">&nbsp;here.</Link></p>

@@ -21,16 +21,16 @@ export function OrdinoTeaserCards() {
                     " Publication"),
                 React.createElement("div", { className: "card shadow-sm h-100" },
                     React.createElement("div", { className: "card-body" },
-                        React.createElement("p", { className: "card-text" }, "Ordino was published in the Oxford Bioinformatics journal. Please consider a citation when using Ordino and publishing your results."),
+                        React.createElement("p", { className: "card-text" }, "Ordino and its components have been published in multiple scientific articles. Please cite the following article when using Ordino and publishing your results."),
                         React.createElement("p", { className: "card-text text-muted" },
-                            "Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger",
+                            "Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger.",
                             React.createElement("br", null),
-                            "Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples",
+                            React.createElement("b", null, "Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples."),
                             React.createElement("br", null),
-                            "Bioinformatics, 35(17): 3140-3142, 2019.")),
+                            React.createElement("i", null, " Bioinformatics, 35(17): 3140-3142, 2019."))),
                     React.createElement("div", { className: "card-footer" },
                         React.createElement(Link, { to: "/publication", className: "btn btn-light" },
                             React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
-                            " Read the publication")))))));
+                            " List of all publications")))))));
 }
 //# sourceMappingURL=OrdinoTeaserCards.js.map

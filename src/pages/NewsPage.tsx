@@ -13,7 +13,7 @@ const sections = [
         <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
-        <h4 className="my-4">New Data</h4>
+        <h4 className="my-4">New data</h4>
 
         <h5 className="mt-4">Gene Signature Scores</h5>
 
@@ -34,7 +34,7 @@ const sections = [
 
 
         <h4 className="my-4">Usability improvements</h4>
-        <h5 className="mt-4">Annotation Columns</h5>
+        <h5 className="mt-4">Annotation columns</h5>
 
         <p>
           It is now possible to add multiple "Annotation Columns" at once
@@ -80,7 +80,7 @@ const sections = [
           It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino.
       </p>
         <p>
-          <i>How to access</i>: Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot below).<br /> There you can select which columns to compare and then get detailed information about the result.
+          <i>How to access</i>: Click on the calculator icon on the right. This opens a new side-panel (highlighted in red in the screenshot above).<br /> There you can select which columns to compare and then get detailed information about the result.
       </p>
 
         <h4 className="my-4">Improved features</h4>
@@ -105,7 +105,7 @@ const sections = [
 
         <h5 className="mt-4">Interactive help tours</h5>
         <p>
-          And to make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.
+          To make it easier for new users to get to know Ordino, we also added two additional interactive help tours that guide you through the application.
             </p>
         <p>
           <i>These can be accessed by clicking on the “?” in the upper right corner of Ordino</i>.
@@ -201,7 +201,7 @@ const sections = [
         <p>New filter and value mapping dialog for numeric columns (e.g., it is now possible to copy the value range from one column to another).</p>
         <p>Extended coloring options for numeric columns.</p>
 
-        <h5 className="mt-4">Improved column sorting and grouping.</h5>
+        <h5 className="mt-4">Improved column sorting and grouping</h5>
         <p> The order of multiple sorting/grouping columns can now be explicitly specified in the side panel on the right (can be opened by clicking on the arrow on the right).</p>
         <p>The values of numeric columns can be grouped into an arbitrary number of bins.</p>
         <p>  The values of text columns can now be grouped.</p>
@@ -215,20 +215,18 @@ const sections = [
         <p> Chromosomes are now correctly sorted.</p>
         <p> Gene start and end coordinates are now numeric columns allowing correct sorting (can for instance be used to draw copy number profiles).</p>
 
+        <h5 className="mt-4"> Improved performance</h5>
+        <p>  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
+
         <h5 className="mt-4"> Improved user interface</h5>
         <p>"Add column" menu simplified.</p>
         <p> Some features renamed to make it clearer what they do.</p>
         <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
 
 
-        <h5 className="mt-4"> Improved performance</h5>
-        <p>  The overview mode (last button on the right panel) is now faster and works even with a larger number of columns.</p>
-        <p> Some features renamed to make it clearer what they do.</p>
-        <p>A "Submit Feedback" button was added: By clicking on the button in the upper right corner (the life belt icon), you can easily provide feedback about Ordino (bug reports, features requests, etc).</p>
-
         <h5 className="mt-4"> Briefly noted</h5>
-        <p>  A few external detail views have been added.</p>
-        <p> SExtended "Data download" functionality.</p>
+        <p> A few external detail views have been added.</p>
+        <p> Extended "Data download" functionality.</p>
 
       </>
     )
@@ -241,20 +239,20 @@ export function NewsPage() {
   return (
     <>
       <HeaderNavigation />
-      <div className="position-relative pt-5">
+      <div className="position-relative py-6">
         <OrdinoScrollspy items={sections.map((section) => ({id: section.id, name: section.name}))}>
           {(handleOnChange) =>
             <>
-              <div className="container pb-10 pt-5">
+              <div className="container pb-6">
                 <div className="row">
                   <div className="col">
                     {sections.map((item, index) => {
                       return (
                         // `id` attribute must match the one in the scrollspy
-                        <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
+                        <OrdinoScrollspyItem className="pt-6" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
                           <>
                             <h4 className="text-left mt-2 d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> {item.name}</h4>
-                            <div className="card shadow-sm p-3 h-100">
+                            <div className="card shadow-sm h-100">
                               <div className="card-body">
                                 {item.markup()}
                               </div>

@@ -5,7 +5,7 @@ import logoDatavisyn from 'ordino_public/dist/assets/logos/datavisyn.svg';
 
 export function DevelopedByAffiliations() {
   return (
-    <section className="container ordino-developed-by-affiliations py-5">
+    <section className="container ordino-developed-by-affiliations py-6">
       <div className="row">
         <div className="col mb-3 text-center">
           <p>Ordino is developed by</p>
