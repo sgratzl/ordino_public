@@ -22,12 +22,12 @@ const OrdinoPublication = () => {
     </p>
         <p className="text-muted card-text">
           Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger<br />
-      Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples<br />
-      Bioinformatics, 35(17): 3140-3142, 2019.
-    </p>
+          <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples</b><br />
+          <i>Bioinformatics, 35(17): 3140-3142, 2019.</i>
+        </p>
       </div>
       <div className="card-footer">
-        <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-angle-right"></i> Read the publication</a>
+        <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i> Publisher</a>
         <a href="https://academic.oup.com/bioinformatics/article-pdf/35/17/3140/29591819/btz009.pdf" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
         <a href="https://github.com/Caleydo/ordino_public" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
       </div>
@@ -61,7 +61,7 @@ const TourdinoPublication = () => {
           <i>EuroVis Workshop on Visual Analytics (EuroVA '19), 2019.</i></p>
       </div>
       <div className="card-footer">
-        <a href="https://diglib.eg.org/handle/10.2312/eurova20191117" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-angle-right"></i>Read the publication</a>
+        <a href="https://diglib.eg.org/handle/10.2312/eurova20191117" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i>Publisher</a>
         <a href="https://diglib.eg.org/bitstream/handle/10.2312/eurova20191117/007-011.pdf?sequence=1&isAllowed=y" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
         <a href="https://github.com/Caleydo/tourdino" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
       </div>
@@ -90,7 +90,7 @@ const TagglePublication = () => {
           <i>Information Visualization, 19(2): 114-136, 2019.</i></p>
       </div>
       <div className="card-footer">
-        <a href="https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-angle-right"></i> Read the Publication</a>
+        <a href="https://dx.doi.org/10.1177/1473871619878085" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i> Publisher</a>
         <a href="https://sci.utah.edu/~vdl/papers/2017_preprint_taggle.pdf" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
         <a href="https://github.com/caleydo/lineupjs/tree/develop" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
       </div>
@@ -127,7 +127,7 @@ export function PublicationPage() {
     <>
       <HeaderNavigation />
       <div className="position-relative pt-5">
-        <OrdinoScrollspy items={publications.map((section) => ({id: section.id, name: section.name}))}>
+        <OrdinoScrollspy items={publications.map((publication) => ({id: publication.id, name: publication.name}))}>
           {(handleOnChange) =>
             <>
               <div className="ordino-publication-page container pb-10 pt-5">
