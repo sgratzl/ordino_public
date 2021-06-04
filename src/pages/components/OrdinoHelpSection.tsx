@@ -56,13 +56,13 @@ export function OrdinoHelpSection(props: IOrdinoHelpSectionProps) {
     <OrdinoScrollspy items={cards.map((item) => ({id: item.id, name: item.name}))}>
       {(handleOnChange) =>
         <>
-          <div className="container pt-4">
+          <div className="container pb-5">
             <div className="row">
               <div className="col">
                 {cards.map((item, index) => {
                   return (
                     // `id` attribute must match the one in the scrollspy
-                    <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
+                    <OrdinoScrollspyItem className="pt-6" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
                       <>
                         <h4 className="text-left  mt-2 mb-3"><i className={`mr-2 ordino-icon-2 ${item.icon}`}></i> {item.name}</h4>
                         <item.factory {...{openInNewWindow: props.openInNewWindow}} />

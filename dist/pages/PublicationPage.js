@@ -2,7 +2,7 @@ import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
 // tslint:disable-next-line: variable-name
 const OrdinoPublication = () => {
-    return React.createElement("div", { className: "mb-4 row" },
+    return React.createElement("div", { className: "row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
             React.createElement("div", { className: "card-body" },
                 React.createElement("iframe", { className: "mb-2", width: "100%", height: "100%", src: "https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
@@ -27,7 +27,7 @@ const OrdinoPublication = () => {
 };
 // tslint:disable-next-line: variable-name
 const TourdinoPublication = () => {
-    return React.createElement("div", { className: "mb-4 row" },
+    return React.createElement("div", { className: "row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
             React.createElement("div", { className: "card-body" },
                 React.createElement("iframe", { className: "mb-2", width: "100%", height: "100%", src: "https://www.youtube-nocookie.com/embed/k6EPm6i-Vw4?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
@@ -52,7 +52,7 @@ const TourdinoPublication = () => {
 };
 // tslint:disable-next-line: variable-name
 const TagglePublication = () => {
-    return React.createElement("div", { className: "mb-4 row" },
+    return React.createElement("div", { className: "row" },
         React.createElement("div", { className: "shadow-sm card p-2", style: { overflow: 'hidden' } },
             React.createElement("div", { className: "card-body" },
                 React.createElement("iframe", { className: "mb-2", width: "100%", height: "100%", src: "https://www.youtube-nocookie.com/embed/t50KgQKK8EQ?autoplay=0", frameBorder: "0", allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture", allowFullScreen: true }),
@@ -98,16 +98,16 @@ const publications = [
 export function PublicationPage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
-        React.createElement("div", { className: "position-relative pt-5" },
+        React.createElement("div", { className: "position-relative pt-6" },
             React.createElement(OrdinoScrollspy, { items: publications.map((publication) => ({ id: publication.id, name: publication.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
-                React.createElement("div", { className: "ordino-publication-page container pb-10 pt-5" },
+                React.createElement("div", { className: "ordino-publication-page container pb-6" },
                     React.createElement("div", { className: "row" },
                         React.createElement("div", { className: "col" }, publications.map((item, index) => {
                             return (
                             // `id` attribute must match the one in the scrollspy
-                            React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
+                            React.createElement(OrdinoScrollspyItem, { className: "pt-6", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
                                 React.createElement(React.Fragment, null,
-                                    React.createElement("h4", { className: "text-left  mt-2 mb-3" },
+                                    React.createElement("h4", { className: "text-left mt-2 mb-3" },
                                         React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),
                                         " ",
                                         item.name),

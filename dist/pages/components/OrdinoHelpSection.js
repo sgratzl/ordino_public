@@ -40,12 +40,12 @@ const cards = [
 export function OrdinoHelpSection(props) {
     return (React.createElement(React.Fragment, null,
         React.createElement(OrdinoScrollspy, { items: cards.map((item) => ({ id: item.id, name: item.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
-            React.createElement("div", { className: "container pt-4" },
+            React.createElement("div", { className: "container pb-5" },
                 React.createElement("div", { className: "row" },
                     React.createElement("div", { className: "col" }, cards.map((item, index) => {
                         return (
                         // `id` attribute must match the one in the scrollspy
-                        React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
+                        React.createElement(OrdinoScrollspyItem, { className: "pt-6", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
                             React.createElement(React.Fragment, null,
                                 React.createElement("h4", { className: "text-left  mt-2 mb-3" },
                                     React.createElement("i", { className: `mr-2 ordino-icon-2 ${item.icon}` }),

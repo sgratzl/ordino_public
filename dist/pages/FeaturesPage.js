@@ -6,7 +6,7 @@ export function FeaturesPage() {
         React.createElement(HeaderNavigation, null),
         React.createElement("div", { className: "position-relative" },
             React.createElement("div", { className: "ordino-container" },
-                React.createElement("div", { className: "p-5 container" },
+                React.createElement("div", { className: "p-6 container" },
                     React.createElement("div", { className: "row" },
                         React.createElement("div", { className: "col" },
                             React.createElement("h4", { className: "text-left d-flex align-items-center mb-3" },

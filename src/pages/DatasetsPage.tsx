@@ -9,7 +9,7 @@ interface IDatasetPageCardProps {
 
 export function DatasetPageCard({title, children}: IDatasetPageCardProps) {
   return (
-    <div style={{height: '100%'}} className="card shadow-sm">
+    <div  className="card shadow-sm h-100">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         {children}

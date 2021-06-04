@@ -3,7 +3,7 @@ import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} fr
 
 // tslint:disable-next-line: variable-name
 const OrdinoPublication = () => {
-  return <div className="mb-4 row">
+  return <div className="row">
     <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/TIDUsEOsI_Y?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
@@ -37,7 +37,7 @@ const OrdinoPublication = () => {
 
 // tslint:disable-next-line: variable-name
 const TourdinoPublication = () => {
-  return <div className="mb-4 row">
+  return <div className="row">
     <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/k6EPm6i-Vw4?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
@@ -71,7 +71,7 @@ const TourdinoPublication = () => {
 
 // tslint:disable-next-line: variable-name
 const TagglePublication = () => {
-  return <div className="mb-4 row">
+  return <div className="row">
     <div className="shadow-sm card p-2" style={{overflow: 'hidden'}}>
       <div className="card-body">
         <iframe className="mb-2" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/t50KgQKK8EQ?autoplay=0" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowFullScreen></iframe>
@@ -126,19 +126,19 @@ export function PublicationPage() {
   return (
     <>
       <HeaderNavigation />
-      <div className="position-relative pt-5">
+      <div className="position-relative pt-6">
         <OrdinoScrollspy items={publications.map((publication) => ({id: publication.id, name: publication.name}))}>
           {(handleOnChange) =>
             <>
-              <div className="ordino-publication-page container pb-10 pt-5">
+              <div className="ordino-publication-page container pb-6">
                 <div className="row">
                   <div className="col">
                     {publications.map((item, index) => {
                       return (
                         // `id` attribute must match the one in the scrollspy
-                        <OrdinoScrollspyItem className="pt-3 pb-5" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
+                        <OrdinoScrollspyItem className="pt-6" id={item.id} key={item.name} index={index} handleOnChange={handleOnChange}>
                           <>
-                            <h4 className="text-left  mt-2 mb-3"><i className={`mr-2 ordino-icon-2 ${item.icon}`}></i> {item.name}</h4>
+                            <h4 className="text-left mt-2 mb-3"><i className={`mr-2 ordino-icon-2 ${item.icon}`}></i> {item.name}</h4>
                             <item.factory />
                           </>
                         </OrdinoScrollspyItem>

@@ -8,7 +8,7 @@ export function FeaturesPage() {
       <HeaderNavigation ></HeaderNavigation>
       <div className="position-relative">
         <div className="ordino-container">
-          <div className="p-5 container">
+          <div className="p-6 container">
             <div className="row">
               <div className="col">
                 <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define List of Items</h4>

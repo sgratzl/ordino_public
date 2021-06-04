@@ -10,7 +10,7 @@ export function HelpPage() {
   return (
     <>
       <HeaderNavigation />
-      <div className="container-fluid ordino-help-page h-100 position-relative pt-5">
+      <div className="container-fluid ordino-help-page h-100 position-relative pt-6">
         <OrdinoHelpSection>
           <DevelopedByAffiliations />
           <OrdinoFooter />

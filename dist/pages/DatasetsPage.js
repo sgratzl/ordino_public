@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter } from 'ordino';
 export function DatasetPageCard({ title, children }) {
-    return (React.createElement("div", { style: { height: '100%' }, className: "card shadow-sm" },
+    return (React.createElement("div", { className: "card shadow-sm h-100" },
         React.createElement("div", { className: "card-body" },
             React.createElement("h5", { className: "card-title" }, title),
             children)));
