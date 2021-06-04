@@ -3,16 +3,16 @@ import {Link} from 'react-router-dom';
 import ordinoHero from 'ordino_public/dist/assets/ordino-hero.svg';
 import {HeaderNavigation} from 'ordino';
 
-const INTRO_VIDE0_MODAL_ID = 'ordino-intro-video-modal';
+const INTRO_VIDEO_MODAL_ID = 'ordino-intro-video-modal';
 
 export function OrdinoHero() {
   const [modalIsClosed, setModalIsClosed] = React.useState(true);
   const videoRef = React.useRef(null);
 
-  const handleCloseModal = (event: React.MouseEvent<HTMLIFrameElement>) => {
+  const handleCloseModal = (event: React.MouseEvent<HTMLElement>) => {
     const target = (event.target as HTMLElement);
     // backdrop === modal node
-    if (target.id === INTRO_VIDE0_MODAL_ID) {
+    if (target.id === INTRO_VIDEO_MODAL_ID) {
       setModalIsClosed(true);
     }
   };
@@ -29,7 +29,7 @@ export function OrdinoHero() {
           </div>
           <div className="row ordino-hero-actions my-4">
             <div className="col text-center">
-              <button type="button" className="btn btn-link btn-lg" onClick={() => setModalIsClosed(false)} data-toggle="modal" data-target={`#${INTRO_VIDE0_MODAL_ID}`}>
+              <button type="button" className="btn btn-link btn-lg" onClick={() => setModalIsClosed(false)} data-toggle="modal" data-target={`#${INTRO_VIDEO_MODAL_ID}`}>
                 <i className="fas fa-play"></i>
               Watch intro video
             </button>
@@ -48,7 +48,7 @@ export function OrdinoHero() {
           </div>
         </div>
       </div>
-      <div className="modal" id={INTRO_VIDE0_MODAL_ID} onClick={handleCloseModal} aria-labelledby="ordino-intro-video-modal-title" aria-hidden="true">
+      <div className="modal" id={INTRO_VIDEO_MODAL_ID} onClick={handleCloseModal} aria-labelledby="ordino-intro-video-modal-title" aria-hidden="true">
         <div className="modal-dialog ordino-intro-video-modal">
           <div className="modal-content">
             <div className="modal-header">
