@@ -11,7 +11,7 @@ export function FeaturesPage() {
           <div className="p-6 container">
             <div className="row">
               <div className="col">
-                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define List of Items</h4>
+                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Define list of items</h4>
               </div>
             </div>
             <div className="row">
@@ -24,7 +24,7 @@ export function FeaturesPage() {
             </div>
             <div className="row mt-6">
               <div className="col">
-                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Rank, Filter, and Select Items</h4>
+                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right"></i> Rank, filter, and select items</h4>
               </div>
             </div>
             <div className="row">
@@ -49,7 +49,7 @@ export function FeaturesPage() {
               </div>
             </div>
             <div className="row row-cols-md-2">
-              <FeatureCard title="Database Columns" >
+              <FeatureCard title="Database columns" >
                 <p>Database columns contain metadata about genes (such as biotype, chromosome, Ensembl ID,
                 name, sequence region start &#38; end, strand, and gene symbol), cell lines (age at surgery, gender,
                 growth type, histology type, metastatic site, morphology, name, organ, and tumor type), and
@@ -57,7 +57,7 @@ export function FeaturesPage() {
                 gender, height, name, organ, race, tumor type, tumor type adjacent, vendor name, vital status,
             and weight).</p>
               </FeatureCard>
-              <FeatureCard title="Single Score Columns" >
+              <FeatureCard title="Single score columns" >
                 <p>Depending on the item type of the main table, users can add
                 single score columns by specifying a single item (gene, cell line, or tissue sample) together with
                 the data attribute of interest (e.g., expression, copy number, or mutation). The following single
@@ -69,7 +69,7 @@ export function FeaturesPage() {
                   <li>For <b>tissue samples</b>: single gene score.</li>
                 </ul>
               </FeatureCard>
-              <FeatureCard title="Aggregated Score Columns">
+              <FeatureCard title="Aggregated score columns">
                 <p>In addition to single score columns, the values of which are loaded directly from the the Ordino
                 database, users can define aggregations of multiple items that are calculated on the fly by the
                 Ordino server. To define an aggregation, users must specify (1) the set of items on whose basis
@@ -85,7 +85,7 @@ export function FeaturesPage() {
                   <li>For <b>tissues samples</b>: aggregated gene score.</li>
                 </ul>
               </FeatureCard>
-              <FeatureCard title="Combining Columns">
+              <FeatureCard title="Combining columns">
                 <p>Combining columns allow users to combine the content of multiple columns by dragging the
                 header of single columns onto the combined column header. Users can create weighted sum
                 columns, which are visualized as stacked bars highlighting the contribution of individual
@@ -95,7 +95,7 @@ export function FeaturesPage() {
                 semantically grouping multiple columns, and imposition columns, which color numerical
             columns by a categorical attribute.</p>
               </FeatureCard>
-              <FeatureCard title="Uploaded Columns">
+              <FeatureCard title="Uploaded columns">
                 <p>Uploaded columns allow users to fuse external data to the currently shown table. The data can
                 be loaded from a comma-separated file in which the first column contains the unique identifier
                 of the primary identifier in the table, followed by one or multiple columns holding the data to be
@@ -105,7 +105,7 @@ export function FeaturesPage() {
             </div>
             <div className="row mt-6">
               <div className="col">
-                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain Detailed Information</h4>
+                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain detailed information</h4>
               </div>
             </div>
             <div className="row">
@@ -118,40 +118,40 @@ export function FeaturesPage() {
               </div>
             </div>
             <div className="row row-cols-md-2">
-              <FeatureCard title="Database Info View" >
+              <FeatureCard title="Database info view" >
                 <p>Database Info view for showing metadata stored in the database for all selected items. The
                 information is represented as a table containing a row for each database attribute and a column
             for each selected item.</p>
               </FeatureCard>
-              <FeatureCard title="Expression View, Copy Number View and Mutation View" >
+              <FeatureCard title="Expression view, copy number view and mutation view" >
                 <p>Expression view, Copy Number view, and Mutation view visualizing experimental data for the
             currently selected items with the ranking visualization technique <a href="http://lineup.js.org" target="_blank" rel="noopener noreferrer">LineUp</a>.</p>
               </FeatureCard>
-              <FeatureCard title="Combined View" >
+              <FeatureCard title="Combined view" >
                 <p>Combined view is a specialized ranking view that is able to show copy number, expression, and
             mutation data in combination.</p>
               </FeatureCard>
-              <FeatureCard title="Expression vs. Copy Number View" >
+              <FeatureCard title="Expression vs. copy number view" >
                 <p>Expression vs. Copy Number view showing a scatterplot for each selected gene with copy
                 number mapped to the x-axis and expression to the y-axis.
                 The analyst can determine via a drop-down list whether the scatterplot shows cell lines or tissue
                 samples. Dots in the plots can be colored by preloaded categorical attributes, such as tumor
             type, gender and organ.</p>
               </FeatureCard>
-              <FeatureCard title="Co-Expression View" >
+              <FeatureCard title="Co-expression view" >
                 <p>Co-Expression view for comparing the expression of multiple selected genes. If multiple genes
                 are selected, one plot is shown for each combination. Analogously to the Expression vs. Copy
                 Number view, the dots represent either cell lines or tissue samples and can be colored by
             categorical attributes.</p>
               </FeatureCard>
-              <FeatureCard title="OncoPrint View" >
+              <FeatureCard title="OncoPrint view" >
                 <p>OncoPrint view showing a horizontal series of colored blocks (glyphs) for each gene selected.
                 Depending on the chosen data subset, each block represents a cell line or tissue sample. The
                 background color of the blocks indicates the copy number status (pink=amplification, blue=deep
                 deletion, gray=normal, white=unknown), while the small block contained visualizes the mutation
             status (green=mutated, gray=non mutated, white=unknown) of a cell line or tissue sample.</p>
               </FeatureCard>
-              <FeatureCard title="External Resource Views" >
+              <FeatureCard title="External resource views" >
                 <p>External resource views loading the content of external websites. For selected genes, the user
             can look at the information available on <a href="https://ensembl.org/" target="_blank" rel="noopener noreferrer">Ensembl</a>, <a href="https://proteinatlas.org/" target="_blank" rel="noopener noreferrer">Human Protein Atlas</a>, <a href="https://www.targetvalidation.org/" target="_blank" rel="noopener noreferrer">Open Targets</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">PubMed</a>, and <a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="noopener noreferrer">UniProt</a>.
             For cell lines, the analyst can load the information available on <a href="https://cancer.sanger.ac.uk/cosmic/" target="_blank" rel="noopener noreferrer">COSMIC</a> (Catalogue Of Somatic Mutations In Cancer).</p>
