@@ -9,7 +9,7 @@ interface IDatasetPageCardProps {
 
 export function DatasetPageCard({title, children}: IDatasetPageCardProps) {
   return (
-    <div  className="card shadow-sm h-100">
+    <div className="card shadow-sm h-100">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         {children}
@@ -22,7 +22,7 @@ export function DatasetPageCard({title, children}: IDatasetPageCardProps) {
 export function DatasetsPage() {
   return (
     <>
-      <HeaderNavigation ></HeaderNavigation>
+      <HeaderNavigation></HeaderNavigation>
       <div className="position-relative">
         <div className="ordino-container">
           <div className="dataset-page py-6 container">
