@@ -13,7 +13,7 @@ const sections = [
         <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
       </p>
-        <h4 className="my-4">New Data</h4>
+        <h4 className="my-4">New data</h4>
 
         <h5 className="mt-4">Gene Signature Scores</h5>
 
@@ -34,7 +34,7 @@ const sections = [
 
 
         <h4 className="my-4">Usability improvements</h4>
-        <h5 className="mt-4">Annotation Columns</h5>
+        <h5 className="mt-4">Annotation columns</h5>
 
         <p>
           It is now possible to add multiple "Annotation Columns" at once
