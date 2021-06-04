@@ -68,7 +68,7 @@ const TagglePublication = () => {
                 React.createElement("a", { href: "https://dx.doi.org/10.1177/1473871619878085", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-globe-americas" }),
                     " Publisher"),
-                React.createElement("a", { href: "https://sci.utah.edu/~vdl/papers/2017_preprint_taggle.pdf", target: "_blank", className: "btn btn-light mr-2" },
+                React.createElement("a", { href: "https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085", target: "_blank", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-file-pdf" }),
                     " Download"),
                 React.createElement("a", { href: "https://github.com/lineupjs/lineupjs", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
