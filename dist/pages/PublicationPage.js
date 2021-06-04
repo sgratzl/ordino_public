@@ -71,7 +71,7 @@ const TagglePublication = () => {
                 React.createElement("a", { href: "https://sci.utah.edu/~vdl/papers/2017_preprint_taggle.pdf", target: "_blank", className: "btn btn-light mr-2" },
                     React.createElement("i", { className: "mr-1 fas fa-file-pdf" }),
                     " Download"),
-                React.createElement("a", { href: "https://github.com/caleydo/lineupjs/tree/develop", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
+                React.createElement("a", { href: "https://github.com/lineupjs/lineupjs", target: "_blank", rel: "noopener noreferrer", className: "btn btn-light" },
                     React.createElement("i", { className: "mr-1 fab fa-github" }),
                     " Source code"))));
 };
