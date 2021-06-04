@@ -6,7 +6,7 @@ export function FeaturesPage() {
   return (
     <>
       <HeaderNavigation ></HeaderNavigation>
-      <div className="position-relative">
+      <div className="position-relative pt-6">
         <div className="ordino-container">
           <div className="p-6 container">
             <div className="row">

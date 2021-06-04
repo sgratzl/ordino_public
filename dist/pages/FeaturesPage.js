@@ -4,7 +4,7 @@ import { FeatureCard } from './components/FeatureCard';
 export function FeaturesPage() {
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
-        React.createElement("div", { className: "position-relative" },
+        React.createElement("div", { className: "position-relative pt-6" },
             React.createElement("div", { className: "ordino-container" },
                 React.createElement("div", { className: "p-6 container" },
                     React.createElement("div", { className: "row" },

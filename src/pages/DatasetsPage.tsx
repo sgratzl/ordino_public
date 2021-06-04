@@ -23,7 +23,7 @@ export function DatasetsPage() {
   return (
     <>
       <HeaderNavigation></HeaderNavigation>
-      <div className="position-relative">
+      <div className="position-relative pt-6">
         <div className="ordino-container">
           <div className="dataset-page py-6 container">
             <div className="row">
