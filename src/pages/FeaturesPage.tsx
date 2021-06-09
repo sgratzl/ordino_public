@@ -43,14 +43,15 @@ export function FeaturesPage() {
                   chromosome, and biotype. For cell lines and tissue samples, the default
                   columns are name, tumor type, organ, and gender. Initially, gene lists are
                   sorted alphabetically by gene symbol, and lists of cell lines and tissue samples by their name. Further
-              columns can be added by clicking on the plus icon shown on the right-hand side of the interface.<br />
-              Ordino supports the following column types:
+              columns can be added by clicking on the plus icon shown on the right-hand side of the interface.</p>
+                <p className="lead text-ordino-gray-4">
+                  Ordino supports the following column types:
               </p>
               </div>
             </div>
             <div className="row row-cols-md-2">
-              <FeatureCard title="Database columns" >
-                <p>Database columns contain metadata about genes (such as biotype, chromosome, Ensembl ID,
+              <FeatureCard title="Annotation columns" >
+                <p>Annotation columns contain metadata about genes (such as biotype, chromosome, Ensembl ID,
                 name, sequence region start &#38; end, strand, and gene symbol), cell lines (age at surgery, gender,
                 growth type, histology type, metastatic site, morphology, name, organ, and tumor type), and
                 tissue samples (age, body mass index (BMI), days to death, days to last follow up, ethnicity,
@@ -87,13 +88,30 @@ export function FeaturesPage() {
               </FeatureCard>
               <FeatureCard title="Combining columns">
                 <p>Combining columns allow users to combine the content of multiple columns by dragging the
-                header of single columns onto the combined column header. Users can create weighted sum
-                columns, which are visualized as stacked bars highlighting the contribution of individual
-                attributes to the total score, min/mean/max combination columns, which show only the
-                minimum, mean or maximum of all combined columns, scripted columns, for which users can
-                define how individual columns are to be combined using JavaScript, nested columns for
-                semantically grouping multiple columns, and imposition columns, which color numerical
-            columns by a categorical attribute.</p>
+                header of single columns onto the combined column header.<br />
+                The available combining columns are:</p>
+                <ul>
+                  <li>
+                    <b>Weighted sum columns</b> , which are visualized as stacked bars highlighting the contribution of individual
+                      attributes to the total score.
+                  </li>
+
+                  <li>
+                    <b>min/mean/max combination columns</b>, which show only the
+                      minimum, mean or maximum of all combined columns.
+                  </li>
+                  <li>
+                    <b>Scripted columns</b>, for which users can
+                      define how individual columns are to be combined using JavaScript.
+                  </li>
+                  <li>
+                    <b>Nested columns</b> for semantically grouping multiple columns.
+                  </li>
+                  <li>
+                    <b>Imposition columns</b>, which color numerical
+                      columns by a categorical attribute.
+                  </li>
+                </ul>
               </FeatureCard>
               <FeatureCard title="Uploaded columns">
                 <p>Uploaded columns allow users to fuse external data to the currently shown table. The data can
@@ -103,6 +121,25 @@ export function FeaturesPage() {
             Ensembl IDs.</p>
               </FeatureCard>
             </div>
+
+
+            <div className="row mt-6">
+              <div className="col">
+                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Perform basic statistical analyses </h4>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <p className="lead text-ordino-gray-4">
+                  Seeking relationships and patterns in tabular data is a common data exploration task. To confirm hypotheses that are based on visual patterns observed during exploratory data analysis,
+                 users need to be able to quickly compare data subsets, and get further information on the significance of the result and the statistical test applied.</p>
+                <p className="lead text-ordino-gray-4">
+                  The <b>Statistical analysis tab</b> enables users who are not experts in statistics to verify generated hypotheses and confirm insights gained during the exploration of tabular data.
+                  Concretely, it presents an overview of the statistical significance of various row or column comparisons. On demand, it shows further details, including the <b>test score</b>, a <b>textual description</b>, and a <b>detail visualization</b> explaining the results.
+                  </p>
+              </div>
+            </div>
+
             <div className="row mt-6">
               <div className="col">
                 <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Obtain detailed information</h4>
@@ -112,8 +149,7 @@ export function FeaturesPage() {
               <div className="col">
                 <p className="lead text-ordino-gray-4">
                   Users can select one or more items in a ranking table for exploration using a collection of detail views.
-                  The detail views offered to the user depend on the type of items selected. The publicly deployed version
-                  of Ordino includes the following detail views:
+                  The detail views offered to the user depend on the type of items selected. Ordino includes the following detail views:
           </p>
               </div>
             </div>
