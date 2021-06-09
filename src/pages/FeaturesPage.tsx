@@ -125,7 +125,7 @@ export function FeaturesPage() {
 
             <div className="row mt-6">
               <div className="col">
-                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Perform basic statistical analyses </h4>
+                <h4 className="text-left d-flex align-items-center mb-3"><i className="mr-2 ordino-icon-1 fas fa-chevron-circle-right" ></i> Perform basic statistical analyses</h4>
               </div>
             </div>
             <div className="row">
@@ -134,7 +134,7 @@ export function FeaturesPage() {
                   Seeking relationships and patterns in tabular data is a common data exploration task. To confirm hypotheses that are based on visual patterns observed during exploratory data analysis,
                  users need to be able to quickly compare data subsets, and get further information on the significance of the result and the statistical test applied.</p>
                 <p className="lead text-ordino-gray-4">
-                  The <b>Statistical analysis tab</b> enables users who are not experts in statistics to verify generated hypotheses and confirm insights gained during the exploration of tabular data.
+                  The <b>statistical analysis</b> panel in each ranking enables users who are not experts in statistics to verify generated hypotheses and confirm insights gained during the exploration of tabular data.
                   Concretely, it presents an overview of the statistical significance of various row or column comparisons. On demand, it shows further details, including the <b>test score</b>, a <b>textual description</b>, and a <b>detail visualization</b> explaining the results.
                   </p>
               </div>
