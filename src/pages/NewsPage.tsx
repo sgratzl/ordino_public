@@ -1,18 +1,89 @@
 import * as React from 'react';
 import {HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem} from 'ordino';
-import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
-import annotation_column from 'ordino_public/dist/assets/pages/annotation_column.png';
-import data_download from 'ordino_public/dist/assets/pages/data_download.png';
-import tourdino from 'ordino_public/dist/assets/pages/tourdino.jpg';
+
+import v700_tourdino from 'ordino_public/dist/assets/pages/news/v700_tourdino.jpg';
+
+import v800_gene_signature from 'ordino_public/dist/assets/pages/news/v800_gene_signature.jpg';
+import v800_annotation_column from 'ordino_public/dist/assets/pages/news/v800_annotation_column.png';
+import v800_data_download from 'ordino_public/dist/assets/pages/news/v800_data_download.png';
+
+import v900_homepage from 'ordino_public/dist/assets/pages/news/v900_homepage.png';
+import v900_start_menu from 'ordino_public/dist/assets/pages/news/v900_start_menu.png';
+import v900_start_menu_tabs from 'ordino_public/dist/assets/pages/news/v900_start_menu_tabs.png';
+import v900_application_help from 'ordino_public/dist/assets/pages/news/v900_application_help.png';
+import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ranking_redesign.png';
+
+
 const sections = [
   {
+    id: 'v9-0-0',
+    name: 'Version 9.0 (2021-06-15)',
+    markup: () => (
+      <>
+        <p className="lead text-muted">
+          This update contains more a whole new homepage, start menu, and various <b>usability improvements</b>.
+        </p>
+
+        <h4 className="my-4">Hello Ordino! 👋</h4>
+
+        <p>
+          With this release we provide a dedicated homepage for Ordino to welcome new and recurring users.
+          The modern pages provide an overview of the Ordino features, loaded datasets, and publications.
+          We also inform about the most recent changes and developments on this page.
+        </p>
+
+        <img className="img-fluid mb-4" src={v900_homepage} alt="The new Ordino Hompage welcomes its user." />
+
+        <p>
+          The application itself was moved to the <a href="./app" target="_blank" rel="noopener noreferrer"><code>/app</code> directory</a>.
+          Please update your bookmarks if you want to access Ordino directly and to skip the homepage.
+        </p>
+
+
+        <h4 className="my-4">Start menu overhaul</h4>
+
+        <p>
+          In addition to the new homepage we designed an entirely new Ordino start menu.
+          The new start menu is divided into three main tabs: datasets, sessions, and tours.
+          Each tab has now more space and is structured into different sections to select or upload datasets,
+          save a session, or start a tour.
+        </p>
+
+
+        <img className="img-fluid mb-4" src={v900_start_menu} alt="The new Ordino start menu." />
+
+        <p>
+          From an analysis you can now directly access these tab from the application header.
+        </p>
+
+        <img className="img-fluid mb-4" src={v900_start_menu_tabs} alt="Access the start menu tabs from the application header in your analysis." />
+
+
+        <p>
+          In case you need help or want give feedback or report a bug, click on the ?-icon in the application header.
+        </p>
+
+        <img className="img-fluid mb-4" src={v900_application_help} alt="Ordino at a glance integrated in the application." />
+
+        <h4 className="my-4">A new look</h4>
+
+        <p>
+          We have improved the design and usability of the whole application in general
+          and the ranking views in specific to make the usage easier and more appealing.
+        </p>
+
+        <img className="img-fluid mb-4" src={v900_ranking_redesign} alt="Face-lift of the ranking views and application user interface." />
+      </>
+    )
+  },
+  {
     id: 'v8-0-0',
-    name: 'Version 8.0.0 (2021-03-24)',
+    name: 'Version 8.0 (2021-03-24)',
     markup: () => (
       <>
         <p className="lead text-muted">
           This update contains more <b>data</b>, various <b>usability improvements</b>, and several <b>bug fixes</b>. The most important changes are:
-      </p>
+        </p>
         <h4 className="my-4">New data</h4>
 
         <h5 className="mt-4">Gene Signature Scores</h5>
@@ -20,7 +91,7 @@ const sections = [
         <p>
           <i>Gene Signature Scores</i> are now available for cell lines and tissue samples (including GTEx, TCGA, and PDX models). These can be added using the <i>Add Column</i> dialog:
          </p>
-        <img className=" img-fluid border border-ordino-gray-5" src={gene_signature} alt="Gene Signature Score" />
+        <img className=" img-fluid border border-ordino-gray-5" src={v800_gene_signature} alt="Gene Signature Score" />
 
         <p className="card-text mt-2">Currently, the following gene signature scores are available:</p>
         <ul>
@@ -39,19 +110,19 @@ const sections = [
         <p>
           It is now possible to add multiple "Annotation Columns" at once
               </p>
-        <img className="img-fluid border border-ordino-gray-5" src={annotation_column} alt="Annotation Column" />
+        <img className="img-fluid border border-ordino-gray-5" src={v800_annotation_column} alt="Annotation Column" />
 
         <h5 className="mt-4">Data download</h5>
         <p className="mt-2">
           The data download dialog has been improved
               </p>
-        <img className="img-fluid border border-ordino-gray-5" src={data_download} alt="Download Data" />
+        <img className="img-fluid border border-ordino-gray-5" src={v800_data_download} alt="Download Data" />
       </>
     )
   },
   {
     id: 'v7-0-0',
-    name: 'Version 7.0.0 (2020-08-26)',
+    name: 'Version 7.0 (2020-08-26)',
     markup: () => (
       <>
         <p className="lead text-muted">
@@ -75,7 +146,7 @@ const sections = [
 
         <h4 className="my-4">Completely new features</h4>
         <h5 className="mt-4">Basic statistical analyses</h5>
-        <img className="img-fluid mb-2" src={tourdino} alt="Tourdino" />
+        <img className="img-fluid mb-2" src={v700_tourdino} alt="Tourdino" />
         <p>
           It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino.
       </p>
@@ -129,7 +200,7 @@ const sections = [
   },
   {
     id: 'v6-0-0',
-    name: 'Version 6.0.0 (2019-10-14)',
+    name: 'Version 6.0 (2019-10-14)',
     markup: () => (
       <>
         <p className="lead text-muted">
@@ -159,7 +230,7 @@ const sections = [
   },
   {
     id: 'v5-1-0',
-    name: 'Version 5.1.0 (2018-12-05)',
+    name: 'Version 5.1 (2018-12-05)',
     markup: () => (
       <>
         <p className="lead text-muted">
@@ -189,7 +260,7 @@ const sections = [
   },
   {
     id: 'v5-0-0',
-    name: 'Version 5.0.0 (2018-11-07)',
+    name: 'Version 5.0 (2018-11-07)',
     markup: () => (
       <>
         <p className="lead text-muted">

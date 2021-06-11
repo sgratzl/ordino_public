@@ -1,13 +1,46 @@
 import * as React from 'react';
 import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
-import gene_signature from 'ordino_public/dist/assets/pages/gene_signature.jpg';
-import annotation_column from 'ordino_public/dist/assets/pages/annotation_column.png';
-import data_download from 'ordino_public/dist/assets/pages/data_download.png';
-import tourdino from 'ordino_public/dist/assets/pages/tourdino.jpg';
+import v700_tourdino from 'ordino_public/dist/assets/pages/news/v700_tourdino.jpg';
+import v800_gene_signature from 'ordino_public/dist/assets/pages/news/v800_gene_signature.jpg';
+import v800_annotation_column from 'ordino_public/dist/assets/pages/news/v800_annotation_column.png';
+import v800_data_download from 'ordino_public/dist/assets/pages/news/v800_data_download.png';
+import v900_homepage from 'ordino_public/dist/assets/pages/news/v900_homepage.png';
+import v900_start_menu from 'ordino_public/dist/assets/pages/news/v900_start_menu.png';
+import v900_start_menu_tabs from 'ordino_public/dist/assets/pages/news/v900_start_menu_tabs.png';
+import v900_application_help from 'ordino_public/dist/assets/pages/news/v900_application_help.png';
+import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ranking_redesign.png';
 const sections = [
     {
+        id: 'v9-0-0',
+        name: 'Version 9.0 (2021-06-15)',
+        markup: () => (React.createElement(React.Fragment, null,
+            React.createElement("p", { className: "lead text-muted" },
+                "This update contains more a whole new homepage, start menu, and various ",
+                React.createElement("b", null, "usability improvements"),
+                "."),
+            React.createElement("h4", { className: "my-4" }, "Hello Ordino! \uD83D\uDC4B"),
+            React.createElement("p", null, "With this release we provide a dedicated homepage for Ordino to welcome new and recurring users. The modern pages provide an overview of the Ordino features, loaded datasets, and publications. We also inform about the most recent changes and developments on this page."),
+            React.createElement("img", { className: "img-fluid mb-4", src: v900_homepage, alt: "The new Ordino Hompage welcomes its user." }),
+            React.createElement("p", null,
+                "The application itself was moved to the ",
+                React.createElement("a", { href: "./app", target: "_blank", rel: "noopener noreferrer" },
+                    React.createElement("code", null, "/app"),
+                    " directory"),
+                ". Please update your bookmarks if you want to access Ordino directly and to skip the homepage."),
+            React.createElement("h4", { className: "my-4" }, "Start menu overhaul"),
+            React.createElement("p", null, "In addition to the new homepage we designed an entirely new Ordino start menu. The new start menu is divided into three main tabs: datasets, sessions, and tours. Each tab has now more space and is structured into different sections to select or upload datasets, save a session, or start a tour."),
+            React.createElement("img", { className: "img-fluid mb-4", src: v900_start_menu, alt: "The new Ordino start menu." }),
+            React.createElement("p", null, "From an analysis you can now directly access these tab from the application header."),
+            React.createElement("img", { className: "img-fluid mb-4", src: v900_start_menu_tabs, alt: "Access the start menu tabs from the application header in your analysis." }),
+            React.createElement("p", null, "In case you need help or want give feedback or report a bug, click on the ?-icon in the application header."),
+            React.createElement("img", { className: "img-fluid mb-4", src: v900_application_help, alt: "Ordino at a glance integrated in the application." }),
+            React.createElement("h4", { className: "my-4" }, "A new look"),
+            React.createElement("p", null, "We have improved the design and usability of the whole application in general and the ranking views in specific to make the usage easier and more appealing."),
+            React.createElement("img", { className: "img-fluid mb-4", src: v900_ranking_redesign, alt: "Face-lift of the ranking views and application user interface." })))
+    },
+    {
         id: 'v8-0-0',
-        name: 'Version 8.0.0 (2021-03-24)',
+        name: 'Version 8.0 (2021-03-24)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
@@ -24,7 +57,7 @@ const sections = [
                 " are now available for cell lines and tissue samples (including GTEx, TCGA, and PDX models). These can be added using the ",
                 React.createElement("i", null, "Add Column"),
                 " dialog:"),
-            React.createElement("img", { className: " img-fluid border border-ordino-gray-5", src: gene_signature, alt: "Gene Signature Score" }),
+            React.createElement("img", { className: " img-fluid border border-ordino-gray-5", src: v800_gene_signature, alt: "Gene Signature Score" }),
             React.createElement("p", { className: "card-text mt-2" }, "Currently, the following gene signature scores are available:"),
             React.createElement("ul", null,
                 React.createElement("li", null, "NIBR_IFN (Novartis 38 Gene Interferon activity signature)"),
@@ -32,14 +65,14 @@ const sections = [
             React.createElement("h4", { className: "my-4" }, "Usability improvements"),
             React.createElement("h5", { className: "mt-4" }, "Annotation columns"),
             React.createElement("p", null, "It is now possible to add multiple \"Annotation Columns\" at once"),
-            React.createElement("img", { className: "img-fluid border border-ordino-gray-5", src: annotation_column, alt: "Annotation Column" }),
+            React.createElement("img", { className: "img-fluid border border-ordino-gray-5", src: v800_annotation_column, alt: "Annotation Column" }),
             React.createElement("h5", { className: "mt-4" }, "Data download"),
             React.createElement("p", { className: "mt-2" }, "The data download dialog has been improved"),
-            React.createElement("img", { className: "img-fluid border border-ordino-gray-5", src: data_download, alt: "Download Data" })))
+            React.createElement("img", { className: "img-fluid border border-ordino-gray-5", src: v800_data_download, alt: "Download Data" })))
     },
     {
         id: 'v7-0-0',
-        name: 'Version 7.0.0 (2020-08-26)',
+        name: 'Version 7.0 (2020-08-26)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
@@ -63,7 +96,7 @@ const sections = [
                 ": Open a list of cell lines \t\u2192 click on \u201C+\u201D to open the \u201Cadd column\u201D dialog \t\u2192 select \"Annotation Columns\" \t\u2192 select the data of interest."),
             React.createElement("h4", { className: "my-4" }, "Completely new features"),
             React.createElement("h5", { className: "mt-4" }, "Basic statistical analyses"),
-            React.createElement("img", { className: "img-fluid mb-2", src: tourdino, alt: "Tourdino" }),
+            React.createElement("img", { className: "img-fluid mb-2", src: v700_tourdino, alt: "Tourdino" }),
             React.createElement("p", null, "It is now possible to do basic statistical analyses, like calculating the correlation of two columns, directly in Ordino."),
             React.createElement("p", null,
                 React.createElement("i", null, "How to access"),
@@ -98,7 +131,7 @@ const sections = [
     },
     {
         id: 'v6-0-0',
-        name: 'Version 6.0.0 (2019-10-14)',
+        name: 'Version 6.0 (2019-10-14)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
                 "This update contains new ",
@@ -119,7 +152,7 @@ const sections = [
     },
     {
         id: 'v5-1-0',
-        name: 'Version 5.1.0 (2018-12-05)',
+        name: 'Version 5.1 (2018-12-05)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
                 "This update contains new ",
@@ -139,7 +172,7 @@ const sections = [
     },
     {
         id: 'v5-0-0',
-        name: 'Version 5.0.0 (2018-11-07)',
+        name: 'Version 5.0 (2018-11-07)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
                 "This update contains more ",
