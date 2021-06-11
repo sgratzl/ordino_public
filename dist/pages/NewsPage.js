@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem } from 'ordino';
+import { HeaderNavigation, OrdinoFooter, OrdinoScrollspy, OrdinoScrollspyItem, useScrollToSlug } from 'ordino';
 import v700_tourdino from 'ordino_public/dist/assets/pages/news/v700_tourdino.jpg';
 import v800_gene_signature from 'ordino_public/dist/assets/pages/news/v800_gene_signature.jpg';
 import v800_annotation_column from 'ordino_public/dist/assets/pages/news/v800_annotation_column.png';
@@ -11,7 +11,7 @@ import v900_application_help from 'ordino_public/dist/assets/pages/news/v900_app
 import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ranking_redesign.png';
 const sections = [
     {
-        id: 'v9-0-0',
+        id: 'v9-0',
         name: 'Version 9.0 (2021-06-15)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -39,7 +39,7 @@ const sections = [
             React.createElement("img", { className: "img-fluid mb-4", src: v900_ranking_redesign, alt: "Face-lift of the ranking views and application user interface." })))
     },
     {
-        id: 'v8-0-0',
+        id: 'v8-0',
         name: 'Version 8.0 (2021-03-24)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -71,7 +71,7 @@ const sections = [
             React.createElement("img", { className: "img-fluid border border-ordino-gray-5", src: v800_data_download, alt: "Download Data" })))
     },
     {
-        id: 'v7-0-0',
+        id: 'v7-0',
         name: 'Version 7.0 (2020-08-26)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -130,7 +130,7 @@ const sections = [
             React.createElement("p", null, "File upload has been improved and now supports boolean (i.e., true/false) columns.")))
     },
     {
-        id: 'v6-0-0',
+        id: 'v6-0',
         name: 'Version 6.0 (2019-10-14)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -151,7 +151,7 @@ const sections = [
             React.createElement("p", null, "The \"Download Data\" menu has been simplified.")))
     },
     {
-        id: 'v5-1-0',
+        id: 'v5-1',
         name: 'Version 5.1 (2018-12-05)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -171,7 +171,7 @@ const sections = [
             React.createElement("p", null, "Spearman correlation computation has been added to the \"Co-expression\" Detail View.")))
     },
     {
-        id: 'v5-0-0',
+        id: 'v5-0',
         name: 'Version 5.0 (2018-11-07)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
@@ -209,6 +209,7 @@ const sections = [
     }
 ];
 export function NewsPage() {
+    useScrollToSlug();
     return (React.createElement(React.Fragment, null,
         React.createElement(HeaderNavigation, null),
         React.createElement("div", { className: "position-relative py-6" },
