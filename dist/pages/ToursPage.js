@@ -15,17 +15,19 @@ export function ToursPage() {
     const beginnerTours = tours === null || tours === void 0 ? void 0 : tours.filter((tour) => tour.desc.level === 'beginner');
     const advancedTours = tours === null || tours === void 0 ? void 0 : tours.filter((tour) => tour.desc.level === 'advanced');
     return (React.createElement(React.Fragment, null,
-        React.createElement(HeaderNavigation, { fixed: "top" }),
-        status === 'success' ?
-            React.createElement("div", { className: "mt-9 mb-6 container tours-tab" },
-                React.createElement("p", { className: "lead text-ordino-gray-4" }, "Learn more about Ordino by taking an interactive guided tour"),
-                beginnerTours ?
-                    React.createElement(ToursSection, { level: "beginner", tours: beginnerTours, hrefBase: "/app/#tour={id}" })
+        React.createElement(HeaderNavigation, null),
+        React.createElement("div", { className: "position-relative pt-6" },
+            React.createElement("div", { className: "ordino-container" },
+                status === 'success' ?
+                    React.createElement("div", { className: "mt-9 mb-6 container tours-tab" },
+                        React.createElement("p", { className: "lead text-ordino-gray-4" }, "Learn more about Ordino by taking an interactive guided tour"),
+                        beginnerTours ?
+                            React.createElement(ToursSection, { level: "beginner", tours: beginnerTours, hrefBase: "/app/#tour={id}" })
+                            : null,
+                        advancedTours ?
+                            React.createElement(ToursSection, { level: "advanced", tours: advancedTours, hrefBase: "/app/#tour={id}" })
+                            : null)
                     : null,
-                advancedTours ?
-                    React.createElement(ToursSection, { level: "advanced", tours: advancedTours, hrefBase: "/app/#tour={id}" })
-                    : null)
-            : null,
-        React.createElement(OrdinoFooter, null)));
+                React.createElement(OrdinoFooter, null)))));
 }
 //# sourceMappingURL=ToursPage.js.map
