@@ -7,18 +7,18 @@ export function DevelopedByAffiliations() {
   return (
     <section className="container ordino-developed-by-affiliations py-5">
       <div className="row">
-        <div className="col mb-3 text-center">
+        <div className="col position-relative mb-3 text-center">
           <p>Ordino is developed by</p>
         </div>
       </div>
       <div className="row">
-        <div className="col text-center">
+        <div className="col position-relative text-center">
           <a href="https://jku.at" target="_blank" rel="noopener noreferrer"><img src={logoJKU} alt="Johannes Kepler University Linz" style={{height: '45px'}} /></a>
         </div>
-        <div className="col text-center">
+        <div className="col position-relative text-center">
           <a href="https://www.boehringer-ingelheim.com" target="_blank" rel="noopener noreferrer"><img src={logoBI} alt="Boehringer Ingelheim" style={{height: '45px'}} /></a>
         </div>
-        <div className="col text-center">
+        <div className="col position-relative text-center">
           <a href="https://www.datavisyn.io" target="_blank" rel="noopener noreferrer"><img src={logoDatavisyn} alt="datavisyn" style={{height: '35px'}} /></a>
         </div>
       </div>

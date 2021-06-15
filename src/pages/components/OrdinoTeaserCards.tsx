@@ -5,8 +5,8 @@ export function OrdinoTeaserCards() {
   return (
     <div className="ordino-teaser-cards container">
       <div className="row row-cols-1 row-cols-md-2 my-5">
-        <div className="col mb-4">
-          <h4 className="text-center mb-3"><i className="mr-2 ordino-icon-2 fas fa-newspaper"></i> What's new?</h4>
+        <div className="col position-relative mb-4">
+          <h4 className="text-center mb-3"><i className="me-2 ordino-icon-2 fas fa-newspaper"></i> What's new?</h4>
           <div className="card shadow-sm h-100">
             <div className="card-body">
               <p className="card-text">
@@ -18,12 +18,12 @@ export function OrdinoTeaserCards() {
               </p>
             </div>
             <div className="card-footer">
-              <Link to="/news" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> Read the changelog</Link>
+              <Link to="/news" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> Read the changelog</Link>
             </div>
           </div>
         </div>
-        <div className="col mb-4">
-          <h4 className="text-center mb-3"><i className="mr-2 ordino-icon-2 fas fa-book-open"></i> Publication</h4>
+        <div className="col position-relative mb-4">
+          <h4 className="text-center mb-3"><i className="me-2 ordino-icon-2 fas fa-book-open"></i> Publication</h4>
           <div className="card shadow-sm h-100">
             <div className="card-body">
               <p className="card-text">
@@ -36,7 +36,7 @@ export function OrdinoTeaserCards() {
               </p>
             </div>
             <div className="card-footer">
-              <Link to="/publication" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> Read the publication</Link>
+              <Link to="/publication" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> Read the publication</Link>
             </div>
           </div>
         </div>

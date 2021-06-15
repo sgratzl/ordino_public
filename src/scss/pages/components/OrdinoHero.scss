@@ -54,7 +54,7 @@
 
       &:focus {
         color: map-get($theme-colors, 'ordino-white-hover');
-        box-shadow: 0 0 0 0.1rem scale-color(map-get($theme-colors, 'ordino-gray-1'), $alpha: -50%);
+        box-shadow: 0 0 0 0.1rem shift-color(map-get($theme-colors, 'ordino-gray-1'), -50%);
       }
     }
   }

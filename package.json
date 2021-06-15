@@ -53,15 +53,15 @@
     "dist"
   ],
   "dependencies": {
+    "ordino": "github:Caleydo/ordino#vstoiber/bootstrap_v5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-router-dom": "^5.2.0",
-    "ordino": "github:Caleydo/ordino#welcome-page"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.14.6",
     "@types/react-dom": "^16.9.5",
-    "@types/react-router-dom":"^5.1.7",
+    "@types/react-router-dom": "^5.1.7",
     "@types/jest": "~26.0.20",
     "identity-obj-proxy": "~3.0.0",
     "jest": "~26.6.3",

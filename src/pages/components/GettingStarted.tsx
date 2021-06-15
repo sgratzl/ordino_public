@@ -4,7 +4,7 @@ export function GettingStarted() {
   return (
     <section className="container ordino-getting-started py-5">
       <div className="row">
-        <div className="col text-center">
+        <div className="col position-relative text-center">
           <h1>Getting started with Ordino</h1>
         </div>
       </div>
@@ -23,7 +23,7 @@ export function GettingStarted() {
         </li>
       </ol>
       <div className="row">
-        <div className="col text-center">
+        <div className="col position-relative text-center">
           <a href="/app/" className="btn btn-outline-secondary btn-lg">Start Analysis</a>
         </div>
       </div>
