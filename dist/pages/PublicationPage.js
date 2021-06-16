@@ -25,7 +25,6 @@ function OrdinoPublication() {
                     React.createElement("i", { className: "mr-1 fab fa-github" }),
                     " Source code"))));
 }
-;
 function TourdinoPublication() {
     return React.createElement("div", { className: "row" },
         React.createElement("div", { className: "shadow-sm card p-2 overflow-hidden" },
@@ -51,7 +50,6 @@ function TourdinoPublication() {
                     React.createElement("i", { className: "mr-1 fab fa-github" }),
                     " Source code"))));
 }
-;
 function TagglePublication() {
     return React.createElement("div", { className: "row" },
         React.createElement("div", { className: "shadow-sm card p-2 overflow-hidden" },
@@ -77,7 +75,6 @@ function TagglePublication() {
                     React.createElement("i", { className: "mr-1 fab fa-github" }),
                     " Source code"))));
 }
-;
 const publications = [
     {
         id: 'ordino-publication',

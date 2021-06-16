@@ -32,7 +32,7 @@ function OrdinoPublication() {
       </div>
     </div>
   </div>;
-};
+}
 
 function TourdinoPublication() {
   return <div className="row">
@@ -65,7 +65,7 @@ function TourdinoPublication() {
       </div>
     </div>
   </div>;
-};
+}
 
 function TagglePublication() {
   return <div className="row">
@@ -94,7 +94,7 @@ function TagglePublication() {
       </div>
     </div>
   </div>;
-};
+}
 
 const publications = [
   {
