@@ -26,9 +26,9 @@ function OrdinoPublication() {
         </p>
       </div>
       <div className="card-footer">
-        <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i> Publisher</a>
-        <a href="https://academic.oup.com/bioinformatics/article-pdf/35/17/3140/29591819/btz009.pdf" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
-        <a href="https://github.com/Caleydo/ordino_public" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
+        <a href="https://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer" className="btn btn-light me-2"><i className="me-1 fas fa-globe-americas"></i> Publisher</a>
+        <a href="https://academic.oup.com/bioinformatics/article-pdf/35/17/3140/29591819/btz009.pdf" target="_blank" className="btn btn-light me-2"><i className="me-1 fas fa-file-pdf"></i> Download</a>
+        <a href="https://github.com/Caleydo/ordino_public" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="me-1 fab fa-github"></i> Source code</a>
       </div>
     </div>
   </div>;
@@ -59,9 +59,9 @@ function TourdinoPublication() {
         </p>
       </div>
       <div className="card-footer">
-        <a href="https://diglib.eg.org/handle/10.2312/eurova20191117" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i>Publisher</a>
-        <a href="https://diglib.eg.org/bitstream/handle/10.2312/eurova20191117/007-011.pdf?sequence=1&amp;isAllowed=y" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
-        <a href="https://github.com/Caleydo/tourdino" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
+        <a href="https://diglib.eg.org/handle/10.2312/eurova20191117" target="_blank" rel="noopener noreferrer" className="btn btn-light me-2"><i className="me-1 fas fa-globe-americas"></i>Publisher</a>
+        <a href="https://diglib.eg.org/bitstream/handle/10.2312/eurova20191117/007-011.pdf?sequence=1&amp;isAllowed=y" target="_blank" className="btn btn-light me-2"><i className="me-1 fas fa-file-pdf"></i> Download</a>
+        <a href="https://github.com/Caleydo/tourdino" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="me-1 fab fa-github"></i> Source code</a>
       </div>
     </div>
   </div>;
@@ -88,9 +88,9 @@ function TagglePublication() {
         </p>
       </div>
       <div className="card-footer">
-        <a href="https://dx.doi.org/10.1177/1473871619878085" target="_blank" rel="noopener noreferrer" className="btn btn-light mr-2"><i className="mr-1 fas fa-globe-americas"></i> Publisher</a>
-        <a href="https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085" target="_blank" className="btn btn-light mr-2"><i className="mr-1 fas fa-file-pdf"></i> Download</a>
-        <a href="https://github.com/lineupjs/lineupjs" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="mr-1 fab fa-github"></i> Source code</a>
+        <a href="https://dx.doi.org/10.1177/1473871619878085" target="_blank" rel="noopener noreferrer" className="btn btn-light me-2"><i className="me-1 fas fa-globe-americas"></i> Publisher</a>
+        <a href="https://journals.sagepub.com/doi/pdf/10.1177/1473871619878085" target="_blank" className="btn btn-light me-2"><i className="me-1 fas fa-file-pdf"></i> Download</a>
+        <a href="https://github.com/lineupjs/lineupjs" target="_blank" rel="noopener noreferrer" className="btn btn-light"><i className="me-1 fab fa-github"></i> Source code</a>
       </div>
     </div>
   </div>;

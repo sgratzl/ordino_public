@@ -17,7 +17,7 @@ export function OrdinoContactForm() {
         form.reset();
         window.location.href = 'mailto:' + CONTACT_FORM_EMAIL + parameters;
     }, []);
-    return (React.createElement("div", { className: "card shadow-sm" },
+    return (React.createElement("div", { className: "card shadow-sm p-2" },
         React.createElement("div", { className: "card-body" },
             React.createElement("p", { className: "card-text" },
                 'Do you have questions or found a bug, do not hesitate to contact us using the contact form below. You can also contact us by writing an email to ',

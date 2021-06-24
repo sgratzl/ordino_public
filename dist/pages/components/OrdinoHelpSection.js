@@ -8,7 +8,7 @@ import { TermsOfUseCard } from './TermsOfUseCard';
 const cards = [
     {
         id: 'ordino-at-a-glance',
-        name: 'Ordino at a Glance',
+        name: 'Ordino at a glance',
         icon: 'fas fa-mountain',
         factory: (props) => React.createElement(VideoCard, Object.assign({}, props))
     },
@@ -26,13 +26,13 @@ const cards = [
     },
     {
         id: 'terms-of-use',
-        name: 'Terms of Use',
+        name: 'Terms of use',
         icon: 'fas fa-smile',
         factory: () => React.createElement(TermsOfUseCard, null)
     },
     {
         id: 'source-code-licenses',
-        name: 'Source Code',
+        name: 'Source code',
         icon: 'fas fa-code',
         factory: () => React.createElement(SourceCodeCard, null)
     },
@@ -40,12 +40,12 @@ const cards = [
 export function OrdinoHelpSection(props) {
     return (React.createElement(React.Fragment, null,
         React.createElement(OrdinoScrollspy, { items: cards.map((item) => ({ id: item.id, name: item.name })) }, (handleOnChange) => React.createElement(React.Fragment, null,
-            React.createElement("div", { className: "container pt-4" },
+            React.createElement("div", { className: "container pb-5" },
                 React.createElement("div", { className: "row" },
                     React.createElement("div", { className: "col" }, cards.map((item, index) => {
                         return (
                         // `id` attribute must match the one in the scrollspy
-                        React.createElement(OrdinoScrollspyItem, { className: "pt-3 pb-5", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
+                        React.createElement(OrdinoScrollspyItem, { className: "pt-6", id: item.id, key: item.name, index: index, handleOnChange: handleOnChange },
                             React.createElement(React.Fragment, null,
                                 React.createElement("h4", { className: "text-start  mt-2 mb-3" },
                                     React.createElement("i", { className: `me-2 ordino-icon-2 ${item.icon}` }),
