@@ -1,17 +1,9 @@
-body,
-html {
-  font-family: Yantramanav, 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: 400;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  background-color: map-get($theme-colors, 'ordino-gray-1');
-  color: map-get($theme-colors, 'ordino-gray-2');
-}
-
 // keep the footer at the bottom
 // @see https://moderncss.dev/keep-the-footer-at-the-bottom-flexbox-vs-grid/
 #welcome {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: map-get($theme-colors, 'ordino-gray-1');
+  color: map-get($theme-colors, 'ordino-gray-2');
 }

@@ -7,7 +7,7 @@ export default function (registry: IRegistry) {
   // generator-phovea:begin
 
   registry.push(EP_ORDINO_START_MENU_TAB, 'ordino_help_tab', () => import('./menu/HelpTab'), {
-    icon: 'fas fa-question-circle',
+    icon: 'fas fa-question-circle fa-fw',
     menu: EStartMenuSection.RIGHT,
   });
 

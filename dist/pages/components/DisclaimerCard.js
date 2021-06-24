@@ -1,6 +1,6 @@
 import * as React from 'react';
 export function DisclaimerCard() {
-    return (React.createElement("div", { className: "card shadow-sm" },
+    return (React.createElement("div", { className: "card shadow-sm p-2" },
         React.createElement("div", { className: "card-body" },
             React.createElement("p", { className: "card-text" },
                 "The information provided by Johannes Kepler University Linz, Boehringer Ingelheim RCV GmbH ",

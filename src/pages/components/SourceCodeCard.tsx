@@ -10,7 +10,7 @@ export function SourceCodeCard() {
 
   return (
     <>
-      <div className="card shadow-sm">
+      <div className="card shadow-sm p-2">
         <div className="card-body">
           <p className="card-text">
             The source code of Ordino is available under the Mozilla Public
