@@ -36,7 +36,7 @@ export function OrdinoTeaserCards() {
               </p>
             </div>
             <div className="card-footer">
-              <Link to="/publication" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> List of all publications</Link>
+              <Link to="/publications" className="btn btn-light"><i className="mr-1 fas fa-angle-right"></i> List of all publications</Link>
             </div>
           </div>
         </div>

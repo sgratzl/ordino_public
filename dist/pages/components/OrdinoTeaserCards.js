@@ -29,7 +29,7 @@ export function OrdinoTeaserCards() {
                             React.createElement("br", null),
                             React.createElement("i", null, " Bioinformatics, 35(17): 3140-3142, 2019."))),
                     React.createElement("div", { className: "card-footer" },
-                        React.createElement(Link, { to: "/publication", className: "btn btn-light" },
+                        React.createElement(Link, { to: "/publications", className: "btn btn-light" },
                             React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
                             " List of all publications")))))));
 }
