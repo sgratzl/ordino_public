@@ -7,6 +7,13 @@ import {HomePage, DatasetsPage, FeaturesPage, NewsPage, Error404Page, Publicatio
 import {RouterScrollToTop} from './utils';
 import {ToursPage} from './pages/ToursPage';
 
+// maintain compatibility with old session links (e.g., bookmarks, vistories)
+// redirect to app subdirectory if URL hash contains a CLUE session
+const location = document.defaultView.location;
+if(location.hash.includes('clue_graph') || location.hash.includes('clue_state')) {
+  location.replace(location.href.replace('#', 'app#'));
+}
+
 ReactDOM.render(
   <>
     <HashRouter>
