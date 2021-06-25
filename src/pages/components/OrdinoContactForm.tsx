@@ -30,7 +30,7 @@ export function OrdinoContactForm() {
                 <form onSubmit={handleSubmit}>
                     <div className="row-cols-md-3 mb-3">
                         <label className="form-label">Type of contact</label>
-                        <select name="subject" className="form-control">
+                        <select name="subject" className="form-select">
                             <option>I have some general feedback</option>
                             <option>I have a question</option>
                             <option>I want to report a bug</option>

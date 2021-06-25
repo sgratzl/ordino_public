@@ -26,7 +26,7 @@ export function OrdinoContactForm() {
             React.createElement("form", { onSubmit: handleSubmit },
                 React.createElement("div", { className: "row-cols-md-3 mb-3" },
                     React.createElement("label", { className: "form-label" }, "Type of contact"),
-                    React.createElement("select", { name: "subject", className: "form-control" },
+                    React.createElement("select", { name: "subject", className: "form-select" },
                         React.createElement("option", null, "I have some general feedback"),
                         React.createElement("option", null, "I have a question"),
                         React.createElement("option", null, "I want to report a bug"))),
