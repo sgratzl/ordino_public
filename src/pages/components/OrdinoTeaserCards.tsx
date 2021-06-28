@@ -32,7 +32,8 @@ export function OrdinoTeaserCards() {
               <p className="card-text text-muted">
                 Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger.<br />
                 <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples.</b><br />
-                <i> Bioinformatics, 35(17): 3140-3142, 2019.</i>
+                <i> Bioinformatics, 35(17): 3140-3142, 2019. </i>
+                <a href="http://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer">dx.doi.org/10.1093/bioinformatics/btz009</a>
               </p>
             </div>
             <div className="card-footer">
