@@ -27,9 +27,10 @@ export function OrdinoTeaserCards() {
                             React.createElement("br", null),
                             React.createElement("b", null, "Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples."),
                             React.createElement("br", null),
-                            React.createElement("i", null, " Bioinformatics, 35(17): 3140-3142, 2019."))),
+                            React.createElement("i", null, " Bioinformatics, 35(17): 3140-3142, 2019. "),
+                            React.createElement("a", { href: "http://dx.doi.org/10.1093/bioinformatics/btz009", target: "_blank", rel: "noopener noreferrer" }, "dx.doi.org/10.1093/bioinformatics/btz009"))),
                     React.createElement("div", { className: "card-footer" },
-                        React.createElement(Link, { to: "/publication", className: "btn btn-light" },
+                        React.createElement(Link, { to: "/publications", className: "btn btn-light" },
                             React.createElement("i", { className: "mr-1 fas fa-angle-right" }),
                             " List of all publications")))))));
 }

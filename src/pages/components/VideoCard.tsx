@@ -106,7 +106,7 @@ export function VideoCard({openInNewWindow}: IVideoCardProps) {
                     Please cite the first article when using Ordino and publishing your results.</p>
                 <p className="card-text">
                     You can find more information about the publications
-                    <Link {...newWindowProps} className="card-link" to="/publication">&nbsp;here.</Link></p>
+                    <Link {...newWindowProps} className="card-link" to="/publications">&nbsp;here.</Link></p>
             </div>
         </div>
     );
