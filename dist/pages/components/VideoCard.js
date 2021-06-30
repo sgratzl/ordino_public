@@ -80,6 +80,6 @@ export function VideoCard({ openInNewWindow }) {
             React.createElement("p", { className: "card-text" }, "Please cite the first article when using Ordino and publishing your results."),
             React.createElement("p", { className: "card-text" },
                 "You can find more information about the publications",
-                React.createElement(Link, Object.assign({}, newWindowProps, { className: "card-link", to: "/publication" }), "\u00A0here.")))));
+                React.createElement(Link, Object.assign({}, newWindowProps, { className: "card-link", to: "/publications" }), "\u00A0here.")))));
 }
 //# sourceMappingURL=VideoCard.js.map
