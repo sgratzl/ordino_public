@@ -17,11 +17,11 @@ import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ran
 const sections = [
   {
     id: 'v9-0',
-    name: 'Version 9.0 (2021-06-15)',
+    name: 'Version 9.0 (2021-07-01)',
     markup: () => (
       <>
         <p className="lead text-muted">
-          This update contains more a whole new homepage, start menu, and various <b>usability improvements</b>.
+          This update contains more a <b>whole new homepage</b>, <b>start menu</b>, and various <b>usability improvements</b>.
         </p>
 
         <h4 className="my-4">Hello Ordino! 👋</h4>
