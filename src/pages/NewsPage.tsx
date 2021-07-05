@@ -17,7 +17,7 @@ import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ran
 const sections = [
   {
     id: 'v9-0',
-    name: 'Version 9.0 (2021-07-01)',
+    name: 'Version 9.0 (2021-07-12)',
     markup: () => (
       <>
         <p className="lead text-muted">
