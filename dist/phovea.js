@@ -8,7 +8,7 @@ export default function (registry) {
         icon: 'fas fa-question-circle fa-fw',
         menu: EStartMenuSection.RIGHT,
     });
-    registry.push(EP_ORDINO_FOOTER_MENU, 'ordino_footer_menu', () => { }, {
+    registry.push(EP_ORDINO_FOOTER_MENU, 'ordino_footer_menu', () => ({}), {
         lists: [
             [
                 {

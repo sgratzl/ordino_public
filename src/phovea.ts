@@ -11,7 +11,7 @@ export default function (registry: IRegistry) {
     menu: EStartMenuSection.RIGHT,
   });
 
-  registry.push(EP_ORDINO_FOOTER_MENU, 'ordino_footer_menu', () => {}, <IOrdinoFooterMenuDesc>{
+  registry.push(EP_ORDINO_FOOTER_MENU, 'ordino_footer_menu', () => ({}), <IOrdinoFooterMenuDesc>{
     lists: [
       [
         {
