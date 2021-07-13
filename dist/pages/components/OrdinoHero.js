@@ -22,7 +22,7 @@ export function OrdinoHero() {
                         React.createElement("p", null, "Ordino is a browser-based visual data analysis solution to flexibly rank, filter, and explore genes, cell lines, and tissue samples based on a rich set of experimental and metadata."))),
                 React.createElement("div", { className: "row ordino-hero-actions my-4" },
                     React.createElement("div", { className: "col text-center" },
-                        React.createElement("button", { type: "button", className: "btn btn-link btn-lg", onClick: () => setModalIsClosed(false), "data-bs-toggle": "modal", "data-target": `#${INTRO_VIDEO_MODAL_ID}` },
+                        React.createElement("button", { type: "button", className: "btn btn-link btn-lg", onClick: () => setModalIsClosed(false), "data-bs-toggle": "modal", "data-bs-target": `#${INTRO_VIDEO_MODAL_ID}` },
                             React.createElement("i", { className: "fas fa-play" }),
                             "Watch intro video")),
                     React.createElement("div", { className: "col text-center" },

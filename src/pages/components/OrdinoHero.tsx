@@ -29,7 +29,7 @@ export function OrdinoHero() {
           </div>
           <div className="row ordino-hero-actions my-4">
             <div className="col text-center">
-              <button type="button" className="btn btn-link btn-lg" onClick={() => setModalIsClosed(false)} data-bs-toggle="modal" data-target={`#${INTRO_VIDEO_MODAL_ID}`}>
+              <button type="button" className="btn btn-link btn-lg" onClick={() => setModalIsClosed(false)} data-bs-toggle="modal" data-bs-target={`#${INTRO_VIDEO_MODAL_ID}`}>
                 <i className="fas fa-play"></i>
               Watch intro video
             </button>
