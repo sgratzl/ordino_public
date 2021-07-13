@@ -12,10 +12,14 @@ import v900_ranking_redesign from 'ordino_public/dist/assets/pages/news/v900_ran
 const sections = [
     {
         id: 'v9-0',
-        name: 'Version 9.0 (2021-06-15)',
+        name: 'Version 9.0 (2021-07-12)',
         markup: () => (React.createElement(React.Fragment, null,
             React.createElement("p", { className: "lead text-muted" },
-                "This update contains more a whole new homepage, start menu, and various ",
+                "This update contains more a ",
+                React.createElement("b", null, "whole new homepage"),
+                ", ",
+                React.createElement("b", null, "start menu"),
+                ", and various ",
                 React.createElement("b", null, "usability improvements"),
                 "."),
             React.createElement("h4", { className: "my-4" }, "Hello Ordino! \uD83D\uDC4B"),
