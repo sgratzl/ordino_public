@@ -29,7 +29,7 @@ ReactDOM.render(
         <Route path="/datasets">
           <DatasetsPage />
         </Route>
-        <Route path="/publication">
+        <Route path="/publications">
           <PublicationPage />
         </Route>
         <Route path="/help/:slug">{/* initialize slug version first */}

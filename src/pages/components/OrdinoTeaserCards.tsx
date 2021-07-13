@@ -10,15 +10,17 @@ export function OrdinoTeaserCards() {
           <div className="card shadow-sm h-100">
             <div className="card-body">
               <p className="card-text">
-                With Ordino v7.0.0 we have improved the usability of ranking views. The new ranking side panel supports the statistical analysis of rankings.
+                With Ordino v9.0 we have launched a whole new homepage, start menu, and various usability improvements.
               </p>
               <p className="card-text">
-                Ordino is now using the hg38 database and provides new scores for HLA Type, MSI Status, and Mutational Burden for cell lines and tissues samples.
-                Furthermore the PRISM drug screen can be added as cell line score.
+                The new homepage welcomes new and recurring users and provides an overview of the Ordino <Link to="/features">features</Link>, <Link to="/datasets">loaded datasets</Link>, and <Link to="/publications">publications</Link>.
+              </p>
+              <p className="card-text">
+                In addition to the new homepage we designed an entirely new Ordino start menu which provides quick access to datasets, sessions and tours.
               </p>
             </div>
             <div className="card-footer">
-              <Link to="/news" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> Read the changelog</Link>
+              <Link to="/news" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> Read the release notes</Link>
             </div>
           </div>
         </div>
@@ -32,11 +34,12 @@ export function OrdinoTeaserCards() {
               <p className="card-text text-muted">
                 Marc Streit, Samuel Gratzl, Holger Stitz, Andreas Wernitznig, Thomas Zichner, Christian Haslinger.<br />
                 <b>Ordino: visual analysis tool for ranking and exploring genes, cell lines, and tissue samples.</b><br />
-                <i> Bioinformatics, 35(17): 3140-3142, 2019.</i>
+                <i> Bioinformatics, 35(17): 3140-3142, 2019. </i>
+                <a href="http://dx.doi.org/10.1093/bioinformatics/btz009" target="_blank" rel="noopener noreferrer">dx.doi.org/10.1093/bioinformatics/btz009</a>
               </p>
             </div>
             <div className="card-footer">
-              <Link to="/publication" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> List of all publications</Link>
+              <Link to="/publications" className="btn btn-light"><i className="me-1 fas fa-angle-right"></i> List of all publications</Link>
             </div>
           </div>
         </div>
